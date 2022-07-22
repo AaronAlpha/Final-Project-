@@ -11,10 +11,9 @@ import ddf.minim.ugens.*;
 
 
 void setup() {
-  size(1750,900);//Landscape or Square or Portrait 
-  
+  size(1750, 900);//Landscape or Square or Portrait 
+
   populationOfVariables();
-   
 };
 
 
@@ -22,26 +21,52 @@ void setup() {
 void draw() {
   //ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter)
   if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) line(mouseX, mouseY, pmouseX, pmouseY); //Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+
+
+  
+  //Close button
+  //Hover-over for Close Button
+  if (mouseX >= xCloseButton && mouseX <= xCloseButton +  CloseButtonWidth && mouseY >= yCloseButton && mouseY <= yCloseButton + CloseButtonHeight) {
+    buttonfillclose = red;
+    buttontextfill = resetWhite;
+  } else {
+    buttonfillclose = resetWhite;  
+    buttontextfill = red;
+  }
+  //End Hover over  for Close Button
+  
+  fill(buttonfillclose);
+  rect(xCloseButton, yCloseButton, CloseButtonWidth, CloseButtonHeight); //is the closing button //needs hover over(color and text)
+  textAlign(CENTER, CENTER);
+  closeSize = 50; //Changing number until it exists
+  textFont(closeFont, closeSize); //used to affext the text
+  fill(buttontextfill);
+  text(closeTitle, xCloseButton, yCloseButton, CloseButtonWidth, CloseButtonHeight); //'text()' function 'draws' the text 
+  fill(resetWhite);
+  //End Close button
   
   
-
-
-
+  
+  
 };
 
 
 void keyPressed() {
-  
 }; // will not be required as program going to be touch screen and mousePressed is harder - > rub this out
 
 
 void mousePressed() {
-  if(mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight)
-  {if (draw == false) 
-  {draw = true;
-} else {draw = false;}
-} 
+  if (mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight)
+  {
+    if (draw == false) 
+    {
+      draw = true;
+    } else {
+      draw = false;
+    }
+  } 
 
 
+  if (mouseX >= xCloseButton && mouseX <= xCloseButton +  CloseButtonWidth && mouseY >= yCloseButton && mouseY <= yCloseButton + CloseButtonHeight) exit();
 };
 //End MAIN Program

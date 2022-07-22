@@ -1,7 +1,7 @@
 //Global Program
 float drawingSurfaceY, drawingSurfaceX, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter;
 boolean draw = false;
-float xClosButton, yCloseButton, CloseButtonWidth, CloseButtonHeight;
+float xCloseButton, yCloseButton, CloseButtonWidth, CloseButtonHeight;
 float xCenter, yCenter;
 String ls = "Landscape or Square", p = "Portrait", DO = "Display Orientation", instruct = "Flip your screen";
 float lineboxX, lineboxY, lineboxWidth, lineboxHeight;
@@ -9,6 +9,17 @@ float shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight;
 float colorpaletteboxX, colorpaletteboxY, colorpaletteboxWidth, colorpaletteboxHeight;
 float colorpalettefillerboxX, colorpalettefillerboxY, colorpalettefillerboxWidth, colorpalettefillerboxHeight;
 float eraserboxX, eraserboxY, eraserboxWidth, eraserboxHeight;
+float templateboxX, templateboxY, templateboxWidth, templateboxHeight;
+
+String closeTitle = "X";
+PFont closeFont;
+color purple = #9E05FF, resetWhite = #FFFFFF, red = #FF0000; //or another purple  color = #2c08ff
+//the 'resetDefaultInk' is not NightMode friendly as its just white 
+int closeSize;
+color buttonfillclose, buttontextfill;
+
+
+
 
 
 void populationOfVariables(){  
@@ -45,6 +56,17 @@ void populationOfVariables(){
   };
   
   
+  
+  
+  
+  //Text stuff:
+  String[] fontList = PFont.list(); //To list all fonts avaliable on OS
+  printArray(fontList); //is another line of code for print statements
+  closeFont = createFont("ArialNarrow", 55);
+  
+  
+  
+  
 
   //Population of Virtual Piece of Paper
   drawingSurfaceX = xCenter - xCenter*1/2;
@@ -56,12 +78,28 @@ void populationOfVariables(){
   
   drawingDiameter = width*1/100; //diameter of circle line tool
   
+  
+  //Population of Close Button
+  xCloseButton = xCenter + xCenter*7.5/10;
+  yCloseButton = height*6.5/10;
+  CloseButtonWidth = width*1/10;
+  CloseButtonHeight = height*1/10; 
+  //End Population of Close Button
+  
+  ////Population of Maximise/Minimise Button
+  //xCloseButton = xCenter + xCenter*7.5/10;
+  //yCloseButton = height*6.5/10;
+  //CloseButtonWidth = width*1/10;
+  //CloseButtonHeight = height*1/10; 
+  ////End Population of Maximise/Minimise Button
+  
   ////Population of Close Button
-  //xClosButton = ;
-  //yCloseButton = ;
-  //CloseButtonWidth = ;
-  //CloseButtonHeight = ; 
+  //xCloseButton = xCenter + xCenter*7.5/10;
+  //yCloseButton = height*6.5/10;
+  //CloseButtonWidth = width*1/10;
+  //CloseButtonHeight = height*1/10; 
   ////End Population of Close Button
+  
   
   
   //Population of Line Tool Box
@@ -82,7 +120,7 @@ void populationOfVariables(){
   
   //Population of Color Tool Box
   colorpaletteboxX = width * 0;
-  colorpaletteboxY = (height*6.5/10);
+  colorpaletteboxY = height*6.5/10;
   colorpaletteboxWidth = xCenter - xCenter*1/2;
   colorpaletteboxHeight = height; //this box takes up the remaining space as there is a small gaping if it uses the uniformed height of ((height*6.5/10)/2)
   //End Population of Line Tool Box
@@ -90,18 +128,25 @@ void populationOfVariables(){
   
   //Population of Color Fill Background Tool Box
   colorpalettefillerboxX = xCenter - xCenter*1/2;
-  colorpalettefillerboxY = (height*6.5/10);
+  colorpalettefillerboxY = height*6.5/10;
   colorpalettefillerboxWidth = xCenter - xCenter*1/2;
   colorpalettefillerboxHeight = height; //
   //End Population of Color Fill Background Tool Box
   
   
   //Population of Eraser Tool Box
-  eraserboxX = xCenter;
-  eraserboxY = (height*6.5/10);
-  eraserboxWidth = xCenter - xCenter*1/2;
+  eraserboxX = xCenter ;
+  eraserboxY = height*6.5/10;
+  eraserboxWidth = xCenter - xCenter*7/10;
   eraserboxHeight = height; 
   //End Population of Eraser Tool Box
+  
+  //Population of Template Tool Box
+  templateboxX = xCenter + xCenter*3/10;
+  templateboxY = height*6.5/10;
+  templateboxWidth = xCenter - xCenter*6/10;
+  templateboxHeight = height; 
+  //End Population of Template Tool Box
   
 
   
@@ -113,7 +158,8 @@ void populationOfVariables(){
   rect(colorpaletteboxX, colorpaletteboxY, colorpaletteboxWidth, colorpaletteboxHeight);
   rect(colorpalettefillerboxX, colorpalettefillerboxY, colorpalettefillerboxWidth, colorpalettefillerboxHeight);
   rect(eraserboxX, eraserboxY, eraserboxWidth, eraserboxHeight);
+  rect(templateboxX, templateboxY, templateboxWidth, templateboxHeight);
   
-  rect(xClosButton, yCloseButton, CloseButtonWidth, CloseButtonHeight); //is the closing button //needs hover over(color and text)
+  
   
 }
