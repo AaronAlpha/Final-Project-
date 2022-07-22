@@ -1,2 +1,2 @@
-# Final-Project-
+# Final Project
 Final Exam - Drawing Program
