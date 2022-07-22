@@ -97,7 +97,7 @@ void populationOfVariables(){
   
   
   //Population of Eraser Tool Box
-  eraserboxX = xCenter - xCenter*1/2;
+  eraserboxX = xCenter;
   eraserboxY = (height*6.5/10);
   eraserboxWidth = xCenter - xCenter*1/2;
   eraserboxHeight = height; 
