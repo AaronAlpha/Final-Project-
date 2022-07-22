@@ -13,12 +13,8 @@ import ddf.minim.ugens.*;
 void setup() {
   size(1750,900);//Landscape or Square or Portrait 
   
-  
   populationOfVariables();
-  
-  
-  
-  
+   
 };
 
 
