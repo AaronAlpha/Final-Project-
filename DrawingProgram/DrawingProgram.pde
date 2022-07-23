@@ -21,7 +21,7 @@ void setup() {
 
 
 void draw() {
-  if (shouldRestart == true) fill(resetWhite); rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight); 
+
   
   
   //ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter) //have to mae ellipse tool as well
@@ -94,18 +94,24 @@ void mousePressed() {
 
   if (mouseX >= xCloseButton && mouseX <= xCloseButton +  CloseButtonWidth && mouseY >= yCloseButton && mouseY <= yCloseButton + CloseButtonHeight) exit();
 
-
-  if (mouseX >= xRestartButton && mouseX <= xRestartButton +  RestartButtonWidth && mouseY >= yRestartButton && mouseY <= yRestartButton + RestartButtonHeight) {
-    shouldRestart = false;
-    if (shouldRestart == false) {
-        shouldRestart = true;
-      } else {
-        shouldRestart = false;}
-  }
-      
-  
-
-
   //if (mouseX >= xCloseButton && mouseX <= xCloseButton +  CloseButtonWidth && mouseY >= yCloseButton && mouseY <= yCloseButton + CloseButtonHeight) exit();
 };
+
+
+
+
+void mouseDragged() {
+  if (mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight)
+  {
+    if (draw == false) 
+    {
+      draw = true;
+    } else {
+      draw = false;
+    }
+  } 
+};
+
+
+
 //End MAIN Program

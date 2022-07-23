@@ -6,10 +6,12 @@ String ls = "Landscape or Square", p = "Portrait", DO = "Display Orientation", i
 
 
 float lineboxX, lineboxY, lineboxWidth, lineboxHeight;
+float eraserboxX, eraserboxY, eraserboxWidth, eraserboxHeight;
+
 float shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight;
 float colorpaletteboxX, colorpaletteboxY, colorpaletteboxWidth, colorpaletteboxHeight;
 float colorpalettefillerboxX, colorpalettefillerboxY, colorpalettefillerboxWidth, colorpalettefillerboxHeight;
-float eraserboxX, eraserboxY, eraserboxWidth, eraserboxHeight;
+float musicboxX, musicboxY, musicboxWidth, musicboxHeight;
 float templateboxX, templateboxY, templateboxWidth, templateboxHeight;
 
 color purple = #9E05FF, resetWhite = #FFFFFF, red = #FF0000; //or another purple  color = #2c08ff
@@ -158,19 +160,20 @@ void populationOfVariables(){
   //End Population of Color Fill Background Tool Box
   
   
-  //Population of Eraser Tool Box
-  eraserboxX = xCenter ;
-  eraserboxY = height*6.5/10;
-  eraserboxWidth = xCenter - xCenter*7/10;
-  eraserboxHeight = height; 
-  //End Population of Eraser Tool Box
-  
   //Population of Template Tool Box
-  templateboxX = xCenter + xCenter*3/10;
+  templateboxX = xCenter ;
   templateboxY = height*6.5/10;
   templateboxWidth = xCenter - xCenter*6/10;
   templateboxHeight = height; 
   //End Population of Template Tool Box
+  
+  
+  //Population of Music Player Tool Box
+  musicboxX = xCenter + xCenter*3/10;
+  musicboxY = height*6.5/10;
+  musicboxWidth = xCenter - xCenter*6/10;
+  musicboxHeight = height; 
+  //End Population of Music Player Tool Box
   
 
   
@@ -181,7 +184,7 @@ void populationOfVariables(){
   rect(shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight); 
   rect(colorpaletteboxX, colorpaletteboxY, colorpaletteboxWidth, colorpaletteboxHeight);
   rect(colorpalettefillerboxX, colorpalettefillerboxY, colorpalettefillerboxWidth, colorpalettefillerboxHeight);
-  rect(eraserboxX, eraserboxY, eraserboxWidth, eraserboxHeight);
+  rect(musicboxX, musicboxY, musicboxWidth, musicboxHeight);
   rect(templateboxX, templateboxY, templateboxWidth, templateboxHeight);
   
   
