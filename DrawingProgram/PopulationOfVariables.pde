@@ -1,9 +1,10 @@
 //Global Program
 float drawingSurfaceY, drawingSurfaceX, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter;
 boolean draw = false;
-float xCloseButton, yCloseButton, CloseButtonWidth, CloseButtonHeight;
 float xCenter, yCenter;
 String ls = "Landscape or Square", p = "Portrait", DO = "Display Orientation", instruct = "Flip your screen";
+
+
 float lineboxX, lineboxY, lineboxWidth, lineboxHeight;
 float shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight;
 float colorpaletteboxX, colorpaletteboxY, colorpaletteboxWidth, colorpaletteboxHeight;
@@ -11,18 +12,33 @@ float colorpalettefillerboxX, colorpalettefillerboxY, colorpalettefillerboxWidth
 float eraserboxX, eraserboxY, eraserboxWidth, eraserboxHeight;
 float templateboxX, templateboxY, templateboxWidth, templateboxHeight;
 
-String closeTitle = "X";
-PFont closeFont;
 color purple = #9E05FF, resetWhite = #FFFFFF, red = #FF0000; //or another purple  color = #2c08ff
-//the 'resetDefaultInk' is not NightMode friendly as its just white 
+PFont closeFont, RestartFont;
+
+
+String closeTitle = "X", Maximise = "□", Minimise = "□□", Restart = "Restart";
+
+float xCloseButton, yCloseButton, CloseButtonWidth, CloseButtonHeight;
 int closeSize;
-color buttonfillclose, buttontextfill;
+color buttonfillclose, buttontextfillclose;
+
+float xRestartButton, yRestartButton, RestartButtonWidth, RestartButtonHeight;
+int restartSize;
+color buttonfillrestart, buttontextfillrestart;
+boolean shouldRestart = false;
+
+
+
+
+
+String[] fontList = PFont.list(); //To list all fonts avaliable on OS
 
 
 
 
 
 void populationOfVariables(){  
+  
   
   
   xCenter = width/2;
@@ -57,15 +73,7 @@ void populationOfVariables(){
   
   
   
-  
-  
-  //Text stuff:
-  String[] fontList = PFont.list(); //To list all fonts avaliable on OS
-  printArray(fontList); //is another line of code for print statements
-  closeFont = createFont("ArialNarrow", 55);
-  
-  
-  
+
   
 
   //Population of Virtual Piece of Paper
@@ -79,26 +87,42 @@ void populationOfVariables(){
   drawingDiameter = width*1/100; //diameter of circle line tool
   
   
-  //Population of Close Button
-  xCloseButton = xCenter + xCenter*7.5/10;
-  yCloseButton = height*6.5/10;
-  CloseButtonWidth = width*1/10;
-  CloseButtonHeight = height*1/10; 
-  //End Population of Close Button
+  //Population of Restart Button
+  xRestartButton = xCenter + xCenter*7.5/10;
+  yRestartButton = height*6.5/10;
+  RestartButtonWidth = width*1/10;
+  RestartButtonHeight = height*1/10;
+  //Text
+  RestartFont = createFont("Arial Narrow", 55);
+  //End Text 
+  //End Population of Restart Button
+  
   
   ////Population of Maximise/Minimise Button
   //xCloseButton = xCenter + xCenter*7.5/10;
-  //yCloseButton = height*6.5/10;
+  //yCloseButton = height*8/10;
   //CloseButtonWidth = width*1/10;
   //CloseButtonHeight = height*1/10; 
+  ////Text
+  //closeFont = createFont("Arial Narrow", 55);
+  ////End Text 
   ////End Population of Maximise/Minimise Button
   
-  ////Population of Close Button
-  //xCloseButton = xCenter + xCenter*7.5/10;
-  //yCloseButton = height*6.5/10;
-  //CloseButtonWidth = width*1/10;
-  //CloseButtonHeight = height*1/10; 
-  ////End Population of Close Button
+  
+  
+  
+  
+  //Population of Close Button
+  xCloseButton = xCenter + xCenter*7.5/10;
+  yCloseButton = height*9/10;
+  CloseButtonWidth = width*1/10;
+  CloseButtonHeight = height*1/10; 
+  //Text
+  closeFont = createFont("Arial Narrow", 55);
+  //End Text 
+  //End Population of Close Button
+  
+  
   
   
   
