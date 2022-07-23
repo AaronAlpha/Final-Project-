@@ -100,7 +100,7 @@ void mousePressed() {
 
 
 
-void mouseDragged() {
+void mouseClicked() {
   if (mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight)
   {
     if (draw == false) 
