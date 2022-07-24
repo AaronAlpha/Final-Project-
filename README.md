@@ -12,6 +12,6 @@ To-do list:
  - [ ] Full Screen Mode(enlarging current display screen to a monitor width/screen, and similarly, reducing the monitor screen-sized app back to its original display with and height)
  - [x] Virtual Piece of paper for drawing
  - [ ] fill background color
- - [ ] restart button
+ - [x] restart button
  - [ ] starting screen that introduce app and start button tp start program(will basically be a virtual paper/screen on top of the app)
  - [x] drawing by pressing and holding and then stop drawing by letting go
