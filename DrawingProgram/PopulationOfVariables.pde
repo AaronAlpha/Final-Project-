@@ -28,6 +28,7 @@ float xRestartButton, yRestartButton, RestartButtonWidth, RestartButtonHeight;
 int restartSize;
 color buttonfillrestart, buttontextfillrestart;
 boolean shouldRestart = false;
+float restartCanvasX, restartCanvasY, restartCanvasWidth, restartCanvasHeight;
 
 
 
@@ -176,7 +177,10 @@ void populationOfVariables() {
   
   
   //Population of Restart Canvas box(that'll cover the canvas with a new virtual box everytime)
-  
+  restartCanvasX = xCenter - xCenter*1/2;
+  restartCanvasY = height*0;
+  restartCanvasWidth = xCenter + xCenter*1/2; 
+  restartCanvasHeight = height*6.5/10;
    
   
   //End Population Restart Canvas box
