@@ -5,6 +5,7 @@ import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 
+//Global Variable
 
 
 
@@ -37,10 +38,22 @@ void draw() {
   //ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter) //have to mae ellipse tool as well
   if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) line(mouseX, mouseY, pmouseX, pmouseY); //Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
-  if (shouldRestart == true) rect(restartCanvasX, restartCanvasY, restartCanvasWidth, restartCanvasHeight); shouldRestart = false; //Restart Button process
+  if (shouldRestart == true) rect(restartCanvasX, restartCanvasY, restartCanvasWidth, restartCanvasHeight); 
+  shouldRestart = false; //Restart Button process
 
 
-  MinMaxButton();
+  if (MaxAlready == true) {
+    MintoMaxButton() ;
+    appWidth = displayWidth; 
+    appHeight = displayHeight;
+    
+  } else if (MaxAlready == false) {
+    MaxtoMinButton();
+    appWidth = width; 
+    appHeight = height; 
+
+  };
+
   restartButton();
   closeButton();
 };
@@ -62,10 +75,23 @@ void mousePressed() {
     } else {
       shouldRestart = false;
     }
-};
+  };
 
+
+  if (mouseX >= xMinMaxButton && mouseX <= xMinMaxButton +  xMinMaxButtonWidth && mouseY >= yMinMaxButton && mouseY <= yMinMaxButton + xMinMaxButtonHeight) {
+    if (appWidth != displayWidth && appHeight != displayHeight) { 
+      if (MaxAlready == false) {
+        MaxAlready = true;
+      } else {
+        MaxAlready = false;
+      }
+    }
+  }
+  
+  
+  
 }
 
 
 
-  //End MAIN Program
+//End MAIN Program

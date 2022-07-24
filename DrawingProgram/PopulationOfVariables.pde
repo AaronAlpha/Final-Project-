@@ -33,6 +33,11 @@ float restartCanvasX, restartCanvasY, restartCanvasWidth, restartCanvasHeight;
 float xMinMaxButton, yMinMaxButton, xMinMaxButtonWidth, xMinMaxButtonHeight;
 int MinMaxSize;
 color buttonfillMinMax, buttontextfillMinMax;
+boolean MaxAlready = false; //means that its in Maximised mode already, if 'true' that means that the window is max
+
+
+int appWidth = width;
+int appHeight = height;
 
 
 
@@ -50,8 +55,7 @@ void populationOfVariables() {
   xCenter = width/2;
   yCenter = height/2;
   
-  int appWidth = width;
-  int appHeight = height;
+  
   
   
   //Display Checker
