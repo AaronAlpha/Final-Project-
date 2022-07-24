@@ -1,6 +1,6 @@
 void restartButton() {
   //Restart button
-  //Hover-over for Close Button
+  //Hover-over for Restart Button
   if (mouseX >= xRestartButton && mouseX <= xRestartButton +  RestartButtonWidth && mouseY >= yRestartButton && mouseY <= yRestartButton + RestartButtonHeight) {
     buttonfillrestart = purple;
     buttontextfillrestart = resetWhite;
@@ -8,7 +8,7 @@ void restartButton() {
     buttonfillrestart = resetWhite;  
     buttontextfillrestart = purple;
   }
-  //End Hover over  for Restart Button
+  //End Hover over for Restart Button
 
   fill(buttonfillrestart);
   rect(xRestartButton, yRestartButton, RestartButtonWidth, RestartButtonHeight); //is the closing button //needs hover over(color and text)

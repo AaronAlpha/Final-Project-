@@ -14,11 +14,11 @@ float colorpalettefillerboxX, colorpalettefillerboxY, colorpalettefillerboxWidth
 float musicboxX, musicboxY, musicboxWidth, musicboxHeight;
 float templateboxX, templateboxY, templateboxWidth, templateboxHeight;
 
-color purple = #9E05FF, resetWhite = #FFFFFF, red = #FF0000; //or another purple  color = #2c08ff
-PFont closeFont, RestartFont;
+color purple = #9E05FF, resetWhite = #FFFFFF, red = #FF0000, blue = #5792F5; //or another purple  color = #2c08ff
+PFont closeFont, RestartFont, MinMaxFont;
 
 
-String closeTitle = "X", Maximise = "□", Minimise = "□□", Restart = "Restart";
+String closeTitle = "X", Minimise = "□",  Maximise= "□□", Restart = "Restart";
 
 float xCloseButton, yCloseButton, CloseButtonWidth, CloseButtonHeight;
 int closeSize;
@@ -29,6 +29,10 @@ int restartSize;
 color buttonfillrestart, buttontextfillrestart;
 boolean shouldRestart = false;
 float restartCanvasX, restartCanvasY, restartCanvasWidth, restartCanvasHeight;
+
+float xMinMaxButton, yMinMaxButton, xMinMaxButtonWidth, xMinMaxButtonHeight;
+int MinMaxSize;
+color buttonfillMinMax, buttontextfillMinMax;
 
 
 
@@ -111,15 +115,15 @@ void populationOfVariables() {
   //End Population of Restart Button
   
   
-  ////Population of Maximise/Minimise Button
-  //xCloseButton = xCenter + xCenter*7.5/10;
-  //yCloseButton = height*8/10;
-  //CloseButtonWidth = width*1/10;
-  //CloseButtonHeight = height*1/10; 
-  ////Text
-  //closeFont = createFont("Arial Narrow", 55);
-  ////End Text 
-  ////End Population of Maximise/Minimise Button
+  //Population of Maximise/Minimise Button
+  xMinMaxButton = xCenter + xCenter*7.5/10;
+  yMinMaxButton = height*7.75/10;
+  xMinMaxButtonWidth = width*1/10;
+  xMinMaxButtonHeight = height*1/10; 
+  //Text
+  MinMaxFont = createFont("Arial Narrow", 55);
+  //End Text 
+  //End Population of Maximise/Minimise Button
   
   
   
