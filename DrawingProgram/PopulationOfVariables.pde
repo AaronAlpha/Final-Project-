@@ -86,6 +86,17 @@ void populationOfVariables() {
   //End Population of Virtual Piece of Paper
   
   
+  //Population of Restart Canvas box(that'll cover the canvas with a new virtual box everytime)
+  restartCanvasX = xCenter - xCenter*1/2;
+  restartCanvasY = height*0;
+  restartCanvasWidth = xCenter + xCenter*1/2; 
+  restartCanvasHeight = height*6.5/10;
+  //End Population Restart Canvas box
+  
+  
+  
+  
+  
   drawingDiameter = width*1/100; //diameter of circle line tool
   
   
@@ -176,14 +187,7 @@ void populationOfVariables() {
   //End Population of Music Player Tool Box
   
   
-  //Population of Restart Canvas box(that'll cover the canvas with a new virtual box everytime)
-  restartCanvasX = xCenter - xCenter*1/2;
-  restartCanvasY = height*0;
-  restartCanvasWidth = xCenter + xCenter*1/2; 
-  restartCanvasHeight = height*6.5/10;
-   
   
-  //End Population Restart Canvas box
   
 
   
