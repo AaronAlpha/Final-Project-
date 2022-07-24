@@ -38,20 +38,36 @@ void setup() {
 
 void draw() {
 
-
-  if (mousePressed == true) {
-    draw = true;
-  } else {
-    draw = false;
-  }
+  lineButton();
+  eraserButton();
 
 
-  //ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter) //have to mae ellipse tool as well
-  if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) line(mouseX, mouseY, pmouseX, pmouseY); //Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
+  //ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter) //have to mae ellipse tool as well  ----> dont think its useful
+  if (lineDraw == true) {  
+      if (mousePressed == true) {
+      draw = true;
+      } else {
+      draw = false;
+      }
+      if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) line(mouseX, mouseY, pmouseX, pmouseY); //Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+      eraser = false;
+} else{ 
+    lineDraw = false;
+}
+
+
+
+
+
+
+
+
+
+  //user tools
   if (shouldRestart == true) rect(restartCanvasX, restartCanvasY, restartCanvasWidth, restartCanvasHeight); 
   shouldRestart = false; //Restart Button process
-  
+
   restartButton();
   closeButton();
 
@@ -62,17 +78,17 @@ void draw() {
   //} else if (MaxAlready == false) {
   //  MaxtoMinButton();
   //};
+  //end user tools
 
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
   //starter box code used to introduce code to user
   //if (starterBox == false) {
   //  populationOfVariables();
@@ -103,12 +119,9 @@ void draw() {
   //fill(buttonfilltextstart);
   //text(startText, xStart, yStart, StartWidth, StartHeigt); //'text()' function 'draws' the text 
   //fill(resetWhite);
-    
+
   //rect(xStartBox, yStartBox, StartBoxWidth, StartBoxHeight);
   //}
-
-
-  
 };
 
 
@@ -131,6 +144,24 @@ void mousePressed() {
       shouldRestart = true;
     } else {
       shouldRestart = false;
+    }
+  }
+
+
+
+  if (mouseX >= xlinetool && mouseX <= xlinetool +  linetoolWidth && mouseY >= ylinetool && mouseY <= ylinetool + linetoolHeight) {
+    if (lineDraw == false) {
+      lineDraw = true;
+    } else {
+      lineDraw = false;
+    }
+  }
+
+  if (mouseX >= eraserboxX && mouseX <= eraserboxX +  eraserboxWidth && mouseY >= eraserboxY && mouseY <= eraserboxY + eraserboxHeight) {
+    if (eraser == false) {
+      eraser = true;
+    } else {
+      eraser = false;
     }
   }
 
@@ -159,7 +190,6 @@ void mousePressed() {
   //starterBox = false;
   //  }
   //}
-
 }//this is for the starter button
 
 

@@ -6,7 +6,16 @@ String ls = "Landscape or Square", p = "Portrait", DO = "Display Orientation", i
 
 
 float lineboxX, lineboxY, lineboxWidth, lineboxHeight;
+float xlinetool, ylinetool, linetoolWidth, linetoolHeight;
+int lineSize;
+String lineswitchText = "Drawing mode";
+color buttonfillline, buttontextfillline;
+boolean lineDraw = false;
 float eraserboxX, eraserboxY, eraserboxWidth, eraserboxHeight;
+int eraserSize;
+String eraserswitchText= "Eraser";
+color buttonfilleraser, buttontextfilleraser;
+boolean eraser = false;
 
 float shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight;
 float colorpaletteboxX, colorpaletteboxY, colorpaletteboxWidth, colorpaletteboxHeight;
@@ -15,7 +24,7 @@ float musicboxX, musicboxY, musicboxWidth, musicboxHeight;
 float templateboxX, templateboxY, templateboxWidth, templateboxHeight;
 
 color purple = #9E05FF, resetWhite = #FFFFFF, red = #FF0000, blue = #5792F5, black = #000000, orange = #F59A39; //or another purple  color = #2c08ff
-PFont closeFont, RestartFont, RestartFontHover, MinMaxFont, introFont, startFont;
+PFont closeFont, RestartFont, RestartFontHover, MinMaxFont, introFont, startFont, linebuttonFont, eraserbuttonFont;
 
 
 String closeTitle = "X", Minimise = "□",  Maximise= "□□", Restart = "Erase All";
@@ -185,6 +194,28 @@ void populationOfVariables() {
   
   
   
+  //Population of line tool switch
+  xlinetool = width*0;
+  ylinetool = height*0;
+  linetoolWidth = (xCenter - xCenter*1/2)/2;
+  linetoolHeight = (height*6.5/10)/2;
+  //Text
+  linebuttonFont = createFont("Arial Narrow", 45);
+  //End Text 
+  //End population of line tool switch
+  
+  
+  //Population of eraser tool switch
+  eraserboxX = width*0 + (xCenter - xCenter*1/2)/2;
+  eraserboxY = height*0;
+  eraserboxWidth = (xCenter - xCenter*1/2)/2;
+  eraserboxHeight = (height*6.5/10)/2;
+  //Text
+  eraserbuttonFont = createFont("Arial Narrow", 45);
+  //End Text 
+  //End population of eraser tool
+ 
+  
   //Population of Line Tool Box
   lineboxX = width * 0;
   lineboxY = height * 0;
@@ -239,13 +270,14 @@ void populationOfVariables() {
   
   
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight); //is the Virtual piece of paper
-  rect(lineboxX, lineboxY, lineboxWidth, lineboxHeight); //the 'Line drawing tool' tool box top left
+  rect(lineboxX, lineboxY, lineboxWidth, lineboxHeight); //the 'Line drawing tool' tool box top left with eraser switch
   rect(shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight); 
   rect(colorpaletteboxX, colorpaletteboxY, colorpaletteboxWidth, colorpaletteboxHeight);
   rect(colorpalettefillerboxX, colorpalettefillerboxY, colorpalettefillerboxWidth, colorpalettefillerboxHeight);
   rect(musicboxX, musicboxY, musicboxWidth, musicboxHeight);
   rect(templateboxX, templateboxY, templateboxWidth, templateboxHeight);
-  
+  rect(xlinetool, ylinetool, linetoolWidth, linetoolHeight);//is the button to switch to the line tool
+  rect(eraserboxX, eraserboxY, eraserboxWidth, eraserboxHeight);//this is the button to switch to the eraser tool
   
   
   
