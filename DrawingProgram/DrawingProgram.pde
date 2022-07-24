@@ -25,7 +25,10 @@ void setup() {
 
 
   populationOfVariables();
+  
   printArray(fontList); //is another line of code for print statements
+  
+  
 };
 
 
@@ -59,6 +62,7 @@ void draw() {
 
   restartButton();
   closeButton();
+  
 };
 
 

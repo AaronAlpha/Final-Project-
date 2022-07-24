@@ -207,4 +207,5 @@ void populationOfVariables() {
   rect(musicboxX, musicboxY, musicboxWidth, musicboxHeight);
   rect(templateboxX, templateboxY, templateboxWidth, templateboxHeight);
   
+  
 }
