@@ -1,32 +1,75 @@
 void thin() {
-  fill(buttonfillclose);
-  rect(xCloseButton, yCloseButton, CloseButtonWidth, CloseButtonHeight); //is the closing button //needs hover over(color and text)
+  //Thin button
+  //Hover-over color for Thin Button
+  if (mouseX >= xThin && mouseX <= xThin +  thinWidth && mouseY >= yThin && mouseY <= yThin + thinHeight) {
+    buttonfillthin = red;
+    buttontextfillthin = resetWhite;
+  } else {
+    buttonfillthin = resetWhite;  
+    buttontextfillthin = red;
+  }
+  
+  //End Hover-over color for Thin Button
+
+  
+  fill(buttonfillthin);
+  rect(xThin, yThin, thinWidth, thinHeight); //is the closing button //needs hover over(color and text)
   textAlign(CENTER, CENTER);
-  closeSize = 40; //Changing number until it exists
-  textFont(closeFont, closeSize); //used to affext the text
-  fill(buttontextfillclose);
-  text(closeTitle, xCloseButton, yCloseButton, CloseButtonWidth, CloseButtonHeight); //'text()' function 'draws' the text 
+  thinSize = 40; //Changing number until it exists
+  textFont(thinbuttonFont, thinSize); //used to affext the text
+  fill(buttontextfillthin);
+  text(thin, xThin, yThin, thinWidth, thinHeight); //'text()' function 'draws' the text 
   fill(resetWhite);
 }
+
+  //End Thin button
+
+
 
 void thick() {
-  fill(buttonfillclose);
-  rect(xCloseButton, yCloseButton, CloseButtonWidth, CloseButtonHeight); //is the closing button //needs hover over(color and text)
+  //Thick button
+  //Hover-over color for Thick Button
+  if (mouseX >= xThick && mouseX <= xThick +  thickWidth && mouseY >= yThick && mouseY <= yThick + thickHeight) {
+    buttonfillthick = green;
+    buttontextfillthick = resetWhite;
+  } else {
+    buttonfillthick = resetWhite;  
+    buttontextfillthick = green;
+  }
+  //End Hover-over color for Thick Button
+  
+  fill(buttonfillthick);
+  rect(xThick, yThick, thickWidth, thickHeight); //is the closing button //needs hover over(color and text)
   textAlign(CENTER, CENTER);
-  closeSize = 40; //Changing number until it exists
-  textFont(closeFont, closeSize); //used to affext the text
-  fill(buttontextfillclose);
-  text(closeTitle, xCloseButton, yCloseButton, CloseButtonWidth, CloseButtonHeight); //'text()' function 'draws' the text 
+  thickSize = 40; //Changing number until it exists
+  textFont(thickbuttonFont, thickSize); //used to affext the text
+  fill(buttontextfillthick);
+  text(thick, xThick, yThick, thickWidth, thickHeight); //'text()' function 'draws' the text 
   fill(resetWhite);
 }
+  //End Thick button
+  
+  
 
 void thicker() {
-  fill(buttonfillclose);
-  rect(xCloseButton, yCloseButton, CloseButtonWidth, CloseButtonHeight); //is the closing button //needs hover over(color and text)
+  //Thicker button
+  //Hover-over color for Thicker Button
+  if (mouseX >= xThicker && mouseX <= xThicker +  thickerWidth && mouseY >= yThicker && mouseY <= yThicker + thickerHeight) {
+    buttonfillthicker = yellow;
+      buttontextfillthicker = resetWhite;
+  } else {
+    buttonfillthicker = resetWhite;  
+    buttontextfillthicker = yellow;
+  }
+  //End Hover-over color for Thicker Button
+  
+  fill(buttonfillthicker);
+  rect(xThicker, yThicker, thickerWidth, thickerHeight); //is the closing button //needs hover over(color and text)
   textAlign(CENTER, CENTER);
-  closeSize = 40; //Changing number until it exists
-  textFont(closeFont, closeSize); //used to affext the text
-  fill(buttontextfillclose);
-  text(closeTitle, xCloseButton, yCloseButton, CloseButtonWidth, CloseButtonHeight); //'text()' function 'draws' the text 
+  thickerSize = 40; //Changing number until it exists
+  textFont(thickerbuttonFont, thickerSize); //used to affext the text
+  fill(buttontextfillthicker);
+  text(thicker, xThicker, yThicker, thickerWidth, thickerHeight); //'text()' function 'draws' the text 
   fill(resetWhite);
 }
+  //End Thicker button

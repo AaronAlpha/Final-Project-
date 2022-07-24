@@ -40,11 +40,14 @@ void draw() {
 
   lineButton();
   eraserButton();
+  thin();
+  thick();
+  thicker();
 
 
 
   //ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter) //have to mae ellipse tool as well  ----> dont think its useful
-  if (lineDraw == true) {  
+  if (lineDraw == true) {     
     if (mousePressed == true) {
       draw = true;
     } else {

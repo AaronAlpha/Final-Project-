@@ -3,6 +3,11 @@ float drawingSurfaceY, drawingSurfaceX, drawingSurfaceWidth, drawingSurfaceHeigh
 boolean draw = false;
 float xCenter, yCenter;
 String ls = "Landscape or Square", p = "Portrait", DO = "Display Orientation", instruct = "Flip your screen";
+color purple = #9E05FF, resetWhite = #FFFFFF, red = #FF0000, blue = #5792F5, black = #000000, orange = #F59A39, green =#39F56C, yellow = #EEF539; //or another purple  color = #2c08ff
+
+PFont closeFont, RestartFont, RestartFontHover, MinMaxFont, introFont, startFont, linebuttonFont, eraserbuttonFont, toolsFont, thinbuttonFont, thickbuttonFont, thickerbuttonFont;
+PFont shapesbuttonFont, colorbuttonFont, colorfillerbuttonFont;
+String[] fontList = PFont.list(); //To list all fonts avaliable on OS
 
 
 float lineboxX, lineboxY, lineboxWidth, lineboxHeight;
@@ -11,26 +16,45 @@ int lineSize;
 String lineswitchText = "Drawing mode";
 color buttonfillline, buttontextfillline;
 boolean lineDraw = false;
+
 float eraserboxX, eraserboxY, eraserboxWidth, eraserboxHeight;
 int eraserSize;
 String eraserswitchText= "Eraser";
 color buttonfilleraser, buttontextfilleraser;
+
 float xTools, yTools, toolsWidth, toolsHeight;
+
 float xThin, yThin, thinWidth, thinHeight;
+color buttonfillthin, buttontextfillthin;
+String thin = "Thin line";
+int thinSize;
+
 float xThick, yThick, thickWidth, thickHeight;
+color buttonfillthick, buttontextfillthick;
+String thick = "Thick line";
+
+int thickSize;
 float xThicker, yThicker, thickerWidth, thickerHeight;
-
-
+color buttonfillthicker, buttontextfillthicker;
+String thicker = "Thicker line";
+int thickerSize;
 
 
 float shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight;
+
+
 float colorpaletteboxX, colorpaletteboxY, colorpaletteboxWidth, colorpaletteboxHeight;
+
 float colorpalettefillerboxX, colorpalettefillerboxY, colorpalettefillerboxWidth, colorpalettefillerboxHeight;
-float musicboxX, musicboxY, musicboxWidth, musicboxHeight;
+
+
 float templateboxX, templateboxY, templateboxWidth, templateboxHeight;
 
-color purple = #9E05FF, resetWhite = #FFFFFF, red = #FF0000, blue = #5792F5, black = #000000, orange = #F59A39; //or another purple  color = #2c08ff
-PFont closeFont, RestartFont, RestartFontHover, MinMaxFont, introFont, startFont, linebuttonFont, eraserbuttonFont, toolsFont, thinbuttonFont, thickbuttonFont, thickerbuttonFont;
+float musicboxX, musicboxY, musicboxWidth, musicboxHeight;
+
+
+
+
 
 
 String closeTitle = "X", Minimise = "□",  Maximise= "□□", Restart = "Erase All";
@@ -56,7 +80,7 @@ boolean MaxAlready = false; //means that its in Maximised mode already, if 'true
 int appWidth = width;
 int appHeight = height;
 
-String[] fontList = PFont.list(); //To list all fonts avaliable on OS
+
 
 float xStartBox, yStartBox, StartBoxWidth, StartBoxHeight;
 boolean starterBox = true;
@@ -246,7 +270,7 @@ void populationOfVariables() {
   thickbuttonFont = createFont("Arial Narrow", 45);
   //End Text 
   
-  xThicker = ((xCenter - xCenter*1/2)/2)*2/3;
+  xThicker = ((xCenter - xCenter*1/2)/2)*1.3333333;
   yThicker = (height*6.5/10)/4;
   thickerWidth = linetoolWidth*2/3;
   thickerHeight = (height*6.5/10)/4;
@@ -271,6 +295,9 @@ void populationOfVariables() {
   shapesboxY = (height*6.5/10)/2;
   shapesboxWidth = xCenter - xCenter*1/2;
   shapesboxHeight = (height*6.5/10)/2;
+  //Text
+  shapesbuttonFont = createFont("Arial Narrow", 45);
+  //End Text 
   //End Population of Shapes Tool Box
   
   
@@ -279,21 +306,27 @@ void populationOfVariables() {
   colorpaletteboxY = height*6.5/10;
   colorpaletteboxWidth = xCenter - xCenter*1/2;
   colorpaletteboxHeight = height; //this box takes up the remaining space as there is a small gaping if it uses the uniformed height of ((height*6.5/10)/2)
+  //Text
+  colorbuttonFont = createFont("Arial Narrow", 45);
+  //End Text 
   //End Population of Line Tool Box
   
   
   //Population of Color Fill Background Tool Box
-  colorpalettefillerboxX = xCenter - xCenter*1/2;
+  colorpalettefillerboxX = (xCenter - xCenter*1/2)/2;
   colorpalettefillerboxY = height*6.5/10;
-  colorpalettefillerboxWidth = xCenter - xCenter*1/2;
-  colorpalettefillerboxHeight = height; //
+  colorpalettefillerboxWidth = (xCenter - xCenter*1/2)/2;
+  colorpalettefillerboxHeight = height; 
+  //Text
+ colorfillerbuttonFont = createFont("Arial Narrow", 45);
+  //End Text 
   //End Population of Color Fill Background Tool Box
-  
+   
   
   //Population of Template Tool Box
-  templateboxX = xCenter ;
+  templateboxX = xCenter - xCenter*1/2;
   templateboxY = height*6.5/10;
-  templateboxWidth = xCenter - xCenter*6/10;
+  templateboxWidth = xCenter - xCenter*2/10;
   templateboxHeight = height; 
   //End Population of Template Tool Box
   
