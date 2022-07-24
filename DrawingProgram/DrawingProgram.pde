@@ -13,7 +13,7 @@ import ddf.minim.ugens.*;
 
 void setup() {
   size(1750, 900);//Landscape or Square or Portrait 
-  
+
   //the following is an attempt to trying to increase the app screen to full screen or decrease the screen to the original/default screen size
   //if (MaxAlready == false) {
   //  size(1750, 900);
@@ -23,12 +23,10 @@ void setup() {
   //if (MaxAlready == true) size(displayWidth, displayHeight);
   //if (MaxAlready == false) size(1750, 900);
 
-
   populationOfVariables();
-  
+
+
   printArray(fontList); //is another line of code for print statements
-  
-  
 };
 
 
@@ -39,7 +37,8 @@ void setup() {
 
 
 void draw() {
-  
+
+
   if (mousePressed == true) {
     draw = true;
   } else {
@@ -62,6 +61,44 @@ void draw() {
 
   restartButton();
   closeButton();
+
+  if (starterBox == true) {
+    rect(xStartBox, yStartBox, StartBoxWidth, StartBoxHeight);
+  } else {
+    
+  }
+  
+  
+  
+  rect(IntroX, IntroY, IntroWidth, IntroHeight); //is the closing button //needs hover over(color and text)
+  textAlign(CENTER, CENTER);
+  introSize = 40; //Changing number until it exists
+  textFont(introFont, introSize); //used to affext the text
+  fill(buttontextfillclose);
+  text(introText, IntroX, IntroY, IntroWidth, IntroHeight); //'text()' function 'draws' the text 
+  fill(resetWhite);
+  
+  
+  
+  
+  
+  if (mouseX >= xStart && mouseX <= xStart +  StartWidth && mouseY >= yStart && mouseY <= yStart + StartHeigt) {
+    buttonfillStart = orange;
+    buttonfilltextstart = resetWhite;
+  } else {
+    buttonfillStart = resetWhite;  
+    buttonfilltextstart = orange;
+  }
+  
+  rect(xStart, yStart, StartWidth, StartHeigt); //is the closing button //needs hover over(color and text)
+  textAlign(CENTER, CENTER);
+  startSize = 40; //Changing number until it exists
+  textFont(startFont, startSize); //used to affext the text
+  fill(buttontextfillclose);
+  text(startText, xStart, yStart, StartWidth, StartHeigt); //'text()' function 'draws' the text 
+  fill(resetWhite);
+  
+  
   
 };
 
@@ -95,7 +132,7 @@ void mousePressed() {
   //  }
   //}
   
-  
+  if (mouseX >= xCloseButton && mouseX <= xCloseButton +  CloseButtonWidth && mouseY >= yCloseButton && mouseY <= yCloseButton + CloseButtonHeight) exit(); //this is for the starter button
   
 }
 

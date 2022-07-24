@@ -14,8 +14,8 @@ float colorpalettefillerboxX, colorpalettefillerboxY, colorpalettefillerboxWidth
 float musicboxX, musicboxY, musicboxWidth, musicboxHeight;
 float templateboxX, templateboxY, templateboxWidth, templateboxHeight;
 
-color purple = #9E05FF, resetWhite = #FFFFFF, red = #FF0000, blue = #5792F5, black = #000000; //or another purple  color = #2c08ff
-PFont closeFont, RestartFont, RestartFontHover, MinMaxFont;
+color purple = #9E05FF, resetWhite = #FFFFFF, red = #FF0000, blue = #5792F5, black = #000000, orange = #F59A39; //or another purple  color = #2c08ff
+PFont closeFont, RestartFont, RestartFontHover, MinMaxFont, introFont, startFont;
 
 
 String closeTitle = "X", Minimise = "□",  Maximise= "□□", Restart = "Erase All";
@@ -30,6 +30,7 @@ color buttonfillrestart, buttontextfillrestart;
 boolean shouldRestart = false;
 float restartCanvasX, restartCanvasY, restartCanvasWidth, restartCanvasHeight;
 String restartHoverText = "This is to erase all of the drawing and to restart";
+boolean continueRestartHoverOver = false;
 
 float xMinMaxButton, yMinMaxButton, xMinMaxButtonWidth, xMinMaxButtonHeight;
 int MinMaxSize;
@@ -40,11 +41,18 @@ boolean MaxAlready = false; //means that its in Maximised mode already, if 'true
 int appWidth = width;
 int appHeight = height;
 
-
-
-
-
 String[] fontList = PFont.list(); //To list all fonts avaliable on OS
+
+float xStartBox, yStartBox, StartBoxWidth, StartBoxHeight;
+boolean starterBox = true;
+float IntroX, IntroY, IntroWidth, IntroHeight;
+String introText = "Welcome to the Drawing Program";
+int introSize;
+float xStart, yStart, StartWidth, StartHeigt;
+int startSize;
+String startText = "Press to Start the Program Here!";
+color buttonfillStart, buttonfilltextstart;
+
 
 
 
@@ -84,7 +92,38 @@ void populationOfVariables() {
   
   
   
+  
+  //Population Intro
+  IntroX = xCenter - xCenter*1/2;
+  IntroY = yCenter - yCenter*1/2; 
+  IntroWidth = xCenter; 
+  IntroHeight = yCenter-yCenter*1/4;
+  //Text
+  introFont = createFont("Arial Narrow", 45);
+  //End Text
+  //End Population Intro
+  
+  
+  
+  //Population Start
+  xStart = xCenter - xCenter*1.25/5;
+  yStart = yCenter + yCenter*2/5;
+  StartWidth = IntroWidth*3/4 - IntroWidth*1/4;
+  StartHeigt = IntroHeight/2;
+  //Text
+  startFont = createFont("Arial Narrow", 45);
+  //End Text  
+  //End Population start
+  
 
+  
+  //Population of Starter box for program
+   xStartBox = width*0;
+   yStartBox = height*0;
+   StartBoxWidth = width; 
+   StartBoxHeight = height;
+  
+  //End Population of Starter box for program
   
 
   //Population of Virtual Piece of Paper
@@ -195,9 +234,9 @@ void populationOfVariables() {
   
   
   
-
   
-  
+  rect(IntroX, IntroY, IntroWidth, IntroHeight);
+  rect(xStart, yStart, StartWidth, StartHeigt);
   
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight); //is the Virtual piece of paper
   rect(lineboxX, lineboxY, lineboxWidth, lineboxHeight); //the 'Line drawing tool' tool box top left
@@ -206,6 +245,8 @@ void populationOfVariables() {
   rect(colorpalettefillerboxX, colorpalettefillerboxY, colorpalettefillerboxWidth, colorpalettefillerboxHeight);
   rect(musicboxX, musicboxY, musicboxWidth, musicboxHeight);
   rect(templateboxX, templateboxY, templateboxWidth, templateboxHeight);
+  
+  
   
   
 }
