@@ -16,9 +16,9 @@ int eraserSize;
 String eraserswitchText= "Eraser";
 color buttonfilleraser, buttontextfilleraser;
 float xTools, yTools, toolsWidth, toolsHeight;
-int toolsSize;
-String toolsText= "Eraser";
-color buttonfilltools, buttontextfilltools;
+float xThin, yThin, thinWidth, thinHeight;
+float xThick, yThick, thickWidth, thickHeight;
+float xThicker, yThicker, thickerWidth, thickerHeight;
 
 
 
@@ -227,10 +227,22 @@ void populationOfVariables() {
   yTools = (height*6.5/10)/4;
   toolsWidth = xCenter - xCenter*1/2;
   toolsHeight = (height*6.5/10)/4;
-  //Text
-  toolsFont = createFont("Arial Narrow", 45);
-  //End Text 
   //End Population of tools for tools box(drawing mode and eraser)
+  
+  //Population for different size drawing tool
+  xThin = ;
+  yThin = ;
+  thinWidth = ;
+  thinHeight = ;
+  xThick = ;
+  yThick = ;
+  thickWidth = ;
+  thickHeight = ; 
+  xThicker = ;
+  yThicker = ;
+  thickerWidth = ;
+  thickerHeight = ;
+  //End Population for different size drawing tool
   
   
  
@@ -297,6 +309,9 @@ void populationOfVariables() {
   rect(xlinetool, ylinetool, linetoolWidth, linetoolHeight);//is the button to switch to the line tool
   rect(eraserboxX, eraserboxY, eraserboxWidth, eraserboxHeight);//this is the button to switch to the eraser tool
   rect(xTools, yTools, toolsWidth, toolsHeight);
+  rect(xThin, yThin, thinWidth, thinHeight);
+  rect(xThick, yThick, thickWidth, thickHeight);
+  rect(xThicker, yThicker, thickerWidth, thickerHeight);
   
   
   
