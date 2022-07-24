@@ -28,15 +28,7 @@ void setup() {
 void draw() {
 
   if (mousePressed == true) {
-    if (mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight)
-  {
-    if (draw == false) 
-    {
-      draw = true;
-    } else {
-      draw = false;
-    }
-  } ;
+    draw = true;
   } else {
     draw = false;
   }
@@ -99,13 +91,10 @@ void keyPressed() {
 
 
 void mousePressed() {
-  
-  
-
-
   if (mouseX >= xCloseButton && mouseX <= xCloseButton +  CloseButtonWidth && mouseY >= yCloseButton && mouseY <= yCloseButton + CloseButtonHeight) exit();
 
   //if (mouseX >= xCloseButton && mouseX <= xCloseButton +  CloseButtonWidth && mouseY >= yCloseButton && mouseY <= yCloseButton + CloseButtonHeight) exit();
+
 };
 
 
