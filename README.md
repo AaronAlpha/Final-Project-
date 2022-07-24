@@ -14,3 +14,4 @@ To-do list:
  - [ ] fill background color
  - [ ] restart button
  - [ ] starting screen that introduce app and start button tp start program(will basically be a virtual paper/screen on top of the app)
+ - [x] drawing by pressing and holding and then stop drawing by letting go
