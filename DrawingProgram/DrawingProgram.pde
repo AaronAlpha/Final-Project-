@@ -13,6 +13,16 @@ import ddf.minim.ugens.*;
 
 void setup() {
   size(1750, 900);//Landscape or Square or Portrait 
+  
+  //the following is an attempt to trying to increase the app screen to full screen or decrease the screen to the original/default screen size
+  //if (MaxAlready == false) {
+  //  size(1750, 900);
+  //} else if (MaxAlready == true) {
+  //  size(displayWidth, displayHeight);
+  //}
+  //if (MaxAlready == true) size(displayWidth, displayHeight);
+  //if (MaxAlready == false) size(1750, 900);
+
 
   populationOfVariables();
   printArray(fontList); //is another line of code for print statements
@@ -26,8 +36,7 @@ void setup() {
 
 
 void draw() {
-
-
+  
   if (mousePressed == true) {
     draw = true;
   } else {
@@ -41,18 +50,12 @@ void draw() {
   if (shouldRestart == true) rect(restartCanvasX, restartCanvasY, restartCanvasWidth, restartCanvasHeight); 
   shouldRestart = false; //Restart Button process
 
-
-  if (MaxAlready == true) {
-    MintoMaxButton() ;
-    appWidth = displayWidth; 
-    appHeight = displayHeight;
-    
-  } else if (MaxAlready == false) {
-    MaxtoMinButton();
-    appWidth = width; 
-    appHeight = height; 
-
-  };
+  //the following is an attempt to trying to increase the app screen to full screen or decrease the screen to the original/default screen size
+  //if (MaxAlready == true) {
+  //  MintoMaxButton() ;
+  //} else if (MaxAlready == false) {
+  //  MaxtoMinButton();
+  //};
 
   restartButton();
   closeButton();
@@ -77,16 +80,16 @@ void mousePressed() {
     }
   };
 
-
-  if (mouseX >= xMinMaxButton && mouseX <= xMinMaxButton +  xMinMaxButtonWidth && mouseY >= yMinMaxButton && mouseY <= yMinMaxButton + xMinMaxButtonHeight) {
-    if (appWidth != displayWidth && appHeight != displayHeight) { 
-      if (MaxAlready == false) {
-        MaxAlready = true;
-      } else {
-        MaxAlready = false;
-      }
-    }
-  }
+  //the following is an attempt to trying to increase the app screen to full screen or decrease the screen to the original/default screen size
+  //if (mouseX >= xMinMaxButton && mouseX <= xMinMaxButton +  xMinMaxButtonWidth && mouseY >= yMinMaxButton && mouseY <= yMinMaxButton + xMinMaxButtonHeight) {
+  //  if (appWidth != displayWidth && appHeight != displayHeight) { 
+  //    if (MaxAlready == false) {
+  //      MaxAlready = true;
+  //    } else {
+  //      MaxAlready = false;
+  //    }
+  //  }
+  //}
   
   
   

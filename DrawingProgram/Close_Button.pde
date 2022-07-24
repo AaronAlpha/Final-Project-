@@ -1,6 +1,6 @@
 void closeButton() {
   //Close button
-  //Hover-over for Close Button
+  //Hover-over color for Close Button
   if (mouseX >= xCloseButton && mouseX <= xCloseButton +  CloseButtonWidth && mouseY >= yCloseButton && mouseY <= yCloseButton + CloseButtonHeight) {
     buttonfillclose = red;
     buttontextfillclose = resetWhite;
@@ -8,7 +8,7 @@ void closeButton() {
     buttonfillclose = resetWhite;  
     buttontextfillclose = red;
   }
-  //End Hover over  for Close Button
+  //End Hover-over color for Close Button
 
   fill(buttonfillclose);
   rect(xCloseButton, yCloseButton, CloseButtonWidth, CloseButtonHeight); //is the closing button //needs hover over(color and text)

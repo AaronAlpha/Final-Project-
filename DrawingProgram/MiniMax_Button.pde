@@ -1,3 +1,5 @@
+//the following is an attempt to trying to increase the app screen to full screen or decrease the screen to the original/default screen size
+
 void MintoMaxButton() {
   //MintoMax button
   //Hover-over for MintoMax Button
@@ -20,6 +22,7 @@ void MintoMaxButton() {
   fill(resetWhite);
   //End MintoMax button
 
-
+  
+  
   
 }

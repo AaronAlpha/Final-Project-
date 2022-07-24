@@ -1,3 +1,6 @@
+//the following is an attempt to trying to increase the app screen to full screen or decrease the screen to the original/default screen size
+
+
 void MaxtoMinButton() {
   //MaxtoMin button
   //Hover-over for MaxtoMin Button
@@ -20,6 +23,5 @@ void MaxtoMinButton() {
   fill(resetWhite);
   //End MaxtoMin button
   
-  
-
+  if (MaxAlready == false) width = 1790; height = 900;
 }

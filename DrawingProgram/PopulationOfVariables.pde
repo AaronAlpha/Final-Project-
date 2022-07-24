@@ -14,21 +14,22 @@ float colorpalettefillerboxX, colorpalettefillerboxY, colorpalettefillerboxWidth
 float musicboxX, musicboxY, musicboxWidth, musicboxHeight;
 float templateboxX, templateboxY, templateboxWidth, templateboxHeight;
 
-color purple = #9E05FF, resetWhite = #FFFFFF, red = #FF0000, blue = #5792F5; //or another purple  color = #2c08ff
-PFont closeFont, RestartFont, MinMaxFont;
+color purple = #9E05FF, resetWhite = #FFFFFF, red = #FF0000, blue = #5792F5, black = #000000; //or another purple  color = #2c08ff
+PFont closeFont, RestartFont, RestartFontHover, MinMaxFont;
 
 
-String closeTitle = "X", Minimise = "□",  Maximise= "□□", Restart = "Restart";
+String closeTitle = "X", Minimise = "□",  Maximise= "□□", Restart = "Erase All";
 
 float xCloseButton, yCloseButton, CloseButtonWidth, CloseButtonHeight;
 int closeSize;
 color buttonfillclose, buttontextfillclose;
 
 float xRestartButton, yRestartButton, RestartButtonWidth, RestartButtonHeight;
-int restartSize;
+int restartSize, restartSizeHover;
 color buttonfillrestart, buttontextfillrestart;
 boolean shouldRestart = false;
 float restartCanvasX, restartCanvasY, restartCanvasWidth, restartCanvasHeight;
+String restartHoverText = "This is to erase all of the drawing and to restart";
 
 float xMinMaxButton, yMinMaxButton, xMinMaxButtonWidth, xMinMaxButtonHeight;
 int MinMaxSize;
@@ -115,22 +116,21 @@ void populationOfVariables() {
   RestartButtonHeight = height*1/10;
   //Text
   RestartFont = createFont("Arial Narrow", 45);
+  RestartFontHover = createFont("Arial Narrow", 45);
   //End Text 
   //End Population of Restart Button
   
   
-  //Population of Maximise/Minimise Button
-  xMinMaxButton = xCenter + xCenter*7.5/10;
-  yMinMaxButton = height*7.75/10;
-  xMinMaxButtonWidth = width*1/10;
-  xMinMaxButtonHeight = height*1/10; 
-  //Text
-  MinMaxFont = createFont("Arial Narrow", 55);
-  //End Text 
-  //End Population of Maximise/Minimise Button
-  
-  
-  
+  //the following is an attempt to trying to increase the app screen to full screen or decrease the screen to the original/default screen size
+  ////Population of Maximise/Minimise Button
+  //xMinMaxButton = xCenter + xCenter*7.5/10;
+  //yMinMaxButton = height*7.75/10;
+  //xMinMaxButtonWidth = width*1/10;
+  //xMinMaxButtonHeight = height*1/10; 
+  ////Text
+  //MinMaxFont = createFont("Arial Narrow", 55);
+  ////End Text 
+  ////End Population of Maximise/Minimise Button
   
   
   //Population of Close Button
@@ -142,8 +142,6 @@ void populationOfVariables() {
   closeFont = createFont("Arial Narrow", 45);
   //End Text 
   //End Population of Close Button
-  
-  
   
   
   
