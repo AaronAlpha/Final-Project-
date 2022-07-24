@@ -44,6 +44,9 @@ float shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight;
 
 
 float colorpaletteboxX, colorpaletteboxY, colorpaletteboxWidth, colorpaletteboxHeight;
+int colorSize;
+color buttonfillcolor, buttontextfillcolor;
+String colortext = "Color";
 
 float colorpalettefillerboxX, colorpalettefillerboxY, colorpalettefillerboxWidth, colorpalettefillerboxHeight;
 
@@ -304,7 +307,7 @@ void populationOfVariables() {
   //Population of Color Tool Box
   colorpaletteboxX = width * 0;
   colorpaletteboxY = height*6.5/10;
-  colorpaletteboxWidth = xCenter - xCenter*1/2;
+  colorpaletteboxWidth = (xCenter - xCenter*1/2)/2;
   colorpaletteboxHeight = height; //this box takes up the remaining space as there is a small gaping if it uses the uniformed height of ((height*6.5/10)/2)
   //Text
   colorbuttonFont = createFont("Arial Narrow", 45);
