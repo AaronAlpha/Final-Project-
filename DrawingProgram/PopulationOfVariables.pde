@@ -30,7 +30,7 @@ float musicboxX, musicboxY, musicboxWidth, musicboxHeight;
 float templateboxX, templateboxY, templateboxWidth, templateboxHeight;
 
 color purple = #9E05FF, resetWhite = #FFFFFF, red = #FF0000, blue = #5792F5, black = #000000, orange = #F59A39; //or another purple  color = #2c08ff
-PFont closeFont, RestartFont, RestartFontHover, MinMaxFont, introFont, startFont, linebuttonFont, eraserbuttonFont, toolsFont;
+PFont closeFont, RestartFont, RestartFontHover, MinMaxFont, introFont, startFont, linebuttonFont, eraserbuttonFont, toolsFont, thinbuttonFont, thickbuttonFont, thickerbuttonFont;
 
 
 String closeTitle = "X", Minimise = "□",  Maximise= "□□", Restart = "Erase All";
@@ -212,7 +212,7 @@ void populationOfVariables() {
   
   
   //Population of eraser tool switch
-  eraserboxX = width*0 + (xCenter - xCenter*1/2)/2;
+  eraserboxX = (xCenter - xCenter*1/2)/2;
   eraserboxY = height*0;
   eraserboxWidth = (xCenter - xCenter*1/2)/2;
   eraserboxHeight = (height*6.5/10)/4;
@@ -230,18 +230,29 @@ void populationOfVariables() {
   //End Population of tools for tools box(drawing mode and eraser)
   
   //Population for different size drawing tool
-  xThin = ;
-  yThin = ;
-  thinWidth = ;
-  thinHeight = ;
-  xThick = ;
-  yThick = ;
-  thickWidth = ;
-  thickHeight = ; 
-  xThicker = ;
-  yThicker = ;
-  thickerWidth = ;
-  thickerHeight = ;
+  xThin = width*0;
+  yThin = (height*6.5/10)/4;
+  thinWidth = linetoolWidth*2/3;
+  thinHeight = (height*6.5/10)/4;
+  //Text
+  thinbuttonFont = createFont("Arial Narrow", 45);
+  //End Text 
+  
+  xThick = linetoolWidth*2/3;
+  yThick = (height*6.5/10)/4;
+  thickWidth = linetoolWidth*2/3;
+  thickHeight = (height*6.5/10)/4; 
+  //Text
+  thickbuttonFont = createFont("Arial Narrow", 45);
+  //End Text 
+  
+  xThicker = ((xCenter - xCenter*1/2)/2)*2/3;
+  yThicker = (height*6.5/10)/4;
+  thickerWidth = linetoolWidth*2/3;
+  thickerHeight = (height*6.5/10)/4;
+  //Text
+  thickerbuttonFont = createFont("Arial Narrow", 45);
+  //End Text 
   //End Population for different size drawing tool
   
   
