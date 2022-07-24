@@ -55,16 +55,9 @@ void draw() {
     lineDraw = false;
   }
   
-  if (eraser == true) {  
-    if (mousePressed == true) {
-      draw = true;
-    } else {
-      draw = false;
-    }
-    if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) line(mouseX, mouseY, pmouseX, pmouseY); //Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
-  } else { 
-    eraser = false;
-  }
+  
+  
+  
 
 
 
@@ -169,13 +162,13 @@ void mousePressed() {
     }
   }
 
-  if (mouseX >= eraserboxX && mouseX <= eraserboxX +  eraserboxWidth && mouseY >= eraserboxY && mouseY <= eraserboxY + eraserboxHeight) {
-    if (eraser == false) {
-      eraser = true;
-    } else {
-      eraser = false;
-    }
-  }
+  //if (mouseX >= eraserboxX && mouseX <= eraserboxX +  eraserboxWidth && mouseY >= eraserboxY && mouseY <= eraserboxY + eraserboxHeight) {
+  //  if (eraser == false) {
+  //    eraser = true;
+  //  } else {
+  //    eraser = false;
+  //  }
+  //}
 
 
 

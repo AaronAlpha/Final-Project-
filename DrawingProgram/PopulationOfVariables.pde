@@ -15,7 +15,13 @@ float eraserboxX, eraserboxY, eraserboxWidth, eraserboxHeight;
 int eraserSize;
 String eraserswitchText= "Eraser";
 color buttonfilleraser, buttontextfilleraser;
-boolean eraser = false, eraserdraw;
+float xTools, yTools, toolsWidth, toolsHeight;
+int toolsSize;
+String toolsText= "Eraser";
+color buttonfilltools, buttontextfilltools;
+
+
+
 
 float shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight;
 float colorpaletteboxX, colorpaletteboxY, colorpaletteboxWidth, colorpaletteboxHeight;
@@ -24,7 +30,7 @@ float musicboxX, musicboxY, musicboxWidth, musicboxHeight;
 float templateboxX, templateboxY, templateboxWidth, templateboxHeight;
 
 color purple = #9E05FF, resetWhite = #FFFFFF, red = #FF0000, blue = #5792F5, black = #000000, orange = #F59A39; //or another purple  color = #2c08ff
-PFont closeFont, RestartFont, RestartFontHover, MinMaxFont, introFont, startFont, linebuttonFont, eraserbuttonFont;
+PFont closeFont, RestartFont, RestartFontHover, MinMaxFont, introFont, startFont, linebuttonFont, eraserbuttonFont, toolsFont;
 
 
 String closeTitle = "X", Minimise = "□",  Maximise= "□□", Restart = "Erase All";
@@ -198,7 +204,7 @@ void populationOfVariables() {
   xlinetool = width*0;
   ylinetool = height*0;
   linetoolWidth = (xCenter - xCenter*1/2)/2;
-  linetoolHeight = (height*6.5/10)/2;
+  linetoolHeight = (height*6.5/10)/4;
   //Text
   linebuttonFont = createFont("Arial Narrow", 45);
   //End Text 
@@ -209,11 +215,24 @@ void populationOfVariables() {
   eraserboxX = width*0 + (xCenter - xCenter*1/2)/2;
   eraserboxY = height*0;
   eraserboxWidth = (xCenter - xCenter*1/2)/2;
-  eraserboxHeight = (height*6.5/10)/2;
+  eraserboxHeight = (height*6.5/10)/4;
   //Text
   eraserbuttonFont = createFont("Arial Narrow", 45);
   //End Text 
   //End population of eraser tool
+  
+  
+  //Population of tools for tools box(drawing mode and eraser)
+  xTools = width*0;
+  yTools = (height*6.5/10)/4;
+  toolsWidth = xCenter - xCenter*1/2;
+  toolsHeight = (height*6.5/10)/4;
+  //Text
+  toolsFont = createFont("Arial Narrow", 45);
+  //End Text 
+  //End Population of tools for tools box(drawing mode and eraser)
+  
+  
  
   
   //Population of Line Tool Box
@@ -267,8 +286,7 @@ void populationOfVariables() {
   
   
   
-  
-  
+
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight); //is the Virtual piece of paper
   rect(lineboxX, lineboxY, lineboxWidth, lineboxHeight); //the 'Line drawing tool' tool box top left with eraser switch
   rect(shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight); 
@@ -278,6 +296,7 @@ void populationOfVariables() {
   rect(templateboxX, templateboxY, templateboxWidth, templateboxHeight);
   rect(xlinetool, ylinetool, linetoolWidth, linetoolHeight);//is the button to switch to the line tool
   rect(eraserboxX, eraserboxY, eraserboxWidth, eraserboxHeight);//this is the button to switch to the eraser tool
+  rect(xTools, yTools, toolsWidth, toolsHeight);
   
   
   

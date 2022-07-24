@@ -8,6 +8,7 @@ void lineButton() {
     buttonfillline = resetWhite;  
     buttontextfillline = black;
   }
+  
   //End Hover-over color for Line Button
 
   fill(buttonfillline);
