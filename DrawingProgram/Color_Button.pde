@@ -1,22 +1,22 @@
 void colorButton() {
   //Color button
-  //Hover-over color for Color Button
-  if (mouseX >= colorpaletteboxX && mouseX <= colorpaletteboxX +  colorpaletteboxWidth && mouseY >= colorpaletteboxY && mouseY <= colorpaletteboxY + colorpaletteboxHeight) {
-    buttonfillcolor = black;
+  //Hover-over color for Color colorpaletteboxHeight
+  if (mouseX >= colorpaletteboxX && mouseX <= colorpaletteboxX +  colorpaletteboxHeight && mouseY >= colorpaletteboxY && mouseY <= colorpaletteboxY + colorpaletteboxHeight) {
+    buttonfillcolor = red;
     buttontextfillcolor = resetWhite;
   } else {
     buttonfillcolor = resetWhite;  
-    buttontextfillcolor = black;
+    buttontextfillcolor = red;
   }
-  //End Hover-over color for Color Button
+  //End Hover-over color for Close Button
 
   fill(buttonfillcolor);
-  rect(colorpaletteboxX, colorpaletteboxY, colorpaletteboxWidth, colorpaletteboxHeight); //is the closing button //needs hover over(color and text)
+  rect(colorpaletteboxX, colorpaletteboxY, colorpaletteboxWidth, colorpaletteboxHeight); //is the closing button //needs hover over(color and <del>text</del>)
   textAlign(CENTER, CENTER);
-  colorSize = 40; //Changing number until it exists
-  textFont(colorbuttonFont, colorSize); //used to affext the text
+  buttontextfillcolor = 40; //Changing number until it exists
+  textFont(closeFont, colorSize); //used to affext the text
   fill(buttontextfillcolor);
-  text(thicker, colorpaletteboxX, colorpaletteboxY, colorpaletteboxWidth, colorpaletteboxHeight); //'text()' function 'draws' the text 
+  text(colortext, colorpaletteboxX, colorpaletteboxY, colorpaletteboxWidth, colorpaletteboxHeight); //'text()' function 'draws' the text 
   fill(resetWhite);
-  //End Color button
-}
+  //End Close button
+};

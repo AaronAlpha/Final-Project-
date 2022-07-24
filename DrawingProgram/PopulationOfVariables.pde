@@ -32,8 +32,8 @@ int thinSize;
 float xThick, yThick, thickWidth, thickHeight;
 color buttonfillthick, buttontextfillthick;
 String thick = "Thick line";
-
 int thickSize;
+
 float xThicker, yThicker, thickerWidth, thickerHeight;
 color buttonfillthicker, buttontextfillthicker;
 String thicker = "Thicker line";
