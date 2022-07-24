@@ -16,7 +16,7 @@ void colorButton() {
   colorSize = 40; //Changing number until it exists
   textFont(colorbuttonFont, colorSize); //used to affext the text
   fill(buttontextfillcolor);
-  text(colortext, colorpaletteboxX, colorpaletteboxY, colorpaletteboxWidth, colorpaletteboxHeight); //'text()' function 'draws' the text 
+  text(thicker, colorpaletteboxX, colorpaletteboxY, colorpaletteboxWidth, colorpaletteboxHeight); //'text()' function 'draws' the text 
   fill(resetWhite);
   //End Color button
 }
