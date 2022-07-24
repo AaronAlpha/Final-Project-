@@ -20,8 +20,18 @@ void setup() {
 
 
 
+
+
+
+
+
 void draw() {
 
+  if (mousePressed == true) {
+    fill(0);
+  } else {
+    fill(255);
+  }
   
   
   //ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter) //have to mae ellipse tool as well
@@ -81,15 +91,24 @@ void keyPressed() {
 
 
 void mousePressed() {
-  if (mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight)
+  //if (mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight)
+  //{
+  //  if (draw == false) 
+  //  {
+  //    draw = true;
+  //  } else {
+  //    draw = false;
+  //  }
+  //} 
+  
+   if (mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight)
   {
     if (draw == false) 
     {
       draw = true;
     } else {
       draw = false;
-    }
-  } 
+    };
 
 
   if (mouseX >= xCloseButton && mouseX <= xCloseButton +  CloseButtonWidth && mouseY >= yCloseButton && mouseY <= yCloseButton + CloseButtonHeight) exit();
@@ -99,18 +118,6 @@ void mousePressed() {
 
 
 
-
-void mouseClicked() {
-  if (mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight)
-  {
-    if (draw == false) 
-    {
-      draw = true;
-    } else {
-      draw = false;
-    }
-  } 
-};
 
 
 

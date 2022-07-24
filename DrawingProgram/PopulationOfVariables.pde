@@ -39,8 +39,7 @@ String[] fontList = PFont.list(); //To list all fonts avaliable on OS
 
 
 
-void populationOfVariables(){  
-  
+void populationOfVariables() {   
   
   
   xCenter = width/2;
@@ -186,7 +185,5 @@ void populationOfVariables(){
   rect(colorpalettefillerboxX, colorpalettefillerboxY, colorpalettefillerboxWidth, colorpalettefillerboxHeight);
   rect(musicboxX, musicboxY, musicboxWidth, musicboxHeight);
   rect(templateboxX, templateboxY, templateboxWidth, templateboxHeight);
-  
-  
   
 }
