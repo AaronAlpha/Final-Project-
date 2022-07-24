@@ -35,14 +35,14 @@ void restartButton() {
   
   if (mouseX >= xRestartButton && mouseX <= xRestartButton +  RestartButtonWidth && mouseY >= yRestartButton && mouseY <= yRestartButton + RestartButtonHeight) {
     fill(resetWhite);
-    rect(mouseX-width*8/100, mouseY + height*1/10, RestartButtonWidth*1.5, RestartButtonHeight*1.5); //is the closing button //needs hover over(color and text)
+    rect(xCenter + xCenter*7.15/10,  height*7.45/10, RestartButtonWidth*1.5, RestartButtonHeight*1.5); //is the closing button //needs hover over(color and text)
     textAlign(CENTER, CENTER);
     restartSizeHover = 30; //Changing number until it exists
     textFont(RestartFont, restartSizeHover); //used to affext the text
     fill(black);
-    text(restartHoverText, mouseX-width*8/100, mouseY+ height*1/10, RestartButtonWidth*1.5, RestartButtonHeight*1.5); //'text()' function 'draws' the text 
+    text(restartHoverText, xCenter + xCenter*7.15/10, height*7.45/10, RestartButtonWidth*1.5, RestartButtonHeight*1.5); //'text()' function 'draws' the text 
     fill(resetWhite);
-  }
+  }//tried with mouseX and mouseY in the rect() but there was a following chain so took it out; plus when mouse is not there on the restrt button, it stays there
   //End Hover-over text for Restart Button
 
 

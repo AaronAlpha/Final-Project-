@@ -51,6 +51,10 @@ void draw() {
 
   if (shouldRestart == true) rect(restartCanvasX, restartCanvasY, restartCanvasWidth, restartCanvasHeight); 
   shouldRestart = false; //Restart Button process
+  
+  restartButton();
+  closeButton();
+
 
   //the following is an attempt to trying to increase the app screen to full screen or decrease the screen to the original/default screen size
   //if (MaxAlready == true) {
@@ -59,46 +63,51 @@ void draw() {
   //  MaxtoMinButton();
   //};
 
-  restartButton();
-  closeButton();
 
-  if (starterBox == true) {
-    rect(xStartBox, yStartBox, StartBoxWidth, StartBoxHeight);
-  } else {
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  //starter box code used to introduce code to user
+  //if (starterBox == false) {
+  //  populationOfVariables();
+  //  ;
+  //} else {
+  //fill(buttonfillIntro);
+  //rect(IntroX, IntroY, IntroWidth, IntroHeight); //is the closing button //needs hover over(color and text)
+  //textAlign(CENTER, CENTER);
+  //introSize = 40; //Changing number until it exists
+  //textFont(introFont, introSize); //used to affext the text
+  //fill(buttonfilltextintro);
+  //text(introText, IntroX, IntroY, IntroWidth, IntroHeight); //'text()' function 'draws' the text 
+  //fill(resetWhite);
+
+  //if (mouseX >= xStart && mouseX <= xStart +  StartWidth && mouseY >= yStart && mouseY <= yStart + StartHeigt) {
+  //  buttonfillStart = orange;
+  //  buttonfilltextstart = resetWhite;
+  //} else {
+  //  buttonfillStart = resetWhite;  
+  //  buttonfilltextstart = orange;
+  //}
+
+  //fill(buttonfillStart);
+  //rect(xStart, yStart, StartWidth, StartHeigt); //is the closing button //needs hover over(color and text)
+  //textAlign(CENTER, CENTER);
+  //startSize = 40; //Changing number until it exists
+  //textFont(startFont, startSize); //used to affext the text
+  //fill(buttonfilltextstart);
+  //text(startText, xStart, yStart, StartWidth, StartHeigt); //'text()' function 'draws' the text 
+  //fill(resetWhite);
     
-  }
-  
-  
-  
-  rect(IntroX, IntroY, IntroWidth, IntroHeight); //is the closing button //needs hover over(color and text)
-  textAlign(CENTER, CENTER);
-  introSize = 40; //Changing number until it exists
-  textFont(introFont, introSize); //used to affext the text
-  fill(buttontextfillclose);
-  text(introText, IntroX, IntroY, IntroWidth, IntroHeight); //'text()' function 'draws' the text 
-  fill(resetWhite);
-  
-  
-  
-  
-  
-  if (mouseX >= xStart && mouseX <= xStart +  StartWidth && mouseY >= yStart && mouseY <= yStart + StartHeigt) {
-    buttonfillStart = orange;
-    buttonfilltextstart = resetWhite;
-  } else {
-    buttonfillStart = resetWhite;  
-    buttonfilltextstart = orange;
-  }
-  
-  rect(xStart, yStart, StartWidth, StartHeigt); //is the closing button //needs hover over(color and text)
-  textAlign(CENTER, CENTER);
-  startSize = 40; //Changing number until it exists
-  textFont(startFont, startSize); //used to affext the text
-  fill(buttontextfillclose);
-  text(startText, xStart, yStart, StartWidth, StartHeigt); //'text()' function 'draws' the text 
-  fill(resetWhite);
-  
-  
+  //rect(xStartBox, yStartBox, StartBoxWidth, StartBoxHeight);
+  //}
+
+
   
 };
 
@@ -110,6 +119,10 @@ void keyPressed() {
 }; // will not be required as program going to be touch screen and mousePressed is harder - > rub this out
 
 
+
+
+
+
 void mousePressed() {
   if (mouseX >= xCloseButton && mouseX <= xCloseButton +  CloseButtonWidth && mouseY >= yCloseButton && mouseY <= yCloseButton + CloseButtonHeight) exit();
 
@@ -119,7 +132,14 @@ void mousePressed() {
     } else {
       shouldRestart = false;
     }
-  };
+  }
+
+
+
+
+
+
+
 
   //the following is an attempt to trying to increase the app screen to full screen or decrease the screen to the original/default screen size
   //if (mouseX >= xMinMaxButton && mouseX <= xMinMaxButton +  xMinMaxButtonWidth && mouseY >= yMinMaxButton && mouseY <= yMinMaxButton + xMinMaxButtonHeight) {
@@ -131,10 +151,17 @@ void mousePressed() {
   //    }
   //  }
   //}
-  
-  if (mouseX >= xCloseButton && mouseX <= xCloseButton +  CloseButtonWidth && mouseY >= yCloseButton && mouseY <= yCloseButton + CloseButtonHeight) exit(); //this is for the starter button
-  
-}
+
+  //if (mouseX >= xStart && mouseX <= xStart +  StartWidth && mouseY >= yStart && mouseY <= yStart + StartHeigt) {
+  //  if (starterBox == true) {
+  //  starterBox = false;
+  //  } else {
+  //starterBox = false;
+  //  }
+  //}
+
+}//this is for the starter button
+
 
 
 

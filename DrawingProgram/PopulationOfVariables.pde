@@ -48,6 +48,7 @@ boolean starterBox = true;
 float IntroX, IntroY, IntroWidth, IntroHeight;
 String introText = "Welcome to the Drawing Program";
 int introSize;
+color buttonfillIntro = resetWhite, buttonfilltextintro = orange;
 float xStart, yStart, StartWidth, StartHeigt;
 int startSize;
 String startText = "Press to Start the Program Here!";
@@ -235,8 +236,7 @@ void populationOfVariables() {
   
   
   
-  rect(IntroX, IntroY, IntroWidth, IntroHeight);
-  rect(xStart, yStart, StartWidth, StartHeigt);
+  
   
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight); //is the Virtual piece of paper
   rect(lineboxX, lineboxY, lineboxWidth, lineboxHeight); //the 'Line drawing tool' tool box top left
