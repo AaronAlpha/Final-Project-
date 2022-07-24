@@ -14,8 +14,10 @@ void setup() {
   size(1750, 900);//Landscape or Square or Portrait 
 
   populationOfVariables();
-
   printArray(fontList); //is another line of code for print statements
+  
+
+  
 };
 
 
@@ -26,7 +28,8 @@ void setup() {
 
 
 void draw() {
-
+  
+  
   if (mousePressed == true) {
     draw = true;
   } else {
@@ -36,17 +39,17 @@ void draw() {
   
   //ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter) //have to mae ellipse tool as well
   if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) line(mouseX, mouseY, pmouseX, pmouseY); //Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+  
+  rect();
 
-
-
-
-
+  
+  
   restartButton();
   closeButton();
 
 
 
-}
+};
 
 
 

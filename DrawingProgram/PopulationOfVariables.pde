@@ -94,7 +94,7 @@ void populationOfVariables() {
   RestartButtonWidth = width*1/10;
   RestartButtonHeight = height*1/10;
   //Text
-  RestartFont = createFont("Arial Narrow", 55);
+  RestartFont = createFont("Arial Narrow", 45);
   //End Text 
   //End Population of Restart Button
   
@@ -119,7 +119,7 @@ void populationOfVariables() {
   CloseButtonWidth = width*1/10;
   CloseButtonHeight = height*1/10; 
   //Text
-  closeFont = createFont("Arial Narrow", 55);
+  closeFont = createFont("Arial Narrow", 45);
   //End Text 
   //End Population of Close Button
   
@@ -173,6 +173,13 @@ void populationOfVariables() {
   musicboxWidth = xCenter - xCenter*6/10;
   musicboxHeight = height; 
   //End Population of Music Player Tool Box
+  
+  
+  //Population of Restart Canvas box(that'll cover the canvas with a new virtual box everytime)
+  
+   
+  
+  //End Population Restart Canvas box
   
 
   
