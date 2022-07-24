@@ -41,7 +41,7 @@ void draw() {
 
 
 
-
+  restartButton();
   closeButton();
 
 
