@@ -49,6 +49,9 @@ color buttonfillcolor, buttontextfillcolor;
 String colortext = "Color";
 
 float colorpalettefillerboxX, colorpalettefillerboxY, colorpalettefillerboxWidth, colorpalettefillerboxHeight;
+String colorfillerText = "Color Filler";
+int colorfillerSize;
+color buttonfillcolorfiller, buttontextfillcolorfiller;
 
 
 float templateboxX, templateboxY, templateboxWidth, templateboxHeight;

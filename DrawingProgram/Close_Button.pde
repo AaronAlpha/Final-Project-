@@ -1,7 +1,7 @@
 void closeButton() {
   //Close button
   //Hover-over color for Close Button
-  if (mouseX >= xCloseButton && mouseX <= xCloseButton +  CloseButtonWidth && mouseY >= yCloseButton && mouseY <= yCloseButton + CloseButtonHeight) {
+  if (mouseX >= xCloseButton && mouseX <= xCloseButton + CloseButtonWidth && mouseY >= yCloseButton && mouseY <= yCloseButton + CloseButtonHeight) {
     buttonfillclose = red;
     buttontextfillclose = resetWhite;
   } else {

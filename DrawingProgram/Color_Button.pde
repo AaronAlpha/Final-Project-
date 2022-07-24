@@ -1,12 +1,12 @@
 void colorButton() {
   //Color button
   //Hover-over color for Color colorpaletteboxHeight
-  if (mouseX >= colorpaletteboxX && mouseX <= colorpaletteboxX +  colorpaletteboxHeight && mouseY >= colorpaletteboxY && mouseY <= colorpaletteboxY + colorpaletteboxHeight) {
-    buttonfillcolor = red;
+  if (mouseX >= colorpaletteboxX && mouseX <= colorpaletteboxX + colorpaletteboxHeight && mouseY >= colorpaletteboxY && mouseY <= colorpaletteboxY + colorpaletteboxHeight) {
+    buttonfillcolor = black;
     buttontextfillcolor = resetWhite;
   } else {
     buttonfillcolor = resetWhite;  
-    buttontextfillcolor = red;
+    buttontextfillcolor = black;
   }
   //End Hover-over color for Close Button
 
