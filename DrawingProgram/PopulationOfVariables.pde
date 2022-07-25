@@ -256,6 +256,9 @@ void populationOfVariables() {
   eraserboxX = (xCenter - xCenter*1/2)/2;
   eraserboxY = height*0;
   eraserboxWidth = (xCenter - xCenter*1/2)/2;
+  eraserboxHeight = (height*6.5/10)/4;
+  //Text
+  eraserbuttonFont = createFont("Arial Narrow", 45);
   //End Text 
   //End population of eraser tool
   
