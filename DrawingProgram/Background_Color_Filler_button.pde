@@ -1,22 +1,22 @@
 void backgroundColorFill() {
-  //Close button
-  //Hover-over color for Close Button
-  if (mouseX >= xCloseButton && mouseX <= xCloseButton +  CloseButtonWidth && mouseY >= yCloseButton && mouseY <= yCloseButton + CloseButtonHeight) {
-    buttonfillcolorfiller = red;
-    buttontextfillcolorfiller = resetWhite;
+  //Background Color button
+  //Hover-over color for Background Color Button
+  if (mouseX >= xBackgroundFiller && mouseX <= xBackgroundFiller +  BackgroundFillerWidth && mouseY >= yBackgroundFiller && mouseY <= yBackgroundFiller + BackgroundFillerHeight) {
+    buttonfillBackgroundFiller= red;
+    buttontextfillBackgroundFiller = resetWhite;
   } else {
-    buttonfillcolorfiller = resetWhite;  
-    buttontextfillcolorfiller = red;
+    buttonfillcolor = resetWhite;  
+    buttontextfillcolor = red;
   }
-  //End Hover-over color for Close Button
+  //End Hover-over color for Background Color Button
 
-  fill(buttonfillcolorfiller);
-  rect(colorpalettefillerboxX, colorpalettefillerboxY, colorpalettefillerboxWidth, colorpalettefillerboxHeight); //is the closing button //needs hover over(color and <del>text</del>)
+  fill(buttonfillcolor);
+  rect(xBackgroundFiller, yBackgroundFiller, BackgroundFillerWidth, BackgroundFillerHeight); //is the closing button //needs hover over(color and <del>text</del>)
   textAlign(CENTER, CENTER);
-  colorfillerSize = 40; //Changing number until it exists
-  textFont(closeFont, colorfillerSize); //used to affext the text
-  fill(buttontextfillcolorfiller);
-  text(colorfillerText, colorpalettefillerboxX, colorpalettefillerboxY, colorpalettefillerboxWidth, colorpalettefillerboxHeight); //'text()' function 'draws' the text 
+  backgroundFillerSize = 10; //Changing number until it exists
+  textFont(colorfillerbuttonFont, backgroundFillerSize); //used to affext the text
+  fill(buttontextfillcolor);
+  text(backgroundFillerText, xBackgroundFiller, yBackgroundFiller, BackgroundFillerWidth, BackgroundFillerHeight); //'text()' function 'draws' the text 
   fill(resetWhite);
-  //End Close button
+  //End Background Color button
 }

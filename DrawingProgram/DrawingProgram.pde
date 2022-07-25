@@ -43,9 +43,8 @@ void draw() {
   thin();
   thick();
   thicker();
-  //shapes();
   colorButton();
-  //backgroundColorFill();
+  backgroundColorFill();
 
 
 

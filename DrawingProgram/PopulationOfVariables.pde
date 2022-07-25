@@ -43,15 +43,15 @@ int thickerSize;
 float shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight;
 
 
-float colorpaletteboxX, colorpaletteboxY, colorpaletteboxWidth, colorpaletteboxHeight;
+float xColor, yColor, ColorWidth, ColorHeight;
 int colorSize;
 color buttonfillcolor, buttontextfillcolor;
-String colortext = "Color";
+String colorText = "Color";
 
-float colorpalettefillerboxX, colorpalettefillerboxY, colorpalettefillerboxWidth, colorpalettefillerboxHeight;
-String colorfillerText = "Color Filler";
-int colorfillerSize;
-color buttonfillcolorfiller, buttontextfillcolorfiller;
+float xBackgroundFiller, yBackgroundFiller, BackgroundFillerWidth, BackgroundFillerHeight;
+String backgroundFillerText = "Color Filler";
+int backgroundFillerSize;
+color buttonfillBackgroundFiller, buttontextfillBackgroundFiller;
 
 
 float templateboxX, templateboxY, templateboxWidth, templateboxHeight;
@@ -308,10 +308,10 @@ void populationOfVariables() {
   
   
   //Population of Color Tool Box
-  colorpaletteboxX = width*0;
-  colorpaletteboxY = height*6.5/10;
-  colorpaletteboxWidth = (xCenter - xCenter*1/2)/2;
-  colorpaletteboxHeight = height; //this box takes up the remaining space as there is a small gaping if it uses the uniformed height of ((height*6.5/10)/2)
+  xColor = width*0;
+  yColor = height*6.5/10;
+  ColorWidth = (xCenter - xCenter*1/2)/2;
+  ColorHeight = height;//this box takes up the remaining space as there is a small gaping if it uses the uniformed height of ((height*6.5/10)/2)
   //Text
   colorbuttonFont = createFont("Arial Narrow", 45);
   //End Text 
@@ -319,10 +319,10 @@ void populationOfVariables() {
   
   
   //Population of Color Fill Background Tool Box
-  colorpalettefillerboxX = (xCenter - xCenter*1/2)/2;
-  colorpalettefillerboxY = height*6.5/10;
-  colorpalettefillerboxWidth = (xCenter - xCenter*1/2)/2;
-  colorpalettefillerboxHeight = height; 
+  xBackgroundFiller = (xCenter - xCenter*1/2)/2;
+  yBackgroundFiller = height*6.5/10;
+  BackgroundFillerWidth = (xCenter - xCenter*1/2)/2;
+  BackgroundFillerHeight = height; 
   //Text
   colorfillerbuttonFont = createFont("Arial Narrow", 45);
   //End Text 
@@ -352,8 +352,8 @@ void populationOfVariables() {
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight); //is the Virtual piece of paper
   rect(lineboxX, lineboxY, lineboxWidth, lineboxHeight); //the 'Line drawing tool' tool box top left with eraser switch
   rect(shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight); 
-  rect(colorpaletteboxX, colorpaletteboxY, colorpaletteboxWidth, colorpaletteboxHeight);
-  rect(colorpalettefillerboxX, colorpalettefillerboxY, colorpalettefillerboxWidth, colorpalettefillerboxHeight);
+  //rect();
+  //rect(xBackgroundFiller, yBackgroundFiller, BackgroundFillerWidth, BackgroundFillerHeight);
   rect(musicboxX, musicboxY, musicboxWidth, musicboxHeight);
   rect(templateboxX, templateboxY, templateboxWidth, templateboxHeight);
   rect(xlinetool, ylinetool, linetoolWidth, linetoolHeight);//is the button to switch to the line tool
