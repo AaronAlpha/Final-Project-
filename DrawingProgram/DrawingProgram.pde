@@ -49,7 +49,9 @@ void draw() {
 
 
   if (shapesOn == true) rect(xShapeOptions, yShapeOptions, ShapeWidth, ShapeHeight);
-  
+
+
+
 
 
   //ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter) //have to mae ellipse tool as well  ----> dont think its useful
@@ -59,9 +61,18 @@ void draw() {
     } else {
       draw = false;
     }
-    if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) line(mouseX, mouseY, pmouseX, pmouseY); //Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
-  } else { 
+
+    if (draw == true && thinBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {strokeWeight(1); line(mouseX, mouseY, pmouseX, pmouseY); strokeWeight(1);} else {}//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+    if (draw == true && thickBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {strokeWeight(5); line(mouseX, mouseY, pmouseX, pmouseY); strokeWeight(1);} else {}//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+    if (draw == true && thickerBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {strokeWeight(8); line(mouseX, mouseY, pmouseX, pmouseY); strokeWeight(1);} else {}//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+
+    if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) line(mouseX, mouseY, pmouseX, pmouseY);
+
+      } else { 
     lineDraw = false;
+    thinBool = false;
+    thickBool = false;
+    thickerBool = false;
   }
 
 
@@ -152,8 +163,8 @@ void keyPressed() {
 
 void mousePressed() {
   shapesOn = false;
-  
-  
+
+
   if (mouseX >= xCloseButton && mouseX <= xCloseButton +  CloseButtonWidth && mouseY >= yCloseButton && mouseY <= yCloseButton + CloseButtonHeight) exit();
 
   if (mouseX >= xRestartButton && mouseX <= xRestartButton +  RestartButtonWidth && mouseY >= yRestartButton && mouseY <= yRestartButton + RestartButtonHeight) {
@@ -192,30 +203,55 @@ void mousePressed() {
   } 
 
 
+  if (mouseX >= xThin && mouseX <= xThin +  thinWidth && mouseY >= yThin && mouseY <= yThin + thinHeight) {
+    if (thinBool == false) {
+      thinBool = true;
+      
+    } else {
+      thinBool = false;
+    }
+    
+    } 
+    else if (mouseX >= xThick && mouseX <= xThick +  thickWidth && mouseY >= yThick && mouseY <= yThick + thickHeight)  {if (thickBool == false){
+    thickBool = true;
+  } else {
+    thickBool = false;
+    
+}
+    }
+  else if (mouseX >= xThicker && mouseX <= xThicker +  thickerWidth && mouseY >= yThicker && mouseY <= yThicker + thickerHeight) {if (thickerBool == false){
+  thickerBool = true;
+  } else {
+    thickerBool = false;
+    
+  }
+  }
 
 
 
 
 
 
-  //the following is an attempt to trying to increase the app screen to full screen or decrease the screen to the original/default screen size
-  //if (mouseX >= xMinMaxButton && mouseX <= xMinMaxButton +  xMinMaxButtonWidth && mouseY >= yMinMaxButton && mouseY <= yMinMaxButton + xMinMaxButtonHeight) {
-  //  if (appWidth != displayWidth && appHeight != displayHeight) { 
-  //    if (MaxAlready == false) {
-  //      MaxAlready = true;
-  //    } else {
-  //      MaxAlready = false;
-  //    }
-  //  }
-  //}
 
-  //if (mouseX >= xStart && mouseX <= xStart +  StartWidth && mouseY >= yStart && mouseY <= yStart + StartHeigt) {
-  //  if (starterBox == true) {
-  //  starterBox = false;
-  //  } else {
-  //starterBox = false;
-  //  }
-  //}
+
+    //the following is an attempt to trying to increase the app screen to full screen or decrease the screen to the original/default screen size
+    //if (mouseX >= xMinMaxButton && mouseX <= xMinMaxButton +  xMinMaxButtonWidth && mouseY >= yMinMaxButton && mouseY <= yMinMaxButton + xMinMaxButtonHeight) {
+    //  if (appWidth != displayWidth && appHeight != displayHeight) { 
+    //    if (MaxAlready == false) {
+    //      MaxAlready = true;
+    //    } else {
+    //      MaxAlready = false;
+    //    }
+    //  }
+    //}
+
+    //if (mouseX >= xStart && mouseX <= xStart +  StartWidth && mouseY >= yStart && mouseY <= yStart + StartHeigt) {
+    //  if (starterBox == true) {
+    //  starterBox = false;
+    //  } else {
+    //starterBox = false;
+    //  }
+    //}
 }//this is for the starter button
 
 
