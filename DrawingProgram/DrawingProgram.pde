@@ -62,18 +62,36 @@ void draw() {
       draw = false;
     }
 
-    if (draw == true && thinBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {strokeWeight(1); line(mouseX, mouseY, pmouseX, pmouseY); strokeWeight(1);} else {}//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
-    if (draw == true && thickBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {strokeWeight(5); line(mouseX, mouseY, pmouseX, pmouseY); strokeWeight(1);} else {}//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
-    if (draw == true && thickerBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {strokeWeight(8); line(mouseX, mouseY, pmouseX, pmouseY); strokeWeight(1);} else {}//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+    if (draw == true && thinBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      strokeWeight(1); 
+      line(mouseX, mouseY, pmouseX, pmouseY); 
+      strokeWeight(1);
+    } else {
+    }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+    if (draw == true && thickBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      strokeWeight(5); 
+      line(mouseX, mouseY, pmouseX, pmouseY); 
+      strokeWeight(1);
+    } else {
+    }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+    if (draw == true && thickerBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      strokeWeight(8); 
+      line(mouseX, mouseY, pmouseX, pmouseY); 
+      strokeWeight(1);
+    } else {
+    }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+
 
     if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) line(mouseX, mouseY, pmouseX, pmouseY);
-
-      } else { 
+  } else { 
     lineDraw = false;
     thinBool = false;
     thickBool = false;
     thickerBool = false;
   }
+
+
+  if (eraser == true &&draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) stroke(255); line(mouseX, mouseY, pmouseX, pmouseY); endStroke();
 
 
 
@@ -164,9 +182,11 @@ void keyPressed() {
 void mousePressed() {
   shapesOn = false;
 
-
+  //switch to toggle close button ON(to end program)
   if (mouseX >= xCloseButton && mouseX <= xCloseButton +  CloseButtonWidth && mouseY >= yCloseButton && mouseY <= yCloseButton + CloseButtonHeight) exit();
-
+  //end
+  
+  //control flow/switch to toggle Restart button ON or OFF
   if (mouseX >= xRestartButton && mouseX <= xRestartButton +  RestartButtonWidth && mouseY >= yRestartButton && mouseY <= yRestartButton + RestartButtonHeight) {
     if (shouldRestart == false) {
       shouldRestart = true;
@@ -174,9 +194,10 @@ void mousePressed() {
       shouldRestart = false;
     }
   }
+  //end
 
 
-
+  //switch to toggle drawing mode ON or OFF
   if (mouseX >= xlinetool && mouseX <= xlinetool +  linetoolWidth && mouseY >= ylinetool && mouseY <= ylinetool + linetoolHeight) {
     if (lineDraw == false) {
       lineDraw = true;
@@ -184,16 +205,21 @@ void mousePressed() {
       lineDraw = false;
     }
   }
+  //end
+  
+  
+  //switch to toggle eraser ON or OFF
+  if (mouseX >= eraserboxX && mouseX <= eraserboxX +  eraserboxWidth && mouseY >= eraserboxY && mouseY <= eraserboxY + eraserboxHeight) {
+    if (eraser == false) {
+      eraser = true;
+    } else {
+      eraser = false;
+    }
+  }
+  //end
 
-  //if (mouseX >= eraserboxX && mouseX <= eraserboxX +  eraserboxWidth && mouseY >= eraserboxY && mouseY <= eraserboxY + eraserboxHeight) {
-  //  if (eraser == false) {
-  //    eraser = true;
-  //  } else {
-  //    eraser = false;
-  //  }
-  //}
-
-
+  
+  //control flow/switch to open a shapes tab to put shapes in canvas
   if (mouseX >= shapesboxX && mouseX <= shapesboxX + shapesboxWidth && mouseY >= shapesboxY && mouseY <= shapesboxY + shapesboxHeight) {
     if (shapesOn == false) {
       shapesOn = true;
@@ -201,31 +227,35 @@ void mousePressed() {
       shapesOn = false;
     }
   } 
+  //end 
 
 
-  if (mouseX >= xThin && mouseX <= xThin +  thinWidth && mouseY >= yThin && mouseY <= yThin + thinHeight) {
-    if (thinBool == false) {
-      thinBool = true;
-      
+
+    //brush type control flow
+    if (mouseX >= xThin && mouseX <= xThin +  thinWidth && mouseY >= yThin && mouseY <= yThin + thinHeight) {
+      if (thinBool == false) {
+        thinBool = true;
+
+      } else {
+        thinBool = false;
+      }
+
+      } 
+      else if (mouseX >= xThick && mouseX <= xThick +  thickWidth && mouseY >= yThick && mouseY <= yThick + thickHeight)  {if (thickBool == false){
+      thickBool = true;
     } else {
-      thinBool = false;
-    }
-    
-    } 
-    else if (mouseX >= xThick && mouseX <= xThick +  thickWidth && mouseY >= yThick && mouseY <= yThick + thickHeight)  {if (thickBool == false){
-    thickBool = true;
-  } else {
-    thickBool = false;
-    
-}
-    }
-  else if (mouseX >= xThicker && mouseX <= xThicker +  thickerWidth && mouseY >= yThicker && mouseY <= yThicker + thickerHeight) {if (thickerBool == false){
-  thickerBool = true;
-  } else {
-    thickerBool = false;
-    
+      thickBool = false;
+
   }
-  }
+      }
+    else if (mouseX >= xThicker && mouseX <= xThicker +  thickerWidth && mouseY >= yThicker && mouseY <= yThicker + thickerHeight) {if (thickerBool == false){
+    thickerBool = true;
+    } else {
+      thickerBool = false;
+
+    }
+    }
+    //end brush type control flow
 
 
 
@@ -234,24 +264,26 @@ void mousePressed() {
 
 
 
-    //the following is an attempt to trying to increase the app screen to full screen or decrease the screen to the original/default screen size
-    //if (mouseX >= xMinMaxButton && mouseX <= xMinMaxButton +  xMinMaxButtonWidth && mouseY >= yMinMaxButton && mouseY <= yMinMaxButton + xMinMaxButtonHeight) {
-    //  if (appWidth != displayWidth && appHeight != displayHeight) { 
-    //    if (MaxAlready == false) {
-    //      MaxAlready = true;
-    //    } else {
-    //      MaxAlready = false;
-    //    }
-    //  }
-    //}
 
-    //if (mouseX >= xStart && mouseX <= xStart +  StartWidth && mouseY >= yStart && mouseY <= yStart + StartHeigt) {
-    //  if (starterBox == true) {
-    //  starterBox = false;
-    //  } else {
-    //starterBox = false;
-    //  }
-    //}
+
+  //the following is an attempt to trying to increase the app screen to full screen or decrease the screen to the original/default screen size
+  //if (mouseX >= xMinMaxButton && mouseX <= xMinMaxButton +  xMinMaxButtonWidth && mouseY >= yMinMaxButton && mouseY <= yMinMaxButton + xMinMaxButtonHeight) {
+  //  if (appWidth != displayWidth && appHeight != displayHeight) { 
+  //    if (MaxAlready == false) {
+  //      MaxAlready = true;
+  //    } else {
+  //      MaxAlready = false;
+  //    }
+  //  }
+  //}
+
+  //if (mouseX >= xStart && mouseX <= xStart +  StartWidth && mouseY >= yStart && mouseY <= yStart + StartHeigt) {
+  //  if (starterBox == true) {
+  //  starterBox = false;
+  //  } else {
+  //starterBox = false;
+  //  }
+  //}
 }//this is for the starter button
 
 

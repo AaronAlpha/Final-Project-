@@ -21,6 +21,7 @@ float eraserboxX, eraserboxY, eraserboxWidth, eraserboxHeight;
 int eraserSize;
 String eraserswitchText= "Eraser";
 color buttonfilleraser, buttontextfilleraser;
+boolean eraser = false;
 
 float xTools, yTools, toolsWidth, toolsHeight;
 
