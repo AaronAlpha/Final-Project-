@@ -312,7 +312,7 @@ void populationOfVariables() {
   xColor = width*0;
   yColor = height*6.5/10;
   ColorWidth = (xCenter - xCenter*1/2)/2;
-  ColorHeight = height*6.5/10;//this box takes up the remaining space as there is a small gaping if it uses the uniformed height of ((height*6.5/10)/2)
+  ColorHeight =  (height*7/10)/2;
   //Text
   colorbuttonFont = createFont("Arial Narrow", 45);
   //End Text 
@@ -323,7 +323,7 @@ void populationOfVariables() {
   xBackgroundFiller = (xCenter - xCenter*1/2)/2;
   yBackgroundFiller = height*6.5/10;
   BackgroundFillerWidth = (xCenter - xCenter*1/2)/2;
-  BackgroundFillerHeight = height*6.5/10; 
+  BackgroundFillerHeight = (height*7/10)/2; 
   //Text
   colorfillerbuttonFont = createFont("Arial Narrow", 45);
   //End Text 
@@ -335,7 +335,7 @@ void populationOfVariables() {
   templateboxX = xCenter - xCenter*1/2;
   templateboxY = height*6.5/10;
   templateboxWidth = xCenter - xCenter*2/10;
-  templateboxHeight = height; 
+  templateboxHeight = (height*7/10)/2; 
   //End Population of Template Tool Box
   
   
@@ -343,7 +343,7 @@ void populationOfVariables() {
   musicboxX = xCenter + xCenter*3/10;
   musicboxY = height*6.5/10;
   musicboxWidth = xCenter - xCenter*6/10;
-  musicboxHeight = height; 
+  musicboxHeight = (height*7/10)/2; 
   //End Population of Music Player Tool Box
   
   
