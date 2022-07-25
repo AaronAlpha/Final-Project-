@@ -38,14 +38,16 @@ void setup() {
 void draw() {
 
   lineButton();
+  //stampButton();
   eraserButton();
   thin();
   thick();
   thicker();
   shapes();
+  shapesShapes();
   colorButton();
   backgroundColorFill();
-  shapesShapes();
+  
 
   
 
@@ -53,7 +55,56 @@ void draw() {
   
 
 
-  //ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter) //have to mae ellipse tool as well  ----> dont think its useful
+  //ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter) //have to mae ellipse tool as well  
+  //start Line tool
+  if (lineDraw == true) {     
+    if (mousePressed == true) {
+      draw = true;
+    } else {
+      draw = false;
+    }
+
+    if (draw == true && thinBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      strokeWeight(1); 
+      line(mouseX, mouseY, pmouseX, pmouseY); 
+      strokeWeight(1);
+    } else {
+    }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+    if (draw == true && thickBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      strokeWeight(5); 
+      line(mouseX, mouseY, pmouseX, pmouseY); 
+      strokeWeight(1);
+    } else {
+    }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+    if (draw == true && thickerBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      strokeWeight(8); 
+      line(mouseX, mouseY, pmouseX, pmouseY); 
+      strokeWeight(1);
+    } else {
+    }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+
+    if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) line(mouseX, mouseY, pmouseX, pmouseY);
+
+    if (draw == true && eraser == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      stroke(#FFFFFF); 
+      line(mouseX, mouseY, pmouseX, pmouseY); 
+      stroke(0);
+    }
+  } else { 
+    lineDraw = false;
+    thinBool = false;
+    thickBool = false;
+    thickerBool = false;
+    eraser = false;
+    shapesOn = false;
+    circle = false;
+    
+  }//end line tool
+  
+  
+  
+  
+  //start Stamp tool
   if (lineDraw == true) {     
     if (mousePressed == true) {
       draw = true;

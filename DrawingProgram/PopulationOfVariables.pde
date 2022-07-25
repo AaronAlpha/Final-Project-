@@ -470,7 +470,7 @@ void populationOfVariables() {
   //rect(xTriangle, yTriangle, TriangleWidth, TriangleHeight);
   //rect(xSquare, ySquare, SquareWidth, SquareHeight);
   //rect(xRectangle, yRectangle, RectangleWidth, RectangleHeight);
-  rect(xstamptool, ystamptool, stamptoolWidth, stamptoolHeight);
+  //rect(xstamptool, ystamptool, stamptoolWidth, stamptoolHeight);
   
   
 
