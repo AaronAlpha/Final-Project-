@@ -44,7 +44,7 @@ void draw() {
   thick();
   thicker();
   colorButton();
-  backgroundColorFill();
+  //backgroundColorFill();
 
 
 
@@ -61,7 +61,7 @@ void draw() {
   }
   
   
-  
+
   
 
 

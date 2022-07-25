@@ -1,7 +1,7 @@
 void backgroundColorFill() {
   //Background Color button
   //Hover-over color for Background Color Button
-  if (mouseX >= xBackgroundFiller && mouseX <= xBackgroundFiller +  BackgroundFillerWidth && mouseY >= yBackgroundFiller && mouseY <= yBackgroundFiller + BackgroundFillerHeight) {
+  if (mouseX >= xBackgroundFiller && mouseX <= xBackgroundFiller + BackgroundFillerWidth && mouseY >= yBackgroundFiller  && mouseY <= yBackgroundFiller + BackgroundFillerHeight) {
     buttonfillBackgroundFiller= red;
     buttontextfillBackgroundFiller = resetWhite;
   } else {

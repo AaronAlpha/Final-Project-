@@ -351,17 +351,15 @@ void populationOfVariables() {
 
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight); //is the Virtual piece of paper
   rect(lineboxX, lineboxY, lineboxWidth, lineboxHeight); //the 'Line drawing tool' tool box top left with eraser switch
-  rect(shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight); 
-  //rect();
-  //rect(xBackgroundFiller, yBackgroundFiller, BackgroundFillerWidth, BackgroundFillerHeight);
+  rect(shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight);  
   rect(musicboxX, musicboxY, musicboxWidth, musicboxHeight);
   rect(templateboxX, templateboxY, templateboxWidth, templateboxHeight);
-  rect(xlinetool, ylinetool, linetoolWidth, linetoolHeight);//is the button to switch to the line tool
-  rect(eraserboxX, eraserboxY, eraserboxWidth, eraserboxHeight);//this is the button to switch to the eraser tool
+  //rect(xlinetool, ylinetool, linetoolWidth, linetoolHeight);//is the button to switch to the line tool
+  //rect(eraserboxX, eraserboxY, eraserboxWidth, eraserboxHeight);//this is the button to switch to the eraser tool
   rect(xTools, yTools, toolsWidth, toolsHeight);
-  rect(xThin, yThin, thinWidth, thinHeight);
-  rect(xThick, yThick, thickWidth, thickHeight);
-  rect(xThicker, yThicker, thickerWidth, thickerHeight);
+  //rect(xThin, yThin, thinWidth, thinHeight);
+  //rect(xThick, yThick, thickWidth, thickHeight);
+  //rect(xThicker, yThicker, thickerWidth, thickerHeight);
   
   
   
