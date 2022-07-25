@@ -41,6 +41,8 @@ int thickerSize;
 
 
 float shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight;
+String shapesButtonText = "Shapes";
+int shapesSize;
 
 
 float xColor, yColor, ColorWidth, ColorHeight;
@@ -85,7 +87,6 @@ boolean MaxAlready = false; //means that its in Maximised mode already, if 'true
 
 int appWidth = width;
 int appHeight = height;
-
 
 
 float xStartBox, yStartBox, StartBoxWidth, StartBoxHeight;
@@ -311,7 +312,7 @@ void populationOfVariables() {
   xColor = width*0;
   yColor = height*6.5/10;
   ColorWidth = (xCenter - xCenter*1/2)/2;
-  ColorHeight = height;//this box takes up the remaining space as there is a small gaping if it uses the uniformed height of ((height*6.5/10)/2)
+  ColorHeight = height*6.5/10;//this box takes up the remaining space as there is a small gaping if it uses the uniformed height of ((height*6.5/10)/2)
   //Text
   colorbuttonFont = createFont("Arial Narrow", 45);
   //End Text 
@@ -322,12 +323,13 @@ void populationOfVariables() {
   xBackgroundFiller = (xCenter - xCenter*1/2)/2;
   yBackgroundFiller = height*6.5/10;
   BackgroundFillerWidth = (xCenter - xCenter*1/2)/2;
-  BackgroundFillerHeight = height; 
+  BackgroundFillerHeight = height*6.5/10; 
   //Text
   colorfillerbuttonFont = createFont("Arial Narrow", 45);
   //End Text 
   //End Population of Color Fill Background Tool Box
-   
+  
+  
   
   //Population of Template Tool Box
   templateboxX = xCenter - xCenter*1/2;
@@ -360,6 +362,7 @@ void populationOfVariables() {
   rect(xThin, yThin, thinWidth, thinHeight);
   rect(xThick, yThick, thickWidth, thickHeight);
   rect(xThicker, yThicker, thickerWidth, thickerHeight);
+
   
   
   
