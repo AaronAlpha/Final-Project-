@@ -5,7 +5,7 @@ Final Exam - Drawing Program
 To-do list:
  - [x] Line drawing tool
  - [x] <del>Circle Stamping tool</del> -> didnt find useful
- - [ ] Eraser (i.e. line tool, fill with background (color), removed 'stroke()')
+ - [x] Eraser (i.e. line tool, fill with background (color), removed 'stroke()')
  - [x] Different brushes(thin to thick to thicker tool)
  - [ ] Color Palet(basic button with name or color and color as background for button)
  - [x] Exit button(for whole app and each seleced tool(like color tool will open up a small screen)
@@ -17,3 +17,4 @@ To-do list:
  - [x] drawing by pressing and holding and then stop drawing by letting go
  - [ ] template for pics
  - [ ] jukebox
+ - [ ] shapes tab
