@@ -6,16 +6,22 @@ String ls = "Landscape or Square", p = "Portrait", DO = "Display Orientation", i
 color purple = #9E05FF, resetWhite = #FFFFFF, red = #FF0000, blue = #5792F5, black = #000000, orange = #F59A39, green =#39F56C, yellow = #EEF539; //or another purple  color = #2c08ff
 
 PFont closeFont, RestartFont, RestartFontHover, MinMaxFont, introFont, startFont, linebuttonFont, eraserbuttonFont, toolsFont, thinbuttonFont, thickbuttonFont, thickerbuttonFont;
-PFont shapesbuttonFont, colorbuttonFont, colorfillerbuttonFont, circleFont, triangleFont, squareFont, rectangleFont;
+PFont shapesbuttonFont, colorbuttonFont, colorfillerbuttonFont, circleFont, triangleFont, squareFont, rectangleFont, stampFont;
 String[] fontList = PFont.list(); //To list all fonts avaliable on OS
 
 
 float lineboxX, lineboxY, lineboxWidth, lineboxHeight;
 float xlinetool, ylinetool, linetoolWidth, linetoolHeight;
 int lineSize;
-String lineswitchText = "Drawing mode";
+String lineswitchText = "Line mode";
 color buttonfillline, buttontextfillline;
 boolean lineDraw = false;
+
+float xstamptool, ystamptool, stamptoolWidth, stamptoolHeight;
+int stampSize;
+String stampText = "Stamp mode";
+color buttonfillstamp, buttontextfillstamp;
+boolean stampDraw = false;
 
 float eraserboxX, eraserboxY, eraserboxWidth, eraserboxHeight;
 int eraserSize;
@@ -224,12 +230,6 @@ void populationOfVariables() {
   //End Population Restart Canvas box
   
   
-  
-  
-  
-  drawingDiameter = width*1/100; //diameter of circle line tool
-  
-  
   //Population of Restart Button
   xRestartButton = xCenter + xCenter*7.5/10;
   yRestartButton = height*6.5/10;
@@ -272,16 +272,27 @@ void populationOfVariables() {
   lineboxHeight = (height*6.5/10)/2;
   //End Population of Line Tool Box
   
-  
   //Population of line tool switch
   xlinetool = width*0;
   ylinetool = height*0;
-  linetoolWidth = (xCenter - xCenter*1/2)/2;
+  linetoolWidth = ((xCenter - xCenter*1/2)/2)/2;
   linetoolHeight = (height*6.5/10)/4;
   //Text
   linebuttonFont = createFont("Arial Narrow", 45);
   //End Text 
   //End population of line tool switch
+  
+  
+  //Population of stamp tool button
+  xstamptool = ((xCenter - xCenter*1/2)/2)*1/2;
+  ystamptool = height*0;
+  stamptoolWidth  = ((xCenter - xCenter*1/2)/2)/2;
+  stamptoolHeight = (height*6.5/10)/4;
+  drawingDiameter = width*1/100; //diameter of circle/stamping line tool
+  //Text
+  stampFont = createFont("Arial Narrow", 45);
+  //End Text 
+  //End population of stamp tool button
   
   
   //Population of eraser tool switch
@@ -444,21 +455,22 @@ void populationOfVariables() {
   
 
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight); //is the Virtual piece of paper
-  rect(lineboxX, lineboxY, lineboxWidth, lineboxHeight); //the 'Line drawing tool' tool box top left with eraser switch 
+  rect(lineboxX, lineboxY, lineboxWidth, lineboxHeight); //the 'Line drawing tool' tool box top left with eraser switch and a stamping tool with different thickness sizes
   rect(musicboxX, musicboxY, musicboxWidth, musicboxHeight);
   rect(templateboxX, templateboxY, templateboxWidth, templateboxHeight);
-  rect(xlinetool, ylinetool, linetoolWidth, linetoolHeight);//is the button to switch to the line tool
-  rect(eraserboxX, eraserboxY, eraserboxWidth, eraserboxHeight);//this is the button to switch to the eraser tool
+  //rect(xlinetool, ylinetool, linetoolWidth, linetoolHeight);//is the button to switch to the line tool
+  //rect(eraserboxX, eraserboxY, eraserboxWidth, eraserboxHeight);//this is the button to switch to the eraser tool
   rect(xTools, yTools, toolsWidth, toolsHeight);
-  rect(xThin, yThin, thinWidth, thinHeight);
-  rect(xThick, yThick, thickWidth, thickHeight);
-  rect(xThicker, yThicker, thickerWidth, thickerHeight);
+  //rect(xThin, yThin, thinWidth, thinHeight);
+  //rect(xThick, yThick, thickWidth, thickHeight);
+  //rect(xThicker, yThicker, thickerWidth, thickerHeight);
   rect(xShapesColorPanel, yShapesColorPanel, ShapesColorPanelWidth, ShapesColorPanelHeight); 
   rect(xShapeOptions, yShapeOptions, ShapeWidth, ShapeHeight);
-  rect(xCircle, yCircle, CircleWidth, CircleHeight);
-  rect(xTriangle, yTriangle, TriangleWidth, TriangleHeight);
-  rect(xSquare, ySquare, SquareWidth, SquareHeight);
-  rect(xRectangle, yRectangle, RectangleWidth, RectangleHeight);
+  //rect(xCircle, yCircle, CircleWidth, CircleHeight);
+  //rect(xTriangle, yTriangle, TriangleWidth, TriangleHeight);
+  //rect(xSquare, ySquare, SquareWidth, SquareHeight);
+  //rect(xRectangle, yRectangle, RectangleWidth, RectangleHeight);
+  rect(xstamptool, ystamptool, stamptoolWidth, stamptoolHeight);
   
   
 

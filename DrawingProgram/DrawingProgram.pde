@@ -45,6 +45,7 @@ void draw() {
   shapes();
   colorButton();
   backgroundColorFill();
+  shapesShapes();
 
   
 

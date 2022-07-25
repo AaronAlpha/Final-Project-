@@ -13,7 +13,7 @@ void shapesShapes() {
   fill(buttonfillcircle);
   rect(xCircle, yCircle, CircleWidth, CircleHeight); //is the closing button //needs hover over(color and text)
   textAlign(CENTER, CENTER);
-  circleSize = 40; //Changing number until it exists
+  circleSize = 25; //Changing number until it exists
   textFont(circleFont, circleSize); //used to affext the text
   fill(buttontextfillcircle);
   text(circleText, xCircle, yCircle, CircleWidth, CircleHeight); //'text()' function 'draws' the text 
@@ -35,7 +35,7 @@ void shapesShapes() {
   fill(buttonfilltriangle);
   rect(xTriangle, yTriangle, TriangleWidth, TriangleHeight); //is the closing button //needs hover over(color and text)
   textAlign(CENTER, CENTER);
-  triangleSize = 40; //Changing number until it exists
+  triangleSize = 25; //Changing number until it exists
   textFont(triangleFont, triangleSize); //used to affext the text
   fill(buttontextfilltriangle);
   text(triangleText, xTriangle, yTriangle, TriangleWidth, TriangleHeight); //'text()' function 'draws' the text 
@@ -57,7 +57,7 @@ void shapesShapes() {
   fill(buttonfilleraser);
   rect(xSquare, ySquare, SquareWidth, SquareHeight); //is the closing button //needs hover over(color and text)
   textAlign(CENTER, CENTER);
-  eraserSize = 40; //Changing number until it exists
+  eraserSize = 25; //Changing number until it exists
   textFont(eraserbuttonFont, eraserSize); //used to affext the text
   fill(buttontextfilleraser);
   text(squareText, xSquare, ySquare, SquareWidth, SquareHeight); //'text()' function 'draws' the text 
@@ -79,7 +79,7 @@ void shapesShapes() {
   fill(buttonfillrectangle);
   rect(xRectangle, yRectangle, RectangleWidth, RectangleHeight); //is the closing button //needs hover over(color and text)
   textAlign(CENTER, CENTER);
-  rectangleSize = 40; //Changing number until it exists
+  rectangleSize = 25; //Changing number until it exists
   textFont(rectangleFont, rectangleSize); //used to affext the text
   fill(buttontextfillrectangle);
   text(rectangleText, xRectangle, yRectangle, RectangleWidth, RectangleHeight); //'text()' function 'draws' the text 
