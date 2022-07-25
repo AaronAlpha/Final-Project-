@@ -18,8 +18,10 @@ void shapes() {
   fill(buttontextfillclose);
   if (shapesOn == false) {
     text(shapesButtonTextf, shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight); //'text()' function 'draws' the text 
+    rect(xShapeOptions*0, yShapeOptions*0, ShapeWidth*0, ShapeHeight*0);
   } else if (shapesOn == true) {
     text(shapesButtonTextt, shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight); //'text()' function 'draws' the text 
+    rect(xShapeOptions, yShapeOptions, ShapeWidth, ShapeHeight);
   }
 
   fill(resetWhite);

@@ -48,7 +48,7 @@ void draw() {
   backgroundColorFill();
 
 
-  if (shapesOn == true) rect(xShapeOptions, yShapeOptions, ShapeWidth, ShapeHeight);
+  
   
 
 
