@@ -48,6 +48,9 @@ void draw() {
   backgroundColorFill();
 
 
+  if (shapesOn == true) rect(xShapeOptions, yShapeOptions, ShapeWidth, ShapeHeight);
+  
+
 
   //ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter) //have to mae ellipse tool as well  ----> dont think its useful
   if (lineDraw == true) {     
@@ -60,10 +63,10 @@ void draw() {
   } else { 
     lineDraw = false;
   }
-  
-  
 
-  
+
+
+
 
 
 
@@ -175,6 +178,15 @@ void mousePressed() {
   //    eraser = false;
   //  }
   //}
+
+
+  if (mouseX >= shapesboxX && mouseX <= shapesboxX + shapesboxWidth && mouseY >= shapesboxY && mouseY <= shapesboxY + shapesboxHeight) {
+    if (shapesOn == false) {
+      shapesOn = true;
+    } else {
+      shapesOn = false;
+    }
+  } 
 
 
 

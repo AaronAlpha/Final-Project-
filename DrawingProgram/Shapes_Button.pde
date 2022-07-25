@@ -16,8 +16,12 @@ void shapes() {
   shapesSize = 40; //Changing number until it exists
   textFont(shapesbuttonFont, shapesSize); //used to affext the text
   fill(buttontextfillclose);
-  text(shapesButtonText, shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight); //'text()' function 'draws' the text 
+  if (shapesOn == false) {
+    text(shapesButtonTextf, shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight); //'text()' function 'draws' the text 
+  } else if (shapesOn == true) {
+    text(shapesButtonTextt, shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight); //'text()' function 'draws' the text 
+  }
+
   fill(resetWhite);
   //End Shapes button
-
 }
