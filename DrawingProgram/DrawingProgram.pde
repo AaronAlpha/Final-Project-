@@ -49,11 +49,8 @@ void draw() {
 
   
   if (shapesOn == true) shapesShapes();
-  //if (circle == true) shape(circleShape, mouseX, mouseY, pmouseX, pmouseX);
+  if (circle == true) shape(circleShape, drawingSurfaceX + drawingSurfaceX*1/4, drawingSurfaceY - drawingSurfaceY*1/2);
   
-
-
-
 
 
   //ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter) //have to mae ellipse tool as well  ----> dont think its useful
@@ -97,8 +94,10 @@ void draw() {
     thickBool = false;
     thickerBool = false;
     eraser = false;
+    shapesOn = false;
+    circle = false;
+    
   }
-
 
 
 

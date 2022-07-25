@@ -351,7 +351,7 @@ void populationOfVariables() {
   circleFont = createFont("Arial Narrow", 45);
   //End Text 
   //shape
-  //circleShape = createShape(ELLIPSE); //error
+  circleShape = createShape(ELLIPSE, drawingSurfaceX+drawingSurfaceX*1/4, drawingSurfaceY - drawingSurfaceY*1/2, xCenter, yCenter); //error
   //
   //end 
   
