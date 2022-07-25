@@ -410,8 +410,8 @@ void populationOfVariables() {
   
   
   //Population of Color Fill Background Tool Box
-  xBackgroundFiller = (xCenter - xCenter*1/2)/2;
-  yBackgroundFiller = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3;
+  xBackgroundFiller = width*0;
+  yBackgroundFiller = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + (height - (height*6.5/10)/2)*1/3;
   BackgroundFillerWidth = (xCenter - xCenter*1/2)/2;
   BackgroundFillerHeight = (height - (height*6.5/10)/2)*1/3; 
   //Text
@@ -420,7 +420,7 @@ void populationOfVariables() {
   //End Population of Color Fill Background Tool Box
   
   //End population
-  
+  //(xCenter - xCenter*1/2)/2 -> is x coordinates for the shapes and color boxes
   
   
   //Population of Template Tool Box
