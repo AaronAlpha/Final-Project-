@@ -75,8 +75,6 @@ String rectangleText = "Rectangle";
 color buttonfillrectangle, buttontextfillrectangle;
 boolean rectangle = false;
 
-
-
 float xColor, yColor, ColorWidth, ColorHeight;
 int colorSize;
 color buttonfillcolor, buttontextfillcolor;
@@ -86,6 +84,11 @@ float xBackgroundFiller, yBackgroundFiller, BackgroundFillerWidth, BackgroundFil
 String backgroundFillerText = "Color filler for background";
 int backgroundFillerSize;
 color buttonfillBackgroundFiller, buttontextfillBackgroundFiller;
+
+
+float xShapesColorPanel, yShapesColorPanel, ShapesColorPanelWidth, ShapesColorPanelHeight;
+
+
 
 
 float templateboxX, templateboxY, templateboxWidth, templateboxHeight;
@@ -327,11 +330,18 @@ void populationOfVariables() {
   
   
   
+  
+  //Population Shapes and Color Panel
+  xShapesColorPanel = width*0;
+  yShapesColorPanel = (height*6.5/10)/2;
+  ShapesColorPanelWidth = xCenter - xCenter*1/2; 
+  ShapesColorPanelHeight =  height - (height*6.5/10)/2;
+  
   //Population of Shapes Button Box
   shapesboxX = width * 0;
   shapesboxY = (height*6.5/10)/2;
-  shapesboxWidth = xCenter - xCenter*1/2;
-  shapesboxHeight = (height*6.5/10)/2;
+  shapesboxWidth = (xCenter - xCenter*1/2)/2;
+  shapesboxHeight = (height - (height*6.5/10)/2)*1/3;
   //Text
   shapesbuttonFont = createFont("Arial Narrow", 45);
   //End Text 
@@ -390,9 +400,9 @@ void populationOfVariables() {
   
   //Population of Color Tool Box
   xColor = width*0;
-  yColor = height*6.5/10;
+  yColor = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3;
   ColorWidth = (xCenter - xCenter*1/2)/2;
-  ColorHeight =  (height*7/10)/2;
+  ColorHeight =  (height - (height*6.5/10)/2)*1/3;
   //Text
   colorbuttonFont = createFont("Arial Narrow", 45);
   //End Text 
@@ -401,13 +411,15 @@ void populationOfVariables() {
   
   //Population of Color Fill Background Tool Box
   xBackgroundFiller = (xCenter - xCenter*1/2)/2;
-  yBackgroundFiller = height*6.5/10;
+  yBackgroundFiller = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3;
   BackgroundFillerWidth = (xCenter - xCenter*1/2)/2;
-  BackgroundFillerHeight = (height*7/10)/2; 
+  BackgroundFillerHeight = (height - (height*6.5/10)/2)*1/3; 
   //Text
   colorfillerbuttonFont = createFont("Arial Narrow", 45);
   //End Text 
   //End Population of Color Fill Background Tool Box
+  
+  //End population
   
   
   
@@ -432,8 +444,7 @@ void populationOfVariables() {
   
 
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight); //is the Virtual piece of paper
-  rect(lineboxX, lineboxY, lineboxWidth, lineboxHeight); //the 'Line drawing tool' tool box top left with eraser switch
-  rect(shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight);  
+  rect(lineboxX, lineboxY, lineboxWidth, lineboxHeight); //the 'Line drawing tool' tool box top left with eraser switch 
   rect(musicboxX, musicboxY, musicboxWidth, musicboxHeight);
   rect(templateboxX, templateboxY, templateboxWidth, templateboxHeight);
   rect(xlinetool, ylinetool, linetoolWidth, linetoolHeight);//is the button to switch to the line tool
@@ -442,9 +453,9 @@ void populationOfVariables() {
   rect(xThin, yThin, thinWidth, thinHeight);
   rect(xThick, yThick, thickWidth, thickHeight);
   rect(xThicker, yThicker, thickerWidth, thickerHeight);
+  rect(xShapesColorPanel, yShapesColorPanel, ShapesColorPanelWidth, ShapesColorPanelHeight); 
   
 
-//xcircleBox, ycircleBox, circleBoxWIdth, circleBoxHeight
   
   
   
