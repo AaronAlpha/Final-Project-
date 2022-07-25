@@ -366,10 +366,10 @@ void populationOfVariables() {
   //end 
   
   //triangle box
-  xTriangle = xCenter - xCenter*1/4;
-  yTriangle = yCenter - (yCenter/2)*1/1.55;
-  TriangleWidth = (xCenter - xCenter*1/2)/2;
-  TriangleHeight = (yCenter/2)*3/5;
+  xTriangle = (xCenter - xCenter*1/2)/2 + ((xCenter - xCenter*1/2)/2)/2;
+  yTriangle = (height*6.5/10)/2;
+  TriangleWidth = ((xCenter - xCenter*1/2)/2)/2;
+  TriangleHeight = ((height - (height*6.5/10)/2)*1/3)/2;
   //Text
   triangleFont = createFont("Arial Narrow", 45);
   //End Text 
@@ -386,10 +386,10 @@ void populationOfVariables() {
   //end
   
   //rectangle box
-  xRectangle = xCenter - xCenter*1/4;
-  yRectangle = yCenter - (yCenter/2)*1/22;
-  RectangleWidth = (xCenter - xCenter*1/2)/2;
-  RectangleHeight = (yCenter/2)*3/5;
+  xRectangle = (xCenter - xCenter*1/2)/2 + ((xCenter - xCenter*1/2)/2)/2;
+  yRectangle = (height*6.5/10)/2 + (height*6.5/10)/5.77;
+  RectangleWidth = ((xCenter - xCenter*1/2)/2)/2;
+  RectangleHeight = ((height - (height*6.5/10)/2)*1/3)/2;
   //Text
   rectangleFont = createFont("Arial Narrow", 45);
   //End Text 

@@ -85,4 +85,8 @@ void shapesShapes() {
   text(rectangleText, xRectangle, yRectangle, RectangleWidth, RectangleHeight); //'text()' function 'draws' the text 
   fill(resetWhite);
   //End Rectangle button
+  
+  
+  
+  //can improve the shapes tab button by putting shapes instead of text in of it
 }
