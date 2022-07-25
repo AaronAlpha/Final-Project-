@@ -18,5 +18,8 @@ void colorButton() {
   fill(buttontextfillcolor);
   text(colorText, xColor, yColor, ColorWidth, ColorHeight); //'text()' function 'draws' the text 
   fill(resetWhite);
+  
+ 
+  
   //End Color button
 };
