@@ -239,7 +239,7 @@ void mousePressed() {
 
 
 
-  //brush type control flow
+  //brush-type control flow
   if (mouseX >= xThin && mouseX <= xThin +  thinWidth && mouseY >= yThin && mouseY <= yThin + thinHeight) {
     if (thinBool == false) {
       thinBool = true;
@@ -265,7 +265,19 @@ void mousePressed() {
 
 
 
+  //shapes control flow
+  //circle
+  if (mouseX >= xCircle && mouseX <= xCircle +  CircleWidth && mouseY >= yCircle && mouseY <= yCircle + CircleHeight) {}
+  //end
   
+  //triangle
+  //end
+  
+  //square
+  //end
+  
+  //rectangle
+  //end
 
 
 

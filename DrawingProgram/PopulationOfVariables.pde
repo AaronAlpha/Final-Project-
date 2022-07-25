@@ -49,28 +49,29 @@ String shapesButtonText = "Shapes";
 int shapesSize;
 boolean shapesOn;
 float xShapeOptions, yShapeOptions, ShapeWidth, ShapeHeight;
+
 float xCircle, yCircle, CircleWidth, CircleHeight;
 int circleSize;
-String circleText = "Drawing mode";
+String circleText = "Circle";
 color buttonfillcircle, buttontextfillcircle;
 boolean circle = false;
 
 
 float xTriangle, yTriangle, TriangleWidth, TriangleHeight;
 int triangleSize;
-String triangleText = "Drawing mode";
+String triangleText = "Triangle";
 color buttonfilltriangle, buttontextfilltriangle;
 boolean triangle = false;
 
 float xSquare, ySquare, SquareWidth, SquareHeight;
 int squareSize;
-String squareText = "Drawing mode";
+String squareText = "Square";
 color buttonfillsquare, buttontextfillsquare;
 boolean square = false;
 
 float xRectangle, yRectangle, RectangleWidth, RectangleHeight;
 int rectangleSize;
-String rectangleText = "Drawing mode";
+String rectangleText = "Rectangle";
 color buttonfillrectangle, buttontextfillrectangle;
 boolean rectangle = false;
 
