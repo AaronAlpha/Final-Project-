@@ -6,7 +6,7 @@ String ls = "Landscape or Square", p = "Portrait", DO = "Display Orientation", i
 color purple = #9E05FF, resetWhite = #FFFFFF, red = #FF0000, blue = #5792F5, black = #000000, orange = #F59A39, green =#39F56C, yellow = #EEF539; //or another purple  color = #2c08ff
 
 PFont closeFont, RestartFont, RestartFontHover, MinMaxFont, introFont, startFont, linebuttonFont, eraserbuttonFont, toolsFont, thinbuttonFont, thickbuttonFont, thickerbuttonFont;
-PFont shapesbuttonFont, colorbuttonFont, colorfillerbuttonFont;
+PFont shapesbuttonFont, colorbuttonFont, colorfillerbuttonFont, circleFont, triangleFont, squareFont, rectangleFont;
 String[] fontList = PFont.list(); //To list all fonts avaliable on OS
 
 
@@ -49,7 +49,31 @@ String shapesButtonText = "Shapes";
 int shapesSize;
 boolean shapesOn;
 float xShapeOptions, yShapeOptions, ShapeWidth, ShapeHeight;
-float xcircleB, ycircleShape, shapeDiameter;
+float xCircle, yCircle, CircleWidth, CircleHeight;
+int circleSize;
+String circleText = "Drawing mode";
+color buttonfillcircle, buttontextfillcircle;
+boolean circle = false;
+
+
+float xTriangle, yTriangle, TriangleWidth, TriangleHeight;
+int triangleSize;
+String triangleText = "Drawing mode";
+color buttonfilltriangle, buttontextfilltriangle;
+boolean triangle = false;
+
+float xSquare, ySquare, SquareWidth, SquareHeight;
+int squareSize;
+String squareText = "Drawing mode";
+color buttonfillsquare, buttontextfillsquare;
+boolean square = false;
+
+float xRectangle, yRectangle, RectangleWidth, RectangleHeight;
+int rectangleSize;
+String rectangleText = "Drawing mode";
+color buttonfillrectangle, buttontextfillrectangle;
+boolean rectangle = false;
+
 
 
 float xColor, yColor, ColorWidth, ColorHeight;
@@ -302,7 +326,7 @@ void populationOfVariables() {
   
   
   
-  //Population of Shapes Tool Box
+  //Population of Shapes Button Box
   shapesboxX = width * 0;
   shapesboxY = (height*6.5/10)/2;
   shapesboxWidth = xCenter - xCenter*1/2;
@@ -310,10 +334,52 @@ void populationOfVariables() {
   //Text
   shapesbuttonFont = createFont("Arial Narrow", 45);
   //End Text 
+  
+  //shapes tool box
   xShapeOptions = xCenter - xCenter*1/2;
   yShapeOptions = (height*6.5/10)/2;
   ShapeWidth = xCenter - xCenter*1/2;
   ShapeHeight = (height*6.5/10)/2;
+  
+  //circle box
+  xCircle = xCenter - xCenter*1/2;
+  yCircle = yShapeOptions/2;
+  CircleWidth = (xCenter - xCenter*1/2)/2;
+  CircleHeight = yShapeOptions/2;
+  //Text
+  circleFont = createFont("Arial Narrow", 45);
+  //End Text 
+  //end 
+  
+  //triangle box
+  xTriangle = xCenter - xCenter*1/4;
+  yTriangle = yShapeOptions/2;
+  TriangleWidth = (xCenter - xCenter*1/2)/2;
+  TriangleHeight = yShapeOptions/2;
+  //Text
+  triangleFont = createFont("Arial Narrow", 45);
+  //End Text 
+  //end
+  
+  //square box
+  xSquare = xCenter - xCenter*1/2;
+  ySquare = yShapeOptions/2;
+  SquareWidth = (xCenter - xCenter*1/2)/2;
+  SquareHeight = yShapeOptions/2;
+  //Text
+  squareFont = createFont("Arial Narrow", 45);
+  //End Text   
+  //end
+  
+  //rectangle box
+  xRectangle = xCenter - xCenter*1/4;
+  yRectangle = yShapeOptions/2;
+  RectangleWidth = (xCenter - xCenter*1/2)/2;
+  RectangleHeight = yShapeOptions/2;
+  //Text
+  rectangleFont = createFont("Arial Narrow", 45);
+  //End Text 
+  //end
   //End Population of Shapes Tool Box
   
   

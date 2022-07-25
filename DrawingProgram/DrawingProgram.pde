@@ -49,6 +49,7 @@ void draw() {
 
 
   if (shapesOn == true) rect(xShapeOptions, yShapeOptions, ShapeWidth, ShapeHeight);
+  //if
 
 
 
@@ -83,15 +84,22 @@ void draw() {
 
 
     if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) line(mouseX, mouseY, pmouseX, pmouseY);
+
+    if (draw == true && eraser == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      stroke(#FFFFFF); 
+      line(mouseX, mouseY, pmouseX, pmouseY); 
+      stroke(0);
+    }
+    
   } else { 
     lineDraw = false;
     thinBool = false;
     thickBool = false;
     thickerBool = false;
+    eraser = false;
   }
 
 
-  if (eraser == true &&draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) stroke(255); line(mouseX, mouseY, pmouseX, pmouseY); endStroke();
 
 
 
@@ -185,7 +193,7 @@ void mousePressed() {
   //switch to toggle close button ON(to end program)
   if (mouseX >= xCloseButton && mouseX <= xCloseButton +  CloseButtonWidth && mouseY >= yCloseButton && mouseY <= yCloseButton + CloseButtonHeight) exit();
   //end
-  
+
   //control flow/switch to toggle Restart button ON or OFF
   if (mouseX >= xRestartButton && mouseX <= xRestartButton +  RestartButtonWidth && mouseY >= yRestartButton && mouseY <= yRestartButton + RestartButtonHeight) {
     if (shouldRestart == false) {
@@ -206,8 +214,8 @@ void mousePressed() {
     }
   }
   //end
-  
-  
+
+
   //switch to toggle eraser ON or OFF
   if (mouseX >= eraserboxX && mouseX <= eraserboxX +  eraserboxWidth && mouseY >= eraserboxY && mouseY <= eraserboxY + eraserboxHeight) {
     if (eraser == false) {
@@ -218,7 +226,7 @@ void mousePressed() {
   }
   //end
 
-  
+
   //control flow/switch to open a shapes tab to put shapes in canvas
   if (mouseX >= shapesboxX && mouseX <= shapesboxX + shapesboxWidth && mouseY >= shapesboxY && mouseY <= shapesboxY + shapesboxHeight) {
     if (shapesOn == false) {
@@ -231,33 +239,33 @@ void mousePressed() {
 
 
 
-    //brush type control flow
-    if (mouseX >= xThin && mouseX <= xThin +  thinWidth && mouseY >= yThin && mouseY <= yThin + thinHeight) {
-      if (thinBool == false) {
-        thinBool = true;
-
-      } else {
-        thinBool = false;
-      }
-
-      } 
-      else if (mouseX >= xThick && mouseX <= xThick +  thickWidth && mouseY >= yThick && mouseY <= yThick + thickHeight)  {if (thickBool == false){
+  //brush type control flow
+  if (mouseX >= xThin && mouseX <= xThin +  thinWidth && mouseY >= yThin && mouseY <= yThin + thinHeight) {
+    if (thinBool == false) {
+      thinBool = true;
+    } else {
+      thinBool = false;
+    }
+  } else if (mouseX >= xThick && mouseX <= xThick +  thickWidth && mouseY >= yThick && mouseY <= yThick + thickHeight) {
+    if (thickBool == false) {
       thickBool = true;
     } else {
       thickBool = false;
-
-  }
-      }
-    else if (mouseX >= xThicker && mouseX <= xThicker +  thickerWidth && mouseY >= yThicker && mouseY <= yThicker + thickerHeight) {if (thickerBool == false){
-    thickerBool = true;
+    }
+  } else if (mouseX >= xThicker && mouseX <= xThicker +  thickerWidth && mouseY >= yThicker && mouseY <= yThicker + thickerHeight) {
+    if (thickerBool == false) {
+      thickerBool = true;
     } else {
       thickerBool = false;
-
     }
-    }
-    //end brush type control flow
+  }
+  //end brush type control flow
 
 
+
+
+
+  
 
 
 
