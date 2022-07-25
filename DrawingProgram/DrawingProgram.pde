@@ -42,9 +42,9 @@ void draw() {
   thin();
   thick();
   thicker();
-  shapes();
-  colorButton();
-  backgroundColorFill();
+  //shapes();
+  //colorButton();
+  //backgroundColorFill();
 
   
   if (shapesOn == true) shapesShapes();
