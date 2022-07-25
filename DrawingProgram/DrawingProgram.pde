@@ -48,7 +48,7 @@ void draw() {
   backgroundColorFill();
 
 
-  
+  if (shapesOn == true) rect(xShapeOptions, yShapeOptions, ShapeWidth, ShapeHeight); ellipse(xcircleShape, ycircleShape, shapeDiameter, shapeDiameter);;
   
 
 
@@ -151,6 +151,9 @@ void keyPressed() {
 
 
 void mousePressed() {
+  shapesOn = false;
+  
+  
   if (mouseX >= xCloseButton && mouseX <= xCloseButton +  CloseButtonWidth && mouseY >= yCloseButton && mouseY <= yCloseButton + CloseButtonHeight) exit();
 
   if (mouseX >= xRestartButton && mouseX <= xRestartButton +  RestartButtonWidth && mouseY >= yRestartButton && mouseY <= yRestartButton + RestartButtonHeight) {

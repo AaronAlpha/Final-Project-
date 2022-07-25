@@ -16,14 +16,7 @@ void shapes() {
   shapesSize = 40; //Changing number until it exists
   textFont(shapesbuttonFont, shapesSize); //used to affext the text
   fill(buttontextfillclose);
-  if (shapesOn == false) {
-    text(shapesButtonTextf, shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight); //'text()' function 'draws' the text 
-    rect(xShapeOptions*0, yShapeOptions*0, ShapeWidth*0, ShapeHeight*0);
-  } else if (shapesOn == true) {
-    text(shapesButtonTextt, shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight); //'text()' function 'draws' the text 
-    rect(xShapeOptions, yShapeOptions, ShapeWidth, ShapeHeight);
-  }
-
+  text(shapesButtonText, shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight); //'text()' function 'draws' the text 
   fill(resetWhite);
   //End Shapes button
 }

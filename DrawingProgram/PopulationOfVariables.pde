@@ -41,10 +41,11 @@ int thickerSize;
 
 
 float shapesboxX, shapesboxY, shapesboxWidth, shapesboxHeight;
-String shapesButtonTextf = "Shapes; press here to open the Shapes window/tab", shapesButtonTextt = "Please repress to close down the Shapes window";
+String shapesButtonText = "Shapes";
 int shapesSize;
-boolean shapesOn = false;
+boolean shapesOn;
 float xShapeOptions, yShapeOptions, ShapeWidth, ShapeHeight;
+float xcircleShape, ycircleShape, shapeDiameter;
 
 
 float xColor, yColor, ColorWidth, ColorHeight;
@@ -307,11 +308,12 @@ void populationOfVariables() {
   //Text
   shapesbuttonFont = createFont("Arial Narrow", 45);
   //End Text 
-  
+
   xShapeOptions = xCenter - xCenter*1/2;
   yShapeOptions = (height*6.5/10)/2;
   ShapeWidth = xCenter - xCenter*1/2;
   ShapeHeight = (height*6.5/10)/2;
+  
   
   //End Population of Shapes Tool Box
   
@@ -370,6 +372,7 @@ void populationOfVariables() {
   rect(xThin, yThin, thinWidth, thinHeight);
   rect(xThick, yThick, thickWidth, thickHeight);
   rect(xThicker, yThicker, thickerWidth, thickerHeight);
+  
 
   
   
