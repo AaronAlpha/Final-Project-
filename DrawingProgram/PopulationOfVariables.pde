@@ -347,16 +347,16 @@ void populationOfVariables() {
   //End Text 
   
   //shapes tool box
-  xShapeOptions = xCenter - xCenter*1/2;
+  xShapeOptions = (xCenter - xCenter*1/2)/2;
   yShapeOptions = (height*6.5/10)/2;
-  ShapeWidth = xCenter - xCenter*1/2;
-  ShapeHeight = (height*6.5/10)/2;
+  ShapeWidth = (xCenter - xCenter*1/2)/2;
+  ShapeHeight = (height - (height*6.5/10)/2)*1/3;
   
   //circle box
-  xCircle = xCenter - xCenter*1/2;
-  yCircle = yCenter - (yCenter/2)*1/1.55;
-  CircleWidth = (xCenter - xCenter*1/2)/2;
-  CircleHeight = (yCenter/2)*3/5;
+  xCircle = (xCenter - xCenter*1/2)/2;
+  yCircle = (height*6.5/10)/2;
+  CircleWidth = ((xCenter - xCenter*1/2)/2)/2;
+  CircleHeight = ((height - (height*6.5/10)/2)*1/3)/2;
   //Text
   circleFont = createFont("Arial Narrow", 45);
   //End Text 
@@ -376,10 +376,10 @@ void populationOfVariables() {
   //end
   
   //square box
-  xSquare = xCenter - xCenter*1/2;
-  ySquare = yCenter - (yCenter/2)*1/22;
-  SquareWidth = (xCenter - xCenter*1/2)/2;
-  SquareHeight = (yCenter/2)*3/5;
+  xSquare = (xCenter - xCenter*1/2)/2;
+  ySquare = (height*6.5/10)/2 + (height*6.5/10)/5.77;
+  SquareWidth = ((xCenter - xCenter*1/2)/2)/2;
+  SquareHeight = ((height - (height*6.5/10)/2)*1/3)/2;
   //Text
   squareFont = createFont("Arial Narrow", 45);
   //End Text   
@@ -454,6 +454,12 @@ void populationOfVariables() {
   rect(xThick, yThick, thickWidth, thickHeight);
   rect(xThicker, yThicker, thickerWidth, thickerHeight);
   rect(xShapesColorPanel, yShapesColorPanel, ShapesColorPanelWidth, ShapesColorPanelHeight); 
+  rect(xShapeOptions, yShapeOptions, ShapeWidth, ShapeHeight);
+  rect(xCircle, yCircle, CircleWidth, CircleHeight);
+  rect(xTriangle, yTriangle, TriangleWidth, TriangleHeight);
+  rect(xSquare, ySquare, SquareWidth, SquareHeight);
+  rect(xRectangle, yRectangle, RectangleWidth, RectangleHeight);
+  
   
 
   
