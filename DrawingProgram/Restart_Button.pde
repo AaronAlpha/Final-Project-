@@ -55,7 +55,7 @@ void restartButton() {
   text(Restart, xRestartButton, yRestartButton, RestartButtonWidth, RestartButtonHeight); //'text()' function 'draws' the text 
   fill(resetWhite);
   //End Restart button
-};
+}  
 
 
 

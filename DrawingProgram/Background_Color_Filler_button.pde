@@ -19,4 +19,4 @@ void backgroundColorFill() {
   text(backgroundFillerText, xBackgroundFiller, yBackgroundFiller, BackgroundFillerWidth, BackgroundFillerHeight); //'text()' function 'draws' the text 
   fill(resetWhite);
   //End Background Color button
-};
+}

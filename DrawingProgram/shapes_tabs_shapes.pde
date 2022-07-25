@@ -60,7 +60,7 @@ void shapesShapes() {
   eraserSize = 40; //Changing number until it exists
   textFont(eraserbuttonFont, eraserSize); //used to affext the text
   fill(buttontextfilleraser);
-  text(eraserswitchText, xSquare, ySquare, SquareWidth, SquareHeight); //'text()' function 'draws' the text 
+  text(squareText, xSquare, ySquare, SquareWidth, SquareHeight); //'text()' function 'draws' the text 
   fill(resetWhite);
   //End Square button
   

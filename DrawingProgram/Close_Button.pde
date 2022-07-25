@@ -19,4 +19,4 @@ void closeButton() {
   text(closeTitle, xCloseButton, yCloseButton, CloseButtonWidth, CloseButtonHeight); //'text()' function 'draws' the text 
   fill(resetWhite);
   //End Close button
-};
+}

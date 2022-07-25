@@ -24,11 +24,10 @@ void setup() {
   //if (MaxAlready == false) size(1750, 900);
 
   populationOfVariables();
-
+  if (circle == true) shape(circleShape, drawingSurfaceX + drawingSurfaceX*1/4, drawingSurfaceY - drawingSurfaceY*1/2);
 
   printArray(fontList); //is another line of code for print statements
-};
-
+}
 
 
 
@@ -49,7 +48,7 @@ void draw() {
 
   
   if (shapesOn == true) shapesShapes();
-  if (circle == true) shape(circleShape, drawingSurfaceX + drawingSurfaceX*1/4, drawingSurfaceY - drawingSurfaceY*1/2);
+
   
 
 
@@ -98,12 +97,6 @@ void draw() {
     circle = false;
     
   }
-
-
-
-
-
-
 
 
 
@@ -172,14 +165,13 @@ void draw() {
 
   //rect(xStartBox, yStartBox, StartBoxWidth, StartBoxHeight);
   //}
-};
-
+}
 
 
 
 
 void keyPressed() {
-}; // will not be required as program going to be touch screen and mousePressed is harder - > rub this out
+} // will not be required as program going to be touch screen and mousePressed is harder - > rub this out
 
 
 
