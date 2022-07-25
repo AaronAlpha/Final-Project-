@@ -47,9 +47,10 @@ void draw() {
   colorButton();
   backgroundColorFill();
 
-
-  if (shapesOn == true) rect(xShapeOptions, yShapeOptions, ShapeWidth, ShapeHeight);
-  //if
+  
+  if (shapesOn == true) shapesShapes();
+  if (circle == true) shape(circleShape, mouseX, mouseY, pmouseX, pmouseX);
+  
 
 
 
@@ -90,7 +91,6 @@ void draw() {
       line(mouseX, mouseY, pmouseX, pmouseY); 
       stroke(0);
     }
-    
   } else { 
     lineDraw = false;
     thinBool = false;
@@ -267,16 +267,43 @@ void mousePressed() {
 
   //shapes control flow
   //circle
-  if (mouseX >= xCircle && mouseX <= xCircle +  CircleWidth && mouseY >= yCircle && mouseY <= yCircle + CircleHeight) {}
+  if (mouseX >= xCircle && mouseX <= xCircle +  CircleWidth && mouseY >= yCircle && mouseY <= yCircle + CircleHeight) {
+    if (circle == false) {
+      circle = true;
+    } else {
+      circle = false;
+    }
+  }
   //end
-  
+
   //triangle
+  if (mouseX >= xTriangle && mouseX <= xTriangle +  TriangleWidth && mouseY >= yTriangle && mouseY <= yTriangle + TriangleHeight) {
+    if (triangle == false) {
+      triangle = true;
+    } else {
+      triangle = false;
+    }
+  }
   //end
-  
+
   //square
+  if (mouseX >= xSquare && mouseX <= xSquare +  SquareWidth && mouseY >= ySquare && mouseY <= ySquare + SquareHeight) {
+    if (square == false) {
+      square = true;
+    } else {
+      square = false;
+    }
+  }
   //end
-  
+
   //rectangle
+  if (mouseX >= xRectangle && mouseX <= xRectangle +  RectangleWidth && mouseY >= yRectangle && mouseY <= yRectangle + RectangleHeight) {
+    if (rectangle == false) {
+      rectangle = true;
+    } else {
+      rectangle = false;
+    }
+  }
   //end
 
 

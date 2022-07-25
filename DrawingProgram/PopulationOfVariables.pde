@@ -49,7 +49,7 @@ String shapesButtonText = "Shapes";
 int shapesSize;
 boolean shapesOn;
 float xShapeOptions, yShapeOptions, ShapeWidth, ShapeHeight;
-
+PShape circleShape, triangleShape, squareShape, rectangleShape;
 float xCircle, yCircle, CircleWidth, CircleHeight;
 int circleSize;
 String circleText = "Circle";
@@ -344,19 +344,22 @@ void populationOfVariables() {
   
   //circle box
   xCircle = xCenter - xCenter*1/2;
-  yCircle = yShapeOptions/2;
+  yCircle = yCenter - (yCenter/2)*1/1.55;
   CircleWidth = (xCenter - xCenter*1/2)/2;
-  CircleHeight = yShapeOptions/2;
+  CircleHeight = (yCenter/2)*3/5;
   //Text
   circleFont = createFont("Arial Narrow", 45);
   //End Text 
+  //shape
+  circleShape = createShape(ELLIPSE); //error
+  //
   //end 
   
   //triangle box
   xTriangle = xCenter - xCenter*1/4;
-  yTriangle = yShapeOptions/2;
+  yTriangle = yCenter - (yCenter/2)*1/1.55;
   TriangleWidth = (xCenter - xCenter*1/2)/2;
-  TriangleHeight = yShapeOptions/2;
+  TriangleHeight = (yCenter/2)*3/5;
   //Text
   triangleFont = createFont("Arial Narrow", 45);
   //End Text 
@@ -364,9 +367,9 @@ void populationOfVariables() {
   
   //square box
   xSquare = xCenter - xCenter*1/2;
-  ySquare = yShapeOptions/2;
+  ySquare = yCenter - (yCenter/2)*1/22;
   SquareWidth = (xCenter - xCenter*1/2)/2;
-  SquareHeight = yShapeOptions/2;
+  SquareHeight = (yCenter/2)*3/5;
   //Text
   squareFont = createFont("Arial Narrow", 45);
   //End Text   
@@ -374,9 +377,9 @@ void populationOfVariables() {
   
   //rectangle box
   xRectangle = xCenter - xCenter*1/4;
-  yRectangle = yShapeOptions/2;
+  yRectangle = yCenter - (yCenter/2)*1/22;
   RectangleWidth = (xCenter - xCenter*1/2)/2;
-  RectangleHeight = yShapeOptions/2;
+  RectangleHeight = (yCenter/2)*3/5;
   //Text
   rectangleFont = createFont("Arial Narrow", 45);
   //End Text 
