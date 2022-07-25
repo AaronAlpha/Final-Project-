@@ -15,3 +15,5 @@ To-do list:
  - [x] restart button
  - [ ] <del>starting screen that introduce app and start button tp start program(will basically be a virtual paper/screen on top of the app)</del>(NOT POSSIBLE AT MOMENT)
  - [x] drawing by pressing and holding and then stop drawing by letting go
+ - [ ] template for pics
+ - [ ] jukebox
