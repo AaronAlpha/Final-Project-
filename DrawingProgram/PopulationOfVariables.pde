@@ -45,7 +45,7 @@ String shapesButtonText = "Shapes";
 int shapesSize;
 boolean shapesOn;
 float xShapeOptions, yShapeOptions, ShapeWidth, ShapeHeight;
-float xcircleShape, ycircleShape, shapeDiameter;
+float xcircleB, ycircleShape, shapeDiameter;
 
 
 float xColor, yColor, ColorWidth, ColorHeight;
@@ -233,6 +233,13 @@ void populationOfVariables() {
   //End Population of Close Button
   
   
+  //Population of Line Tool Box
+  lineboxX = width * 0;
+  lineboxY = height * 0;
+  lineboxWidth = xCenter - xCenter*1/2;
+  lineboxHeight = (height*6.5/10)/2;
+  //End Population of Line Tool Box
+  
   
   //Population of line tool switch
   xlinetool = width*0;
@@ -249,9 +256,6 @@ void populationOfVariables() {
   eraserboxX = (xCenter - xCenter*1/2)/2;
   eraserboxY = height*0;
   eraserboxWidth = (xCenter - xCenter*1/2)/2;
-  eraserboxHeight = (height*6.5/10)/4;
-  //Text
-  eraserbuttonFont = createFont("Arial Narrow", 45);
   //End Text 
   //End population of eraser tool
   
@@ -290,15 +294,6 @@ void populationOfVariables() {
   //End Population for different size drawing tool
   
   
- 
-  
-  //Population of Line Tool Box
-  lineboxX = width * 0;
-  lineboxY = height * 0;
-  lineboxWidth = xCenter - xCenter*1/2;
-  lineboxHeight = (height*6.5/10)/2;
-  //End Population of Line Tool Box
-  
   
   //Population of Shapes Tool Box
   shapesboxX = width * 0;
@@ -308,14 +303,12 @@ void populationOfVariables() {
   //Text
   shapesbuttonFont = createFont("Arial Narrow", 45);
   //End Text 
-
   xShapeOptions = xCenter - xCenter*1/2;
   yShapeOptions = (height*6.5/10)/2;
   ShapeWidth = xCenter - xCenter*1/2;
   ShapeHeight = (height*6.5/10)/2;
-  
-  
   //End Population of Shapes Tool Box
+  
   
   
   //Population of Color Tool Box
@@ -374,6 +367,7 @@ void populationOfVariables() {
   rect(xThicker, yThicker, thickerWidth, thickerHeight);
   
 
+//xcircleBox, ycircleBox, circleBoxWIdth, circleBoxHeight
   
   
   
