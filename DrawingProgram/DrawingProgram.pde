@@ -49,7 +49,7 @@ void draw() {
 
   
   if (shapesOn == true) shapesShapes();
-  if (circle == true) shape(circleShape, mouseX, mouseY, pmouseX, pmouseX);
+  //if (circle == true) shape(circleShape, mouseX, mouseY, pmouseX, pmouseX);
   
 
 
