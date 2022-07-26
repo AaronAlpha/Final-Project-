@@ -6,7 +6,7 @@ String ls = "Landscape or Square", p = "Portrait", DO = "Display Orientation", i
 color purple = #9E05FF, resetWhite = #FFFFFF, red = #FF0000, blue = #5792F5, black = #000000, orange = #F59A39, green =#39F56C, yellow = #EEF539; //or another purple  color = #2c08ff
 
 PFont closeFont, RestartFont, RestartFontHover, MinMaxFont, introFont, startFont, linebuttonFont, eraserbuttonFont, toolsFont, thinbuttonFont, thickbuttonFont, thickerbuttonFont;
-PFont shapesbuttonFont, colorbuttonFont, colorfillerbuttonFont, circleFont, triangleFont, squareFont, rectangleFont, stampFont;
+PFont shapesbuttonFont, colorbuttonFont, colorfillerbuttonFont, circleFont, triangleFont, squareFont, rectangleFont, stampFont, DottedLineFont;
 String[] fontList = PFont.list(); //To list all fonts avaliable on OS
 
 
@@ -302,10 +302,13 @@ void populationOfVariables() {
   
   
   //Population of dotted line
-  xDottedLine = ;
-  yDottedLine = ;
-  DottedLineWidth = ;
-  DottedLineHeight = ;
+  xDottedLine = 1000; //((xCenter - xCenter*1/2)/2)/2 + ((xCenter - xCenter*1/2)/2)/2
+  yDottedLine = height*0;
+  DottedLineWidth = ((xCenter - xCenter*1/2)/2)/2;
+  DottedLineHeight = (height*6.5/10)/4;
+  //Text
+  DottedLineFont = createFont("Arial Narrow", 45);
+  //End Text
   //End Population of dotted line
   
   
@@ -484,6 +487,7 @@ void populationOfVariables() {
   //rect(xSquare, ySquare, SquareWidth, SquareHeight);
   //rect(xRectangle, yRectangle, RectangleWidth, RectangleHeight);
   //rect(xstamptool, ystamptool, stamptoolWidth, stamptoolHeight);
+  rect(xDottedLine, yDottedLine, DottedLineWidth, DottedLineHeight);
   
   
 

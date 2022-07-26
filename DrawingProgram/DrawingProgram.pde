@@ -39,6 +39,7 @@ void draw() {
 
   lineButton();
   stampButton();
+  dottedLine();
   eraserButton();
   thin();
   thick();
