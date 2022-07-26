@@ -1,4 +1,4 @@
-void colorPallete() {
+void backgroundPallete() {
   //Red button
   //Hover-over color for Red Button
   if (mouseX >= xRed && mouseX <= xRed + RedWidth && mouseY >= yRed && mouseY <= yRed + RedHeight) {
@@ -202,4 +202,5 @@ void colorPallete() {
   fill(resetWhite);
   //End Close button
   
+}
 }

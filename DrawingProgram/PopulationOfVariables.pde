@@ -5,6 +5,7 @@ float xCenter, yCenter;
 String ls = "Landscape or Square", p = "Portrait", DO = "Display Orientation", instruct = "Flip your screen";
 color purple = #9E05FF, resetWhite = #FFFFFF, red = #FF0000, blue = #0822FF, black = #000000, orange = #F59A39, green =#39F56C, yellow = #EEF539; //or another purple  color = #2c08ff
 color indigo = #9F08FF, pink = #FF08CA; 
+color lightred = #FF8383, lightblue = #4D60FF, lightgreen = #74FF98, lightorange = #FFAE62, lightyellow = #F9FF64, lightindigo = #CA7FFC, lightpink = #FC8FE5, lightblack = #484646, lightwhite = #E3DCDC;
 
 PFont closeFont, RestartFont, RestartFontHover, MinMaxFont, introFont, startFont, linebuttonFont, eraserbuttonFont, toolsFont, thinbuttonFont, thickbuttonFont, thickerbuttonFont;
 PFont shapesbuttonFont, colorbuttonFont, colorfillerbuttonFont, circleFont, triangleFont, squareFont, rectangleFont, stampFont, DottedLineFont;
