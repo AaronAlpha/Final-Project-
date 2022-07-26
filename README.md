@@ -18,3 +18,6 @@ To-do list:
  - [ ] template for pics
  - [ ] jukebox
  - [ ] shapes tab
+ - [ ] dotted line 
+ - [ ] paint brush eraser xD
+ - [ ] not having to select and deselect all drawing tools and different sizes for drawing tool
