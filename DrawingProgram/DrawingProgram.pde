@@ -55,6 +55,7 @@ void draw() {
   //start Line tool
   if (lineDraw == true) { 
     stampDraw = false;
+    DottedLineDraw = false;
     if (mousePressed == true) {
       draw = true;
     } else {
@@ -96,6 +97,7 @@ void draw() {
   //start Stamp tool
   if (stampDraw == true) {  
     lineDraw = false;
+    DottedLineDraw = false;
     if (mousePressed == true) {
       draw = true;
     } else {
@@ -126,6 +128,48 @@ void draw() {
       ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter);
   } else {
   }//end stamp tool
+  
+  
+  
+  //start Line tool
+  if (DottedLineDraw == true) { 
+    stampDraw = false;
+    lineDraw = false;
+    if (mousePressed == true) {
+      draw = true;
+    } else {
+      draw = false;
+    }
+
+    if (draw == true && thinBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      strokeWeight(1); 
+      line(mouseX, mouseY, pmouseX, pmouseY); 
+      strokeWeight(1);
+
+    } else {
+    }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+
+    if (draw == true && thickBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      strokeWeight(5); 
+      line(mouseX, mouseY, pmouseX, pmouseY); 
+      strokeWeight(1);
+
+    } else {
+    }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+
+    if (draw == true && thickerBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      strokeWeight(8); 
+      line(mouseX, mouseY, pmouseX, pmouseY); 
+      strokeWeight(1);
+
+    } else {
+    }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+
+    if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) 
+      line(mouseX, mouseY, pmouseX, pmouseY);
+  } else {
+  }//end line tool
+
 
 
 
@@ -383,11 +427,11 @@ void mouseClicked() {
     if (lineDraw == false) {
       lineDraw = true;
       stampDraw = false;
+      DottedLineDraw = false;
     } else {
       lineDraw = false;
     }
   }//end
-
 
 
   //switch to toggle stamp mode ON or OFF
@@ -395,10 +439,24 @@ void mouseClicked() {
     if (stampDraw == false) {
       stampDraw = true;
       lineDraw = false;
+      DottedLineDraw = false;
     } else {
       stampDraw = false;
     }
   }//end
+  
+  
+  //switch to toggle stamp mode ON or OFF
+  if (mouseX >= xDottedLine && mouseX <= xDottedLine +  DottedLineWidth && mouseY >= yDottedLine && mouseY <= yDottedLine + DottedLineHeight) {
+    if (DottedLineDraw == false) {
+      DottedLineDraw = true;
+      lineDraw = false;
+      stampDraw = false;
+    } else {
+      DottedLineDraw = false;
+    }
+  }//end
+  
   
   
   
