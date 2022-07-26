@@ -20,4 +20,4 @@ To-do list:
  - [ ] shapes tab
  - [ ] dotted line 
  - [ ] paint brush eraser xD
- - [ ] not having to select and deselect all drawing tools and different sizes for drawing tool
+ - [x] not having to select and deselect all drawing tools and different sizes for drawing tool
