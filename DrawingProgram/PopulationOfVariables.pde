@@ -4,7 +4,7 @@ boolean draw = false;
 float xCenter, yCenter;
 String ls = "Landscape or Square", p = "Portrait", DO = "Display Orientation", instruct = "Flip your screen";
 color purple = #9E05FF, resetWhite = #FFFFFF, red = #FF0000, blue = #5792F5, black = #000000, orange = #F59A39, green =#39F56C, yellow = #EEF539; //or another purple  color = #2c08ff
-//color indigo = 
+color indigo = #4B00FF, pink = #E500FF, ; 
 
 PFont closeFont, RestartFont, RestartFontHover, MinMaxFont, introFont, startFont, linebuttonFont, eraserbuttonFont, toolsFont, thinbuttonFont, thickbuttonFont, thickerbuttonFont;
 PFont shapesbuttonFont, colorbuttonFont, colorfillerbuttonFont, circleFont, triangleFont, squareFont, rectangleFont, stampFont, DottedLineFont;
@@ -108,18 +108,13 @@ float xPink, yPink, PinkWidth, PinkHeight;
 float xBlack, yBlack, BlackWidth, BlackHeight;
 float xWhite, yWhite, WhiteWidth, WhiteHeight;
 
-
 float xShapesColorPanel, yShapesColorPanel, ShapesColorPanelWidth, ShapesColorPanelHeight;
-
 
 
 
 float templateboxX, templateboxY, templateboxWidth, templateboxHeight;
 
 float musicboxX, musicboxY, musicboxWidth, musicboxHeight;
-
-
-
 
 
 
@@ -499,7 +494,15 @@ void populationOfVariables() {
   //rect(xRectangle, yRectangle, RectangleWidth, RectangleHeight);
   //rect(xstamptool, ystamptool, stamptoolWidth, stamptoolHeight);
   rect(xDottedLine, yDottedLine, DottedLineWidth, DottedLineHeight);
-  
+  rect(xRed, yRed, RedWidth, RedHeight);
+  rect(xBlue, yBlue, BlueWidth, BlueHeight);
+  rect(xGreen, yGreen, GreenWidth, GreenHeight);
+  rect(xOrange, yOrange, OrangeWidth, OrangeHeight);
+  rect(xYellow, yYellow, YellowWidth, YelloHeight);
+  rect(xIndigo, yIndigo, IndigoWidth, IndigoHeight);
+  rect(xPink, yPink, PinkWidth, PinkHeight);
+  rect(xBlack, yBlack, BlackWidth, BlackHeight);
+  rect(xWhite, yWhite, WhiteWidth, WhiteHeight);
   
 
   
