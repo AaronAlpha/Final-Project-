@@ -8,6 +8,7 @@ color indigo = #4B00FF, pink = #E500FF;
 
 PFont closeFont, RestartFont, RestartFontHover, MinMaxFont, introFont, startFont, linebuttonFont, eraserbuttonFont, toolsFont, thinbuttonFont, thickbuttonFont, thickerbuttonFont;
 PFont shapesbuttonFont, colorbuttonFont, colorfillerbuttonFont, circleFont, triangleFont, squareFont, rectangleFont, stampFont, DottedLineFont;
+PFont redFont, blueFont, greenFont, orangeFont, yellowFont, indigoFont, pinkFont, blackFont, whiteFont;
 String[] fontList = PFont.list(); //To list all fonts avaliable on OS
 
 
@@ -100,14 +101,33 @@ color buttonfillBackgroundFiller, buttontextfillBackgroundFiller;
 
 float xColorPallete, yColorPallete, ColorPalleteWidth, ColorPalleteHeight;
 float xRed, yRed, RedWidth, RedHeight;
+color buttonfillred, buttontextfillred;
+
 float xBlue, yBlue, BlueWidth, BlueHeight;
+color buttonfillblue, buttontextfillblue;
+
 float xGreen, yGreen, GreenWidth, GreenHeight;
+color buttonfillgreen, buttontextfillgreen;
+
 float xOrange, yOrange, OrangeWidth, OrangeHeight;
+color buttonfillorange, buttontextfillorange;
+
 float xYellow, yYellow, YellowWidth, YelloHeight;
+color buttonfillyellow, buttontextfillyellow;
+
 float xIndigo, yIndigo, IndigoWidth, IndigoHeight;
+color buttonfillindigo, buttontextfillindigo;
+
 float xPink, yPink, PinkWidth, PinkHeight;
+color buttonfillpink, buttontextfillpink;
+
 float xBlack, yBlack, BlackWidth, BlackHeight;
+color buttonfillblack, buttontextfillblack;
+
 float xWhite, yWhite, WhiteWidth, WhiteHeight;
+color buttonfillwhite, buttontextfillwhite;
+int 
+
 
 float xBackgroundColorPallete, yBackgroundColorPallete, BackgroundColorPalleteWidth, BackgroundColorPalleteHeight;
 float xRedBackground, yRedBackground, RedBackgroundWidth, RedBackgroundHeight;
@@ -119,6 +139,8 @@ float xIndigoBackground, yIndigoBackground, IndigoBackgroundWidth, IndigoBackgro
 float xPinkBackground, yPinkBackground, PinkBackgroundWidth, PinkBackgroundHeight;
 float xBlackBackground, yBlackBackground, BlackBackgroundWidth, BlackBackgroundHeight;
 float xWhiteBackground, yWhiteBackground, WhiteBackgroundWidth, WhiteBackgroundHeight;
+
+
 
 
 
@@ -488,46 +510,60 @@ void populationOfVariables() {
   yRed = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3;
   RedWidth = ((xCenter - xCenter*1/2)/2)/3;
   RedHeight = ((height - (height*6.5/10)/2)*1/3)/3;
+  //Text
+  redFont = createFont("Arial Narrow", 45);
+  //end text
   
   xBlue = (xCenter - xCenter*1/2)/2 + ((xCenter - xCenter*1/2)/2)*1/3;
   yBlue = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3;
   BlueWidth = ((xCenter - xCenter*1/2)/2)/3;
   BlueHeight = ((height - (height*6.5/10)/2)*1/3)/3;
+  blueFont = createFont("Arial Narrow", 45);
+  
   
   xGreen = (xCenter - xCenter*1/2)/2 + ((xCenter - xCenter*1/2)/2)*1/3 + ((xCenter - xCenter*1/2)/2)*1/3;
   yGreen = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3;
   GreenWidth = ((xCenter - xCenter*1/2)/2)/3; 
   GreenHeight = ((height - (height*6.5/10)/2)*1/3)/3;
+  greenFont = createFont("Arial Narrow", 45);
   
   xOrange = (xCenter - xCenter*1/2)/2;
   yOrange = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3;
   OrangeWidth = ((xCenter - xCenter*1/2)/2)/3;
   OrangeHeight = ((height - (height*6.5/10)/2)*1/3)/3;
+  orangeFont = createFont("Arial Narrow", 45);
+  
   
   xYellow = (xCenter - xCenter*1/2)/2 + ((xCenter - xCenter*1/2)/2)*1/3; 
   yYellow = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3;
   YellowWidth = ((xCenter - xCenter*1/2)/2)/3;
   YelloHeight = ((height - (height*6.5/10)/2)*1/3)/3;
+  yellowFont = createFont("Arial Narrow", 45);
   
   xIndigo = (xCenter - xCenter*1/2)/2 + ((xCenter - xCenter*1/2)/2)*1/3 + ((xCenter - xCenter*1/2)/2)*1/3;
   yIndigo  = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3;
   IndigoWidth = ((xCenter - xCenter*1/2)/2)/3;
   IndigoHeight = ((height - (height*6.5/10)/2)*1/3)/3;
+  indigoFont = createFont("Arial Narrow", 45);
   
   xPink = (xCenter - xCenter*1/2)/2;
   yPink  = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3;
   PinkWidth = ((xCenter - xCenter*1/2)/2)/3;
   PinkHeight = ((height - (height*6.5/10)/2)*1/3)/3;
+  pinkFont = createFont("Arial Narrow", 45);
   
   xBlack = (xCenter - xCenter*1/2)/2 + ((xCenter - xCenter*1/2)/2)*1/3;
   yBlack = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3;
   BlackWidth = ((xCenter - xCenter*1/2)/2)/3;
   BlackHeight = ((height - (height*6.5/10)/2)*1/3)/3;
+  blackFont = createFont("Arial Narrow", 45);
   
   xWhite = (xCenter - xCenter*1/2)/2 + ((xCenter - xCenter*1/2)/2)*1/3 + ((xCenter - xCenter*1/2)/2)*1/3;
   yWhite = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3;
   WhiteWidth = ((xCenter - xCenter*1/2)/2)/3;
   WhiteHeight = ((height - (height*6.5/10)/2)*1/3)/3;
+  whiteFont = createFont("Arial Narrow", 45);
+
   //End population of all Color Pallete Colors
   
   
