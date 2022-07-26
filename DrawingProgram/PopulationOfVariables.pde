@@ -62,12 +62,12 @@ int shapesSize;
 boolean shapesOn;
 float xShapeOptions, yShapeOptions, ShapeWidth, ShapeHeight;
 PShape circleShape, triangleShape, squareShape, rectangleShape;
+
 float xCircle, yCircle, CircleWidth, CircleHeight;
 int circleSize;
 String circleText = "Circle";
 color buttonfillcircle, buttontextfillcircle;
 boolean circle = false;
-
 
 float xTriangle, yTriangle, TriangleWidth, TriangleHeight;
 int triangleSize;
