@@ -27,7 +27,7 @@ float xDottedLine, yDottedLine, DottedLineWidth, DottedLineHeight;
 int DottedLineSize;
 String DottedLineText = "Dotted Line";
 color buttonfillDottedLine, buttontextfillDottedLine;
-boolean DottedLineDraw = false;
+boolean DottedLineDraw = false, Dotted = false;
 
 float eraserboxX, eraserboxY, eraserboxWidth, eraserboxHeight;
 int eraserSize;
