@@ -87,7 +87,7 @@ void backgroundPallete() {
   orangeSize = 40; //Changing number until it exists
   textFont(orangeFont, orangeSize); //used to affext the text
   fill(buttontextfillorange);
-  text(xOrangeBackground, yOrangeBackground, OrangeBackgroundWidth, OrangeBackgroundHeight); //'text()' function 'draws' the text 
+  text(orangeTitle, xOrangeBackground, yOrangeBackground, OrangeBackgroundWidth, OrangeBackgroundHeight); //'text()' function 'draws' the text 
   fill(resetWhite);
   //End Orange button
   
