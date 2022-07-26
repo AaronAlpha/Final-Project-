@@ -302,7 +302,7 @@ void populationOfVariables() {
   
   
   //Population of dotted line
-  xDottedLine = 1000; //((xCenter - xCenter*1/2)/2)/2 + ((xCenter - xCenter*1/2)/2)/2
+  xDottedLine = ((xCenter - xCenter*1/2)/2)/2 + ((xCenter - xCenter*1/2)/2)/2; 
   yDottedLine = height*0;
   DottedLineWidth = ((xCenter - xCenter*1/2)/2)/2;
   DottedLineHeight = (height*6.5/10)/4;
