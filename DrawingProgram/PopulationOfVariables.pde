@@ -429,9 +429,8 @@ void populationOfVariables() {
   colorfillerbuttonFont = createFont("Arial Narrow", 45);
   //End Text 
   //End Population of Color Fill Background Tool Box
-  
   //End population
-  //(xCenter - xCenter*1/2)/2 -> is x coordinates for the shapes and color boxes
+
   
   
   //Population of Template Tool Box

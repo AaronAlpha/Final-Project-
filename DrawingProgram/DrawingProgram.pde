@@ -38,7 +38,7 @@ void setup() {
 void draw() {
 
   lineButton();
-  //stampButton();
+  stampButton();
   eraserButton();
   thin();
   thick();
@@ -55,7 +55,7 @@ void draw() {
   
 
 
-  //ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter) //have to mae ellipse tool as well  
+  
   //start Line tool
   if (lineDraw == true) {     
     if (mousePressed == true) {
@@ -95,17 +95,15 @@ void draw() {
     thinBool = false;
     thickBool = false;
     thickerBool = false;
-    eraser = false;
-    shapesOn = false;
-    circle = false;
+    //eraser = false;
     
   }//end line tool
   
   
   
   
-  //start Stamp tool
-  if (lineDraw == true) {     
+   //start Stamp tool
+  if (stampDraw == true) {     
     if (mousePressed == true) {
       draw = true;
     } else {
@@ -114,29 +112,30 @@ void draw() {
 
     if (draw == true && thinBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
       strokeWeight(1); 
-      line(mouseX, mouseY, pmouseX, pmouseY); 
+      ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter); //have to make ellipse tool as well  
       strokeWeight(1);
     } else {
     }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
     if (draw == true && thickBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
       strokeWeight(5); 
-      line(mouseX, mouseY, pmouseX, pmouseY); 
+      ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter);
       strokeWeight(1);
     } else {
     }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
     if (draw == true && thickerBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
       strokeWeight(8); 
-      line(mouseX, mouseY, pmouseX, pmouseY); 
+      ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter);
       strokeWeight(1);
     } else {
     }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
 
-    if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) line(mouseX, mouseY, pmouseX, pmouseY);
+    if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) 
+    ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter);
 
     if (draw == true && eraser == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
       stroke(#FFFFFF); 
-      line(mouseX, mouseY, pmouseX, pmouseY); 
+      ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter); 
       stroke(0);
     }
   } else { 
@@ -144,12 +143,58 @@ void draw() {
     thinBool = false;
     thickBool = false;
     thickerBool = false;
-    eraser = false;
-    shapesOn = false;
-    circle = false;
-    
-  }
+    //eraser = false;
+    //shapesOn = false;
 
+    
+  }//end stamp tool
+
+
+
+
+  ////start Eraser tool
+  //if (lineDraw == true) {     
+  //  if (mousePressed == true) {
+  //    draw = true;
+  //  } else {
+  //    draw = false;
+  //  }
+
+  //  if (draw == true && thinBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+  //    strokeWeight(1); 
+  //    line(mouseX, mouseY, pmouseX, pmouseY); 
+  //    strokeWeight(1);
+  //  } else {
+  //  }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+  //  if (draw == true && thickBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+  //    strokeWeight(5); 
+  //    line(mouseX, mouseY, pmouseX, pmouseY); 
+  //    strokeWeight(1);
+  //  } else {
+  //  }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+  //  if (draw == true && thickerBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+  //    strokeWeight(8); 
+  //    line(mouseX, mouseY, pmouseX, pmouseY); 
+  //    strokeWeight(1);
+  //  } else {
+  //  }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+
+  //  if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) line(mouseX, mouseY, pmouseX, pmouseY);
+
+ 
+    
+  //} else { 
+  //  lineDraw = false;
+  //  thinBool = false;
+  //  thickBool = false;
+  //  thickerBool = false;
+  //  //eraser = false;
+
+  //}//end Eraser tool
+  
+  
+  
+ 
 
 
 
@@ -257,6 +302,8 @@ void mousePressed() {
     }
   }
   //end
+  
+  
 
 
   //switch to toggle eraser ON or OFF
