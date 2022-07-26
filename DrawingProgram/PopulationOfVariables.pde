@@ -6,6 +6,7 @@ String ls = "Landscape or Square", p = "Portrait", DO = "Display Orientation", i
 color purple = #9E05FF, resetWhite = #FFFFFF, red = #FF0000, blue = #0822FF, black = #000000, orange = #F59A39, green =#39F56C, yellow = #EEF539; //or another purple  color = #2c08ff
 color indigo = #9F08FF, pink = #FF08CA; 
 color lightred = #FF8383, lightblue = #4D60FF, lightgreen = #74FF98, lightorange = #FFAE62, lightyellow = #F9FF64, lightindigo = #CA7FFC, lightpink = #FC8FE5, lightblack = #484646, lightwhite = #E3DCDC;
+color backgroundColor;
 
 PFont closeFont, RestartFont, RestartFontHover, MinMaxFont, introFont, startFont, linebuttonFont, eraserbuttonFont, toolsFont, thinbuttonFont, thickbuttonFont, thickerbuttonFont;
 PFont shapesbuttonFont, colorbuttonFont, colorfillerbuttonFont, circleFont, triangleFont, squareFont, rectangleFont, stampFont, DottedLineFont;
@@ -149,14 +150,31 @@ String whiteTitle = "W";
 
 float xBackgroundColorPallete, yBackgroundColorPallete, BackgroundColorPalleteWidth, BackgroundColorPalleteHeight;
 float xRedBackground, yRedBackground, RedBackgroundWidth, RedBackgroundHeight;
+boolean redBackground = false;
+
 float xBlueBackground, yBlueBackground, BlueBackgroundWidth, BlueBackgroundHeight;
+boolean blueBackground = false;
+
 float xGreenBackground, yGreenBackground, GreenBackgroundWidth, GreenBackgroundHeight;
+boolean greenBackground = false;
+
 float xOrangeBackground, yOrangeBackground, OrangeBackgroundWidth, OrangeBackgroundHeight;
+boolean orangeBackground = false;
+
 float xYellowBackground, yYellowBackground, YellowBackgroundWidth, YellowBackgroundHeight;
+boolean yellowBackground = false;
+
 float xIndigoBackground, yIndigoBackground, IndigoBackgroundWidth, IndigoBackgroundHeight;
+boolean indigoBackground = false;
+
 float xPinkBackground, yPinkBackground, PinkBackgroundWidth, PinkBackgroundHeight;
+boolean pinkBackground = false;
+
 float xBlackBackground, yBlackBackground, BlackBackgroundWidth, BlackBackgroundHeight;
+boolean blackBackground = false;
+
 float xWhiteBackground, yWhiteBackground, WhiteBackgroundWidth, WhiteBackgroundHeight;
+boolean whiteBackground = false;
 
 
 
@@ -656,9 +674,10 @@ void populationOfVariables() {
   
   
   
-  
-
+  backgroundColor = resetWhite;
+  fill(backgroundColor);
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight); //is the Virtual piece of paper
+  fill(resetWhite);
   rect(lineboxX, lineboxY, lineboxWidth, lineboxHeight); //the 'Line drawing tool' tool box top left with eraser switch and a stamping tool with different thickness sizes
   rect(musicboxX, musicboxY, musicboxWidth, musicboxHeight);
   rect(templateboxX, templateboxY, templateboxWidth, templateboxHeight);
