@@ -1,5 +1,5 @@
-void colorButton() {
-  //Color button
+void colorBox() {
+  //Color box
 
   rect(xColor, yColor, ColorWidth, ColorHeight); //is the closing button //needs hover over(color and <del>text</del>)
   textAlign(CENTER, CENTER);
@@ -11,5 +11,5 @@ void colorButton() {
   
  
   
-  //End Color button
+  //End Color box
 }

@@ -535,49 +535,49 @@ void populationOfVariables() {
   
   //Population for all Background Color Pallete Colors
   xRedBackground = (xCenter - xCenter*1/2)/2;
-  yRedBackground = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + (height - (height*6.5/10)/2)*1/3;
+  yRedBackground = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 +  (height - (height*6.5/10)/2)*1/3;
   RedBackgroundWidth = ((xCenter - xCenter*1/2)/2)/3;
   RedBackgroundHeight = ((height - (height*6.5/10)/2)*1/3)/3;
   
   xBlueBackground = (xCenter - xCenter*1/2)/2 + ((xCenter - xCenter*1/2)/2)*1/3;
   yBlueBackground = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + (height - (height*6.5/10)/2)*1/3;
   BlueBackgroundWidth = ((xCenter - xCenter*1/2)/2)/3;
-  BlueBackgroundWidth = ((height - (height*6.5/10)/2)*1/3)/3;
+  BlueBackgroundHeight = ((height - (height*6.5/10)/2)*1/3)/3;
   
   xGreenBackground = (xCenter - xCenter*1/2)/2 + ((xCenter - xCenter*1/2)/2)*1/3 + ((xCenter - xCenter*1/2)/2)*1/3;
-  yGreenBackground = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3;
+  yGreenBackground = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + (height - (height*6.5/10)/2)*1/3;
   GreenBackgroundWidth = ((xCenter - xCenter*1/2)/2)/3; 
-  GreenBackgroundWidth = ((height - (height*6.5/10)/2)*1/3)/3;
+  GreenBackgroundHeight = ((height - (height*6.5/10)/2)*1/3)/3;
   
   xOrangeBackground = (xCenter - xCenter*1/2)/2;
-  yOrangeBackground = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3;
+  yOrangeBackground = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3 + (height - (height*6.5/10)/2)*1/3;
   OrangeBackgroundWidth = ((xCenter - xCenter*1/2)/2)/3;
-  OrangeBackgroundWidth = ((height - (height*6.5/10)/2)*1/3)/3;
+  OrangeBackgroundHeight = ((height - (height*6.5/10)/2)*1/3)/3;
   
   xYellowBackground = (xCenter - xCenter*1/2)/2 + ((xCenter - xCenter*1/2)/2)*1/3; 
-  yYellowBackground = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3;
+  yYellowBackground = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3 + (height - (height*6.5/10)/2)*1/3;
   YellowBackgroundWidth = ((xCenter - xCenter*1/2)/2)/3;
-  YellowBackgroundWidth = ((height - (height*6.5/10)/2)*1/3)/3;
+  YellowBackgroundHeight = ((height - (height*6.5/10)/2)*1/3)/3;
   
   xIndigoBackground = (xCenter - xCenter*1/2)/2 + ((xCenter - xCenter*1/2)/2)*1/3 + ((xCenter - xCenter*1/2)/2)*1/3;
-  yIndigoBackground  = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3;
+  yIndigoBackground  = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3 + (height - (height*6.5/10)/2)*1/3;
   IndigoBackgroundWidth = ((xCenter - xCenter*1/2)/2)/3;
-  IndigoBackgroundWidth = ((height - (height*6.5/10)/2)*1/3)/3;
+  IndigoBackgroundHeight = ((height - (height*6.5/10)/2)*1/3)/3;
   
   xPinkBackground = (xCenter - xCenter*1/2)/2;
-  yPinkBackground = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3;
+  yPinkBackground = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3 + (height - (height*6.5/10)/2)*1/3;
   PinkBackgroundWidth = ((xCenter - xCenter*1/2)/2)/3;
-  PinkBackgroundWidth = ((height - (height*6.5/10)/2)*1/3)/3;
+  PinkBackgroundHeight = ((height - (height*6.5/10)/2)*1/3)/3;
   
   xBlackBackground = (xCenter - xCenter*1/2)/2 + ((xCenter - xCenter*1/2)/2)*1/3;
-  yBlackBackground = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3;
+  yBlackBackground = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3 + (height - (height*6.5/10)/2)*1/3;
   BlackBackgroundWidth = ((xCenter - xCenter*1/2)/2)/3;
-  BlackBackgroundWidth = ((height - (height*6.5/10)/2)*1/3)/3;
+  BlackBackgroundHeight = ((height - (height*6.5/10)/2)*1/3)/3;
   
   xWhiteBackground = (xCenter - xCenter*1/2)/2 + ((xCenter - xCenter*1/2)/2)*1/3 + ((xCenter - xCenter*1/2)/2)*1/3;
-  yWhiteBackground = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3;
+  yWhiteBackground = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3 + (height - (height*6.5/10)/2)*1/3;
   WhiteBackgroundWidth = ((xCenter - xCenter*1/2)/2)/3;
-  WhiteBackgroundWidth = ((height - (height*6.5/10)/2)*1/3)/3;
+  WhiteBackgroundHeight = ((height - (height*6.5/10)/2)*1/3)/3;
   //End population of all Background Color Pallete Colors
   
   

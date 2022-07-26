@@ -46,7 +46,7 @@ void draw() {
   thicker();
   shapes();
   shapesShapes();
-  colorButton();
+  colorBox();
   backgroundColorFill();
 
 
