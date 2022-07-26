@@ -47,17 +47,18 @@ void draw() {
   shapesShapes();
   colorButton();
   backgroundColorFill();
-  
-
-  
 
 
-  
 
 
-  
+
+
+
+
+
   //start Line tool
-  if (lineDraw == true) {     
+  if (lineDraw == true) { 
+    stampDraw = false;
     if (mousePressed == true) {
       draw = true;
     } else {
@@ -68,48 +69,43 @@ void draw() {
       strokeWeight(1); 
       line(mouseX, mouseY, pmouseX, pmouseY); 
       strokeWeight(1);
+
     } else {
     }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+
     if (draw == true && thickBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
       strokeWeight(5); 
       line(mouseX, mouseY, pmouseX, pmouseY); 
       strokeWeight(1);
+
     } else {
     }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+
     if (draw == true && thickerBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
       strokeWeight(8); 
       line(mouseX, mouseY, pmouseX, pmouseY); 
       strokeWeight(1);
+
     } else {
     }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
-    if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) line(mouseX, mouseY, pmouseX, pmouseY);
-
-    if (draw == true && eraser == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
-      stroke(#FFFFFF); 
-      line(mouseX, mouseY, pmouseX, pmouseY); 
-      stroke(0);
-    }
-  } else { 
-    lineDraw = false;
-    thinBool = false;
-    thickBool = false;
-    thickerBool = false;
-    eraser = false;
-    
+    if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) 
+      line(mouseX, mouseY, pmouseX, pmouseY);
+  } else {
   }//end line tool
-  
-  
-  
-  
+
+
+
+
   //start Stamp tool
-  if (stampDraw == true) {     
+  if (stampDraw == true) {  
+    lineDraw = false;
     if (mousePressed == true) {
       draw = true;
     } else {
       draw = false;
     }
-    
+
     if (draw == true && thinBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
       strokeWeight(1); 
       ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter); //have to make ellipse tool as well  
@@ -131,30 +127,16 @@ void draw() {
 
 
     if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) 
-    ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter);
-
-    if (draw == true && eraser == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
-      stroke(#FFFFFF); 
-      ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter); 
-      stroke(0);
-    }
-  } else { 
-    lineDraw = false;
-    thinBool = false;
-    thickBool = false;
-    thickerBool = false;
-    eraser = false;
-    
-
-    
+      ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter);
+  } else {
   }//end stamp tool
 
 
 
-  
-  
-  
- 
+
+
+
+
 
 
 
@@ -236,7 +218,7 @@ void keyPressed() {
 
 
 void mousePressed() {
-  shapesOn = false;
+
 
   //switch to toggle close button ON(to end program)
   if (mouseX >= xCloseButton && mouseX <= xCloseButton +  CloseButtonWidth && mouseY >= yCloseButton && mouseY <= yCloseButton + CloseButtonHeight) exit();
@@ -253,17 +235,27 @@ void mousePressed() {
   //end
 
 
-  //switch to toggle drawing mode ON or OFF
+  //switch to toggle line mode ON or OFF
   if (mouseX >= xlinetool && mouseX <= xlinetool +  linetoolWidth && mouseY >= ylinetool && mouseY <= ylinetool + linetoolHeight) {
     if (lineDraw == false) {
       lineDraw = true;
     } else {
       lineDraw = false;
     }
-  }
-  //end
-  
-  
+  }//end
+
+
+
+  //switch to toggle stamp mode ON or OFF
+  if (mouseX >= xstamptool && mouseX <= xstamptool +  stamptoolWidth && mouseY >= ystamptool && mouseY <= ystamptool + stamptoolHeight) {
+    if (stampDraw == false) {
+      stampDraw = true;
+    } else {
+      stampDraw = false;
+    }
+  }//end
+
+
 
 
   //switch to toggle eraser ON or OFF
@@ -290,25 +282,29 @@ void mousePressed() {
 
 
   //brush-type control flow
-  if (mouseX >= xThin && mouseX <= xThin +  thinWidth && mouseY >= yThin && mouseY <= yThin + thinHeight) {
-    if (thinBool == false) {
-      thinBool = true;
-    } else {
-      thinBool = false;
-    }
-  } else if (mouseX >= xThick && mouseX <= xThick +  thickWidth && mouseY >= yThick && mouseY <= yThick + thickHeight) {
-    if (thickBool == false) {
-      thickBool = true;
-    } else {
-      thickBool = false;
-    }
-  } else if (mouseX >= xThicker && mouseX <= xThicker +  thickerWidth && mouseY >= yThicker && mouseY <= yThicker + thickerHeight) {
-    if (thickerBool == false) {
-      thickerBool = true;
-    } else {
-      thickerBool = false;
-    }
-  }
+  //if (mouseX >= xThin && mouseX <= xThin +  thinWidth && mouseY >= yThin && mouseY <= yThin + thinHeight) {
+  //  if (thinBool == false) {
+  //    thinBool = true;
+  //  } else {
+  //    thinBool = false;
+  //  }
+  //} else if (mouseX >= xThick && mouseX <= xThick +  thickWidth && mouseY >= yThick && mouseY <= yThick + thickHeight) {
+  //  if (thickBool == false) {
+  //    thickBool = true;
+  //  } else {
+  //    thickBool = false;
+  //  }
+  //} else if (mouseX >= xThicker && mouseX <= xThicker +  thickerWidth && mouseY >= yThicker && mouseY <= yThicker + thickerHeight) {
+  //  if (thickerBool == false) {
+  //    thickerBool = true;
+  //  } else {
+  //    thickerBool = false;
+  //  }
+  //}
+
+//  if (mouseX >= xThin && mouseX <= xThin +  thinWidth && mouseY >= yThin && mouseY <= yThin + thinHeight) thinBool = true;
+//  if (mouseX >= xThick && mouseX <= xThick +  thickWidth && mouseY >= yThick && mouseY <= yThick + thickHeight) thickBool = true;
+//  if (mouseX >= xThicker && mouseX <= xThicker +  thickerWidth && mouseY >= yThicker && mouseY <= yThicker + thickerHeight) thickerBool = true;
   //end brush type control flow
 
 
@@ -383,6 +379,35 @@ void mousePressed() {
   //}
 }//this is for the starter button
 
+
+void mouseClicked() {
+  
+    if (mouseX >= xThin && mouseX <= xThin +  thinWidth && mouseY >= yThin && mouseY <= yThin + thinHeight) {
+    if (thinBool == false) {
+      thinBool = true;
+      thickBool = false;
+      thickerBool = false;
+    } else {
+      thinBool = false;
+    }
+  } else if (mouseX >= xThick && mouseX <= xThick +  thickWidth && mouseY >= yThick && mouseY <= yThick + thickHeight) {
+    if (thickBool == false) {
+      thickBool = true;
+      thinBool = false;
+      thickerBool = false;
+    } else {
+      thickBool = false;
+    }
+  } else if (mouseX >= xThicker && mouseX <= xThicker +  thickerWidth && mouseY >= yThicker && mouseY <= yThicker + thickerHeight) {
+    if (thickerBool == false) {
+      thickerBool = true;
+      thinBool = false;
+      thickBool = false;
+    } else {
+      thickerBool = false;
+    }
+  }
+}
 
 
 

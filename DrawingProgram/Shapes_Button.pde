@@ -2,11 +2,11 @@ void shapes() {
   //Shapes button
   //Hover-over color for Shapes Button
   if (mouseX >= shapesboxX && mouseX <= shapesboxX + shapesboxWidth && mouseY >= shapesboxY && mouseY <= shapesboxY + shapesboxHeight) {
-    buttonfillclose = red;
+    buttonfillclose = black;
     buttontextfillclose = resetWhite;
   } else {
     buttonfillclose = resetWhite;  
-    buttontextfillclose = red;
+    buttontextfillclose = black;
   }
   //End Hover-over color for Shapes Button
 
