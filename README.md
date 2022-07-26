@@ -4,7 +4,7 @@ Final Exam - Drawing Program
 
 To-do list:
  - [x] Line drawing tool
- - [x] <del>Circle Stamping tool</del> -> didnt find useful
+ - [x] Circle Stamping tool
  - [x] Eraser (i.e. line tool, fill with background (color), removed 'stroke()')
  - [x] Different brushes(thin to thick to thicker tool)
  - [ ] Color Palet(basic button with name or color and color as background for button)
