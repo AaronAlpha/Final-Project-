@@ -3,8 +3,8 @@ float drawingSurfaceY, drawingSurfaceX, drawingSurfaceWidth, drawingSurfaceHeigh
 boolean draw = false;
 float xCenter, yCenter;
 String ls = "Landscape or Square", p = "Portrait", DO = "Display Orientation", instruct = "Flip your screen";
-color purple = #9E05FF, resetWhite = #FFFFFF, red = #FF0000, blue = #5792F5, black = #000000, orange = #F59A39, green =#39F56C, yellow = #EEF539; //or another purple  color = #2c08ff
-color indigo = #4B00FF, pink = #E500FF; 
+color purple = #9E05FF, resetWhite = #FFFFFF, red = #FF0000, blue = #0822FF, black = #000000, orange = #F59A39, green =#39F56C, yellow = #EEF539; //or another purple  color = #2c08ff
+color indigo = #9F08FF, pink = #FF08CA; 
 
 PFont closeFont, RestartFont, RestartFontHover, MinMaxFont, introFont, startFont, linebuttonFont, eraserbuttonFont, toolsFont, thinbuttonFont, thickbuttonFont, thickerbuttonFont;
 PFont shapesbuttonFont, colorbuttonFont, colorfillerbuttonFont, circleFont, triangleFont, squareFont, rectangleFont, stampFont, DottedLineFont;
@@ -697,9 +697,4 @@ void populationOfVariables() {
   rect(xPinkBackground, yPinkBackground, PinkBackgroundWidth, PinkBackgroundHeight);
   rect(xBlackBackground, yBlackBackground, BlackBackgroundWidth, BlackBackgroundHeight);
   rect(xWhiteBackground, yWhiteBackground, WhiteBackgroundWidth, WhiteBackgroundHeight);
-  
-
-  
-  
-  
 }
