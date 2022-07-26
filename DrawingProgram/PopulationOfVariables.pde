@@ -4,6 +4,7 @@ boolean draw = false;
 float xCenter, yCenter;
 String ls = "Landscape or Square", p = "Portrait", DO = "Display Orientation", instruct = "Flip your screen";
 color purple = #9E05FF, resetWhite = #FFFFFF, red = #FF0000, blue = #5792F5, black = #000000, orange = #F59A39, green =#39F56C, yellow = #EEF539; //or another purple  color = #2c08ff
+//color indigo = 
 
 PFont closeFont, RestartFont, RestartFontHover, MinMaxFont, introFont, startFont, linebuttonFont, eraserbuttonFont, toolsFont, thinbuttonFont, thickbuttonFont, thickerbuttonFont;
 PFont shapesbuttonFont, colorbuttonFont, colorfillerbuttonFont, circleFont, triangleFont, squareFont, rectangleFont, stampFont, DottedLineFont;
@@ -96,6 +97,16 @@ float xBackgroundFiller, yBackgroundFiller, BackgroundFillerWidth, BackgroundFil
 String backgroundFillerText = "Color filler for background";
 int backgroundFillerSize;
 color buttonfillBackgroundFiller, buttontextfillBackgroundFiller;
+
+float xRed, yRed, RedWidth, RedHeight;
+float xBlue, yBlue, BlueWidth, BlueHeight;
+float xGreen, yGreen, GreenWidth, GreenHeight;
+float xOrange, yOrange, OrangeWidth, OrangeHeight;
+float xYellow, yYellow, YellowWidth, YelloHeight;
+float xIndigo, yIndigo, IndigoWidth, IndigoHeight;
+float xPink, yPink, PinkWidth, PinkHeight;
+float xBlack, yBlack, BlackWidth, BlackHeight;
+float xWhite, yWhite, WhiteWidth, WhiteHeight;
 
 
 float xShapesColorPanel, yShapesColorPanel, ShapesColorPanelWidth, ShapesColorPanelHeight;
