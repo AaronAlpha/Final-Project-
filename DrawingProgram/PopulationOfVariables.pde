@@ -592,12 +592,12 @@ void populationOfVariables() {
   RedBackgroundWidth = ((xCenter - xCenter*1/2)/2)/3;
   RedBackgroundHeight = ((height - (height*6.5/10)/2)*1/3)/3;
   
-  xBlueBackground = (xCenter - xCenter*1/2)/2 + ((xCenter - xCenter*1/2)/2)*1/3;
+  xBlueBackground = (xCenter - xCenter*1/2)/2 + ((xCenter - xCenter*1/2)/2)*1/3 + ((xCenter - xCenter*1/2)/2)*1/3;
   yBlueBackground = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + (height - (height*6.5/10)/2)*1/3;
   BlueBackgroundWidth = ((xCenter - xCenter*1/2)/2)/3;
   BlueBackgroundHeight = ((height - (height*6.5/10)/2)*1/3)/3;
   
-  xGreenBackground = (xCenter - xCenter*1/2)/2 + ((xCenter - xCenter*1/2)/2)*1/3 + ((xCenter - xCenter*1/2)/2)*1/3;
+  xGreenBackground = (xCenter - xCenter*1/2)/2 + ((xCenter - xCenter*1/2)/2)*1/3;
   yGreenBackground = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + (height - (height*6.5/10)/2)*1/3;
   GreenBackgroundWidth = ((xCenter - xCenter*1/2)/2)/3; 
   GreenBackgroundHeight = ((height - (height*6.5/10)/2)*1/3)/3;

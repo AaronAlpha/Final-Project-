@@ -50,6 +50,7 @@ void draw() {
   colorBox();
   colorPallete();
   backgroundColorFill();
+  backgroundPallete();
   
 
 
