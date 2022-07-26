@@ -55,7 +55,8 @@ void draw() {
   //start Line tool
   if (lineDraw == true) { 
     stampDraw = false;
-    DottedLineDraw = false;  
+    DottedLineDraw = false; 
+    eraser = false;
     if (mousePressed == true) {
       draw = true;
     } else {
@@ -98,6 +99,7 @@ void draw() {
   if (stampDraw == true) {  
     lineDraw = false;
     DottedLineDraw = false;
+    eraser = false;
     if (mousePressed == true) {
       draw = true;
     } else {
@@ -456,6 +458,7 @@ void mouseClicked() {
       lineDraw = true;
       stampDraw = false;
       DottedLineDraw = false;
+      eraser = false;
     } else {
       lineDraw = false;
     }
@@ -468,6 +471,7 @@ void mouseClicked() {
       stampDraw = true;
       lineDraw = false;
       DottedLineDraw = false;
+      eraser = false;
     } else {
       stampDraw = false;
     }
@@ -480,6 +484,7 @@ void mouseClicked() {
       DottedLineDraw = true;
       lineDraw = false;
       stampDraw = false;
+      eraser = false;
     } else {
       DottedLineDraw = false;
     }
