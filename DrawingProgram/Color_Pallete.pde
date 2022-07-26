@@ -2,7 +2,7 @@ void colorPallete() {
   //Red button
   //Hover-over color for Red Button
   if (mouseX >= xRed && mouseX <= xRed + RedWidth && mouseY >= yRed && mouseY <= yRed + RedHeight) {
-    buttonfillred = red;
+    buttonfillred = lightred;
     buttontextfillred = resetWhite;
   } else {
     buttonfillred = red;  
@@ -24,7 +24,7 @@ void colorPallete() {
   //Blue button
   //Hover-over color for Blue Button
   if (mouseX >= xBlue && mouseX <= xBlue + BlueWidth && mouseY >= yBlue && mouseY <= yBlue + BlueHeight) {
-    buttonfillblue = blue;
+    buttonfillblue = lightblue;
     buttontextfillblue = resetWhite;
   } else {
     buttonfillblue = blue;  
@@ -48,7 +48,7 @@ void colorPallete() {
   //Green button
   //Hover-over color for Green Button
   if (mouseX >= xGreen && mouseX <= xGreen + GreenWidth && mouseY >= yGreen && mouseY <= yGreen + GreenHeight) {
-    buttonfillgreen = green;
+    buttonfillgreen = lightgreen;
     buttontextfillgreen = resetWhite;
   } else {
     buttonfillgreen = green;  
@@ -70,7 +70,7 @@ void colorPallete() {
   //Orange button
   //Hover-over color for Orange Button
   if (mouseX >= xOrange && mouseX <= xOrange + OrangeWidth && mouseY >= yOrange && mouseY <= yOrange + OrangeHeight) {
-    buttonfillorange = orange;
+    buttonfillorange = lightorange;
     buttontextfillorange = resetWhite;
   } else {
     buttonfillorange = orange;  
@@ -94,7 +94,7 @@ void colorPallete() {
   //Yellow button
   //Hover-over color for Yellow Button
   if (mouseX >= xYellow && mouseX <= xYellow + YellowWidth && mouseY >= yYellow && mouseY <= yYellow + YelloHeight) {
-    buttonfillyellow = yellow;
+    buttonfillyellow = lightyellow;
     buttontextfillyellow = resetWhite;
   } else {
     buttonfillyellow = yellow;  
@@ -116,7 +116,7 @@ void colorPallete() {
   //Indigo button
   //Hover-over color for Indigo Button
   if (mouseX >= xIndigo && mouseX <= xIndigo + IndigoWidth && mouseY >= yIndigo && mouseY <= yIndigo + IndigoHeight) {
-    buttonfillindigo = indigo;
+    buttonfillindigo = lightindigo;
     buttontextfillindigo = resetWhite;
   } else {
     buttonfillindigo = indigo;  
@@ -139,7 +139,7 @@ void colorPallete() {
   //Pink button
   //Hover-over color for Pink Button
   if (mouseX >= xPink && mouseX <= xPink + PinkWidth && mouseY >= yPink && mouseY <= yPink + PinkHeight) {
-    buttonfillpink = pink;
+    buttonfillpink = lightpink;
     buttontextfillpink = resetWhite;
   } else {
     buttonfillpink = pink;  
@@ -162,7 +162,7 @@ void colorPallete() {
   //Black button
   //Hover-over color for Black Button
   if (mouseX >= xBlack && mouseX <= xBlack + BlackWidth && mouseY >= yBlack && mouseY <= yBlack + BlackHeight) {
-    buttonfillblack = black;
+    buttonfillblack = lightblack; //basically a more lighter color of black
     buttontextfillblack = resetWhite;
   } else {
     buttonfillblack = black;  
@@ -184,8 +184,8 @@ void colorPallete() {
   //White button
   //Hover-over color for White Button
   if (mouseX >= xWhite && mouseX <= xWhite + WhiteWidth && mouseY >= yWhite && mouseY <= yWhite + WhiteHeight) {
-    buttonfillwhite = resetWhite;
-    buttontextfillwhite = black;
+    buttonfillwhite = black;
+    buttontextfillwhite = resetWhite;
   } else {
     buttonfillwhite = resetWhite;  
     buttontextfillwhite = black;
