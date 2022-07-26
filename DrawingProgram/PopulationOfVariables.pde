@@ -108,6 +108,9 @@ float xPink, yPink, PinkWidth, PinkHeight;
 float xBlack, yBlack, BlackWidth, BlackHeight;
 float xWhite, yWhite, WhiteWidth, WhiteHeight;
 
+float xColorPallete, yColorPallete, ColorPalleteWidth, ColorPalleteHeight;
+float xBackgroundColorPallete, yBackgroundColorPallete, BackgroundColorPalleteWidth, BackgroundColorPalleteHeight;
+
 float xShapesColorPanel, yShapesColorPanel, ShapesColorPanelWidth, ShapesColorPanelHeight;
 
 
@@ -452,6 +455,72 @@ void populationOfVariables() {
   colorfillerbuttonFont = createFont("Arial Narrow", 45);
   //End Text 
   //End Population of Color Fill Background Tool Box
+  
+  
+  //Population Color Pallete
+  xColorPallete = (xCenter - xCenter*1/2)/2; 
+  yColorPallete = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3;
+  ColorPalleteWidth = (xCenter - xCenter*1/2)/2;
+  ColorPalleteHeight = (height - (height*6.5/10)/2)*1/3;
+  //End
+  
+  //Population Background Color Pallete
+  xBackgroundColorPallete = (xCenter - xCenter*1/2)/2; 
+  yBackgroundColorPallete = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + (height - (height*6.5/10)/2)*1/3;
+  BackgroundColorPalleteWidth = (xCenter - xCenter*1/2)/2;
+  BackgroundColorPalleteHeight = (height - (height*6.5/10)/2)*1/3;
+  //End
+  
+  
+  //Population for all Color Pallete Colors
+  //xRed = ;
+  //yRed = ;
+  //RedWidth = ;
+  //RedHeight = ;
+  
+  //xBlue = ;
+  //yBlue = ;
+  //BlueWidth = ;
+  //BlueHeight = ;
+  
+  //xGreen = ;
+  //yGreen = ;
+  //GreenWidth = ; 
+  //GreenHeight = ;
+  
+  //xOrange = ;
+  //yOrange = ;
+  //OrangeWidth = ;
+  //OrangeHeight = ;
+  
+  //xYellow = ; 
+  //yYellow = ;
+  //YellowWidth = ;
+  //YelloHeight = ;
+  
+  //xIndigo = ;
+  //yIndigo  = ;
+  //IndigoWidth = ;
+  //IndigoHeight = ;
+  
+  //xPink = ;
+  //yPink  = ;
+  //PinkWidth = ;
+  //PinkHeight = ;
+  
+  //xBlack = ;
+  //yBlack = ;
+  //BlackWidth = ;
+  //BlackHeight = ;
+  
+  //xWhite = ;
+  //yWhite = ;
+  //WhiteWidth = ;
+  //WhiteHeight = ;
+  //End population of all Color Pallete Colors
+  
+  
+  
   //End population
 
   
@@ -494,6 +563,9 @@ void populationOfVariables() {
   //rect(xRectangle, yRectangle, RectangleWidth, RectangleHeight);
   //rect(xstamptool, ystamptool, stamptoolWidth, stamptoolHeight);
   rect(xDottedLine, yDottedLine, DottedLineWidth, DottedLineHeight);
+  
+  rect(xColorPallete, yColorPallete, ColorPalleteWidth, ColorPalleteHeight);
+  rect(xBackgroundColorPallete, yBackgroundColorPallete, BackgroundColorPalleteWidth, BackgroundColorPalleteHeight);
   rect(xRed, yRed, RedWidth, RedHeight);
   rect(xBlue, yBlue, BlueWidth, BlueHeight);
   rect(xGreen, yGreen, GreenWidth, GreenHeight);
