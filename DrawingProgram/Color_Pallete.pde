@@ -176,7 +176,7 @@ void colorPallete() {
   blackSize = 40; //Changing number until it exists
   textFont(blackFont, blackSize); //used to affext the text
   fill(buttontextfillblack);
-  text(blackitle, xBlack, yBlack, BlackWidth, BlackHeight); //'text()' function 'draws' the text 
+  text(blackTitle, xBlack, yBlack, BlackWidth, BlackHeight); //'text()' function 'draws' the text 
   fill(resetWhite);
   //End Black button
   

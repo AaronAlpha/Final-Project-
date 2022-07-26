@@ -102,31 +102,48 @@ color buttonfillBackgroundFiller, buttontextfillBackgroundFiller;
 float xColorPallete, yColorPallete, ColorPalleteWidth, ColorPalleteHeight;
 float xRed, yRed, RedWidth, RedHeight;
 color buttonfillred, buttontextfillred;
+int redSize;
+char redTitle = 'R';
 
 float xBlue, yBlue, BlueWidth, BlueHeight;
 color buttonfillblue, buttontextfillblue;
+int blueSize;
+char blueTitle = 'B';
 
 float xGreen, yGreen, GreenWidth, GreenHeight;
 color buttonfillgreen, buttontextfillgreen;
+int greenSize;
+char greenTitle = 'G';
 
 float xOrange, yOrange, OrangeWidth, OrangeHeight;
 color buttonfillorange, buttontextfillorange;
+int orangeSize;
+char orangeTitle = 'O';
 
 float xYellow, yYellow, YellowWidth, YelloHeight;
 color buttonfillyellow, buttontextfillyellow;
+int yellowSize;
+char yellowTitle = 'Y';
 
 float xIndigo, yIndigo, IndigoWidth, IndigoHeight;
 color buttonfillindigo, buttontextfillindigo;
+int indigoSize;
+char indigoTitle = 'I';
 
 float xPink, yPink, PinkWidth, PinkHeight;
 color buttonfillpink, buttontextfillpink;
+int pinkSize;
+char pinkTitle = 'P';
 
 float xBlack, yBlack, BlackWidth, BlackHeight;
 color buttonfillblack, buttontextfillblack;
+int blackSize;
+char blackTitle = 'B';
 
 float xWhite, yWhite, WhiteWidth, WhiteHeight;
 color buttonfillwhite, buttontextfillwhite;
-int 
+int whiteSize;
+char whiteTitle = 'W'; 
 
 
 float xBackgroundColorPallete, yBackgroundColorPallete, BackgroundColorPalleteWidth, BackgroundColorPalleteHeight;
