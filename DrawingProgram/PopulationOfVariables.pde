@@ -23,6 +23,12 @@ String stampText = "Stamp mode";
 color buttonfillstamp, buttontextfillstamp;
 boolean stampDraw = false;
 
+float xDottedLine, yDottedLine, DottedLineWidth, DottedLineHeight;
+int DottedLineSize;
+String DottedLineText = "Dotted Line";
+color buttonfillDottedLine, buttontextfillDottedLine;
+boolean DottedLineDraw = false;
+
 float eraserboxX, eraserboxY, eraserboxWidth, eraserboxHeight;
 int eraserSize;
 String eraserswitchText= "Eraser";
@@ -295,10 +301,18 @@ void populationOfVariables() {
   //End population of stamp tool button
   
   
+  //Population of dotted line
+  xDottedLine = ;
+  yDottedLine = ;
+  DottedLineWidth = ;
+  DottedLineHeight = ;
+  //End Population of dotted line
+  
+  
   //Population of eraser tool switch
-  eraserboxX = (xCenter - xCenter*1/2)/2;
+  eraserboxX = (xCenter - xCenter*1/2)/2 + ((xCenter - xCenter*1/2)/2)*1/2;
   eraserboxY = height*0;
-  eraserboxWidth = (xCenter - xCenter*1/2)/2;
+  eraserboxWidth = ((xCenter - xCenter*1/2)/2)/2;
   eraserboxHeight = (height*6.5/10)/4;
   //Text
   eraserbuttonFont = createFont("Arial Narrow", 45);
