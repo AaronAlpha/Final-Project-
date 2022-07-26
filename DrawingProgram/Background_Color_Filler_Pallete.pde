@@ -203,4 +203,3 @@ void backgroundPallete() {
   //End Close button
   
 }
-}
