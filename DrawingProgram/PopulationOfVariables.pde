@@ -33,19 +33,19 @@ float xTools, yTools, toolsWidth, toolsHeight;
 
 float xThin, yThin, thinWidth, thinHeight;
 color buttonfillthin, buttontextfillthin;
-String thin = "Thin line; to switch off thin line, just repress it.";
+String thin = "Thin line";
 int thinSize;
 boolean thinBool;
 
 float xThick, yThick, thickWidth, thickHeight;
 color buttonfillthick, buttontextfillthick;
-String thick = "Thick line; to switch off thick line, just repress it.";
+String thick = "Thick line";
 int thickSize;
 boolean thickBool;
 
 float xThicker, yThicker, thickerWidth, thickerHeight;
 color buttonfillthicker, buttontextfillthicker;
-String thicker = "Thicker line; to switch off thicker line, just repress it.";
+String thicker = "Thicker line";
 int thickerSize;
 boolean thickerBool;
 

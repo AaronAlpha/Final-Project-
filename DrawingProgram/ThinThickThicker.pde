@@ -15,7 +15,7 @@ void thin() {
   fill(buttonfillthin);
   rect(xThin, yThin, thinWidth, thinHeight); //is the closing button //needs hover over(color and text)
   textAlign(CENTER, CENTER);
-  thinSize = 25; //Changing number until it exists
+  thinSize = 40; //Changing number until it exists
   textFont(thinbuttonFont, thinSize); //used to affext the text
   fill(buttontextfillthin);
   text(thin, xThin, yThin, thinWidth, thinHeight); //'text()' function 'draws' the text 
@@ -41,7 +41,7 @@ void thick() {
   fill(buttonfillthick);
   rect(xThick, yThick, thickWidth, thickHeight); //is the closing button //needs hover over(color and text)
   textAlign(CENTER, CENTER);
-  thickSize = 25; //Changing number until it exists
+  thickSize = 40; //Changing number until it exists
   textFont(thickbuttonFont, thickSize); //used to affext the text
   fill(buttontextfillthick);
   text(thick, xThick, yThick, thickWidth, thickHeight); //'text()' function 'draws' the text 
@@ -66,7 +66,7 @@ void thicker() {
   fill(buttonfillthicker);
   rect(xThicker, yThicker, thickerWidth, thickerHeight); //is the closing button //needs hover over(color and text)
   textAlign(CENTER, CENTER);
-  thickerSize = 25; //Changing number until it exists
+  thickerSize = 40; //Changing number until it exists
   textFont(thickerbuttonFont, thickerSize); //used to affext the text
   fill(buttontextfillthicker);
   text(thicker, xThicker, yThicker, thickerWidth, thickerHeight); //'text()' function 'draws' the text 

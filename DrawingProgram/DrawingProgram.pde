@@ -51,11 +51,6 @@ void draw() {
 
 
 
-
-
-
-
-
   //start Line tool
   if (lineDraw == true) { 
     stampDraw = false;
@@ -235,25 +230,25 @@ void mousePressed() {
   //end
 
 
-  //switch to toggle line mode ON or OFF
-  if (mouseX >= xlinetool && mouseX <= xlinetool +  linetoolWidth && mouseY >= ylinetool && mouseY <= ylinetool + linetoolHeight) {
-    if (lineDraw == false) {
-      lineDraw = true;
-    } else {
-      lineDraw = false;
-    }
-  }//end
+  ////switch to toggle line mode ON or OFF
+  //if (mouseX >= xlinetool && mouseX <= xlinetool +  linetoolWidth && mouseY >= ylinetool && mouseY <= ylinetool + linetoolHeight) {
+  //  if (lineDraw == false) {
+  //    lineDraw = true;
+  //  } else {
+  //    lineDraw = false;
+  //  }
+  //}//end
 
 
 
-  //switch to toggle stamp mode ON or OFF
-  if (mouseX >= xstamptool && mouseX <= xstamptool +  stamptoolWidth && mouseY >= ystamptool && mouseY <= ystamptool + stamptoolHeight) {
-    if (stampDraw == false) {
-      stampDraw = true;
-    } else {
-      stampDraw = false;
-    }
-  }//end
+  ////switch to toggle stamp mode ON or OFF
+  //if (mouseX >= xstamptool && mouseX <= xstamptool +  stamptoolWidth && mouseY >= ystamptool && mouseY <= ystamptool + stamptoolHeight) {
+  //  if (stampDraw == false) {
+  //    stampDraw = true;
+  //  } else {
+  //    stampDraw = false;
+  //  }
+  //}//end
 
 
 
@@ -382,31 +377,56 @@ void mousePressed() {
 
 void mouseClicked() {
   
-    if (mouseX >= xThin && mouseX <= xThin +  thinWidth && mouseY >= yThin && mouseY <= yThin + thinHeight) {
-    if (thinBool == false) {
-      thinBool = true;
-      thickBool = false;
-      thickerBool = false;
+    //switch to toggle line mode ON or OFF
+  if (mouseX >= xlinetool && mouseX <= xlinetool +  linetoolWidth && mouseY >= ylinetool && mouseY <= ylinetool + linetoolHeight) {
+    if (lineDraw == false) {
+      lineDraw = true;
+      stampDraw = false;
     } else {
-      thinBool = false;
+      lineDraw = false;
     }
-  } else if (mouseX >= xThick && mouseX <= xThick +  thickWidth && mouseY >= yThick && mouseY <= yThick + thickHeight) {
-    if (thickBool == false) {
-      thickBool = true;
-      thinBool = false;
-      thickerBool = false;
+  }//end
+
+
+
+  //switch to toggle stamp mode ON or OFF
+  if (mouseX >= xstamptool && mouseX <= xstamptool +  stamptoolWidth && mouseY >= ystamptool && mouseY <= ystamptool + stamptoolHeight) {
+    if (stampDraw == false) {
+      stampDraw = true;
+      lineDraw = false;
     } else {
-      thickBool = false;
+      stampDraw = false;
     }
-  } else if (mouseX >= xThicker && mouseX <= xThicker +  thickerWidth && mouseY >= yThicker && mouseY <= yThicker + thickerHeight) {
-    if (thickerBool == false) {
-      thickerBool = true;
-      thinBool = false;
-      thickBool = false;
-    } else {
-      thickerBool = false;
-    }
+  }//end
+  
+  
+  
+  
+  if (mouseX >= xThin && mouseX <= xThin +  thinWidth && mouseY >= yThin && mouseY <= yThin + thinHeight) {
+  if (thinBool == false) {
+    thinBool = true;
+    thickBool = false;
+    thickerBool = false;
+  } else {
+    thinBool = false;
   }
+} else if (mouseX >= xThick && mouseX <= xThick +  thickWidth && mouseY >= yThick && mouseY <= yThick + thickHeight) {
+  if (thickBool == false) {
+    thickBool = true;
+    thinBool = false;
+    thickerBool = false;
+  } else {
+    thickBool = false;
+  }
+} else if (mouseX >= xThicker && mouseX <= xThicker +  thickerWidth && mouseY >= yThicker && mouseY <= yThicker + thickerHeight) {
+  if (thickerBool == false) {
+    thickerBool = true;
+    thinBool = false;
+    thickBool = false;
+  } else {
+    thickerBool = false;
+  }
+}
 }
 
 
