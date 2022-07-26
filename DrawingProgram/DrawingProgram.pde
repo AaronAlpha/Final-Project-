@@ -95,21 +95,21 @@ void draw() {
     thinBool = false;
     thickBool = false;
     thickerBool = false;
-    //eraser = false;
+    eraser = false;
     
   }//end line tool
   
   
   
   
-   //start Stamp tool
+  //start Stamp tool
   if (stampDraw == true) {     
     if (mousePressed == true) {
       draw = true;
     } else {
       draw = false;
     }
-
+    
     if (draw == true && thinBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
       strokeWeight(1); 
       ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter); //have to make ellipse tool as well  
@@ -143,54 +143,14 @@ void draw() {
     thinBool = false;
     thickBool = false;
     thickerBool = false;
-    //eraser = false;
-    //shapesOn = false;
+    eraser = false;
+    
 
     
   }//end stamp tool
 
 
 
-
-  ////start Eraser tool
-  //if (lineDraw == true) {     
-  //  if (mousePressed == true) {
-  //    draw = true;
-  //  } else {
-  //    draw = false;
-  //  }
-
-  //  if (draw == true && thinBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
-  //    strokeWeight(1); 
-  //    line(mouseX, mouseY, pmouseX, pmouseY); 
-  //    strokeWeight(1);
-  //  } else {
-  //  }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
-  //  if (draw == true && thickBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
-  //    strokeWeight(5); 
-  //    line(mouseX, mouseY, pmouseX, pmouseY); 
-  //    strokeWeight(1);
-  //  } else {
-  //  }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
-  //  if (draw == true && thickerBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
-  //    strokeWeight(8); 
-  //    line(mouseX, mouseY, pmouseX, pmouseY); 
-  //    strokeWeight(1);
-  //  } else {
-  //  }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
-
-  //  if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) line(mouseX, mouseY, pmouseX, pmouseY);
-
- 
-    
-  //} else { 
-  //  lineDraw = false;
-  //  thinBool = false;
-  //  thickBool = false;
-  //  thickerBool = false;
-  //  //eraser = false;
-
-  //}//end Eraser tool
   
   
   

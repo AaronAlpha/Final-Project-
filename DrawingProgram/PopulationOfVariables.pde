@@ -316,15 +316,15 @@ void populationOfVariables() {
   //Population for different size drawing tool
   xThin = width*0;
   yThin = (height*6.5/10)/4;
-  thinWidth = linetoolWidth*2/3;
+  thinWidth = ((xCenter - xCenter*1/2)/2)*2/3;
   thinHeight = (height*6.5/10)/4;
   //Text
   thinbuttonFont = createFont("Arial Narrow", 45);
   //End Text 
   
-  xThick = linetoolWidth*2/3;
+  xThick = ((xCenter - xCenter*1/2)/2)*2/3;
   yThick = (height*6.5/10)/4;
-  thickWidth = linetoolWidth*2/3;
+  thickWidth = ((xCenter - xCenter*1/2)/2)*2/3;
   thickHeight = (height*6.5/10)/4; 
   //Text
   thickbuttonFont = createFont("Arial Narrow", 45);
@@ -332,7 +332,7 @@ void populationOfVariables() {
   
   xThicker = ((xCenter - xCenter*1/2)/2)*1.3333333;
   yThicker = (height*6.5/10)/4;
-  thickerWidth = linetoolWidth*2/3;
+  thickerWidth = ((xCenter - xCenter*1/2)/2)*2/3;
   thickerHeight = (height*6.5/10)/4;
   //Text
   thickerbuttonFont = createFont("Arial Narrow", 45);
