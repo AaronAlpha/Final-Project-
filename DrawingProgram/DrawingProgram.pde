@@ -47,7 +47,9 @@ void draw() {
   shapes();
   shapesShapes();
   colorBox();
+  colorPallete();
   backgroundColorFill();
+  
 
 
 

@@ -5,8 +5,8 @@ void colorPallete() {
     buttonfillred = red;
     buttontextfillred = resetWhite;
   } else {
-    buttonfillred = resetWhite;  
-    buttontextfillred = red;
+    buttonfillred = red;  
+    buttontextfillred = resetWhite;
   }
   //End Hover-over color for Red Button
 
@@ -24,11 +24,11 @@ void colorPallete() {
   //Blue button
   //Hover-over color for Blue Button
   if (mouseX >= xBlue && mouseX <= xBlue + BlueWidth && mouseY >= yBlue && mouseY <= yBlue + BlueHeight) {
-    buttonfillblue = red;
+    buttonfillblue = blue;
     buttontextfillblue = resetWhite;
   } else {
-    buttonfillblue = resetWhite;  
-    buttontextfillblue = red;
+    buttonfillblue = blue;  
+    buttontextfillblue = resetWhite;
   }
   //End Hover-over color for Blue Button
 
@@ -48,11 +48,11 @@ void colorPallete() {
   //Green button
   //Hover-over color for Green Button
   if (mouseX >= xGreen && mouseX <= xGreen + GreenWidth && mouseY >= yGreen && mouseY <= yGreen + GreenHeight) {
-    buttonfillgreen = red;
+    buttonfillgreen = green;
     buttontextfillgreen = resetWhite;
   } else {
-    buttonfillgreen = resetWhite;  
-    buttontextfillgreen = red;
+    buttonfillgreen = green;  
+    buttontextfillgreen = resetWhite;
   }
   //End Hover-over color for Green Button
 
@@ -70,11 +70,11 @@ void colorPallete() {
   //Orange button
   //Hover-over color for Orange Button
   if (mouseX >= xOrange && mouseX <= xOrange + OrangeWidth && mouseY >= yOrange && mouseY <= yOrange + OrangeHeight) {
-    buttonfillorange = red;
+    buttonfillorange = orange;
     buttontextfillorange = resetWhite;
   } else {
-    buttonfillorange = resetWhite;  
-    buttontextfillorange = red;
+    buttonfillorange = orange;  
+    buttontextfillorange = resetWhite;
   }
   //End Hover-over color for Orange Button
 
@@ -94,11 +94,11 @@ void colorPallete() {
   //Yellow button
   //Hover-over color for Yellow Button
   if (mouseX >= xYellow && mouseX <= xYellow + YellowWidth && mouseY >= yYellow && mouseY <= yYellow + YelloHeight) {
-    buttonfillyellow = red;
+    buttonfillyellow = yellow;
     buttontextfillyellow = resetWhite;
   } else {
-    buttonfillyellow = resetWhite;  
-    buttontextfillyellow = red;
+    buttonfillyellow = yellow;  
+    buttontextfillyellow = resetWhite;
   }
   //End Hover-over color for Yellow Button
 
@@ -116,11 +116,11 @@ void colorPallete() {
   //Indigo button
   //Hover-over color for Indigo Button
   if (mouseX >= xIndigo && mouseX <= xIndigo + IndigoWidth && mouseY >= yIndigo && mouseY <= yIndigo + IndigoHeight) {
-    buttonfillindigo = red;
+    buttonfillindigo = indigo;
     buttontextfillindigo = resetWhite;
   } else {
-    buttonfillindigo = resetWhite;  
-    buttontextfillindigo = red;
+    buttonfillindigo = indigo;  
+    buttontextfillindigo = resetWhite;
   }
   //End Hover-over color for Indigo Button
 
@@ -139,11 +139,11 @@ void colorPallete() {
   //Pink button
   //Hover-over color for Pink Button
   if (mouseX >= xPink && mouseX <= xPink + PinkWidth && mouseY >= yPink && mouseY <= yPink + PinkHeight) {
-    buttonfillpink = red;
+    buttonfillpink = pink;
     buttontextfillpink = resetWhite;
   } else {
-    buttonfillpink = resetWhite;  
-    buttontextfillpink = red;
+    buttonfillpink = pink;  
+    buttontextfillpink = resetWhite;
   }
   //End Hover-over color for Pink Button
 
@@ -162,11 +162,11 @@ void colorPallete() {
   //Black button
   //Hover-over color for Black Button
   if (mouseX >= xBlack && mouseX <= xBlack + BlackWidth && mouseY >= yBlack && mouseY <= yBlack + BlackHeight) {
-    buttonfillblack = red;
+    buttonfillblack = black;
     buttontextfillblack = resetWhite;
   } else {
-    buttonfillblack = resetWhite;  
-    buttontextfillblack = red;
+    buttonfillblack = black;  
+    buttontextfillblack = resetWhite;
   }
   //End Hover-over color for Black Button
 
@@ -184,11 +184,11 @@ void colorPallete() {
   //White button
   //Hover-over color for White Button
   if (mouseX >= xWhite && mouseX <= xWhite + WhiteWidth && mouseY >= yWhite && mouseY <= yWhite + WhiteHeight) {
-    buttonfillwhite = red;
-    buttontextfillwhite = resetWhite;
+    buttonfillwhite = resetWhite;
+    buttontextfillwhite = black;
   } else {
     buttonfillwhite = resetWhite;  
-    buttontextfillwhite = red;
+    buttontextfillwhite = black;
   }
   //End Hover-over color for White Button
 

@@ -103,47 +103,47 @@ float xColorPallete, yColorPallete, ColorPalleteWidth, ColorPalleteHeight;
 float xRed, yRed, RedWidth, RedHeight;
 color buttonfillred, buttontextfillred;
 int redSize;
-char redTitle = 'R';
+String redTitle = "R";
 
 float xBlue, yBlue, BlueWidth, BlueHeight;
 color buttonfillblue, buttontextfillblue;
 int blueSize;
-char blueTitle = 'B';
+String blueTitle = "B";
 
 float xGreen, yGreen, GreenWidth, GreenHeight;
 color buttonfillgreen, buttontextfillgreen;
 int greenSize;
-char greenTitle = 'G';
+String greenTitle = "G";
 
 float xOrange, yOrange, OrangeWidth, OrangeHeight;
 color buttonfillorange, buttontextfillorange;
 int orangeSize;
-char orangeTitle = 'O';
+String orangeTitle = "O";
 
 float xYellow, yYellow, YellowWidth, YelloHeight;
 color buttonfillyellow, buttontextfillyellow;
 int yellowSize;
-char yellowTitle = 'Y';
+String yellowTitle = "Y";
 
 float xIndigo, yIndigo, IndigoWidth, IndigoHeight;
 color buttonfillindigo, buttontextfillindigo;
 int indigoSize;
-char indigoTitle = 'I';
+String indigoTitle = "I";
 
 float xPink, yPink, PinkWidth, PinkHeight;
 color buttonfillpink, buttontextfillpink;
 int pinkSize;
-char pinkTitle = 'P';
+String pinkTitle = "P";
 
 float xBlack, yBlack, BlackWidth, BlackHeight;
 color buttonfillblack, buttontextfillblack;
 int blackSize;
-char blackTitle = 'B';
+String blackTitle = "B";
 
 float xWhite, yWhite, WhiteWidth, WhiteHeight;
 color buttonfillwhite, buttontextfillwhite;
 int whiteSize;
-char whiteTitle = 'W'; 
+String whiteTitle = "W"; 
 
 
 float xBackgroundColorPallete, yBackgroundColorPallete, BackgroundColorPalleteWidth, BackgroundColorPalleteHeight;
@@ -527,22 +527,21 @@ void populationOfVariables() {
   yRed = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3;
   RedWidth = ((xCenter - xCenter*1/2)/2)/3;
   RedHeight = ((height - (height*6.5/10)/2)*1/3)/3;
-  //Text
   redFont = createFont("Arial Narrow", 45);
-  //end text
+
   
-  xBlue = (xCenter - xCenter*1/2)/2 + ((xCenter - xCenter*1/2)/2)*1/3;
+  xGreen = (xCenter - xCenter*1/2)/2 + ((xCenter - xCenter*1/2)/2)*1/3; 
+  yGreen = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3;
+  GreenWidth = ((xCenter - xCenter*1/2)/2)/3; 
+  GreenHeight = ((height - (height*6.5/10)/2)*1/3)/3;
+  greenFont = createFont("Arial Narrow", 45);
+  
+  xBlue = (xCenter - xCenter*1/2)/2 + ((xCenter - xCenter*1/2)/2)*1/3 + ((xCenter - xCenter*1/2)/2)*1/3;
   yBlue = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3;
   BlueWidth = ((xCenter - xCenter*1/2)/2)/3;
   BlueHeight = ((height - (height*6.5/10)/2)*1/3)/3;
   blueFont = createFont("Arial Narrow", 45);
   
-  
-  xGreen = (xCenter - xCenter*1/2)/2 + ((xCenter - xCenter*1/2)/2)*1/3 + ((xCenter - xCenter*1/2)/2)*1/3;
-  yGreen = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3;
-  GreenWidth = ((xCenter - xCenter*1/2)/2)/3; 
-  GreenHeight = ((height - (height*6.5/10)/2)*1/3)/3;
-  greenFont = createFont("Arial Narrow", 45);
   
   xOrange = (xCenter - xCenter*1/2)/2;
   yOrange = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 + ((height - (height*6.5/10)/2)*1/3)*1/3;
