@@ -1,5 +1,5 @@
 void backgroundColorFill() {
-  //Background Color button
+  //Background Color box
 
   rect(xBackgroundFiller, yBackgroundFiller, BackgroundFillerWidth, BackgroundFillerHeight); //is the closing button //needs hover over(color and <del>text</del>)
   textAlign(CENTER, CENTER);
@@ -9,5 +9,5 @@ void backgroundColorFill() {
   text(backgroundFillerText, xBackgroundFiller, yBackgroundFiller, BackgroundFillerWidth, BackgroundFillerHeight); //'text()' function 'draws' the text 
   fill(resetWhite);
   
-  //End Background Color button
+  //End Background Color box
 }
