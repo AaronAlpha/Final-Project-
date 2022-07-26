@@ -172,6 +172,47 @@ void draw() {
       
   //} else {
   //}//end dotted line tool
+  
+  
+  //Start Eraser button logic
+  if (eraser == true) { 
+    stampDraw = false;
+    DottedLineDraw = false;  
+    lineDraw = false;
+    if (mousePressed == true) {
+      draw = true;
+    } else {
+      draw = false;
+    }
+
+    if (draw == true && thinBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      strokeWeight(1); 
+      line(mouseX, mouseY, pmouseX, pmouseY); 
+      strokeWeight(1);
+
+    } else {
+    }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+
+    if (draw == true && thickBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      strokeWeight(5); 
+      line(mouseX, mouseY, pmouseX, pmouseY); 
+      strokeWeight(1);
+
+    } else {
+    }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+
+    if (draw == true && thickerBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      strokeWeight(8); 
+      line(mouseX, mouseY, pmouseX, pmouseY); 
+      strokeWeight(1);
+
+    } else {
+    }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+
+    if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) 
+      line(mouseX, mouseY, pmouseX, pmouseY);
+  } else {
+  }//end eraser tool
 
 
 
@@ -292,15 +333,7 @@ void mousePressed() {
 
 
 
-  //switch to toggle eraser ON or OFF
-  if (mouseX >= eraserboxX && mouseX <= eraserboxX +  eraserboxWidth && mouseY >= eraserboxY && mouseY <= eraserboxY + eraserboxHeight) {
-    if (eraser == false) {
-      eraser = true;
-    } else {
-      eraser = false;
-    }
-  }
-  //end
+  
 
 
   ////control flow/switch to open a shapes tab to put shapes in canvas
@@ -451,6 +484,20 @@ void mouseClicked() {
       DottedLineDraw = false;
     }
   }//end
+  
+  
+  //switch to toggle eraser ON or OFF
+  if (mouseX >= eraserboxX && mouseX <= eraserboxX +  eraserboxWidth && mouseY >= eraserboxY && mouseY <= eraserboxY + eraserboxHeight) {
+    if (eraser == false) {
+      eraser = true;
+      stampDraw = false;
+      lineDraw = false;
+      DottedLineDraw = false;
+    } else {
+      eraser = false;
+    }
+  }
+  //end
   
   
   
