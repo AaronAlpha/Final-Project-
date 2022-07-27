@@ -19,5 +19,5 @@ To-do list:
  - [ ] jukebox
  - [ ] shapes tab
  - [ ] dotted line 
- - [x] <del>paint brush eraser xD</del> paint brush
+ - [x] <del>paint brush eraser xD</del> <del>paint brush</del> Marker
  - [x] not having to select and deselect all drawing tools and different sizes for drawing tool
