@@ -8,10 +8,11 @@ color indigo = #9F08FF, pink = #FF08CA;
 color lightred = #FF8383, lightblue = #4D60FF, lightgreen = #74FF98, lightorange = #FFAE62, lightyellow = #F9FF64, lightindigo = #CA7FFC, lightpink = #FC8FE5, lightblack = #484646, lightwhite = #E3DCDC;
 color backgroundColor;
 
+String[] fontList = PFont.list(); //To list all fonts avaliable on OS
 PFont closeFont, RestartFont, RestartFontHover, MinMaxFont, introFont, startFont, linebuttonFont, eraserbuttonFont, toolsFont, thinbuttonFont, thickbuttonFont, thickerbuttonFont;
 PFont shapesbuttonFont, colorbuttonFont, colorfillerbuttonFont, circleFont, triangleFont, squareFont, rectangleFont, stampFont, DottedLineFont;
-PFont redFont, blueFont, greenFont, orangeFont, yellowFont, indigoFont, pinkFont, blackFont, whiteFont, paintFont;
-String[] fontList = PFont.list(); //To list all fonts avaliable on OS
+PFont redFont, blueFont, greenFont, orangeFont, yellowFont, indigoFont, pinkFont, blackFont, whiteFont, paintFont, templateFont;
+
 
 
 float lineboxX, lineboxY, lineboxWidth, lineboxHeight;
@@ -191,6 +192,9 @@ float xShapesColorPanel, yShapesColorPanel, ShapesColorPanelWidth, ShapesColorPa
 
 
 float templateboxX, templateboxY, templateboxWidth, templateboxHeight;
+float xtemplateTitle, ytemplateTitle, templateTitleWidth, templateTitleHeight;
+int templateSize;
+
 
 float musicboxX, musicboxY, musicboxWidth, musicboxHeight;
 
@@ -679,6 +683,12 @@ void populationOfVariables() {
   templateboxY = height*6.5/10;
   templateboxWidth = xCenter - xCenter*2/10;
   templateboxHeight = (height*7/10)/2; 
+  
+  xtemplateTitle = xCenter - xCenter*1/2;
+  ytemplateTitle = height*6.5/10;
+  templateTitleWidth = (xCenter - xCenter*2/10);
+  templateTitleHeight = ((height*7/10)/2)*1/5;
+  templateFont = createFont("Arial Narrow", 45); 
   //End Population of Template Tool Box
   
   
@@ -702,6 +712,7 @@ void populationOfVariables() {
   rect(lineboxX, lineboxY, lineboxWidth, lineboxHeight); //the 'Line drawing tool' tool box top left with eraser switch and a stamping tool with different thickness sizes
   rect(musicboxX, musicboxY, musicboxWidth, musicboxHeight);
   rect(templateboxX, templateboxY, templateboxWidth, templateboxHeight);
+  rect(xtemplateTitle, ytemplateTitle, templateTitleWidth, templateTitleHeight);
   //rect(xlinetool, ylinetool, linetoolWidth, linetoolHeight);//is the button to switch to the line tool
   //rect(eraserboxX, eraserboxY, eraserboxWidth, eraserboxHeight);//this is the button to switch to the eraser tool
   rect(xTools, yTools, toolsWidth, toolsHeight);
