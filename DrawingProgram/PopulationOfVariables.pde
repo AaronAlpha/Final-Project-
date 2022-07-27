@@ -13,6 +13,7 @@ PFont closeFont, RestartFont, RestartFontHover, MinMaxFont, introFont, startFont
 PFont shapesbuttonFont, colorbuttonFont, colorfillerbuttonFont, circleFont, triangleFont, squareFont, rectangleFont, stampFont, DottedLineFont;
 PFont redFont, blueFont, greenFont, orangeFont, yellowFont, indigoFont, pinkFont, blackFont, whiteFont, paintFont, templateFont;
 
+PImage flowerPic, carPic, lovelySightPic;
 
 
 float lineboxX, lineboxY, lineboxWidth, lineboxHeight;
@@ -195,6 +196,9 @@ float templateboxX, templateboxY, templateboxWidth, templateboxHeight;
 float xtemplateTitle, ytemplateTitle, templateTitleWidth, templateTitleHeight;
 int templateSize;
 String templateText = "Templates";
+int largerDimensionflower, smallerDimensionflower, largerDimensioncar, smallerDimensioncar, largerDimensionlovelySight, smallerDimensionlovelySight;
+boolean flowerWidthlarger, flowerHeightlarger, carWidthlarger, carHeightlarger, lovelySightWidthlarger, lovelySightHeightlarger;
+float flowerWidthRatio, flowerHeightRatio, carWidthRatio, carHeightRatio, lovelySightWidthRatio, lovelySightHeightRatio;
 
 
 float musicboxX, musicboxY, musicboxWidth, musicboxHeight;
