@@ -114,46 +114,55 @@ float xRed, yRed, RedWidth, RedHeight;
 color buttonfillred, buttontextfillred;
 int redSize;
 String redTitle = "R";
+boolean redBool = false;
 
 float xBlue, yBlue, BlueWidth, BlueHeight;
 color buttonfillblue, buttontextfillblue;
 int blueSize;
 String blueTitle = "B";
+boolean blueBool = false;
 
 float xGreen, yGreen, GreenWidth, GreenHeight;
 color buttonfillgreen, buttontextfillgreen;
 int greenSize;
 String greenTitle = "G";
+boolean greenBool = false;
 
 float xOrange, yOrange, OrangeWidth, OrangeHeight;
 color buttonfillorange, buttontextfillorange;
 int orangeSize;
 String orangeTitle = "O";
+boolean orangeBool = false;
 
 float xYellow, yYellow, YellowWidth, YelloHeight;
 color buttonfillyellow, buttontextfillyellow;
 int yellowSize;
 String yellowTitle = "Y";
+boolean yellowBool = false;
 
 float xIndigo, yIndigo, IndigoWidth, IndigoHeight;
 color buttonfillindigo, buttontextfillindigo;
 int indigoSize;
 String indigoTitle = "I";
+boolean indigoBool = false;
 
 float xPink, yPink, PinkWidth, PinkHeight;
 color buttonfillpink, buttontextfillpink;
 int pinkSize;
 String pinkTitle = "P";
+boolean pinkBool = false;
 
 float xBlack, yBlack, BlackWidth, BlackHeight;
 color buttonfillblack, buttontextfillblack;
 int blackSize;
 String blackTitle = "B";
+boolean blackBool = false;
 
 float xWhite, yWhite, WhiteWidth, WhiteHeight;
 color buttonfillwhite, buttontextfillwhite;
 int whiteSize;
 String whiteTitle = "W"; 
+boolean whiteBool = false;
 
 
 float xBackgroundColorPallete, yBackgroundColorPallete, BackgroundColorPalleteWidth, BackgroundColorPalleteHeight;
