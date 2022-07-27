@@ -30,12 +30,12 @@ void setup() {
   template();
 
   printArray(fontList); //is another line of code for print statements
-  
-  println(largerDimensionflower, smallerDimensionflower,  flowerWidthlarger, flowerHeightlarger);
+
+  println(largerDimensionflower, smallerDimensionflower, flowerWidthlarger, flowerHeightlarger);
   println(xFlower, yFlower, adjustedFlowerWidth, adjustedFlowerHeight);
-  println(largerDimensioncar, smallerDimensioncar,  carWidthlarger, carHeightlarger);
+  println(largerDimensioncar, smallerDimensioncar, carWidthlarger, carHeightlarger);
   println(xCar, yCar, adjustedCarWidth, adjustedCarHeight);
-  println(largerDimensionlovelySight, smallerDimensionlovelySight,  lovelySightWidthlarger, lovelySightHeightlarger);
+  println(largerDimensionlovelySight, smallerDimensionlovelySight, lovelySightWidthlarger, lovelySightHeightlarger);
   println(xLovelySight, yLovelySight, adjustedLovelySightWidth, adjustedLovelySightHeight);
 }
 
@@ -61,44 +61,176 @@ void draw() {
   colorPallete();
   backgroundColorFill();
   backgroundPallete();
-  
+
 
   image(flowerPic, xFlower, yFlower, adjustedFlowerWidth, adjustedFlowerHeight);
   image(carPic, xCar, yCar, adjustedCarWidth, adjustedCarHeight);
   image(lovelySightPic, xLovelySight, yLovelySight, adjustedLovelySightWidth, adjustedLovelySightHeight);
-  
+
 
 
   if (circle == true) {
-    
-    
+
+
     triangle = false;
     square = false;
     rectangle = false;
-    
+
     ellipse( drawingSurfaceWidth - drawingSurfaceWidth*1/2, drawingSurfaceHeight/2, drawingSurfaceHeight/2, drawingSurfaceHeight/2);
   } else if (triangle == true) {
-    
-    
+
+
     circle = false;
     square = false;
     rectangle = false;
-    
-    
   } else if (square == true) {
     circle = false;
     triangle = false;
     rectangle = false;
-    
   } else if (rectangle == true) {
-    
-    
+
+
     circle = false;
     triangle = false;
     square = false;
-    
-    
   }
+
+
+
+
+  //Color pallete changer
+  if (redBool == true) {
+    blueBool = false;
+    greenBool = false;
+    orangeBool =false;
+    yellowBool = false;
+    indigoBool = false;
+    pinkBool = false;
+    blackBool = false;
+    whiteBool = false;
+
+    drawingColor = red;
+  } else {
+  }
+
+
+
+  if (blueBool == true) {
+    redBool = false;
+    greenBool = false;
+    orangeBool =false;
+    yellowBool = false;
+    indigoBool = false;
+    pinkBool = false;
+    blackBool = false;
+    whiteBool = false;
+
+    drawingColor = blue;
+  } else {
+  }
+
+  if (greenBool == true) {
+    redBool = false;
+    blueBool = false;
+    orangeBool =false;
+    yellowBool = false;
+    indigoBool = false;
+    pinkBool = false;
+    blackBool = false;
+    whiteBool = false;
+
+    drawingColor = green;
+  } else {
+  }
+
+
+  if (orangeBool == true) {
+    blueBool = false;
+    greenBool = false;
+    redBool =false;
+    yellowBool = false;
+    indigoBool = false;
+    pinkBool = false;
+    blackBool = false;
+    whiteBool = false;
+
+    drawingColor = orange;
+  } else {
+  }
+
+  if (yellowBool == true) {
+    blueBool = false;
+    greenBool = false;
+    orangeBool =false;
+    redBool = false;
+    indigoBool = false;
+    pinkBool = false;
+    blackBool = false;
+    whiteBool = false;
+
+    drawingColor = yellow;
+  } else {
+  }
+
+
+  if (indigoBool == true) {
+    blueBool = false;
+    greenBool = false;
+    orangeBool =false;
+    yellowBool = false;
+    redBool = false;
+    pinkBool = false;
+    blackBool = false;
+    whiteBool = false;
+
+    drawingColor = indigo;
+  } else {
+  }
+
+  if (pinkBool == true) {
+    blueBool = false;
+    greenBool = false;
+    orangeBool =false;
+    yellowBool = false;
+    indigoBool = false;
+    redBool = false;
+    blackBool = false;
+    whiteBool = false;
+
+    drawingColor = pink;
+  } else {
+  }
+
+  if (blackBool == true) {
+    blueBool = false;
+    greenBool = false;
+    orangeBool =false;
+    yellowBool = false;
+    indigoBool = false;
+    pinkBool = false;
+    redBool = false;
+    whiteBool = false;
+
+    drawingColor = black;
+  } else {
+  }
+
+  if (whiteBool == true) {
+    blueBool = false;
+    greenBool = false;
+    orangeBool =false;
+    yellowBool = false;
+    indigoBool = false;
+    pinkBool = false;
+    blackBool = false;
+    redBool = false;
+    
+    drawingColor = resetWhite;
+  } else {
+  }
+
+  //end
+
 
 
 
@@ -277,6 +409,18 @@ void draw() {
     DottedLineDraw = false; 
     eraser = false;
     paintDraw = false;
+    
+    
+    redBool = false;
+    blueBool = false;
+    greenBool = false;
+    orangeBool = false;
+    yellowBool =false;
+    indigoBool = false;
+    pinkBool = false;
+    blackBool = false;
+    whiteBool = false;
+    
 
     redBackground = false;
     blueBackground = false;
@@ -295,28 +439,38 @@ void draw() {
     }
 
     if (draw == true && thinBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      stroke(drawingColor);
       strokeWeight(1); 
       line(mouseX, mouseY, pmouseX, pmouseY); 
       strokeWeight(1);
-    } else {}//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+      stroke(black);
+    } else {
+    }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
     if (draw == true && thickBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      stroke(drawingColor);
       strokeWeight(5); 
       line(mouseX, mouseY, pmouseX, pmouseY); 
       strokeWeight(1);
+      stroke(black);
     } else {
     }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
     if (draw == true && thickerBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      stroke(drawingColor);
       strokeWeight(9); 
       line(mouseX, mouseY, pmouseX, pmouseY); 
       strokeWeight(1);
+      stroke(black);
     } else {
     }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
     if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) 
-      line(mouseX, mouseY, pmouseX, pmouseY);
-  } else {}//end line tool
+      stroke(drawingColor);
+    line(mouseX, mouseY, pmouseX, pmouseY);
+    stroke(black);
+  } else {
+  }//end line tool
 
 
 
@@ -327,6 +481,19 @@ void draw() {
     DottedLineDraw = false;
     eraser = false;
     paintDraw = false;
+    
+    
+    redBool = false;
+    blueBool = false;
+    greenBool = false;
+    orangeBool = false;
+    yellowBool =false;
+    indigoBool = false;
+    pinkBool = false;
+    blackBool = false;
+    whiteBool = false;
+    
+    
 
     redBackground = false;
     blueBackground = false;
@@ -337,6 +504,9 @@ void draw() {
     pinkBackground = false;
     blackBackground = false;
     whiteBackground = false;
+    
+    
+
 
     if (mousePressed == true) {
       draw = true;
@@ -345,39 +515,61 @@ void draw() {
     }
 
     if (draw == true && thinBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      stroke(drawingColor);
       strokeWeight(1); 
       ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter); //have to make ellipse tool as well  //Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
       strokeWeight(1);
+      stroke(black);
     } else {
     }
 
     if (draw == true && thickBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      stroke(drawingColor);
       strokeWeight(5); 
       ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter);
       strokeWeight(1);
+      stroke(black);
     } else {
     }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
     if (draw == true && thickerBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      stroke(drawingColor);
       strokeWeight(9); 
       ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter);
       strokeWeight(1);
+      stroke(black);
     } else {
     }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
 
     if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) 
-      ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter);
-  } else {}//end stamp tool
+      stroke(drawingColor);
+    ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter);
+    stroke(black);
+  } else {
+  }//end stamp tool
 
 
-  
+
   //paint brush logic
   if (paintDraw == true) { 
     stampDraw = false;
     DottedLineDraw = false; 
     eraser = false;
     lineDraw = false;
+    
+    
+    redBool = false;
+    blueBool = false;
+    greenBool = false;
+    orangeBool = false;
+    yellowBool =false;
+    indigoBool = false;
+    pinkBool = false;
+    blackBool = false;
+    whiteBool = false;    
+    
+    
 
     redBackground = false;
     blueBackground = false;
@@ -395,31 +587,43 @@ void draw() {
       draw = false;
     }
 
-    
+
     if (draw == true && thinBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      stroke(drawingColor);
       strokeWeight(10); 
       line(mouseX, mouseY, pmouseX, pmouseY); 
       strokeWeight(1);
-    } else {}//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+      stroke(black);
+    } else {
+    }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
     if (draw == true && thickBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      stroke(drawingColor);
       strokeWeight(14); 
       line(mouseX, mouseY, pmouseX, pmouseY); 
       strokeWeight(1);
-    } else {}//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+      stroke(black);
+    } else {
+    }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
     if (draw == true && thickerBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      stroke(drawingColor);
       strokeWeight(24); 
       line(mouseX, mouseY, pmouseX, pmouseY); 
       strokeWeight(1);
-    } else {}//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+      stroke(black);
+    } else {
+    }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
     if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      stroke(drawingColor);
       line(mouseX, mouseY, pmouseX, pmouseY);
-    } else {}    
-     
-  } else {}//end paint brush
-  
+      stroke(black);
+    } else {
+    }
+  } else {
+  }//end paint brush
+
 
 
 
@@ -431,7 +635,7 @@ void draw() {
   //  stampDraw = false;
   //  lineDraw = false;
   //  paintDraw = false;
-  
+
   //  if (mousePressed == true) {
   //    draw = true;
   //  } else {
@@ -483,29 +687,37 @@ void draw() {
 
 
     if (draw == true && thinBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      stroke(backgroundColor);
       strokeWeight(1);
       line(mouseX, mouseY, pmouseX, pmouseY); 
       strokeWeight(1);
+      stroke(black);
     } else {
     }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
     if (draw == true && thickBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      stroke(backgroundColor);
       strokeWeight(5); 
       line(mouseX, mouseY, pmouseX, pmouseY); 
       strokeWeight(1);
+      stroke(black);
     } else {
     }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
     if (draw == true && thickerBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      stroke(backgroundColor);
       strokeWeight(9); 
       line(mouseX, mouseY, pmouseX, pmouseY); 
       strokeWeight(1);
+      stroke(black);
     } else {
     }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
 
     if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) 
-      line(mouseX, mouseY, pmouseX, pmouseY);
+      stroke(backgroundColor);
+    line(mouseX, mouseY, pmouseX, pmouseY);
+    stroke(black);
   } else {
   }//end eraser tool
 
@@ -719,8 +931,8 @@ void mouseClicked() {
       stampDraw = false;
     }
   }//end
-  
-  
+
+
   //switch to toggle paint brush ON or OFF
   if (mouseX >= xPaintBrush && mouseX <= xPaintBrush +  PaintBrushWidth && mouseY >= yPaintBrush && mouseY <= yPaintBrush + PaintBrushHeight) {
     if (paintDraw == false) {
@@ -843,6 +1055,193 @@ void mouseClicked() {
     }
   }
   //end
+
+
+
+
+
+
+  //color pallete single IFs
+  if (mouseX >= xRed && mouseX <= xRed + RedWidth && mouseY >= yRed && mouseY <= yRed + RedHeight) {
+    if (redBool ==false) {
+      redBool = true;
+      greenBool = false;
+      blueBool = false;
+      orangeBool = false;
+      yellowBool = false;
+      indigoBool = false;
+      pinkBool = false;
+      blackBool = false;
+      whiteBool = false;
+    } else {
+      redBool = false;
+    }
+  }
+
+
+  if (mouseX >= xGreen && mouseX <= xGreen + GreenWidth && mouseY >= yGreen && mouseY <= yGreen + GreenHeight) {
+    if (greenBool == false) {
+      greenBool = true;
+      redBool = false;
+      blueBool = false;
+      orangeBool = false;
+      yellowBool = false;
+      indigoBool = false;
+      pinkBool = false;
+      blackBool = false;
+      whiteBool = false;
+    } else {
+      greenBool = false;
+    }
+  }
+
+
+
+  if (mouseX >= xBlue && mouseX <= xBlue + BlueWidth && mouseY >= yBlue && mouseY <= yBlue + BlueHeight) {
+    if (blueBool == false) {
+      blueBool = true;
+      greenBool = false;
+      redBool = false;
+      orangeBool = false;
+      yellowBool = false;
+      indigoBool = false;
+      pinkBool = false;
+      blackBool = false;
+      whiteBool = false;
+    } else {
+      blueBool = false;
+    }
+  }
+
+
+
+
+  if (mouseX >= xOrange && mouseX <= xOrange + OrangeWidth && mouseY >= yOrange && mouseY <= yOrange + OrangeHeight) {
+    if (orangeBool == false) {
+      orangeBool = true;
+      redBool = false;
+      blueBool = false;
+      greenBool = false;
+      yellowBool = false;
+      indigoBool = false;
+      pinkBool = false;
+      blackBool = false;
+      whiteBool = false;
+    } else {
+      orangeBool = false;
+    }
+  }
+
+
+
+  if (mouseX >= xYellow && mouseX <= xYellow + YellowWidth && mouseY >= yYellow && mouseY <= yYellow + YelloHeight) {
+    if (yellowBool == false) {
+      yellowBool = true;
+      redBool = false;
+      blueBool = false;
+      orangeBool = false;
+      greenBool = false;
+      indigoBool = false;
+      pinkBool = false;
+      blackBool = false;
+      whiteBool = false;
+    } else {
+      yellowBool = false;
+    }
+  }
+
+
+
+
+
+
+  if (mouseX >= xIndigo && mouseX <= xIndigo + IndigoWidth && mouseY >= yIndigo && mouseY <= yIndigo + IndigoHeight) {
+    if (indigoBool == false) {
+      indigoBool = true;
+      greenBool = false;
+      redBool = false;
+      orangeBool = false;
+      yellowBool = false;
+      blueBool = false;
+      pinkBool = false;
+      blackBool = false;
+      whiteBool = false;
+    } else {
+      indigoBool = false;
+    }
+  }
+
+
+
+
+
+
+
+
+
+  if (mouseX >= xPink && mouseX <= xPink + PinkWidth && mouseY >= yPink && mouseY <= yPink + PinkHeight) {
+    if (pinkBool == false) {
+      pinkBool = true;
+      redBool = false;
+      blueBool = false;
+      orangeBool = false;
+      yellowBool = false;
+      indigoBool = false;
+      greenBool = false;
+      blackBool = false;
+      whiteBool = false;
+    } else {
+      pinkBool = false;
+    }
+  }
+
+
+
+  if (mouseX >= xBlack && mouseX <= xBlack + BlackWidth && mouseY >= yBlack && mouseY <= yBlack + BlackHeight) {
+    if (blackBool == false) {
+      blackBool = true;
+      redBool = false;
+      blueBool = false;
+      orangeBool = false;
+      yellowBool = false;
+      indigoBool = false;
+      pinkBool = false;
+      greenBool = false;
+      whiteBool = false;
+    } else {
+      blackBool = false;
+    }
+  }
+
+
+
+  if (mouseX >= xWhite && mouseX <= xWhite + WhiteWidth && mouseY >= yWhite && mouseY <= yWhite + WhiteHeight) {
+    if (whiteBool == false) {
+      whiteBool = true;
+      redBool = false;
+      blueBool = false;
+      orangeBool = false;
+      yellowBool = false;
+      indigoBool = false;
+      pinkBool = false;
+      blackBool = false;
+      greenBool = false;
+    } else {
+      whiteBool = false;
+    }
+  }
+
+
+
+
+
+  //end 
+
+
+
+
+
+
 
 
 
@@ -1009,5 +1408,6 @@ void mouseClicked() {
       whiteBackground = false;
     }
   }
+  //end
 }
 //End MAIN Program
