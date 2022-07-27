@@ -111,6 +111,7 @@ void draw() {
 
     drawingColor = red;
   } else {
+    redBool = false;
   }
 
 
@@ -127,6 +128,7 @@ void draw() {
 
     drawingColor = blue;
   } else {
+    blueBool = false;
   }
 
   if (greenBool == true) {
@@ -141,6 +143,7 @@ void draw() {
 
     drawingColor = green;
   } else {
+    greenBool = false;
   }
 
 
@@ -156,6 +159,7 @@ void draw() {
 
     drawingColor = orange;
   } else {
+    orangeBool = false;
   }
 
   if (yellowBool == true) {
@@ -170,6 +174,7 @@ void draw() {
 
     drawingColor = yellow;
   } else {
+    yellowBool = false;
   }
 
 
@@ -185,6 +190,7 @@ void draw() {
 
     drawingColor = indigo;
   } else {
+    indigoBool = false;
   }
 
   if (pinkBool == true) {
@@ -199,6 +205,7 @@ void draw() {
 
     drawingColor = pink;
   } else {
+    pinkBool = false;
   }
 
   if (blackBool == true) {
@@ -213,6 +220,7 @@ void draw() {
 
     drawingColor = black;
   } else {
+    blackBool = false;
   }
 
   if (whiteBool == true) {
@@ -227,6 +235,7 @@ void draw() {
     
     drawingColor = resetWhite;
   } else {
+    whiteBool = false;
   }
 
   //end
@@ -444,6 +453,7 @@ void draw() {
       line(mouseX, mouseY, pmouseX, pmouseY); 
       strokeWeight(1);
       stroke(black);
+
     } else {
     }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
@@ -453,6 +463,7 @@ void draw() {
       line(mouseX, mouseY, pmouseX, pmouseY); 
       strokeWeight(1);
       stroke(black);
+
     } else {
     }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
@@ -467,8 +478,8 @@ void draw() {
 
     if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) 
       stroke(drawingColor);
-    line(mouseX, mouseY, pmouseX, pmouseY);
-    stroke(black);
+      line(mouseX, mouseY, pmouseX, pmouseY);
+      stroke(black);
   } else {
   }//end line tool
 
@@ -544,8 +555,8 @@ void draw() {
 
     if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) 
       stroke(drawingColor);
-    ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter);
-    stroke(black);
+      ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter);
+      stroke(black);
   } else {
   }//end stamp tool
 
@@ -914,6 +925,7 @@ void mouseClicked() {
       stampDraw = false;
       DottedLineDraw = false;
       eraser = false;
+
     } else {
       lineDraw = false;
     }
@@ -927,6 +939,8 @@ void mouseClicked() {
       lineDraw = false;
       DottedLineDraw = false;
       eraser = false;
+      
+
     } else {
       stampDraw = false;
     }
@@ -941,6 +955,8 @@ void mouseClicked() {
       lineDraw = false;
       stampDraw = false;
       eraser = false;
+      
+
     } else {
       paintDraw = false;
     }
@@ -954,6 +970,8 @@ void mouseClicked() {
       lineDraw = false;
       stampDraw = false;
       eraser = false;
+      
+      
     } else {
       DottedLineDraw = false;
     }
@@ -967,6 +985,8 @@ void mouseClicked() {
       stampDraw = false;
       lineDraw = false;
       DottedLineDraw = false;
+      
+      
     } else {
       eraser = false;
     }
@@ -1065,6 +1085,7 @@ void mouseClicked() {
   if (mouseX >= xRed && mouseX <= xRed + RedWidth && mouseY >= yRed && mouseY <= yRed + RedHeight) {
     if (redBool ==false) {
       redBool = true;
+      
       greenBool = false;
       blueBool = false;
       orangeBool = false;
@@ -1073,8 +1094,11 @@ void mouseClicked() {
       pinkBool = false;
       blackBool = false;
       whiteBool = false;
+      
+      
     } else {
       redBool = false;
+
     }
   }
 
@@ -1082,6 +1106,7 @@ void mouseClicked() {
   if (mouseX >= xGreen && mouseX <= xGreen + GreenWidth && mouseY >= yGreen && mouseY <= yGreen + GreenHeight) {
     if (greenBool == false) {
       greenBool = true;
+      
       redBool = false;
       blueBool = false;
       orangeBool = false;
@@ -1090,8 +1115,12 @@ void mouseClicked() {
       pinkBool = false;
       blackBool = false;
       whiteBool = false;
+      
+      
+      
     } else {
       greenBool = false;
+
     }
   }
 
@@ -1100,6 +1129,7 @@ void mouseClicked() {
   if (mouseX >= xBlue && mouseX <= xBlue + BlueWidth && mouseY >= yBlue && mouseY <= yBlue + BlueHeight) {
     if (blueBool == false) {
       blueBool = true;
+      
       greenBool = false;
       redBool = false;
       orangeBool = false;
@@ -1108,8 +1138,11 @@ void mouseClicked() {
       pinkBool = false;
       blackBool = false;
       whiteBool = false;
+      
+      
     } else {
       blueBool = false;
+  
     }
   }
 
@@ -1119,6 +1152,7 @@ void mouseClicked() {
   if (mouseX >= xOrange && mouseX <= xOrange + OrangeWidth && mouseY >= yOrange && mouseY <= yOrange + OrangeHeight) {
     if (orangeBool == false) {
       orangeBool = true;
+      
       redBool = false;
       blueBool = false;
       greenBool = false;
@@ -1127,8 +1161,11 @@ void mouseClicked() {
       pinkBool = false;
       blackBool = false;
       whiteBool = false;
+      
+  
     } else {
       orangeBool = false;
+   
     }
   }
 
@@ -1137,6 +1174,7 @@ void mouseClicked() {
   if (mouseX >= xYellow && mouseX <= xYellow + YellowWidth && mouseY >= yYellow && mouseY <= yYellow + YelloHeight) {
     if (yellowBool == false) {
       yellowBool = true;
+      
       redBool = false;
       blueBool = false;
       orangeBool = false;
@@ -1145,8 +1183,11 @@ void mouseClicked() {
       pinkBool = false;
       blackBool = false;
       whiteBool = false;
+      
+
     } else {
       yellowBool = false;
+ 
     }
   }
 
@@ -1158,6 +1199,7 @@ void mouseClicked() {
   if (mouseX >= xIndigo && mouseX <= xIndigo + IndigoWidth && mouseY >= yIndigo && mouseY <= yIndigo + IndigoHeight) {
     if (indigoBool == false) {
       indigoBool = true;
+      
       greenBool = false;
       redBool = false;
       orangeBool = false;
@@ -1166,8 +1208,11 @@ void mouseClicked() {
       pinkBool = false;
       blackBool = false;
       whiteBool = false;
+      
+
     } else {
       indigoBool = false;
+      
     }
   }
 
@@ -1182,6 +1227,7 @@ void mouseClicked() {
   if (mouseX >= xPink && mouseX <= xPink + PinkWidth && mouseY >= yPink && mouseY <= yPink + PinkHeight) {
     if (pinkBool == false) {
       pinkBool = true;
+      
       redBool = false;
       blueBool = false;
       orangeBool = false;
@@ -1190,8 +1236,10 @@ void mouseClicked() {
       greenBool = false;
       blackBool = false;
       whiteBool = false;
+   
     } else {
       pinkBool = false;
+  
     }
   }
 
@@ -1200,6 +1248,7 @@ void mouseClicked() {
   if (mouseX >= xBlack && mouseX <= xBlack + BlackWidth && mouseY >= yBlack && mouseY <= yBlack + BlackHeight) {
     if (blackBool == false) {
       blackBool = true;
+      
       redBool = false;
       blueBool = false;
       orangeBool = false;
@@ -1208,8 +1257,11 @@ void mouseClicked() {
       pinkBool = false;
       greenBool = false;
       whiteBool = false;
+      
+
     } else {
       blackBool = false;
+
     }
   }
 
@@ -1218,6 +1270,7 @@ void mouseClicked() {
   if (mouseX >= xWhite && mouseX <= xWhite + WhiteWidth && mouseY >= yWhite && mouseY <= yWhite + WhiteHeight) {
     if (whiteBool == false) {
       whiteBool = true;
+      
       redBool = false;
       blueBool = false;
       orangeBool = false;
@@ -1226,8 +1279,10 @@ void mouseClicked() {
       pinkBool = false;
       blackBool = false;
       greenBool = false;
+
     } else {
       whiteBool = false;
+  
     }
   }
 
@@ -1377,6 +1432,7 @@ void mouseClicked() {
   if (mouseX >= xBlackBackground && mouseX <= xBlackBackground + BlackBackgroundWidth && mouseY >= yBlackBackground && mouseY <= yBlackBackground + BlackBackgroundHeight) {
     if (blackBackground == false) {
       blackBackground = true; 
+      
       redBackground = false;
       blueBackground = false;
       greenBackground = false;
