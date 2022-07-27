@@ -263,6 +263,8 @@ void populationOfVariables() {
   };
   
   
+  //smaller Diameter
+    
   
   
   //Population Intro

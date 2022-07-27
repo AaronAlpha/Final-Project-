@@ -58,12 +58,33 @@ void draw() {
 
 
   if (circle == true) {
-    ellipse(drawingSurfaceX, drawingSurfaceY*2, drawingSurfaceWidth/2, drawingSurfaceHeight/2);
+    
+    
+    triangle = false;
+    square = false;
+    rectangle = false;
+    
+    ellipse( drawingSurfaceWidth - drawingSurfaceWidth*1/2, drawingSurfaceHeight/2, drawingSurfaceHeight/2, drawingSurfaceHeight/2);
   } else if (triangle == true) {
     
+    
+    circle = false;
+    square = false;
+    rectangle = false;
+    
+    
   } else if (square == true) {
+    circle = false;
+    triangle = false;
+    rectangle = false;
     
   } else if (rectangle == true) {
+    
+    
+    circle = false;
+    triangle = false;
+    square = false;
+    
     
   }
 
