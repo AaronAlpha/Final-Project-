@@ -357,13 +357,11 @@ void draw() {
 
     if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) 
       ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter);
-  } else {
-  }//end stamp tool
+  } else {}//end stamp tool
 
 
   
   //paint brush logic
-  //start Line tool
   if (paintDraw == true) { 
     stampDraw = false;
     DottedLineDraw = false; 
@@ -396,22 +394,21 @@ void draw() {
       strokeWeight(14); 
       line(mouseX, mouseY, pmouseX, pmouseY); 
       strokeWeight(1);
-    } else {
-    }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+    } else {}//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
     if (draw == true && thickerBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
       strokeWeight(18); 
       line(mouseX, mouseY, pmouseX, pmouseY); 
       strokeWeight(1);
-    } else {
-    }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
+    } else {}//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
     if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) 
+      stroke(10);
       line(mouseX, mouseY, pmouseX, pmouseY);
-  } else {
-  }//end line tool
+      stroke(1);
+  } else {}//end paint brush
   
-  //end 
+
 
 
 
@@ -723,6 +720,7 @@ void mouseClicked() {
     } else {
       paintDraw = false;
     }
+  }
 
 
   //switch to toggle stamp mode ON or OFF
