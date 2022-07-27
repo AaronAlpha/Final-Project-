@@ -9,9 +9,6 @@ void template() {
   
   
   flowerPic = loadImage("flower 4.png");
-  int flowerWidth = 248, flowerHeight = 203;
-  
-  
   if(flowerWidth > flowerHeight) {
     largerDimensionflower = flowerWidth;
     smallerDimensionflower = flowerHeight;
@@ -38,7 +35,6 @@ void template() {
   
   
   carPic = loadImage("car pic 1.jpg");
-  int carWidth = 412, carHeight = 319;  
   if(carWidth > carHeight) {
     largerDimensioncar = carWidth;
     smallerDimensioncar = carHeight;
@@ -64,7 +60,6 @@ void template() {
 
  
   lovelySightPic = loadImage("park pic 2.jpg");
-  int lovelySightWidth = 780, lovelySightHeight = 952;
   if(lovelySightWidth > lovelySightHeight) {
     largerDimensionlovelySight = lovelySightWidth;
     smallerDimensionlovelySight = lovelySightHeight;

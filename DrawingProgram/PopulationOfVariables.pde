@@ -200,8 +200,11 @@ int largerDimensionflower, smallerDimensionflower, largerDimensioncar, smallerDi
 boolean flowerWidthlarger, flowerHeightlarger, carWidthlarger, carHeightlarger, lovelySightWidthlarger, lovelySightHeightlarger;
 float flowerWidthRatio, flowerHeightRatio, carWidthRatio, carHeightRatio, lovelySightWidthRatio, lovelySightHeightRatio;
 float xFlower, yFlower, FlowerWidth, FlowerHeight;
+int flowerWidth = 248, flowerHeight = 203;
 float xCar, yCar, CarWidth, CarHeight;
+int carWidth = 412, carHeight = 319;
 float xLovelySight, yLovelySight, LovelySightWidth, LovelySightHeight;
+int lovelySightWidth = 780, lovelySightHeight = 952;
 float adjustedFlowerWidth, adjustedFlowerHeight, adjustedCarWidth, adjustedCarHeight, adjustedLovelySightWidth, adjustedLovelySightHeight;
 
 
