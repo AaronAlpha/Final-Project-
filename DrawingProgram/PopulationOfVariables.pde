@@ -10,7 +10,7 @@ color backgroundColor;
 
 PFont closeFont, RestartFont, RestartFontHover, MinMaxFont, introFont, startFont, linebuttonFont, eraserbuttonFont, toolsFont, thinbuttonFont, thickbuttonFont, thickerbuttonFont;
 PFont shapesbuttonFont, colorbuttonFont, colorfillerbuttonFont, circleFont, triangleFont, squareFont, rectangleFont, stampFont, DottedLineFont;
-PFont redFont, blueFont, greenFont, orangeFont, yellowFont, indigoFont, pinkFont, blackFont, whiteFont;
+PFont redFont, blueFont, greenFont, orangeFont, yellowFont, indigoFont, pinkFont, blackFont, whiteFont, paintFont;
 String[] fontList = PFont.list(); //To list all fonts avaliable on OS
 
 
@@ -26,6 +26,12 @@ int stampSize;
 String stampText = "Stamp mode";
 color buttonfillstamp, buttontextfillstamp;
 boolean stampDraw = false;
+
+float xPaintBrush, yPaintBrush, PaintBrushWidth, PaintBrushHeight;
+int paintSize;
+String paintText = "Paint Brush";
+color buttonfillpaint, buttontextfillpaint;
+boolean paintDraw = false;
 
 float xDottedLine, yDottedLine, DottedLineWidth, DottedLineHeight;
 int DottedLineSize;
@@ -385,11 +391,19 @@ void populationOfVariables() {
   xDottedLine = ((xCenter - xCenter*1/2)/2)/2 + ((xCenter - xCenter*1/2)/2)/2; 
   yDottedLine = height*0;
   DottedLineWidth = ((xCenter - xCenter*1/2)/2)/2;
-  DottedLineHeight = (height*6.5/10)/4;
+  DottedLineHeight = ((height*6.5/10)/4)/2;
   //Text
   DottedLineFont = createFont("Arial Narrow", 45);
   //End Text
   //End Population of dotted line
+  
+  
+  //Population of paint brush
+  xPaintBrush = ((xCenter - xCenter*1/2)/2)/2 + ((xCenter - xCenter*1/2)/2)/2;
+  yPaintBrush = ((height*6.5/10)/4)/2; 
+  PaintBrushWidth = ((xCenter - xCenter*1/2)/2)/2; 
+  PaintBrushHeight = ((height*6.5/10)/4)/2;
+  //end
   
   
   //Population of eraser tool switch
@@ -697,6 +711,7 @@ void populationOfVariables() {
   //rect(xRectangle, yRectangle, RectangleWidth, RectangleHeight);
   //rect(xstamptool, ystamptool, stamptoolWidth, stamptoolHeight);
   rect(xDottedLine, yDottedLine, DottedLineWidth, DottedLineHeight);
+  rect(xPaintBrush, yPaintBrush, PaintBrushWidth, PaintBrushHeight);
   
   rect(xColorPallete, yColorPallete, ColorPalleteWidth, ColorPalleteHeight);
   rect(xRed, yRed, RedWidth, RedHeight);

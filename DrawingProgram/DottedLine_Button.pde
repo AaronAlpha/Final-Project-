@@ -14,7 +14,7 @@ void dottedLine() {
   fill(buttonfillDottedLine);
   rect(xDottedLine, yDottedLine, DottedLineWidth, DottedLineHeight); //is the closing button //needs hover over(color and text)
   textAlign(CENTER, CENTER);
-  DottedLineSize = 40; //Changing number until it exists
+  DottedLineSize = 26; //Changing number until it exists
   textFont(DottedLineFont, DottedLineSize); //used to affext the text
   fill(buttontextfillDottedLine);
   text(DottedLineText, xDottedLine, yDottedLine, DottedLineWidth, DottedLineHeight); //'text()' function 'draws' the text 
