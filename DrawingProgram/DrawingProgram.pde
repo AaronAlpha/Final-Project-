@@ -62,7 +62,8 @@ void draw() {
   backgroundColorFill();
   backgroundPallete();
 
-
+  
+  //images
   if (mouseX >= xFlower && mouseX <= xFlower + FlowerWidth && mouseY >= yFlower && mouseY <= yFlower + FlowerHeight) {
     buttonfillflower = black;
   } else {
@@ -143,30 +144,29 @@ void draw() {
   //  rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
   //  fill(resetWhite);
   //}
+  
+  //end images
 
 
 
 
-
-
+  //Shapes Tab
   if (circle == true) {
-
-
     triangle = false;
     square = false;
     rectangle = false;
-
-    ellipse( drawingSurfaceWidth - drawingSurfaceWidth*1/2, drawingSurfaceHeight/2, drawingSurfaceHeight/2, drawingSurfaceHeight/2);
+    ellipse( xCenter + xCenter*1/4, (height*6.5/10)/2, drawingSurfaceHeight, drawingSurfaceHeight);
   } else if (triangle == true) {
-
-
+    
     circle = false;
     square = false;
     rectangle = false;
+    triangle(xCenter + xCenter*1/4, height*0, (xCenter + xCenter*1/4) - (xCenter + xCenter*1/4)*1/3.5, drawingSurfaceHeight, (xCenter + xCenter*1/4) + (xCenter + xCenter*1/4)*1/3.5, drawingSurfaceHeight);
   } else if (square == true) {
     circle = false;
     triangle = false;
     rectangle = false;
+    square();
   } else if (rectangle == true) {
 
 
@@ -174,6 +174,7 @@ void draw() {
     triangle = false;
     square = false;
   }
+  //end shapes tab
 
 
 

@@ -31,7 +31,7 @@ boolean stampDraw = false;
 
 float xPaintBrush, yPaintBrush, PaintBrushWidth, PaintBrushHeight;
 int paintSize;
-String paintText = "Paint Brush";
+String paintText = "Marker";
 color buttonfillpaint, buttontextfillpaint;
 boolean paintDraw = false;
 
