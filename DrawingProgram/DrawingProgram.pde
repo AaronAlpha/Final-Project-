@@ -502,7 +502,8 @@ void draw() {
     indigoBool = false;
     pinkBool = false;
     blackBool = false;
-    whiteBool = false;
+    whiteBool = false;    
+    
     
     
 
