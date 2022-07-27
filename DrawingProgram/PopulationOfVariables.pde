@@ -386,6 +386,14 @@ void populationOfVariables() {
   //End Text 
   //End population of stamp tool button
   
+  //Population of paint brush
+  xPaintBrush = ((xCenter - xCenter*1/2)/2)/2 + ((xCenter - xCenter*1/2)/2)/2;
+  yPaintBrush = ((height*6.5/10)/4)/2; 
+  PaintBrushWidth = ((xCenter - xCenter*1/2)/2)/2; 
+  PaintBrushHeight = ((height*6.5/10)/4)/2;
+  paintFont = createFont("Arial Narrow", 45);
+  //end
+    
   
   //Population of dotted line
   xDottedLine = ((xCenter - xCenter*1/2)/2)/2 + ((xCenter - xCenter*1/2)/2)/2; 
@@ -398,12 +406,6 @@ void populationOfVariables() {
   //End Population of dotted line
   
   
-  //Population of paint brush
-  xPaintBrush = ((xCenter - xCenter*1/2)/2)/2 + ((xCenter - xCenter*1/2)/2)/2;
-  yPaintBrush = ((height*6.5/10)/4)/2; 
-  PaintBrushWidth = ((xCenter - xCenter*1/2)/2)/2; 
-  PaintBrushHeight = ((height*6.5/10)/4)/2;
-  //end
   
   
   //Population of eraser tool switch

@@ -1,4 +1,3 @@
-
 import ddf.minim.*;
 import ddf.minim.analysis.*;
 import ddf.minim.effects.*;
@@ -42,6 +41,7 @@ void draw() {
 
   lineButton();
   stampButton();
+  paintBrush();
   dottedLine();
   eraserButton();
   thin();
