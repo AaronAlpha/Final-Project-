@@ -55,9 +55,9 @@ void draw() {
   backgroundPallete();
   template();
 
-  image(flowerPic, xFlower, yFlower, adjustedFlowerWidth, adjustedFlowerHeight);
-  image(carPic, xCar, yCar, adjustedCarWidth, adjustedCarHeight);
-  image(lovelySightPic, xLovelySight, yLovelySight, adjustedLovelySightWidth, adjustedLovelySightHeight);
+  //image(flowerPic, xFlower, yFlower, adjustedFlowerWidth, adjustedFlowerHeight);
+  //image(carPic, xCar, yCar, adjustedCarWidth, adjustedCarHeight);
+  //image(lovelySightPic, xLovelySight, yLovelySight, adjustedLovelySightWidth, adjustedLovelySightHeight);
 
 
   if (circle == true) {

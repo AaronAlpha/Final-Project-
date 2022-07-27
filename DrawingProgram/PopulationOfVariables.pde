@@ -700,6 +700,20 @@ void populationOfVariables() {
   templateFont = createFont("Arial Narrow", 45); 
   
   
+  xFlower = xCenter - xCenter*1/2;
+  yFlower = height*6.5/10 + ((height*7/10)/2)*1/5;
+  FlowerWidth = (xCenter - xCenter*2/10)*1/3;
+  FlowerHeight = (height*7/10)/2 - ((height*7/10)/2)*1/5;
+  
+  xCar = xCenter - xCenter*1/2 + (xCenter - xCenter*2/10)*1/3;
+  yCar = height*6.5/10 + ((height*7/10)/2)*1/5;
+  CarWidth = (xCenter - xCenter*2/10)*1/3;
+  CarHeight = (height*7/10)/2 - ((height*7/10)/2)*1/5;
+  
+  xLovelySight = xCenter - xCenter*1/2 + (xCenter - xCenter*2/10)*1/3 + (xCenter - xCenter*2/10)*1/3;
+  yLovelySight = height*6.5/10 + ((height*7/10)/2)*1/5;
+  LovelySightWidth = (xCenter - xCenter*2/10)*1/3;
+  LovelySightHeight = (height*7/10)/2 - ((height*7/10)/2)*1/5; 
   
   
   //End Population of Template Tool Box
@@ -765,7 +779,7 @@ void populationOfVariables() {
   rect(xWhiteBackground, yWhiteBackground, WhiteBackgroundWidth, WhiteBackgroundHeight);
   
   
-  //rect(xFlower, yFlower, FlowerWidth, FlowerHeight);
-  //rect(xCar, yCar, CarWidth, CarHeight);
-  //rect(xLovelySight, yLovelySight, LovelySightWidth, LovelySightHeight);
+  rect(xFlower, yFlower, FlowerWidth, FlowerHeight);
+  rect(xCar, yCar, CarWidth, CarHeight);
+  rect(xLovelySight, yLovelySight, LovelySightWidth, LovelySightHeight);
 }

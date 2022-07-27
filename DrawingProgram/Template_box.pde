@@ -28,10 +28,6 @@ void template() {
   if(flowerHeightlarger == true) flowerWidthRatio = smallerDimensionflower / largerDimensionflower;
   if(flowerHeightlarger == true) flowerHeightRatio = largerDimensionflower / largerDimensionflower;
   
-  xFlower = xCenter - xCenter*1/2;
-  yFlower = height*6.5/10 + ((height*7/10)/2)*1/5;
-  FlowerWidth = (xCenter - xCenter*2/10)*1/3;
-  FlowerHeight = (height*7/10)/2 - ((height*7/10)/2)*1/5;
   
   adjustedFlowerWidth = FlowerWidth * flowerWidthRatio;
   adjustedFlowerHeight = FlowerHeight * flowerHeightRatio;
@@ -59,10 +55,7 @@ void template() {
   if(carHeightlarger == true) carWidthRatio = smallerDimensioncar / largerDimensioncar;
   if(carHeightlarger == true) carHeightRatio = largerDimensioncar / largerDimensioncar;
   
-  xCar = xCenter - xCenter*1/2 + (xCenter - xCenter*2/10)*1/3;
-  yCar = height*6.5/10 + ((height*7/10)/2)*1/5;
-  CarWidth = (xCenter - xCenter*2/10)*1/3;
-  CarHeight = (height*7/10)/2 - ((height*7/10)/2)*1/5;
+  
   
   adjustedCarWidth = CarWidth * carWidthRatio;
   adjustedCarHeight = CarHeight * carHeightRatio;
@@ -89,10 +82,7 @@ void template() {
   if(lovelySightHeightlarger == true) lovelySightHeightRatio = largerDimensionlovelySight / largerDimensionlovelySight;
   
   
-  xLovelySight = xCenter - xCenter*1/2 + (xCenter - xCenter*2/10)*1/3 + (xCenter - xCenter*2/10)*1/3;
-  yLovelySight = height*6.5/10 + ((height*7/10)/2)*1/5;
-  LovelySightWidth = (xCenter - xCenter*2/10)*1/3;
-  LovelySightHeight = (height*7/10)/2 - ((height*7/10)/2)*1/5;
+  
   
   adjustedLovelySightWidth = LovelySightWidth * lovelySightWidthRatio;
   adjustedLovelySightHeight = LovelySightHeight * lovelySightHeightRatio;
