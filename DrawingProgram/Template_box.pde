@@ -28,6 +28,10 @@ void template() {
   if(flowerHeightlarger == true) flowerWidthRatio = largerDimensionflower / largerDimensionflower;
   
   
+  
+  
+  
+  
   carPic = loadImage("car pic 1.jpg");
   int carWidth = 412, carHeight = 319;  
   if(carWidth > carHeight) {
@@ -69,10 +73,7 @@ void template() {
   
   
   
-  
-  
-  
-  
-  
-  
+
+
+
 }
