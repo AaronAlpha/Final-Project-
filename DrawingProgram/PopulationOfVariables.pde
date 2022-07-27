@@ -209,8 +209,11 @@ int largerDimensionflower, smallerDimensionflower, largerDimensioncar, smallerDi
 boolean flowerWidthlarger = false, flowerHeightlarger = false, carWidthlarger = false, carHeightlarger = false, lovelySightWidthlarger = false, lovelySightHeightlarger = false;
 float flowerWidthRatio = 0.0, flowerHeightRatio = 0.0, carWidthRatio = 0.0, carHeightRatio  = 0.0, lovelySightWidthRatio = 0.0, lovelySightHeightRatio = 0.0;
 float xFlower, yFlower, FlowerWidth, FlowerHeight;
+color buttonfillflower;
 float xCar, yCar, CarWidth, CarHeight;
+color buttonfillcar;
 float xLovelySight, yLovelySight, LovelySightWidth, LovelySightHeight;
+color buttonfillsight;
 float adjustedFlowerWidth, adjustedFlowerHeight, adjustedCarWidth, adjustedCarHeight, adjustedLovelySightWidth, adjustedLovelySightHeight;
 
 
@@ -789,8 +792,5 @@ void populationOfVariables() {
   rect(xWhiteBackground, yWhiteBackground, WhiteBackgroundWidth, WhiteBackgroundHeight);
   
   
-  rect(xFlower, yFlower, FlowerWidth, FlowerHeight);
-  rect(xCar, yCar, CarWidth, CarHeight);
-  rect(xLovelySight, yLovelySight, LovelySightWidth, LovelySightHeight);
-  
+
 }

@@ -63,8 +63,42 @@ void draw() {
   backgroundPallete();
 
 
+ if (mouseX >= xFlower && mouseX <= xFlower + FlowerWidth && mouseY >= yFlower && mouseY <= yFlower + FlowerHeight) {
+    buttonfillflower = black;
+} else {
+    buttonfillflower = resetWhite;
+}
+  
+  fill(buttonfillflower);
+  rect(xFlower, yFlower, FlowerWidth, FlowerHeight);
+  fill(resetWhite);
   image(flowerPic, xFlower, yFlower, adjustedFlowerWidth, adjustedFlowerHeight);
+  
+  
+  if (mouseX >= xCar && mouseX <= xCar + CarWidth && mouseY >= yCar && mouseY <= yCar + CarHeight) {
+    buttonfillcar = black;
+  } else {
+    buttonfillcar = resetWhite;
+  }
+  
+  fill(buttonfillcar);
+  rect(xCar, yCar, CarWidth, CarHeight);
+  fill(resetWhite);
   image(carPic, xCar, yCar, adjustedCarWidth, adjustedCarHeight);
+
+
+
+  if (mouseX >= xLovelySight && mouseX <= xLovelySight + LovelySightWidth && mouseY >= yLovelySight && mouseY <= yLovelySight + LovelySightHeight) {
+    buttonfillsight = black;
+  } else {
+    buttonfillsight = resetWhite;
+  }
+
+
+
+  fill(buttonfillsight);
+  rect(xLovelySight, yLovelySight, LovelySightWidth, LovelySightHeight);
+  fill(resetWhite);  
   image(lovelySightPic, xLovelySight, yLovelySight, adjustedLovelySightWidth, adjustedLovelySightHeight);
 
 
@@ -976,6 +1010,7 @@ void mouseClicked() {
       lineDraw = false;
       stampDraw = false;
       eraser = false;
+      paintDraw = false;
       
       
     } else {
@@ -991,6 +1026,7 @@ void mouseClicked() {
       stampDraw = false;
       lineDraw = false;
       DottedLineDraw = false;
+      paintDraw = false;
       
       
     } else {
