@@ -316,8 +316,7 @@ void draw() {
 
     if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) 
       line(mouseX, mouseY, pmouseX, pmouseY);
-  } else {
-  }//end line tool
+  } else {}//end line tool
 
 
 
@@ -396,7 +395,6 @@ void draw() {
       draw = false;
     }
 
-    stroke(10);
     
     if (draw == true && thinBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
       strokeWeight(10); 
@@ -418,10 +416,7 @@ void draw() {
 
     if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
       line(mouseX, mouseY, pmouseX, pmouseY);
-
-    } else {}
-    stroke(1);
-    
+    } else {}    
      
   } else {}//end paint brush
   

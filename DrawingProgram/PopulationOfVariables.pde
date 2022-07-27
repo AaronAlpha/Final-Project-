@@ -708,7 +708,7 @@ void populationOfVariables() {
   xCar = xCenter - xCenter*1/2 + (xCenter - xCenter*2/10)*1/3;
   yCar = height*6.5/10 + ((height*7/10)/2)*1/5;
   CarWidth = (xCenter - xCenter*2/10)*1/3;
-  CarHeight = (height*7/10)/2 - ((height*7/10)/2)*1/5;
+  CarHeight = (height*7/10)/2 - ((height*7/10)/2)*1/5; 
   
   xLovelySight = xCenter - xCenter*1/2 + (xCenter - xCenter*2/10)*1/3 + (xCenter - xCenter*2/10)*1/3;
   yLovelySight = height*6.5/10 + ((height*7/10)/2)*1/5;
@@ -716,7 +716,8 @@ void populationOfVariables() {
   LovelySightHeight = (height*7/10)/2 - ((height*7/10)/2)*1/5; 
   
   
-  //End Population of Template Tool Box
+  
+ //End Population of Template Tool Box
   
   
   

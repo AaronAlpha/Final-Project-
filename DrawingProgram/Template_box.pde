@@ -7,7 +7,7 @@ void template() {
   text(templateText, xtemplateTitle, ytemplateTitle, templateTitleWidth, templateTitleHeight);
   fill(resetWhite);
   
-  
+
   flowerPic = loadImage("flower 4.png");
   int flowerWidth = 248, flowerHeight = 203;
   if(flowerWidth >= flowerHeight) {
@@ -33,6 +33,10 @@ void template() {
   
   
   
+  println(largerDimensionflower, smallerDimensionflower,  flowerWidthlarger, flowerHeightlarger);
+  println(xFlower, yFlower, adjustedFlowerWidth, adjustedFlowerHeight);
+  
+  
   
   
   carPic = loadImage("car pic 1.jpg");
@@ -54,13 +58,19 @@ void template() {
   if(carHeightlarger == true) carHeightRatio = largerDimensioncar / largerDimensioncar;
   
   
-  
   adjustedCarWidth = CarWidth * carWidthRatio;
   adjustedCarHeight = CarHeight * carHeightRatio;
   
-
-
- 
+  
+   
+  
+  println(largerDimensioncar, smallerDimensioncar,  carWidthlarger, carHeightlarger);
+  println(xCar, yCar, adjustedCarWidth, adjustedCarHeight);
+  
+  
+  
+  
+   
   lovelySightPic = loadImage("park pic 2.jpg");
   int lovelySightWidth = 780, lovelySightHeight = 952;
   if(lovelySightWidth >= lovelySightHeight) {
@@ -80,10 +90,15 @@ void template() {
   if(lovelySightHeightlarger == true) lovelySightHeightRatio = largerDimensionlovelySight / largerDimensionlovelySight;
   
   
-  
-  
   adjustedLovelySightWidth = LovelySightWidth * lovelySightWidthRatio;
   adjustedLovelySightHeight = LovelySightHeight * lovelySightHeightRatio;
+  
+    
+  
+  println(largerDimensionlovelySight, smallerDimensionlovelySight,  lovelySightWidthlarger, lovelySightHeightlarger);
+  println(xLovelySight, yLovelySight, adjustedLovelySightWidth, adjustedLovelySightHeight);
+  
+  
   
   
   
