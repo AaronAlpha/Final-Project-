@@ -779,8 +779,8 @@ void populationOfVariables() {
   rect(xWhiteBackground, yWhiteBackground, WhiteBackgroundWidth, WhiteBackgroundHeight);
   
   
-  //rect(xFlower, yFlower, FlowerWidth, FlowerHeight);
-  //rect(xCar, yCar, CarWidth, CarHeight);
-  //rect(xLovelySight, yLovelySight, LovelySightWidth, LovelySightHeight);
-  template();
+  rect(xFlower, yFlower, FlowerWidth, FlowerHeight);
+  rect(xCar, yCar, CarWidth, CarHeight);
+  rect(xLovelySight, yLovelySight, LovelySightWidth, LovelySightHeight);
+  
 }

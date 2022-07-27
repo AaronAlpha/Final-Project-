@@ -27,13 +27,13 @@ void setup() {
 
 
   populationOfVariables();
-  
+  template();
 
   printArray(fontList); //is another line of code for print statements
   
   println(largerDimensionflower, smallerDimensionflower,  flowerWidthlarger, flowerHeightlarger);
   println(xFlower, yFlower, adjustedFlowerWidth, adjustedFlowerHeight);
-  println(largerDimensioncar, (smallerDimensioncar,  carWidthlarger, carHeightlarger);
+  println(largerDimensioncar, smallerDimensioncar,  carWidthlarger, carHeightlarger);
   println(xCar, yCar, adjustedCarWidth, adjustedCarHeight);
   println(largerDimensionlovelySight, smallerDimensionlovelySight,  lovelySightWidthlarger, lovelySightHeightlarger);
   println(xLovelySight, yLovelySight, adjustedLovelySightWidth, adjustedLovelySightHeight);
