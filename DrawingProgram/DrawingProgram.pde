@@ -476,10 +476,11 @@ void draw() {
     } else {
     }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
-    if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) 
+    if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
       stroke(drawingColor);
       line(mouseX, mouseY, pmouseX, pmouseY);
       stroke(black);
+    } else {}
   } else {
   }//end line tool
 
@@ -554,10 +555,12 @@ void draw() {
     }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
 
-    if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) 
+    if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
       stroke(drawingColor);
       ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter);
       stroke(black);
+    } else {}
+    
   } else {
   }//end stamp tool
 
@@ -703,7 +706,7 @@ void draw() {
       strokeWeight(1);
       line(mouseX, mouseY, pmouseX, pmouseY); 
       strokeWeight(1);
-      stroke(black);
+      stroke(backgroundColor);
     } else {
     }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
@@ -712,7 +715,7 @@ void draw() {
       strokeWeight(5); 
       line(mouseX, mouseY, pmouseX, pmouseY); 
       strokeWeight(1);
-      stroke(black);
+      stroke(backgroundColor);
     } else {
     }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
@@ -721,15 +724,17 @@ void draw() {
       strokeWeight(9); 
       line(mouseX, mouseY, pmouseX, pmouseY); 
       strokeWeight(1);
-      stroke(black);
+      stroke(backgroundColor);
     } else {
     }//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
 
-    if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) 
+    if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
       stroke(backgroundColor);
-    line(mouseX, mouseY, pmouseX, pmouseY);
-    stroke(black);
+      line(mouseX, mouseY, pmouseX, pmouseY);
+      stroke(resetWhite); 
+      stroke(black);
+  } else {}
   } else {
   }//end eraser tool
 
