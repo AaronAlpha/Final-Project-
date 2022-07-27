@@ -103,39 +103,46 @@ void draw() {
 
 
 
-//  if (flower == true) {
+  //if (flower == true) {
     
-//    car = false;
-//    sight = false;
-//    image(flowerPic, drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
-//  } else {
-//    fill(backgroundColor);
-//    rect(drawingSurfaceX, drawingSurfaceY, adjustedFlowerWidth, adjustedFlowerHeight);
-//    fill(resetWhite);
-//  }
+  //  car = false;
+  //  sight = false;
+  //  image(flowerPic, drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
+  //} else {
+  //  //lineDraw = true;
+  //  //stampDraw = true;
+  //  //paintDraw = true;
+  //  //eraser = true;
+  //  flower = false;
+  //  fill(backgroundColor);
+  //  rect(drawingSurfaceX, drawingSurfaceY, adjustedFlowerWidth, adjustedFlowerHeight);
+  //  fill(resetWhite);
+  //}
   
-//  if (car == true) {
-//    flower = false;
-//    sight = false;
+  //if (car == true) {
+  //  flower = false;
+  //  sight = false;
     
-//    image(carPic, drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
-//  } else {
-//    fill(backgroundColor);
-//    rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
-//    fill(resetWhite);
-//  }
-  
-  
-//  if (sight == true) {
+  //  image(carPic, drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
+  //} else {
+  //  car = false;
+  //  fill(backgroundColor);
+  //  rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
+  //  fill(resetWhite);
+  //  }
     
-//    flower = false;
-//    car = false;
-//    image(lovelySightPic, drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
-//  } else {    
-//    fill(backgroundColor);
-//    rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
-//    fill(resetWhite);
-//  }
+    
+  //  if (sight == true) {
+      
+  //  flower = false;
+  //  car = false;
+  //  image(lovelySightPic, drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
+  //} else {    
+  //  sight = false;
+  //  fill(backgroundColor);
+  //  rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
+  //  fill(resetWhite);
+  //}
 
 
 
@@ -522,6 +529,7 @@ void draw() {
     }
 
     if (draw == true && thinBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+      
       stroke(drawingColor);
       strokeWeight(1); 
       line(mouseX, mouseY, pmouseX, pmouseY); 
@@ -1042,6 +1050,37 @@ void mousePressed() {
   //}//this is for the starter button
 
 
+    
+  if (mouseX >= xFlower && mouseX <= xFlower + FlowerWidth && mouseY >= yFlower && mouseY <= yFlower + FlowerHeight) {
+    if (flower == false) {
+      flower = true;
+      car = false;
+      sight = false;
+    } else {
+      flower = false;
+    }
+  }
+
+  if (mouseX >= xCar && mouseX <= xCar + CarWidth && mouseY >= yCar && mouseY <= yCar + CarHeight) {
+    if (car == false) {
+      car = true;
+      flower = false;
+      sight = false;
+    } else {
+      car = false;
+    }
+  }
+
+
+  if (mouseX >= xLovelySight && mouseX <= xLovelySight + LovelySightWidth && mouseY >= yLovelySight && mouseY <= yLovelySight + LovelySightHeight) {
+    if (sight == false) {
+      sight = true;
+      car = false;
+      flower = false;
+    } else {
+      sight = false;
+    }
+  }
   
 
 
@@ -1062,7 +1101,12 @@ void mouseClicked() {
       lineDraw = true;
       stampDraw = false;
       DottedLineDraw = false;
+      paintDraw = false;
       eraser = false;
+      
+      //flower = false;
+      //car = false;
+      //sight = false;
     } else {
       lineDraw = false;
     }
@@ -1076,6 +1120,11 @@ void mouseClicked() {
       lineDraw = false;
       DottedLineDraw = false;
       eraser = false;
+      paintDraw = false;
+      
+      //flower = false;
+      //car = false;
+      //sight = false;
     } else {
       stampDraw = false;
     }
@@ -1090,6 +1139,10 @@ void mouseClicked() {
       lineDraw = false;
       stampDraw = false;
       eraser = false;
+      
+      //flower = false;
+      //car = false;
+      //sight = false;
     } else {
       paintDraw = false;
     }
@@ -1104,6 +1157,10 @@ void mouseClicked() {
       stampDraw = false;
       eraser = false;
       paintDraw = false;
+      
+      //flower = false;
+      //car = false;
+      //sight = false;
     } else {
       DottedLineDraw = false;
     }
@@ -1118,13 +1175,18 @@ void mouseClicked() {
       lineDraw = false;
       DottedLineDraw = false;
       paintDraw = false;
+      
+      //flower = false;
+      //car = false;
+      //sight = false;
     } else {
       eraser = false;
     }
   }
   //end
 
-
+  
+  //size thickness
   if (mouseX >= xThin && mouseX <= xThin +  thinWidth && mouseY >= yThin && mouseY <= yThin + thinHeight) {
     if (thinBool == false) {
       thinBool = true;
@@ -1150,6 +1212,7 @@ void mouseClicked() {
       thickerBool = false;
     }
   }
+  //end
 
 
 
@@ -1209,9 +1272,6 @@ void mouseClicked() {
 
 
 
-
-
-
   //color pallete single IFs
   if (mouseX >= xRed && mouseX <= xRed + RedWidth && mouseY >= yRed && mouseY <= yRed + RedHeight) {
     if (redBool ==false) {
@@ -1249,7 +1309,6 @@ void mouseClicked() {
   }
 
 
-
   if (mouseX >= xBlue && mouseX <= xBlue + BlueWidth && mouseY >= yBlue && mouseY <= yBlue + BlueHeight) {
     if (blueBool == false) {
       blueBool = true;
@@ -1266,7 +1325,6 @@ void mouseClicked() {
       blueBool = false;
     }
   }
-
 
 
 
@@ -1288,7 +1346,6 @@ void mouseClicked() {
   }
 
 
-
   if (mouseX >= xYellow && mouseX <= xYellow + YellowWidth && mouseY >= yYellow && mouseY <= yYellow + YelloHeight) {
     if (yellowBool == false) {
       yellowBool = true;
@@ -1307,10 +1364,6 @@ void mouseClicked() {
   }
 
 
-
-
-
-
   if (mouseX >= xIndigo && mouseX <= xIndigo + IndigoWidth && mouseY >= yIndigo && mouseY <= yIndigo + IndigoHeight) {
     if (indigoBool == false) {
       indigoBool = true;
@@ -1327,12 +1380,6 @@ void mouseClicked() {
       indigoBool = false;
     }
   }
-
-
-
-
-
-
 
 
 
@@ -1390,20 +1437,7 @@ void mouseClicked() {
       whiteBool = false;
     }
   }
-
-
-
-
-
   //end 
-
-
-
-
-
-
-
-
 
 
 
@@ -1572,37 +1606,7 @@ void mouseClicked() {
   //end
   
   
-  
-  if (mouseX >= xFlower && mouseX <= xFlower + FlowerWidth && mouseY >= yFlower && mouseY <= yFlower + FlowerHeight) {
-    if (flower == false) {
-      flower = true;
-      car = false;
-      sight = false;
-    } else {
-      flower = false;
-    }
-  }
 
-  if (mouseX >= xCar && mouseX <= xCar + CarWidth && mouseY >= yCar && mouseY <= yCar + CarHeight) {
-    if (car == false) {
-      car = true;
-      flower = false;
-      sight = false;
-    } else {
-      car = false;
-    }
-  }
-
-
-  if (mouseX >= xLovelySight && mouseX <= xLovelySight + LovelySightWidth && mouseY >= yLovelySight && mouseY <= yLovelySight + LovelySightHeight) {
-    if (sight == false) {
-      sight = true;
-      car = false;
-      flower = false;
-    } else {
-      sight = false;
-    }
-  }
   
   
   
