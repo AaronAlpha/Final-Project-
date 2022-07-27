@@ -384,6 +384,8 @@ void draw() {
       draw = false;
     }
 
+    stroke(10);
+    
     if (draw == true && thinBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
       strokeWeight(10); 
       line(mouseX, mouseY, pmouseX, pmouseY); 
@@ -397,15 +399,18 @@ void draw() {
     } else {}//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
     if (draw == true && thickerBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
-      strokeWeight(18); 
+      strokeWeight(24); 
       line(mouseX, mouseY, pmouseX, pmouseY); 
       strokeWeight(1);
     } else {}//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
-    if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) 
-      stroke(10);
+    if (draw == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
       line(mouseX, mouseY, pmouseX, pmouseY);
-      stroke(1);
+
+    } else {}
+    stroke(1);
+    
+     
   } else {}//end paint brush
   
 

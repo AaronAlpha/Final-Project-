@@ -682,6 +682,9 @@ void populationOfVariables() {
   //End Population of Template Tool Box
   
   
+  
+  
+  
   //Population of Music Player Tool Box
   musicboxX = xCenter + xCenter*3/10;
   musicboxY = height*6.5/10;
