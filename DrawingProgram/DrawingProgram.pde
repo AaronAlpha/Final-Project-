@@ -103,6 +103,45 @@ void draw() {
 
 
 
+//  if (flower == true) {
+    
+//    car = false;
+//    sight = false;
+//    image(flowerPic, drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
+//  } else {
+//    fill(backgroundColor);
+//    rect(drawingSurfaceX, drawingSurfaceY, adjustedFlowerWidth, adjustedFlowerHeight);
+//    fill(resetWhite);
+//  }
+  
+//  if (car == true) {
+//    flower = false;
+//    sight = false;
+    
+//    image(carPic, drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
+//  } else {
+//    fill(backgroundColor);
+//    rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
+//    fill(resetWhite);
+//  }
+  
+  
+//  if (sight == true) {
+    
+//    flower = false;
+//    car = false;
+//    image(lovelySightPic, drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
+//  } else {    
+//    fill(backgroundColor);
+//    rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
+//    fill(resetWhite);
+//  }
+
+
+
+
+
+
   if (circle == true) {
 
 
@@ -474,6 +513,7 @@ void draw() {
     pinkBackground = false;
     blackBackground = false;
     whiteBackground = false;
+    
 
     if (mousePressed == true) {
       draw = true;
@@ -512,8 +552,13 @@ void draw() {
       stroke(drawingColor);
       line(mouseX, mouseY, pmouseX, pmouseY);
       stroke(black);
-    } else {
-    }
+    } else {}
+    
+    
+
+    
+    
+    
   } else {
   }//end line tool
 
@@ -629,6 +674,13 @@ void draw() {
     blackBackground = false;
     whiteBackground = false;
 
+  
+    flower = false;
+    car = false;
+    sight = false;
+
+
+  
     if (mousePressed == true) {
       draw = true;
     } else {
@@ -683,7 +735,35 @@ void draw() {
   //  stampDraw = false;
   //  lineDraw = false;
   //  paintDraw = false;
+      
+      //redBool = false;
+      //blueBool = false;
+      //greenBool = false;
+      //orangeBool = false;
+      //yellowBool =false;
+      //indigoBool = false;
+      //pinkBool = false;
+      //blackBool = false;
+      //whiteBool = false;    
+  
+  
+  
+      //redBackground = false;
+      //blueBackground = false;
+      //greenBackground = false;
+      //orangeBackground = false;
+      //yellowBackground = false;
+      //indigoBackground = false;
+      //pinkBackground = false;
+      //blackBackground = false;
+      //whiteBackground = false;
 
+      
+      //flower = false;
+      //car = false;
+      //sight = false;
+        
+      
   //  if (mousePressed == true) {
   //    draw = true;
   //  } else {
@@ -691,26 +771,33 @@ void draw() {
   //  }
 
   //  if (draw == true && thinBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+  //   stroke(drawingColor);
   //    strokeWeight(1); 
   //    line(mouseX, mouseY, pmouseX, pmouseY); 
   //    strokeWeight(1);
+  //    stroke(black);
   //  } else {}//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
   //  if (draw == true && thickBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+  //    stroke(drawingColor);
   //    strokeWeight(5); 
   //    line(mouseX, mouseY, pmouseX, pmouseY); 
   //    strokeWeight(1);
+        //stroke(black);
   //  } else {}//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
   //  if (draw == true && thickerBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
+  //    stroke(drawingColor);
   //    strokeWeight(9); 
   //    line(mouseX, mouseY, pmouseX, pmouseY); 
   //    strokeWeight(1);
+  //    stroke(black);
   //  } else {}//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
   //  if (draw == true && Dotted == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight)
+  //    stroke(drawingColor);
   //    line(mouseX, mouseY, pmouseX, pmouseY);
-
+  //    stroke(black);
   //    }
 
 
@@ -952,31 +1039,17 @@ void mousePressed() {
   //starterBox = false;
   //  }
   //}
-//}//this is for the starter button
+  //}//this is for the starter button
 
 
-  if (mouseX >= xFlower && mouseX <= xFlower + FlowerWidth && mouseY >= yFlower && mouseY <= yFlower + FlowerHeight) {
-    if (flower == false) {
-    flower = true;
-    car = false;
-    sight = false;
-    } else {
-    flower = false;
-    }
-  }
-
-  if (mouseX >= xFlower && mouseX <= xFlower + FlowerWidth && mouseY >= yFlower && mouseY <= yFlower + FlowerHeight) {
-    if (car == false) {
-    car = true;
-    flower = false;
-    sight = false;
-    } else {car = false;
-  }
-  }
   
-  
-  //if (mouseX >= xLovelySight && mouseX <= xLovelySight + LovelySightWidth && mouseY >= yLovelySight && mouseY <= yLovelySight + LovelySightHeight) {if () else {}} 
 
+
+
+
+
+
+  //if (mouseX >= xLovelySight && mouseX <= xLovelySight + LovelySightWidth && mouseY >= yLovelySight && mouseY <= yLovelySight + LovelySightHeight) {if () else {}}
 }
 
 
@@ -1497,5 +1570,41 @@ void mouseClicked() {
     }
   }
   //end
+  
+  
+  
+  if (mouseX >= xFlower && mouseX <= xFlower + FlowerWidth && mouseY >= yFlower && mouseY <= yFlower + FlowerHeight) {
+    if (flower == false) {
+      flower = true;
+      car = false;
+      sight = false;
+    } else {
+      flower = false;
+    }
+  }
+
+  if (mouseX >= xCar && mouseX <= xCar + CarWidth && mouseY >= yCar && mouseY <= yCar + CarHeight) {
+    if (car == false) {
+      car = true;
+      flower = false;
+      sight = false;
+    } else {
+      car = false;
+    }
+  }
+
+
+  if (mouseX >= xLovelySight && mouseX <= xLovelySight + LovelySightWidth && mouseY >= yLovelySight && mouseY <= yLovelySight + LovelySightHeight) {
+    if (sight == false) {
+      sight = true;
+      car = false;
+      flower = false;
+    } else {
+      sight = false;
+    }
+  }
+  
+  
+  
 }
 //End MAIN Program

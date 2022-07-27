@@ -93,11 +93,7 @@ void template() {
   adjustedLovelySightWidth = LovelySightWidth * lovelySightWidthRatio;
   adjustedLovelySightHeight = LovelySightHeight * lovelySightHeightRatio;
 
-  if (mouseX >= xLovelySight && mouseX <= xLovelySight + LovelySightWidth && mouseY >= yLovelySight && mouseY <= yLovelySight + LovelySightHeight) {
-    buttonfillsight = black;
-  } else {
-    buttonfillsight = resetWhite;
-  }
+  
 
 
   println(largerDimensionlovelySight, smallerDimensionlovelySight, lovelySightWidthlarger, lovelySightHeightlarger);
