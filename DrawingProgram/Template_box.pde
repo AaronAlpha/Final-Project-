@@ -9,13 +9,14 @@ void template() {
   
   
   flowerPic = loadImage("flower 4.png");
-  if(flowerWidth > flowerHeight) {
+  int flowerWidth = 248, flowerHeight = 203;
+  if(flowerWidth >= flowerHeight) {
     largerDimensionflower = flowerWidth;
     smallerDimensionflower = flowerHeight;
     flowerWidthlarger = true;
   } else {
     largerDimensionflower = flowerHeight;
-    smallerDimensionflower =flowerWidth;
+    smallerDimensionflower = flowerWidth;
     flowerHeightlarger = true;
   }
   
@@ -35,7 +36,8 @@ void template() {
   
   
   carPic = loadImage("car pic 1.jpg");
-  if(carWidth > carHeight) {
+  int carWidth = 412, carHeight = 319;
+  if(carWidth >= carHeight) {
     largerDimensioncar = carWidth;
     smallerDimensioncar = carHeight;
     carWidthlarger = true;
@@ -60,7 +62,8 @@ void template() {
 
  
   lovelySightPic = loadImage("park pic 2.jpg");
-  if(lovelySightWidth > lovelySightHeight) {
+  int lovelySightWidth = 780, lovelySightHeight = 952;
+  if(lovelySightWidth >= lovelySightHeight) {
     largerDimensionlovelySight = lovelySightWidth;
     smallerDimensionlovelySight = lovelySightHeight;
     lovelySightWidthlarger = true;

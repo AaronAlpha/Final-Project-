@@ -197,14 +197,11 @@ float xtemplateTitle, ytemplateTitle, templateTitleWidth, templateTitleHeight;
 int templateSize;
 String templateText = "Templates";
 int largerDimensionflower, smallerDimensionflower, largerDimensioncar, smallerDimensioncar, largerDimensionlovelySight, smallerDimensionlovelySight;
-boolean flowerWidthlarger, flowerHeightlarger, carWidthlarger, carHeightlarger, lovelySightWidthlarger, lovelySightHeightlarger;
-float flowerWidthRatio, flowerHeightRatio, carWidthRatio, carHeightRatio, lovelySightWidthRatio, lovelySightHeightRatio;
+boolean flowerWidthlarger = false, flowerHeightlarger = false, carWidthlarger = false, carHeightlarger = false, lovelySightWidthlarger = false, lovelySightHeightlarger = false;
+float flowerWidthRatio = 0.0, flowerHeightRatio = 0.0, carWidthRatio = 0.0, carHeightRatio  = 0.0, lovelySightWidthRatio = 0.0, lovelySightHeightRatio = 0.0;
 float xFlower, yFlower, FlowerWidth, FlowerHeight;
-int flowerWidth = 248, flowerHeight = 203;
 float xCar, yCar, CarWidth, CarHeight;
-int carWidth = 412, carHeight = 319;
 float xLovelySight, yLovelySight, LovelySightWidth, LovelySightHeight;
-int lovelySightWidth = 780, lovelySightHeight = 952;
 float adjustedFlowerWidth, adjustedFlowerHeight, adjustedCarWidth, adjustedCarHeight, adjustedLovelySightWidth, adjustedLovelySightHeight;
 
 
@@ -782,7 +779,8 @@ void populationOfVariables() {
   rect(xWhiteBackground, yWhiteBackground, WhiteBackgroundWidth, WhiteBackgroundHeight);
   
   
-  rect(xFlower, yFlower, FlowerWidth, FlowerHeight);
-  rect(xCar, yCar, CarWidth, CarHeight);
-  rect(xLovelySight, yLovelySight, LovelySightWidth, LovelySightHeight);
+  //rect(xFlower, yFlower, FlowerWidth, FlowerHeight);
+  //rect(xCar, yCar, CarWidth, CarHeight);
+  //rect(xLovelySight, yLovelySight, LovelySightWidth, LovelySightHeight);
+  template();
 }
