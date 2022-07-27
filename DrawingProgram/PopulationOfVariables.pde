@@ -210,10 +210,13 @@ boolean flowerWidthlarger = false, flowerHeightlarger = false, carWidthlarger = 
 float flowerWidthRatio = 0.0, flowerHeightRatio = 0.0, carWidthRatio = 0.0, carHeightRatio  = 0.0, lovelySightWidthRatio = 0.0, lovelySightHeightRatio = 0.0;
 float xFlower, yFlower, FlowerWidth, FlowerHeight;
 color buttonfillflower;
+boolean flower = false;
 float xCar, yCar, CarWidth, CarHeight;
 color buttonfillcar;
+boolean car = false;
 float xLovelySight, yLovelySight, LovelySightWidth, LovelySightHeight;
 color buttonfillsight;
+boolean sight = false;
 float adjustedFlowerWidth, adjustedFlowerHeight, adjustedCarWidth, adjustedCarHeight, adjustedLovelySightWidth, adjustedLovelySightHeight;
 
 
