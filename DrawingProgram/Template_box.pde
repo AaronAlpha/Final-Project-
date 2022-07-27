@@ -20,11 +20,11 @@ void template() {
     flowerHeightlarger = true;
   }
   
-  if(flowerWidthlarger == true) flowerWidthRatio = largerDimensionflower / largerDimensionflower;
-  if(flowerWidthlarger == true) flowerHeightRatio = smallerDimensionflower / largerDimensionflower;  
+  if(flowerWidthlarger == true) flowerWidthRatio = float(largerDimensionflower) / float(largerDimensionflower);
+  if(flowerWidthlarger == true) flowerHeightRatio = float(smallerDimensionflower) / float(largerDimensionflower);  
   
-  if(flowerHeightlarger == true) flowerWidthRatio = smallerDimensionflower / largerDimensionflower;
-  if(flowerHeightlarger == true) flowerHeightRatio = largerDimensionflower / largerDimensionflower;
+  if(flowerHeightlarger == true) flowerWidthRatio = float(smallerDimensionflower) / float(largerDimensionflower);
+  if(flowerHeightlarger == true) flowerHeightRatio = float(largerDimensionflower) / float(largerDimensionflower);
   
   
   adjustedFlowerWidth = FlowerWidth * flowerWidthRatio;
@@ -51,11 +51,11 @@ void template() {
     carHeightlarger = true;
   }
   
-  if(carWidthlarger == true) carWidthRatio = largerDimensioncar / largerDimensioncar;
-  if(carWidthlarger == true) carHeightRatio = smallerDimensioncar / largerDimensioncar;  
+  if(carWidthlarger == true) carWidthRatio = float(largerDimensioncar) / float(largerDimensioncar);
+  if(carWidthlarger == true) carHeightRatio = float(smallerDimensioncar) / float(largerDimensioncar);  
   
-  if(carHeightlarger == true) carWidthRatio = smallerDimensioncar / largerDimensioncar;
-  if(carHeightlarger == true) carHeightRatio = largerDimensioncar / largerDimensioncar;
+  if(carHeightlarger == true) carWidthRatio = float(smallerDimensioncar) / float(largerDimensioncar);
+  if(carHeightlarger == true) carHeightRatio = float(largerDimensioncar) / float(largerDimensioncar);
   
   
   adjustedCarWidth = CarWidth * carWidthRatio;
@@ -83,11 +83,11 @@ void template() {
     lovelySightHeightlarger = true;
   }
   
-  if(lovelySightWidthlarger == true) lovelySightWidthRatio = largerDimensionlovelySight / largerDimensionlovelySight;
-  if(lovelySightWidthlarger == true) lovelySightHeightRatio = smallerDimensionlovelySight / largerDimensionlovelySight;  
+  if(lovelySightWidthlarger == true) lovelySightWidthRatio = float(largerDimensionlovelySight) / float(largerDimensionlovelySight);
+  if(lovelySightWidthlarger == true) lovelySightHeightRatio = float(smallerDimensionlovelySight) / float(largerDimensionlovelySight);  
   
-  if(lovelySightHeightlarger == true) lovelySightWidthRatio = smallerDimensionlovelySight / largerDimensionlovelySight;
-  if(lovelySightHeightlarger == true) lovelySightHeightRatio = largerDimensionlovelySight / largerDimensionlovelySight;
+  if(lovelySightHeightlarger == true) lovelySightWidthRatio = float(smallerDimensionlovelySight) / float(largerDimensionlovelySight);
+  if(lovelySightHeightlarger == true) lovelySightHeightRatio = float(largerDimensionlovelySight) / float(largerDimensionlovelySight);
   
   
   adjustedLovelySightWidth = LovelySightWidth * lovelySightWidthRatio;
