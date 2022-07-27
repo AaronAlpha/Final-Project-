@@ -53,6 +53,7 @@ void draw() {
   colorPallete();
   backgroundColorFill();
   backgroundPallete();
+  template();
 
 
 

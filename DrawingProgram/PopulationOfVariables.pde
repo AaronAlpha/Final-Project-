@@ -194,6 +194,7 @@ float xShapesColorPanel, yShapesColorPanel, ShapesColorPanelWidth, ShapesColorPa
 float templateboxX, templateboxY, templateboxWidth, templateboxHeight;
 float xtemplateTitle, ytemplateTitle, templateTitleWidth, templateTitleHeight;
 int templateSize;
+String templateText = "Templates";
 
 
 float musicboxX, musicboxY, musicboxWidth, musicboxHeight;
