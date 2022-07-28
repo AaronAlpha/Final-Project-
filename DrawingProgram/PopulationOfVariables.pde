@@ -1,4 +1,5 @@
 //Global Program
+Minim minim;
 float drawingSurfaceY, drawingSurfaceX, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter;
 boolean draw = false;
 float xCenter, yCenter;
@@ -18,6 +19,8 @@ PFont SongNameFont, PrevFont, NextFont, muteFont, unmuteFont, loopFont;
 
 PImage flowerPic, carPic, lovelySightPic;
 
+
+AudioPlayer lineSE, stampSE, paintSE, eraserSE;
 
 float lineboxX, lineboxY, lineboxWidth, lineboxHeight;
 float xlinetool, ylinetool, linetoolWidth, linetoolHeight;
@@ -107,11 +110,13 @@ float xColor, yColor, ColorWidth, ColorHeight;
 int colorSize;
 color buttonfillcolor, buttontextfillcolor;
 String colorText = "Color";
+AudioPlayer redSE, blueSE, greenSE, orangeSE, yellowSE, pinkSE, indigoSE, blackSE, whiteSE;
 
 float xBackgroundFiller, yBackgroundFiller, BackgroundFillerWidth, BackgroundFillerHeight;
 String backgroundFillerText = "Color filler for background";
 int backgroundFillerSize;
 color buttonfillBackgroundFiller, buttontextfillBackgroundFiller;
+AudioPlayer redbackgroundSE, bluebackgroundSE, greenbackgroundSE, orangebackgroundSE, yellowbackgroundSE, pinkbackgroundSE, indigobackgroundSE, blackbackgroundSE, whitebackgroundSE;
 
 float xColorPallete, yColorPallete, ColorPalleteWidth, ColorPalleteHeight;
 float xRed, yRed, RedWidth, RedHeight;
@@ -204,7 +209,7 @@ boolean whiteBackground = false;
 float xShapesColorPanel, yShapesColorPanel, ShapesColorPanelWidth, ShapesColorPanelHeight;
 
 
-
+AudioPlayer flowerSE, carSE, sightSE;
 float templateboxX, templateboxY, templateboxWidth, templateboxHeight;
 float xtemplateTitle, ytemplateTitle, templateTitleWidth, templateTitleHeight;
 int templateSize;
@@ -225,7 +230,7 @@ float adjustedFlowerWidth, adjustedFlowerHeight, adjustedCarWidth, adjustedCarHe
 
 
 
-Minim minim;
+
 AudioPlayer Waterfallsong;
 AudioMetaData WaterfallsongMetaData;
 float musicboxX, musicboxY, musicboxWidth, musicboxHeight;
@@ -285,6 +290,7 @@ float xCloseButton, yCloseButton, CloseButtonWidth, CloseButtonHeight;
 int closeSize;
 color buttonfillclose, buttontextfillclose;
 
+AudioPlayer restartSE;
 float xRestartButton, yRestartButton, RestartButtonWidth, RestartButtonHeight;
 int restartSize, restartSizeHover;
 color buttonfillrestart, buttontextfillrestart;
@@ -397,6 +403,10 @@ void populationOfVariables() {
   //End Population of Virtual Piece of Paper
   
   
+  minim = new Minim(this);
+  restartSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
+  
+  
   //Population of Restart Canvas box(that'll cover the canvas with a new virtual box everytime)
   restartCanvasX = xCenter - xCenter*1/2;
   restartCanvasY = height*0;
@@ -439,6 +449,13 @@ void populationOfVariables() {
   //End Text 
   //End Population of Close Button
   
+  
+  
+  minim = new Minim(this);
+  lineSE = minim.loadFile("Daytime Forrest Bonfire.mp3");
+  stampSE = minim.loadFile("Daytime Forrest Bonfire.mp3"); 
+  paintSE = minim.loadFile("Daytime Forrest Bonfire.mp3");
+  eraserSE = minim.loadFile("Daytime Forrest Bonfire.mp3");
   
   //Population of Line Tool Box
   lineboxX = width * 0;
@@ -488,9 +505,7 @@ void populationOfVariables() {
   //End Text
   //End Population of dotted line
   
-  
-  
-  
+
   //Population of eraser tool switch
   eraserboxX = (xCenter - xCenter*1/2)/2 + ((xCenter - xCenter*1/2)/2)*1/2;
   eraserboxY = height*0;
@@ -656,6 +671,18 @@ void populationOfVariables() {
   
   
   //Population for all Color Pallete Colors
+  minim = new Minim(this);
+  redSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
+  blueSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
+  greenSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
+  orangeSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
+  yellowSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
+  pinkSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
+  indigoSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
+  blackSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
+  whiteSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
+  
+  
   xRed = (xCenter - xCenter*1/2)/2;
   yRed = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3;
   RedWidth = ((xCenter - xCenter*1/2)/2)/3;
@@ -719,6 +746,18 @@ void populationOfVariables() {
   
   
   //Population for all Background Color Pallete Colors
+  
+  minim = new Minim(this);
+  redbackgroundSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
+  bluebackgroundSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
+  greenbackgroundSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
+  orangebackgroundSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
+  yellowbackgroundSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
+  pinkbackgroundSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
+  indigobackgroundSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
+  blackbackgroundSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
+  whitebackgroundSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
+  
   xRedBackground = (xCenter - xCenter*1/2)/2;
   yRedBackground = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 +  (height - (height*6.5/10)/2)*1/3;
   RedBackgroundWidth = ((xCenter - xCenter*1/2)/2)/3;
@@ -771,6 +810,11 @@ void populationOfVariables() {
   
   
   //Population of Template Tool Box
+  minim = new Minim(this);
+  flowerSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
+  carSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
+  sightSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
+  
   templateboxX = xCenter - xCenter*1/2;
   templateboxY = height*6.5/10;
   templateboxWidth = xCenter - xCenter*2/10;

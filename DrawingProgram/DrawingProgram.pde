@@ -106,7 +106,7 @@ void draw() {
 
 
   //if (flower == true) {
-
+  //  flowerSE.play();
   //  car = false;
   //  sight = false;
   //  image(flowerPic, drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
@@ -122,6 +122,7 @@ void draw() {
   //}
 
   //if (car == true) {
+  //  carSE.play();
   //  flower = false;
   //  sight = false;
 
@@ -135,7 +136,7 @@ void draw() {
 
 
   //  if (sight == true) {
-
+  //  sightSE.play();
   //  flower = false;
   //  car = false;
   //  image(lovelySightPic, drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
@@ -366,6 +367,8 @@ void draw() {
 
   //background color changer/filler
   if (redBackground == true) {
+    redbackgroundSE.play();
+    
     blueBackground = false;
     greenBackground = false;
     orangeBackground = false;
@@ -384,6 +387,8 @@ void draw() {
 
 
   if (greenBackground == true) {
+    greenbackgroundSE.play();    
+    
     redBackground = false;
     blueBackground = false;
     orangeBackground = false;
@@ -402,6 +407,9 @@ void draw() {
 
 
   if (blueBackground == true) {
+    bluebackgroundSE.play();
+    
+    
     redBackground = false;
     greenBackground = false;
     orangeBackground = false;
@@ -420,6 +428,8 @@ void draw() {
 
 
   if (orangeBackground == true) {
+    orangebackgroundSE.play();
+    
     redBackground = false;
     blueBackground = false;
     greenBackground = false;
@@ -438,6 +448,7 @@ void draw() {
 
 
   if (yellowBackground == true) {
+    yellowbackgroundSE.play();
     redBackground = false;
     blueBackground = false;
     greenBackground = false;
@@ -456,6 +467,7 @@ void draw() {
 
 
   if (indigoBackground == true) {
+    indigobackgroundSE.play();
     redBackground = false;
     blueBackground = false;
     greenBackground = false;
@@ -473,6 +485,7 @@ void draw() {
   }
 
   if (pinkBackground == true) {
+    pinkbackgroundSE.play();
     redBackground = false;
     blueBackground = false;
     greenBackground = false;
@@ -491,6 +504,7 @@ void draw() {
   }
 
   if (blackBackground == true) {
+    blackbackgroundSE.play();
     redBackground = false;
     blueBackground = false;
     greenBackground = false;
@@ -509,6 +523,7 @@ void draw() {
 
 
   if (whiteBackground == true) {
+    whitebackgroundSE.play();
     redBackground = false;
     blueBackground = false;
     greenBackground = false;
@@ -534,6 +549,8 @@ void draw() {
 
   //start Line tool
   if (lineDraw == true) { 
+    //lineSE.play();
+    
     stampDraw = false;
     DottedLineDraw = false; 
     eraser = false;
@@ -614,6 +631,7 @@ void draw() {
 
   //start Stamp tool
   if (stampDraw == true) {  
+    stampSE.play(); 
     lineDraw = false;
     DottedLineDraw = false;
     eraser = false;
@@ -697,6 +715,7 @@ void draw() {
 
   //paint brush logic
   if (paintDraw == true) { 
+    paintSE.play(); 
     stampDraw = false;
     DottedLineDraw = false; 
     eraser = false;
@@ -808,10 +827,10 @@ void draw() {
   //whiteBackground = false;
 
 
-  circle = false;
-  triangle = false;
-  square = false;
-  rectangle = false;
+//  circle = false;
+//  triangle = false;
+//  square = false;
+//  rectangle = false;
 
 
   //  if (mousePressed == true) {
@@ -858,6 +877,7 @@ void draw() {
 
   //Start Eraser button logic
   if (eraser == true) { 
+    eraserSE.play(); 
     stampDraw = false;
     DottedLineDraw = false;  
     lineDraw = false;
@@ -920,7 +940,9 @@ void draw() {
 
 
   //user tools
-  if (shouldRestart == true) rect(restartCanvasX, restartCanvasY, restartCanvasWidth, restartCanvasHeight); 
+  if (shouldRestart == true) 
+  restartSE.play(); 
+  rect(restartCanvasX, restartCanvasY, restartCanvasWidth, restartCanvasHeight); 
   shouldRestart = false; //Restart Button process
 
   restartButton();
