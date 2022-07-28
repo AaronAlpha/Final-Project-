@@ -17,7 +17,7 @@ To-do list:
  - [x] drawing by pressing and holding and then stop drawing by letting go
  - [ ] template for pics
  - [ ] jukebox
- - [ ] shapes tab
+ - [x] shapes tab
  - [ ] dotted line 
  - [x] <del>paint brush eraser xD</del> <del>paint brush</del> Marker
  - [x] not having to select and deselect all drawing tools and different sizes for drawing tool
