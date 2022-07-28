@@ -1003,12 +1003,12 @@ void mousePressed() {
 
 
   //fast forward button
-  if (mouseX >= xRForward && mouseX <= xRForward + RForwardWidth && mouseY >= yRForward && mouseY <= yRForward + RForwardHeight) Waterfallsong.skip(5000);
+  if (mouseX >= xFForward && mouseX <= xFForward + FForwardWidth && mouseY >= yFForward && mouseY <= yFForward + FForwardHeight) Waterfallsong.skip(5000);
   //end fast forward
 
 
   //reverse forward button
-  if (mouseX >= xFForward && mouseX <= xFForward + FForwardWidth && mouseY >= yFForward && mouseY <= yFForward + FForwardHeight) Waterfallsong.skip(-5000);
+  if (mouseX >= xRForward && mouseX <= xRForward + RForwardWidth && mouseY >= yRForward && mouseY <= yRForward + RForwardHeight) Waterfallsong.skip(-5000);
   //end reverse button
 
 

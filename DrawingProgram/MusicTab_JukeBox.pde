@@ -24,16 +24,17 @@ void musiceTab() {
   fill(resetWhite);
   
   if (Play_Pause == true) {
-     strokeWeight(6);
+    stroke(buttonfilltinyPause);
+    strokeWeight(6);
     strokeCap(ROUND);
     line(xPlayPause + xPlayPause*1/98, yPlayPause + yPlayPause/100,  xPlayPause + xPlayPause*1/98, yPlayPause + PlayPauseHeight*8/10);
     line(xPlayPause + xPlayPause*1/40, yPlayPause + yPlayPause/100,  xPlayPause + xPlayPause*1/40, yPlayPause + PlayPauseHeight*8/10);
     strokeWeight(1);
-    fill(resetWhite);
+    stroke(black);
   } else{
-  fill(buttonfilltinyPause);
+  fill(buttonfilltinyPlay);
   triangle(xPlayPause + xPlayPause*1/200, yPlayPause + yPlayPause/180,  xPlayPause + xPlayPause*1/180 , yPlayPause + PlayPauseHeight*9/10, xPlayPause + PlayPauseWidth*9/10, yPlayPause + PlayPauseHeight/2); //make play button triangle and pasue(2 rounded lines close together) button shapes
-  fill(resetWhite);
+  fill(black);
   }
 
   //end play
@@ -52,6 +53,8 @@ void musiceTab() {
   fill(buttonfillFForward);
   rect(xFForward, yFForward, FForwardWidth, FForwardHeight);
   fill(resetWhite);
+  
+  triangle(xFForward + xFForward*1/200, yFForward + yFForward/180,  xFForward + xFForward*1/180 , yFForward + yFForward*9/10, xFForward + FForwardWidth*9/10, yFForward + FForwardHeight/2);
   //end fast forward
 
 
