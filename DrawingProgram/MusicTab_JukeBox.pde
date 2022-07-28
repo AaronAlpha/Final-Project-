@@ -19,12 +19,12 @@ void musiceTab() {
   rect(xPlayPause, yPlayPause, PlayPauseWidth, PlayPauseHeight);
   fill(resetWhite);
   //triangle(); make play button triangle and pasue(2 rounded lines close together) button shapes
-  
-  
+
+
   //end play
-  
-  
-  
+
+
+
   //fast forward Button
   //HoverOver for fast forward button
   if (mouseX >= xFForward && mouseX <= xFForward + FForwardWidth && mouseY >= yFForward && mouseY <= yFForward + FForwardHeight) {
@@ -33,12 +33,12 @@ void musiceTab() {
     buttonfillFForward = resetWhite;
   }
   //end
-  
+
   fill(buttonfillFForward);
   rect(xFForward, yFForward, FForwardWidth, FForwardHeight);
   fill(resetWhite);
   //end fast forward
-  
+
 
 
   //reverse forward Button
@@ -99,17 +99,23 @@ void musiceTab() {
   //HoverOver for Stop button
   if (mouseX >= xStop && mouseX <= xStop + StopWidth && mouseY >= yStop && mouseY <= yStop + StopHeight) {
     buttonfillStop = black;
+    buttonfilltinyStop = resetWhite;
   } else {
     buttonfillStop = resetWhite;
+    buttonfilltinyStop = black;
   }
   //end
   fill(buttonfillStop);
   rect(xStop, yStop, StopWidth, StopHeight);
   fill(resetWhite);
-  
+
+  fill(buttonfilltinyStop); 
+  square(xStop + xStop/100, yStop + yStop/110, StopWidth/2);
+  fill(resetWhite);
+
   //end Stop
-  
-  
+
+
   //previous song Button
   //HoverOver for previous song button
   if (mouseX >= xPSong && mouseX <= xPSong + PSongWidth && mouseY >= yPSong && mouseY <= yPSong + PSongHeight) {
@@ -150,23 +156,18 @@ void musiceTab() {
   text(nsongText, xNSong, yNSong, NSongWidth, NSongHeight);
   fill(resetWhite);
   //end next song
-  
-  
-  
+
+
+
   //Song title
   rect(xSongTitle, ySongTitle, SongTitleWidth, SongTitleHeight);
   textAlign(CENTER, CENTER);
   songtitleSize = 10;
   textFont(SongNameFont, songtitleSize);
-  
+
   songTitle = WaterfallsongMetaData.title();
   fill(resetWhite);
   text(songTitle, xSongTitle, ySongTitle, SongTitleWidth, SongTitleHeight);
   fill(resetWhite);
   //
-  
-  
-  
-  
-  
 }

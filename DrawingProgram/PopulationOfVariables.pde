@@ -269,7 +269,7 @@ int loopSize;
 String loopText = "Loop";
 
 float xStop, yStop, StopWidth, StopHeight;
-color buttonfillStop, buttontextfillStop;
+color buttonfillStop, buttonfilltinyStop ;
 //int stopSize;
 //String stopText = "Stop"; //n ot need, will use square pic
 
