@@ -15,9 +15,9 @@ To-do list:
  - [x] restart button
  - [ ] <del>starting screen that introduce app and start button tp start program(will basically be a virtual paper/screen on top of the app)</del>(NOT POSSIBLE AT MOMENT)
  - [x] drawing by pressing and holding and then stop drawing by letting go
- - [ ] template for pics
- - [ ] jukebox
+ - [ ] <del>template for pics</del>
+ - [x] jukebox
  - [x] shapes tab
- - [ ] dotted line 
+ - [ ] <del>dotted line</del>
  - [x] <del>paint brush eraser xD</del> <del>paint brush</del> Marker
  - [x] not having to select and deselect all drawing tools and different sizes for drawing tool
