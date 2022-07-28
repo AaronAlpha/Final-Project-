@@ -156,46 +156,46 @@ void musiceTab() {
   //end Stop
 
 
-  //previous song Button
-  //HoverOver for previous song button
-  if (mouseX >= xPSong && mouseX <= xPSong + PSongWidth && mouseY >= yPSong && mouseY <= yPSong + PSongHeight) {
-    buttonfillPSong = black;
-    buttontextfillPSong = resetWhite;
-  } else {
-    buttonfillPSong = resetWhite;   
-    buttontextfillPSong = black;
-  }
-  //end
-  fill(buttonfillPSong);
-  rect(xPSong, yPSong, PSongWidth, PSongHeight);
-  textAlign(CENTER, CENTER);
-  psongSize = 20;
-  textFont(PrevFont, psongSize);
-  fill(buttontextfillPSong);
-  text(psongText, xPSong, yPSong, PSongWidth, PSongHeight);
-  fill(resetWhite);
-  //end previous song 
+  ////previous song Button
+  ////HoverOver for previous song button
+  //if (mouseX >= xPSong && mouseX <= xPSong + PSongWidth && mouseY >= yPSong && mouseY <= yPSong + PSongHeight) {
+  //  buttonfillPSong = black;
+  //  buttontextfillPSong = resetWhite;
+  //} else {
+  //  buttonfillPSong = resetWhite;   
+  //  buttontextfillPSong = black;
+  //}
+  ////end
+  //fill(buttonfillPSong);
+  //rect(xPSong, yPSong, PSongWidth, PSongHeight);
+  //textAlign(CENTER, CENTER);
+  //psongSize = 20;
+  //textFont(PrevFont, psongSize);
+  //fill(buttontextfillPSong);
+  //text(psongText, xPSong, yPSong, PSongWidth, PSongHeight);
+  //fill(resetWhite);
+  ////end previous song 
 
 
-  //next song Button
-  //HoverOver for next song button
-  if (mouseX >= xNSong && mouseX <= xNSong + NSongWidth&& mouseY >= yNSong && mouseY <= yNSong + NSongHeight) {
-    buttonfillNSong = black;
-    buttontextfillNSong = resetWhite;
-  } else {
-    buttonfillNSong = resetWhite;
-    buttontextfillNSong = black;
-  }
-  //end
-  fill(buttonfillNSong);
-  rect(xNSong, yNSong, NSongWidth, NSongHeight);
-  textAlign(CENTER, CENTER);
-  nsongSize = 20;
-  textFont(NextFont, nsongSize);
-  fill(buttontextfillNSong);
-  text(nsongText, xNSong, yNSong, NSongWidth, NSongHeight);
-  fill(resetWhite);
-  //end next song
+  ////next song Button
+  ////HoverOver for next song button
+  //if (mouseX >= xNSong && mouseX <= xNSong + NSongWidth&& mouseY >= yNSong && mouseY <= yNSong + NSongHeight) {
+  //  buttonfillNSong = black;
+  //  buttontextfillNSong = resetWhite;
+  //} else {
+  //  buttonfillNSong = resetWhite;
+  //  buttontextfillNSong = black;
+  //}
+  ////end
+  //fill(buttonfillNSong);
+  //rect(xNSong, yNSong, NSongWidth, NSongHeight);
+  //textAlign(CENTER, CENTER);
+  //nsongSize = 20;
+  //textFont(NextFont, nsongSize);
+  //fill(buttontextfillNSong);
+  //text(nsongText, xNSong, yNSong, NSongWidth, NSongHeight);
+  //fill(resetWhite);
+  ////end next song
 
 
 

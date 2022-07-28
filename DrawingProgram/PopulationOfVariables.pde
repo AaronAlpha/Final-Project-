@@ -290,7 +290,6 @@ float xCloseButton, yCloseButton, CloseButtonWidth, CloseButtonHeight;
 int closeSize;
 color buttonfillclose, buttontextfillclose;
 
-AudioPlayer restartSE;
 float xRestartButton, yRestartButton, RestartButtonWidth, RestartButtonHeight;
 int restartSize, restartSizeHover;
 color buttonfillrestart, buttontextfillrestart;
@@ -404,7 +403,6 @@ void populationOfVariables() {
   
   
   minim = new Minim(this);
-  restartSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
   
   
   //Population of Restart Canvas box(that'll cover the canvas with a new virtual box everytime)
@@ -748,15 +746,15 @@ void populationOfVariables() {
   //Population for all Background Color Pallete Colors
   
   minim = new Minim(this);
-  redbackgroundSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
-  bluebackgroundSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
-  greenbackgroundSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
-  orangebackgroundSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
-  yellowbackgroundSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
-  pinkbackgroundSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
-  indigobackgroundSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
-  blackbackgroundSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
-  whitebackgroundSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Wood_Door_Open_and_Close_Series.mp3");
+  redbackgroundSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
+  bluebackgroundSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
+  greenbackgroundSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
+  orangebackgroundSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
+  yellowbackgroundSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
+  pinkbackgroundSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
+  indigobackgroundSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
+  blackbackgroundSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
+  whitebackgroundSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
   
   xRedBackground = (xCenter - xCenter*1/2)/2;
   yRedBackground = (height*6.5/10)/2 + (height - (height*6.5/10)/2)*1/3 +  (height - (height*6.5/10)/2)*1/3;
@@ -882,23 +880,23 @@ void populationOfVariables() {
   RForwardHeight = (((height*7/10)/2)*2/10)/1.5;
   
   
-  xSongTitle = xCenter + xCenter*3/10 + (xCenter*3/10)*1/3 ;
+  xSongTitle = xCenter + xCenter*3/10 ;
   ySongTitle = height*6.5/10 + ((height*7/10)/2)*6/10;
-  SongTitleWidth = ((xCenter - xCenter*6/10)*1/2); //or xCenter - xCenter*6/10 for song name; change starting x value for the long name width to the x coordinate of the music player box itself
+  SongTitleWidth = xCenter - xCenter*6/10; //or xCenter - xCenter*6/10 for song name; change starting x value for the long name width to the x coordinate of the music player box itself
   SongTitleHeight = (((height*7/10)/2)*2/10)/1.5;
   SongNameFont = createFont("Arial Narrow", 45);
   
-  xPSong = xCenter + xCenter*3/10;
-  yPSong = height*6.5/10 + ((height*7/10)/2)*8/10;
-  PSongWidth = ((xCenter - xCenter*6/10)*1/2)*1/2;
-  PSongHeight = (((height*7/10)/2)*2/10)/1.5;
-  PrevFont = createFont("Arial Narrow", 45);
+  //xPSong = xCenter + xCenter*3/10;
+  //yPSong = height*6.5/10 + ((height*7/10)/2)*8/10;
+  //PSongWidth = ((xCenter - xCenter*6/10)*1/2)*1/2;
+  //PSongHeight = (((height*7/10)/2)*2/10)/1.5;
+  //PrevFont = createFont("Arial Narrow", 45);
   
-  xNSong = xCenter + xCenter*6/10;
-  yNSong = height*6.5/10 + ((height*7/10)/2)*8/10;
-  NSongWidth = ((xCenter - xCenter*6/10)*1/2)*1/2;
-  NSongHeight = (((height*7/10)/2)*2/10)/1.5;
-  NextFont = createFont("Arial Narrow", 45);
+  //xNSong = xCenter + xCenter*6/10;
+  //yNSong = height*6.5/10 + ((height*7/10)/2)*8/10;
+  //NSongWidth = ((xCenter - xCenter*6/10)*1/2)*1/2;
+  //NSongHeight = (((height*7/10)/2)*2/10)/1.5;
+  //NextFont = createFont("Arial Narrow", 45);
   
   xMuteUnmute = xCenter + xCenter*3/10 + (xCenter*3/10)*1/3 + (xCenter*3/10)*1/6;
   yMuteUnmute = height*6.5/10 + ((height*7/10)/2)*8/10;

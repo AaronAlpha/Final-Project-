@@ -50,7 +50,7 @@ void draw() {
   lineButton();
   stampButton();
   paintBrush();
-  dottedLine();
+  //dottedLine();
   eraserButton();
   thin();
   thick();
@@ -549,7 +549,7 @@ void draw() {
 
   //start Line tool
   if (lineDraw == true) { 
-    //lineSE.play();
+    lineSE.play();
     
     stampDraw = false;
     DottedLineDraw = false; 
@@ -940,9 +940,7 @@ void draw() {
 
 
   //user tools
-  if (shouldRestart == true) 
-  restartSE.play(); 
-  rect(restartCanvasX, restartCanvasY, restartCanvasWidth, restartCanvasHeight); 
+  if (shouldRestart == true)  rect(restartCanvasX, restartCanvasY, restartCanvasWidth, restartCanvasHeight); 
   shouldRestart = false; //Restart Button process
 
   restartButton();
