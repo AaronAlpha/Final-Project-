@@ -14,6 +14,7 @@ PFont shapesbuttonFont, colorbuttonFont, colorfillerbuttonFont, circleFont, tria
 PFont redFont, blueFont, greenFont, orangeFont, yellowFont, indigoFont, pinkFont, blackFont, whiteFont, paintFont, templateFont, mtitleFont;
 PFont SongNameFont, PrevFont, NextFont, muteFont, unmuteFont, loopFont;
 
+  
 
 PImage flowerPic, carPic, lovelySightPic;
 
@@ -224,8 +225,8 @@ float adjustedFlowerWidth, adjustedFlowerHeight, adjustedCarWidth, adjustedCarHe
 
 
 Minim minim;
-AudioPlayer song1;
-AudioMetaData song1MetaData;
+AudioPlayer Waterfallsong;
+AudioMetaData WaterfallsongMetaData;
 float musicboxX, musicboxY, musicboxWidth, musicboxHeight;
 float xMusicTitle, yMusicTitle, MusicTitleWidth, MusicTitleHeight;
 int mtitleSize;
@@ -800,6 +801,10 @@ void populationOfVariables() {
   MusicTitleWidth = (xCenter - xCenter*6/10)*1/2;
   MusicTitleHeight = ((height*7/10)/2)*2/10;
   mtitleFont = createFont("Arial Narrow", 45);
+  
+  minim = new Minim(this);
+  Waterfallsong = minim.loadFile("../Waterfall.mp3");
+  WaterfallsongMetaData = Waterfallsong.getMetaData();
   
   xPlayPause = xCenter + xCenter*3/10 + (xCenter*3/10)*1/3 + (xCenter*3/10)*1/4;
   yPlayPause = height*6.5/10 + ((height*7/10)/2)*4/10 ;

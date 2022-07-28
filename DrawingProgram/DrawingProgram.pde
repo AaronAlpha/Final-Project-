@@ -63,7 +63,7 @@ void draw() {
   backgroundPallete();
   musiceTab();
 
-  
+
   //images
   if (mouseX >= xFlower && mouseX <= xFlower + FlowerWidth && mouseY >= yFlower && mouseY <= yFlower + FlowerHeight) {
     buttonfillflower = black;
@@ -106,7 +106,7 @@ void draw() {
 
 
   //if (flower == true) {
-    
+
   //  car = false;
   //  sight = false;
   //  image(flowerPic, drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
@@ -120,11 +120,11 @@ void draw() {
   //  rect(drawingSurfaceX, drawingSurfaceY, adjustedFlowerWidth, adjustedFlowerHeight);
   //  fill(resetWhite);
   //}
-  
+
   //if (car == true) {
   //  flower = false;
   //  sight = false;
-    
+
   //  image(carPic, drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
   //} else {
   //  car = false;
@@ -132,10 +132,10 @@ void draw() {
   //  rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
   //  fill(resetWhite);
   //  }
-    
-    
+
+
   //  if (sight == true) {
-      
+
   //  flower = false;
   //  car = false;
   //  image(lovelySightPic, drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
@@ -145,7 +145,7 @@ void draw() {
   //  rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
   //  fill(resetWhite);
   //}
-  
+
   //end images
 
 
@@ -160,7 +160,7 @@ void draw() {
     ellipse( xCenter + xCenter*1/4, (height*6.5/10)/2, drawingSurfaceHeight, drawingSurfaceHeight);
     fill(resetWhite);
   } else if (triangle == true) {
-    
+
     circle = false;
     square = false;
     rectangle = false;
@@ -186,7 +186,7 @@ void draw() {
     circle = false;
     triangle = false;
     square = false;
-    rectangle = false;  
+    rectangle = false;
   }
   //end shapes tab
 
@@ -535,12 +535,12 @@ void draw() {
     pinkBackground = false;
     blackBackground = false;
     whiteBackground = false;
-    
+
     circle = false;
     triangle = false;
     square = false;
     rectangle = false;
-      
+
     if (mousePressed == true) {
       draw = true;
     } else {
@@ -548,7 +548,7 @@ void draw() {
     }
 
     if (draw == true && thinBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
-      
+
       stroke(drawingColor);
       strokeWeight(1); 
       line(mouseX, mouseY, pmouseX, pmouseY); 
@@ -579,13 +579,8 @@ void draw() {
       stroke(drawingColor);
       line(mouseX, mouseY, pmouseX, pmouseY);
       stroke(black);
-    } else {}
-    
-    
-
-    
-    
-    
+    } else {
+    }
   } else {
   }//end line tool
 
@@ -628,7 +623,7 @@ void draw() {
     triangle = false;
     square = false;
     rectangle = false;
-    
+
 
     if (mousePressed == true) {
       draw = true;
@@ -709,7 +704,7 @@ void draw() {
     triangle = false;
     square = false;
     rectangle = false;
-  
+
     if (mousePressed == true) {
       draw = true;
     } else {
@@ -764,36 +759,36 @@ void draw() {
   //  stampDraw = false;
   //  lineDraw = false;
   //  paintDraw = false;
-      
-      //redBool = false;
-      //blueBool = false;
-      //greenBool = false;
-      //orangeBool = false;
-      //yellowBool =false;
-      //indigoBool = false;
-      //pinkBool = false;
-      //blackBool = false;
-      //whiteBool = false;    
-  
-  
-  
-      //redBackground = false;
-      //blueBackground = false;
-      //greenBackground = false;
-      //orangeBackground = false;
-      //yellowBackground = false;
-      //indigoBackground = false;
-      //pinkBackground = false;
-      //blackBackground = false;
-      //whiteBackground = false;
 
-      
-      circle = false;
-      triangle = false;
-      square = false;
-      rectangle = false;
-        
-      
+  //redBool = false;
+  //blueBool = false;
+  //greenBool = false;
+  //orangeBool = false;
+  //yellowBool =false;
+  //indigoBool = false;
+  //pinkBool = false;
+  //blackBool = false;
+  //whiteBool = false;    
+
+
+
+  //redBackground = false;
+  //blueBackground = false;
+  //greenBackground = false;
+  //orangeBackground = false;
+  //yellowBackground = false;
+  //indigoBackground = false;
+  //pinkBackground = false;
+  //blackBackground = false;
+  //whiteBackground = false;
+
+
+  circle = false;
+  triangle = false;
+  square = false;
+  rectangle = false;
+
+
   //  if (mousePressed == true) {
   //    draw = true;
   //  } else {
@@ -813,7 +808,7 @@ void draw() {
   //    strokeWeight(5); 
   //    line(mouseX, mouseY, pmouseX, pmouseY); 
   //    strokeWeight(1);
-        //stroke(black);
+  //stroke(black);
   //  } else {}//Example Circle Drawing tool //'mouseX' and 'mouseY' is used to start drawing at where the mouse is currently on the screen
 
   //  if (draw == true && thickerBool == true && mouseX >= drawingSurfaceX && mouseX <= drawingSurfaceX + drawingSurfaceWidth && mouseY >= drawingSurfaceY && mouseY <= drawingSurfaceY + drawingSurfaceHeight) {
@@ -985,6 +980,78 @@ void mousePressed() {
   //end
 
 
+  //play button
+  if (mouseX >= xPlayPause&& mouseX <= xPlayPause + PlayPauseWidth&& mouseY >= yPlayPause && mouseY <= yPlayPause + PlayPauseHeight) {
+    if (Waterfallsong.isPlaying()) {
+      Waterfallsong.pause();
+    } else if (Waterfallsong.position() >= Waterfallsong.length() - Waterfallsong.length()*1/5) {//ask sir about .position()/.lenght() ratio
+      Waterfallsong.rewind();
+      Waterfallsong.play();
+    } else {
+      Waterfallsong.play();
+    }
+  }
+  //end play button
+
+
+  //fast forward button
+  if (mouseX >= xRForward && mouseX <= xRForward + RForwardWidth && mouseY >= yRForward && mouseY <= yRForward + RForwardHeight) Waterfallsong.skip(5000);
+  //end fast forward
+
+
+  //reverse forward button
+  if (mouseX >= xFForward && mouseX <= xFForward + FForwardWidth && mouseY >= yFForward && mouseY <= yFForward + FForwardHeight) Waterfallsong.skip(-5000);
+  //end reverse button
+
+
+  //mute button
+  if (mouseX >= xMuteUnmute && mouseX <= xMuteUnmute + MuteUnmuteWidth && mouseY >= yMuteUnmute && mouseY <= yMuteUnmute + MuteUnmuteHeight) {
+    if (Waterfallsong.isMuted()) {
+      Waterfallsong.mute();
+    } else {
+      Waterfallsong.unmute();
+    }
+  }
+  //end mute
+
+
+  //loop button
+  if (mouseX >= xLoop && mouseX <= xLoop + LoopWidth&& mouseY >= yLoop && mouseY <= yLoop + LoopHeight) Waterfallsong.loop();
+  //end loop
+
+
+  //stop button
+  if (mouseX >= xStop && mouseX <= xStop + StopWidth && mouseY >= yStop && mouseY <= yStop + StopHeight) {
+    if (Waterfallsong.isPlaying()) {
+      Waterfallsong.rewind();
+      Waterfallsong.play();
+    } else {
+      Waterfallsong.rewind();
+    }
+  }
+  //end stop
+
+
+  ////previous button
+  //if (mouseX >= xPSong && mouseX <= xPSong + PSongWidth && mouseY >= yPSong && mouseY <= yPSong + PSongHeight) {
+  //  if (Waterfallsong.skip(-10000) < Waterfallsong.length()) {
+      
+  //  } else {
+  //  }
+  //}
+  ////end
+  
+  
+  //fast forwarding button
+  
+  //end 
+  
+  
+  //
+
+
+
+
   //Dotted line
   //if (Dotted == false) Dotted = true;
 
@@ -1065,7 +1132,7 @@ void mousePressed() {
   //}//this is for the starter button
 
 
-    
+
   if (mouseX >= xFlower && mouseX <= xFlower + FlowerWidth && mouseY >= yFlower && mouseY <= yFlower + FlowerHeight) {
     if (flower == false) {
       flower = true;
@@ -1096,7 +1163,7 @@ void mousePressed() {
       sight = false;
     }
   }
-  
+
 
 
 
@@ -1118,7 +1185,7 @@ void mouseClicked() {
       DottedLineDraw = false;
       paintDraw = false;
       eraser = false;
-      
+
       circle = false;
       triangle = false;
       square = false;
@@ -1140,8 +1207,8 @@ void mouseClicked() {
       DottedLineDraw = false;
       eraser = false;
       paintDraw = false;
-      
-      
+
+
       circle = false;
       triangle = false;
       square = false;
@@ -1163,7 +1230,7 @@ void mouseClicked() {
       lineDraw = false;
       stampDraw = false;
       eraser = false;
-      
+
       circle = false;
       triangle = false;
       square = false;
@@ -1185,8 +1252,8 @@ void mouseClicked() {
       stampDraw = false;
       eraser = false;
       paintDraw = false;
-      
-      
+
+
       //flower = false;
       //car = false;
       //sight = false;
@@ -1204,12 +1271,12 @@ void mouseClicked() {
       lineDraw = false;
       DottedLineDraw = false;
       paintDraw = false;
-      
+
       circle = false;
       triangle = false;
       square = false;
       rectangle = false;
-      
+
       //flower = false;
       //car = false;
       //sight = false;
@@ -1219,7 +1286,7 @@ void mouseClicked() {
   }
   //end
 
-  
+
   //size thickness
   if (mouseX >= xThin && mouseX <= xThin +  thinWidth && mouseY >= yThin && mouseY <= yThin + thinHeight) {
     if (thinBool == false) {
@@ -1638,11 +1705,5 @@ void mouseClicked() {
     }
   }
   //end
-  
-  
-
-  
-  
-  
 }
 //End MAIN Program

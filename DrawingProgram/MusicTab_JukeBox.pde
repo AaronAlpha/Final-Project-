@@ -109,6 +109,7 @@ void musiceTab() {
   
   //end Stop
   
+  
   //previous song Button
   //HoverOver for previous song button
   if (mouseX >= xPSong && mouseX <= xPSong + PSongWidth && mouseY >= yPSong && mouseY <= yPSong + PSongHeight) {
@@ -149,6 +150,13 @@ void musiceTab() {
   text(nsongText, xNSong, yNSong, NSongWidth, NSongHeight);
   fill(resetWhite);
   //end next song
+  
+  
+  //Song title
+  rect();
+  
+  text(WaterfallsongMetaData.title(), );
+  //
   
   
   
