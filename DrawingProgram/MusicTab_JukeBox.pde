@@ -18,7 +18,7 @@ void musiceTab() {
   fill(buttonfillPlay);
   rect(xPlayPause, yPlayPause, PlayPauseWidth, PlayPauseHeight);
   fill(resetWhite);
-  //triangle(); make play button triangle and pasue(2 rounded lines close together) button shapes
+  triangle(); //make play button triangle and pasue(2 rounded lines close together) button shapes
 
 
   //end play

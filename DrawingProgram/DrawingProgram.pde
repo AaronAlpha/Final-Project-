@@ -1009,15 +1009,19 @@ void mousePressed() {
     if (Waterfallsong.isPlaying()) {
       if (Waterfallsong.isMuted()) {
         Waterfallsong.unmute();
-        Mute_Unmute = false;
       } else {
         Waterfallsong.mute();
-        Mute_Unmute = true;
+      }
     }
-  }  
-}
+  }
 
-  if (Mute_Unmute == 
+  if (mouseX >= xMuteUnmute && mouseX <= xMuteUnmute + MuteUnmuteWidth && mouseY >= yMuteUnmute && mouseY <= yMuteUnmute + MuteUnmuteHeight) {
+    if (Mute_Unmute == false) {
+      Mute_Unmute = true;
+    } else {
+      Mute_Unmute = false;
+    }
+  }
   //end mute
 
 
@@ -1041,18 +1045,18 @@ void mousePressed() {
   ////previous button
   //if (mouseX >= xPSong && mouseX <= xPSong + PSongWidth && mouseY >= yPSong && mouseY <= yPSong + PSongHeight) {
   //  if (Waterfallsong.skip(-10000) < Waterfallsong.length()) {
-      
+
   //  } else {
   //  }
   //}
   ////end
-  
-  
+
+
   //fast forwarding button
-  
+
   //end 
-  
-  
+
+
   //
 
 
