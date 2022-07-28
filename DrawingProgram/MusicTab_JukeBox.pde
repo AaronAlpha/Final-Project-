@@ -15,9 +15,10 @@ void musiceTab() {
     buttonfillPlay = resetWhite;
   }
   //end
+  fill(buttonfillPlay);
   rect(xPlayPause, yPlayPause, PlayPauseWidth, PlayPauseHeight);
-  textAlign(CENTER, CENTER);
-  
+  fill(resetWhite);
+  //triangle(); make play button triangle and pasue(2 rounded lines close together) button shapes
   
   
   //end play
@@ -26,73 +27,131 @@ void musiceTab() {
   
   //fast forward Button
   //HoverOver for fast forward button
-  if (mouseX >= && mouseX <= && mouseY >= && mouseY <= ) {
+  if (mouseX >= xFForward && mouseX <= xFForward + FForwardWidth && mouseY >= yFForward && mouseY <= yFForward + FForwardHeight) {
+    buttonfillFForward = black;
   } else {
+    buttonfillFForward = resetWhite;
   }
   //end
+  
+  fill(buttonfillFForward);
+  rect(xFForward, yFForward, FForwardWidth, FForwardHeight);
+  fill(resetWhite);
   //end fast forward
+  
 
 
   //reverse forward Button
   //HoverOver for reverse forward button
-  if (mouseX >= && mouseX <= && mouseY >= && mouseY <= ) {
+  if (mouseX >= xRForward && mouseX <= xRForward + RForwardWidth && mouseY >= yRForward && mouseY <= yRForward + RForwardHeight) {
+    buttonfillRForward = black;
   } else {
+    buttonfillRForward =resetWhite;
   }
   //end 
+  fill(buttonfillRForward);
+  rect(xRForward, yRForward, RForwardWidth, RForwardHeight);
+  fill(resetWhite);
   //end reverse forward
 
 
-  //Play Button
+  //Mute Button
   //HoverOver for mute button
-  if (mouseX >= && mouseX <= && mouseY >= && mouseY <= ) {
+  if (mouseX >= xMuteUnmute && mouseX <= xMuteUnmute + MuteUnmuteWidth && mouseY >= yMuteUnmute && mouseY <= yMuteUnmute + MuteUnmuteHeight) {
+    buttonfillMuteUnmute = black;
+    buttontextfillMuteUnmute = resetWhite;
   } else {
+    buttonfillMuteUnmute = resetWhite;
+    buttontextfillMuteUnmute = black;
   }
   //end
-  //end play
+  fill(buttonfillMuteUnmute);
+  rect(xMuteUnmute, yMuteUnmute, MuteUnmuteWidth, MuteUnmuteHeight);
+  textAlign(CENTER, CENTER);
+  muteunmuteSize = 20;
+  textFont(muteFont, muteunmuteSize);
+  fill(buttontextfillMuteUnmute);
+  text(muteText, xMuteUnmute, yMuteUnmute, MuteUnmuteWidth, MuteUnmuteHeight);
+  fill(resetWhite);
+  //end mute
 
   //loop Button
   //HoverOver for loop button
-  if (mouseX >= && mouseX <= && mouseY >= && mouseY <= ) {
+  if (mouseX >= xLoop && mouseX <= xLoop + LoopWidth&& mouseY >= yLoop && mouseY <= yLoop + LoopHeight) {
+    buttonfillLoop = black;
+    buttontextfillLoop = resetWhite;
   } else {
+    buttonfillLoop = resetWhite;
+    buttontextfillLoop = black ;
   }
   //end
+  fill(buttonfillLoop);
+  rect(xLoop, yLoop, LoopWidth, LoopHeight);
+  textAlign(CENTER, CENTER);
+  loopSize = 20;
+  textFont(loopFont, loopSize);
+  fill(buttontextfillLoop);
+  text(loopText, xLoop, yLoop, LoopWidth, LoopHeight);
+  fill(resetWhite);
   //end loop
 
-  //stop Button
-  //HoverOver for stop button
-  if (mouseX >= && mouseX <= && mouseY >= && mouseY <= ) {
+  //Stop Button
+  //HoverOver for Stop button
+  if (mouseX >= xStop && mouseX <= xStop + StopWidth && mouseY >= yStop && mouseY <= yStop + StopHeight) {
+    buttonfillStop = black;
   } else {
+    buttonfillStop = resetWhite;
   }
   //end
-  //end stop
-
+  fill(buttonfillStop);
+  rect(xStop, yStop, StopWidth, StopHeight);
+  fill(resetWhite);
+  
+  //end Stop
+  
   //previous song Button
   //HoverOver for previous song button
-  if (mouseX >= && mouseX <= && mouseY >= && mouseY <= ) {
+  if (mouseX >= xPSong && mouseX <= xPSong + PSongWidth && mouseY >= yPSong && mouseY <= yPSong + PSongHeight) {
+    buttonfillPSong = black;
+    buttontextfillPSong = resetWhite;
   } else {
+    buttonfillPSong = resetWhite;   
+    buttontextfillPSong = black;
   }
   //end
-  //end previous song
+  fill(buttonfillPSong);
+  rect(xPSong, yPSong, PSongWidth, PSongHeight);
+  textAlign(CENTER, CENTER);
+  psongSize = 20;
+  textFont(PrevFont, psongSize);
+  fill(buttontextfillPSong);
+  text(psongText, xPSong, yPSong, PSongWidth, PSongHeight);
+  fill(resetWhite);
+  //end previous song 
 
-  //Play Button
+
+  //next song Button
   //HoverOver for next song button
-  if (mouseX >= && mouseX <= && mouseY >= && mouseY <= ) {
+  if (mouseX >= xNSong && mouseX <= xNSong + NSongWidth&& mouseY >= yNSong && mouseY <= yNSong + NSongHeight) {
+    buttonfillNSong = black;
+    buttontextfillNSong = resetWhite;
   } else {
+    buttonfillNSong = resetWhite;
+    buttontextfillNSong = black;
   }
   //end
+  fill(buttonfillNSong);
+  rect(xNSong, yNSong, NSongWidth, NSongHeight);
+  textAlign(CENTER, CENTER);
+  nsongSize = 20;
+  textFont(NextFont, nsongSize);
+  fill(buttontextfillNSong);
+  text(nsongText, xNSong, yNSong, NSongWidth, NSongHeight);
+  fill(resetWhite);
   //end next song
   
   
   
   
-  
-  rect(xFForward, yFForward, FForwardWidth, FForwardHeight);
-  rect( xRForward, yRForward, RForwardWidth, RForwardHeight);
-  rect( xMuteUnmute, yMuteUnmute, MuteUnmuteWidth, MuteUnmuteHeight);
-  rect( xPSong, yPSong, PSongWidth, PSongHeight);
-  rect( xNSong, yNSong, NSongWidth, NSongHeight);
-  rect( xSongTitle, ySongTitle, SongTitleWidth, SongTitleHeight);
-  rect(xLoop, yLoop, LoopWidth, LoopHeight);
-  rect(xStop, yStop, StopWidth, StopHeight);
   
 }

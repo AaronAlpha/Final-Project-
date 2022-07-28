@@ -12,7 +12,7 @@ String[] fontList = PFont.list(); //To list all fonts avaliable on OS
 PFont closeFont, RestartFont, RestartFontHover, MinMaxFont, introFont, startFont, linebuttonFont, eraserbuttonFont, toolsFont, thinbuttonFont, thickbuttonFont, thickerbuttonFont;
 PFont shapesbuttonFont, colorbuttonFont, colorfillerbuttonFont, circleFont, triangleFont, squareFont, rectangleFont, stampFont, DottedLineFont;
 PFont redFont, blueFont, greenFont, orangeFont, yellowFont, indigoFont, pinkFont, blackFont, whiteFont, paintFont, templateFont, mtitleFont;
-PFont SongNameFont, PrevFont, NextFont, muteFont, loopFont;
+PFont SongNameFont, PrevFont, NextFont, muteFont, unmuteFont, loopFont;
 
 
 PImage flowerPic, carPic, lovelySightPic;
@@ -222,6 +222,10 @@ boolean sight = false;
 float adjustedFlowerWidth, adjustedFlowerHeight, adjustedCarWidth, adjustedCarHeight, adjustedLovelySightWidth, adjustedLovelySightHeight;
 
 
+
+Minim minim;
+AudioPlayer song1;
+AudioMetaData song1MetaData;
 float musicboxX, musicboxY, musicboxWidth, musicboxHeight;
 float xMusicTitle, yMusicTitle, MusicTitleWidth, MusicTitleHeight;
 int mtitleSize;
@@ -230,47 +234,44 @@ String mtitleText = "Music Player";
 
 float xPlayPause, yPlayPause, PlayPauseWidth, PlayPauseHeight;
 color buttonfillPlay;
-int playSize;
-
 
 float xFForward, yFForward, FForwardWidth, FForwardHeight;
 color buttonfillFForward;
-int fforwardSize;
+//int fforwardSize;
 
 float xRForward, yRForward, RForwardWidth, RForwardHeight;
 color buttonfillRForward;
-int rforwardSize;
+//int rforwardSize;
 
 float xMuteUnmute, yMuteUnmute, MuteUnmuteWidth, MuteUnmuteHeight;
-color buttonfillMuteUnmute;
+color buttonfillMuteUnmute, buttontextfillMuteUnmute;
 int muteunmuteSize;
 String muteText = "Mute", unmuteText = "Unmute";
 
 float xPSong, yPSong, PSongWidth, PSongHeight;
-color buttonfillPSong;
+color buttonfillPSong, buttontextfillPSong;
 int psongSize;
 String psongText = "Previous";
 
 float xNSong, yNSong, NSongWidth, NSongHeight;
-color buttonfillNSong;
+color buttonfillNSong, buttontextfillNSong;
 int nsongSize;
 String nsongText = "Next";
 
 float xSongTitle, ySongTitle, SongTitleWidth, SongTitleHeight;
 int songtitleSize;
-String 
+//String songTitle = song1.title(); come back to later, and resolve the names of songs and 
 
 float xLoop, yLoop, LoopWidth, LoopHeight;
-color buttonfillLoop;
+color buttonfillLoop, buttontextfillLoop;
 int loopSize;
+String loopText = "Loop";
 
 float xStop, yStop, StopWidth, StopHeight;
-color buttonfillStop;
-int stopSize;
+color buttonfillStop, buttontextfillStop;
+//int stopSize;
+//String stopText = "Stop"; //n ot need, will use square pic
 
-Minim minim;
-AudioPlayer song1;
-AudioMetaData song1MetaData;
 
 
 
@@ -819,7 +820,7 @@ void populationOfVariables() {
   xSongTitle = xCenter + xCenter*3/10 + (xCenter*3/10)*1/3 ;
   ySongTitle = height*6.5/10 + ((height*7/10)/2)*6/10;
   SongTitleWidth = ((xCenter - xCenter*6/10)*1/2); //or xCenter - xCenter*6/10 for song name; change starting x value for the long name width to the x coordinate of the music player box itself
-  SongTitleHeight = (((height*7/10)/2)*2/10)/1.5;\
+  SongTitleHeight = (((height*7/10)/2)*2/10)/1.5;
   SongNameFont = createFont("Arial Narrow", 45);
   
   xPSong = xCenter + xCenter*3/10;
@@ -839,6 +840,7 @@ void populationOfVariables() {
   MuteUnmuteWidth = ((xCenter - xCenter*6/10)*1/2)/2;
   MuteUnmuteHeight = (((height*7/10)/2)*2/10)/1.5;
   muteFont = createFont("Arial Narrow", 45);
+  unmuteFont = createFont("Arial Narrow", 45);
   
   xLoop = xCenter + xCenter*3/10;
   yLoop = height*6.5/10 + ((height*7/10)/2)*4/10;

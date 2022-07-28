@@ -973,6 +973,7 @@ void mousePressed() {
   if (mouseX >= xCloseButton && mouseX <= xCloseButton +  CloseButtonWidth && mouseY >= yCloseButton && mouseY <= yCloseButton + CloseButtonHeight) exit();
   //end
 
+
   //control flow/switch to toggle Restart button ON or OFF
   if (mouseX >= xRestartButton && mouseX <= xRestartButton +  RestartButtonWidth && mouseY >= yRestartButton && mouseY <= yRestartButton + RestartButtonHeight) {
     if (shouldRestart == false) {
@@ -1012,17 +1013,6 @@ void mousePressed() {
 
 
 
-
-
-  ////control flow/switch to open a shapes tab to put shapes in canvas
-  //if (mouseX >= shapesboxX && mouseX <= shapesboxX + shapesboxWidth && mouseY >= shapesboxY && mouseY <= shapesboxY + shapesboxHeight) {
-  //  if (shapesOn == false) {
-  //    shapesOn = true;
-  //  } else {
-  //    shapesOn = false;
-  //  }
-  //} 
-  ////end  -> not needed anymore 
 
 
 
