@@ -11,7 +11,9 @@ color backgroundColor, drawingColor = black;
 String[] fontList = PFont.list(); //To list all fonts avaliable on OS
 PFont closeFont, RestartFont, RestartFontHover, MinMaxFont, introFont, startFont, linebuttonFont, eraserbuttonFont, toolsFont, thinbuttonFont, thickbuttonFont, thickerbuttonFont;
 PFont shapesbuttonFont, colorbuttonFont, colorfillerbuttonFont, circleFont, triangleFont, squareFont, rectangleFont, stampFont, DottedLineFont;
-PFont redFont, blueFont, greenFont, orangeFont, yellowFont, indigoFont, pinkFont, blackFont, whiteFont, paintFont, templateFont;
+PFont redFont, blueFont, greenFont, orangeFont, yellowFont, indigoFont, pinkFont, blackFont, whiteFont, paintFont, templateFont, mtitleFont;
+PFont SongNameFont, PrevFont, NextFont, muteFont, loopFont;
+
 
 PImage flowerPic, carPic, lovelySightPic;
 
@@ -221,6 +223,54 @@ float adjustedFlowerWidth, adjustedFlowerHeight, adjustedCarWidth, adjustedCarHe
 
 
 float musicboxX, musicboxY, musicboxWidth, musicboxHeight;
+float xMusicTitle, yMusicTitle, MusicTitleWidth, MusicTitleHeight;
+int mtitleSize;
+color buttonfillmusictitle;
+String mtitleText = "Music Player";
+
+float xPlayPause, yPlayPause, PlayPauseWidth, PlayPauseHeight;
+color buttonfillPlay;
+int playSize;
+
+
+float xFForward, yFForward, FForwardWidth, FForwardHeight;
+color buttonfillFForward;
+int fforwardSize;
+
+float xRForward, yRForward, RForwardWidth, RForwardHeight;
+color buttonfillRForward;
+int rforwardSize;
+
+float xMuteUnmute, yMuteUnmute, MuteUnmuteWidth, MuteUnmuteHeight;
+color buttonfillMuteUnmute;
+int muteunmuteSize;
+String muteText = "Mute", unmuteText = "Unmute";
+
+float xPSong, yPSong, PSongWidth, PSongHeight;
+color buttonfillPSong;
+int psongSize;
+String psongText = "Previous";
+
+float xNSong, yNSong, NSongWidth, NSongHeight;
+color buttonfillNSong;
+int nsongSize;
+String nsongText = "Next";
+
+float xSongTitle, ySongTitle, SongTitleWidth, SongTitleHeight;
+int songtitleSize;
+String 
+
+float xLoop, yLoop, LoopWidth, LoopHeight;
+color buttonfillLoop;
+int loopSize;
+
+float xStop, yStop, StopWidth, StopHeight;
+color buttonfillStop;
+int stopSize;
+
+Minim minim;
+AudioPlayer song1;
+AudioMetaData song1MetaData;
 
 
 
@@ -737,13 +787,74 @@ void populationOfVariables() {
   
   
   
-  
+  //Music Player/JukeBox stuff
   //Population of Music Player Tool Box
   musicboxX = xCenter + xCenter*3/10;
   musicboxY = height*6.5/10;
   musicboxWidth = xCenter - xCenter*6/10;
   musicboxHeight = (height*7/10)/2; 
-  //End Population of Music Player Tool Box
+  
+  xMusicTitle = xCenter + xCenter*3/10 + (xCenter*3/10)*1/3;
+  yMusicTitle = height*6.5/10;
+  MusicTitleWidth = (xCenter - xCenter*6/10)*1/2;
+  MusicTitleHeight = ((height*7/10)/2)*2/10;
+  mtitleFont = createFont("Arial Narrow", 45);
+  
+  xPlayPause = xCenter + xCenter*3/10 + (xCenter*3/10)*1/3 + (xCenter*3/10)*1/4;
+  yPlayPause = height*6.5/10 + ((height*7/10)/2)*4/10 ;
+  PlayPauseWidth = ((xCenter - xCenter*6/10)*1/2)/4;
+  PlayPauseHeight = (((height*7/10)/2)*2/10)/1.5;
+  
+  xFForward = xCenter + xCenter*3/10 + (xCenter*3/10)*1/3 + (xCenter*3/10)*1/4 + (xCenter*3/10)*1/4;
+  yFForward = height*6.5/10 + ((height*7/10)/2)*4/10;
+  FForwardWidth = ((xCenter - xCenter*6/10)*1/2)/4;
+  FForwardHeight = (((height*7/10)/2)*2/10)/1.5;
+  
+  xRForward = xCenter + xCenter*3/10 + (xCenter*3/10)*1/3 + (xCenter*3/10)*1/4 - (xCenter*3/10)*1/4;
+  yRForward = height*6.5/10 + ((height*7/10)/2)*4/10;
+  RForwardWidth = ((xCenter - xCenter*6/10)*1/2)/4;
+  RForwardHeight = (((height*7/10)/2)*2/10)/1.5;
+  
+  
+  xSongTitle = xCenter + xCenter*3/10 + (xCenter*3/10)*1/3 ;
+  ySongTitle = height*6.5/10 + ((height*7/10)/2)*6/10;
+  SongTitleWidth = ((xCenter - xCenter*6/10)*1/2); //or xCenter - xCenter*6/10 for song name; change starting x value for the long name width to the x coordinate of the music player box itself
+  SongTitleHeight = (((height*7/10)/2)*2/10)/1.5;\
+  SongNameFont = createFont("Arial Narrow", 45);
+  
+  xPSong = xCenter + xCenter*3/10;
+  yPSong = height*6.5/10 + ((height*7/10)/2)*8/10;
+  PSongWidth = ((xCenter - xCenter*6/10)*1/2)*1/2;
+  PSongHeight = (((height*7/10)/2)*2/10)/1.5;
+  PrevFont = createFont("Arial Narrow", 45);
+  
+  xNSong = xCenter + xCenter*6/10;
+  yNSong = height*6.5/10 + ((height*7/10)/2)*8/10;
+  NSongWidth = ((xCenter - xCenter*6/10)*1/2)*1/2;
+  NSongHeight = (((height*7/10)/2)*2/10)/1.5;
+  NextFont = createFont("Arial Narrow", 45);
+  
+  xMuteUnmute = xCenter + xCenter*3/10 + (xCenter*3/10)*1/3 + (xCenter*3/10)*1/6;
+  yMuteUnmute = height*6.5/10 + ((height*7/10)/2)*8/10;
+  MuteUnmuteWidth = ((xCenter - xCenter*6/10)*1/2)/2;
+  MuteUnmuteHeight = (((height*7/10)/2)*2/10)/1.5;
+  muteFont = createFont("Arial Narrow", 45);
+  
+  xLoop = xCenter + xCenter*3/10;
+  yLoop = height*6.5/10 + ((height*7/10)/2)*4/10;
+  LoopWidth = ((xCenter - xCenter*6/10)*1/2)/3;
+  LoopHeight = (((height*7/10)/2)*2/10)/1.5;
+  loopFont = createFont("Arial Narrow", 45);
+  
+  xStop = xCenter + xCenter*6.33/10;
+  yStop = height*6.5/10 + ((height*7/10)/2)*4/10;
+  StopWidth = ((xCenter - xCenter*6/10)*1/2)/3;
+  StopHeight = (((height*7/10)/2)*2/10)/1.5;
+  
+
+  
+  //End Population of Music Player Tool Box\
+  //End Music Player stuff
   
   
   
@@ -794,6 +905,18 @@ void populationOfVariables() {
   rect(xBlackBackground, yBlackBackground, BlackBackgroundWidth, BlackBackgroundHeight);
   rect(xWhiteBackground, yWhiteBackground, WhiteBackgroundWidth, WhiteBackgroundHeight);
   
+  rect(xMusicTitle, yMusicTitle, MusicTitleWidth, MusicTitleHeight);
+  rect(xPlayPause, yPlayPause, PlayPauseWidth, PlayPauseHeight);
+  rect(xFForward, yFForward, FForwardWidth, FForwardHeight);
+  rect( xRForward, yRForward, RForwardWidth, RForwardHeight);
+  rect( xMuteUnmute, yMuteUnmute, MuteUnmuteWidth, MuteUnmuteHeight);
+  rect( xPSong, yPSong, PSongWidth, PSongHeight);
+  rect( xNSong, yNSong, NSongWidth, NSongHeight);
+  rect( xSongTitle, ySongTitle, SongTitleWidth, SongTitleHeight);
+  rect(xLoop, yLoop, LoopWidth, LoopHeight);
+  rect(xStop, yStop, StopWidth, StopHeight);
+
+
   
 
 }

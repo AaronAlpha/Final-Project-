@@ -61,6 +61,7 @@ void draw() {
   colorPallete();
   backgroundColorFill();
   backgroundPallete();
+  musiceTab();
 
   
   //images
