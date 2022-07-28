@@ -152,10 +152,17 @@ void musiceTab() {
   //end next song
   
   
-  //Song title
-  rect();
   
-  text(WaterfallsongMetaData.title(), );
+  //Song title
+  rect(xSongTitle, ySongTitle, SongTitleWidth, SongTitleHeight);
+  textAlign(CENTER, CENTER);
+  songtitleSize = 10;
+  textFont(SongNameFont, songtitleSize);
+  
+  songTitle = WaterfallsongMetaData.title();
+  fill(resetWhite);
+  text(songTitle, xSongTitle, ySongTitle, SongTitleWidth, SongTitleHeight);
+  fill(resetWhite);
   //
   
   

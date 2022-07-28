@@ -1006,12 +1006,16 @@ void mousePressed() {
 
   //mute button
   if (mouseX >= xMuteUnmute && mouseX <= xMuteUnmute + MuteUnmuteWidth && mouseY >= yMuteUnmute && mouseY <= yMuteUnmute + MuteUnmuteHeight) {
-    if (Waterfallsong.isMuted()) {
-      Waterfallsong.mute();
-    } else {
-      Waterfallsong.unmute();
+    if (Waterfallsong.isPlaying()) {
+      if (Waterfallsong.isMuted()) {
+        Waterfallsong.unmute();
+      } else {
+        Waterfallsong.mute();
     }
-  }
+     
+    }  
+}
+  
   //end mute
 
 

@@ -261,7 +261,7 @@ String nsongText = "Next";
 
 float xSongTitle, ySongTitle, SongTitleWidth, SongTitleHeight;
 int songtitleSize;
-//String songTitle = song1.title(); come back to later, and resolve the names of songs and 
+String songTitle; 
 
 float xLoop, yLoop, LoopWidth, LoopHeight;
 color buttonfillLoop, buttontextfillLoop;
@@ -811,12 +811,12 @@ void populationOfVariables() {
   PlayPauseWidth = ((xCenter - xCenter*6/10)*1/2)/4;
   PlayPauseHeight = (((height*7/10)/2)*2/10)/1.5;
   
-  xFForward = xCenter + xCenter*3/10 + (xCenter*3/10)*1/3 + (xCenter*3/10)*1/4 + (xCenter*3/10)*1/4;
+  xFForward = xCenter + xCenter*3/10 + (xCenter*3/10)*1/3 + (xCenter*3/10)*1/4 - (xCenter*3/10)*1/4 ;
   yFForward = height*6.5/10 + ((height*7/10)/2)*4/10;
   FForwardWidth = ((xCenter - xCenter*6/10)*1/2)/4;
   FForwardHeight = (((height*7/10)/2)*2/10)/1.5;
   
-  xRForward = xCenter + xCenter*3/10 + (xCenter*3/10)*1/3 + (xCenter*3/10)*1/4 - (xCenter*3/10)*1/4;
+  xRForward =  xCenter + xCenter*3/10 + (xCenter*3/10)*1/3 + (xCenter*3/10)*1/4 + (xCenter*3/10)*1/4;
   yRForward = height*6.5/10 + ((height*7/10)/2)*4/10;
   RForwardWidth = ((xCenter - xCenter*6/10)*1/2)/4;
   RForwardHeight = (((height*7/10)/2)*2/10)/1.5;
@@ -912,16 +912,16 @@ void populationOfVariables() {
   rect(xBlackBackground, yBlackBackground, BlackBackgroundWidth, BlackBackgroundHeight);
   rect(xWhiteBackground, yWhiteBackground, WhiteBackgroundWidth, WhiteBackgroundHeight);
   
-  rect(xMusicTitle, yMusicTitle, MusicTitleWidth, MusicTitleHeight);
-  rect(xPlayPause, yPlayPause, PlayPauseWidth, PlayPauseHeight);
-  rect(xFForward, yFForward, FForwardWidth, FForwardHeight);
-  rect( xRForward, yRForward, RForwardWidth, RForwardHeight);
-  rect( xMuteUnmute, yMuteUnmute, MuteUnmuteWidth, MuteUnmuteHeight);
-  rect( xPSong, yPSong, PSongWidth, PSongHeight);
-  rect( xNSong, yNSong, NSongWidth, NSongHeight);
-  rect( xSongTitle, ySongTitle, SongTitleWidth, SongTitleHeight);
-  rect(xLoop, yLoop, LoopWidth, LoopHeight);
-  rect(xStop, yStop, StopWidth, StopHeight);
+  //rect(xMusicTitle, yMusicTitle, MusicTitleWidth, MusicTitleHeight);
+  //rect(xPlayPause, yPlayPause, PlayPauseWidth, PlayPauseHeight);
+  //rect(xFForward, yFForward, FForwardWidth, FForwardHeight);
+  //rect( xRForward, yRForward, RForwardWidth, RForwardHeight);
+  //rect( xMuteUnmute, yMuteUnmute, MuteUnmuteWidth, MuteUnmuteHeight);
+  //rect( xPSong, yPSong, PSongWidth, PSongHeight);
+  //rect( xNSong, yNSong, NSongWidth, NSongHeight);
+  //rect( xSongTitle, ySongTitle, SongTitleWidth, SongTitleHeight);
+  //rect(xLoop, yLoop, LoopWidth, LoopHeight);
+  //rect(xStop, yStop, StopWidth, StopHeight);
 
 
   
