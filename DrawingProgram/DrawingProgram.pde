@@ -205,6 +205,7 @@ void draw() {
     whiteBool = false;
 
     drawingColor = red;
+
   } else {
     redBool = false;
   }
@@ -222,6 +223,7 @@ void draw() {
     whiteBool = false;
 
     drawingColor = blue;
+
   } else {
     blueBool = false;
   }
@@ -237,6 +239,7 @@ void draw() {
     whiteBool = false;
 
     drawingColor = green;
+
   } else {
     greenBool = false;
   }
