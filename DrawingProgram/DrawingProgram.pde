@@ -155,24 +155,37 @@ void draw() {
     triangle = false;
     square = false;
     rectangle = false;
+    fill(red);
     ellipse( xCenter + xCenter*1/4, (height*6.5/10)/2, drawingSurfaceHeight, drawingSurfaceHeight);
+    fill(resetWhite);
   } else if (triangle == true) {
     
     circle = false;
     square = false;
     rectangle = false;
-    triangle(xCenter + xCenter*1/4, height*0, (xCenter + xCenter*1/4) - (xCenter + xCenter*1/4)*1/3.5, drawingSurfaceHeight, (xCenter + xCenter*1/4) + (xCenter + xCenter*1/4)*1/3.5, drawingSurfaceHeight);
+    fill(red);
+    triangle(xCenter + xCenter*1/4, height*0, (xCenter + xCenter*1/4) - (xCenter + xCenter*1/4)*1/2.3, drawingSurfaceHeight, (xCenter + xCenter*1/4) + (xCenter + xCenter*1/4)*1/2.3, drawingSurfaceHeight);
+    fill(resetWhite);
   } else if (square == true) {
     circle = false;
     triangle = false;
     rectangle = false;
-    square();
+    fill(red);
+    square(((xCenter + xCenter*1/4) + (xCenter + xCenter*1/4)*1/2.3)*1/1.959, height*0, drawingSurfaceHeight);
+    fill(resetWhite);
   } else if (rectangle == true) {
-
-
     circle = false;
     triangle = false;
     square = false;
+    fill(red);
+    rect((xCenter + xCenter*1/4) - (xCenter + xCenter*1/4)*1/2.3, height*0, drawingSurfaceWidth*3/4, drawingSurfaceHeight);
+    fill(resetWhite);
+    //rect();
+  } else {
+    circle = false;
+    triangle = false;
+    square = false;
+    rectangle = false;  
   }
   //end shapes tab
 
