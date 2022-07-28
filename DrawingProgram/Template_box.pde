@@ -1,10 +1,10 @@
 void template() {
-  rect(xStart, yStart, StartWidth, StartHeigt);
-  introSize = 50;
+  rect(xtemplateTitle, ytemplateTitle, templateTitleWidth, templateTitleHeight);
+  templateSize= 50;
   textAlign(CENTER, CENTER);
-  textFont(startFont, introSize);
-  fill(orange);
-  text(introText, xStart, yStart, StartWidth, StartHeigt);
+  textFont(templateFont, templateSize);
+  fill(black);
+  text(templateText, xtemplateTitle, ytemplateTitle, templateTitleWidth, templateTitleHeight);
   fill(resetWhite);
 
 

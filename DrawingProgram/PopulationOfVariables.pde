@@ -806,7 +806,6 @@ void populationOfVariables() {
   //End population
 
   
-  
   //Population of Template Tool Box
   minim = new Minim(this);
   flowerSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
