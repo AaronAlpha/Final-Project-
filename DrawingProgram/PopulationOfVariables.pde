@@ -234,14 +234,15 @@ color buttonfillmusictitle;
 String mtitleText = "Music Player";
 
 float xPlayPause, yPlayPause, PlayPauseWidth, PlayPauseHeight;
-color buttonfillPlay;
+color buttonfillPlay, buttonfilltinyPlay, buttonfilltinyPause;
+boolean Play_Pause = false;
 
 float xFForward, yFForward, FForwardWidth, FForwardHeight;
-color buttonfillFForward;
+color buttonfillFForward, buttonfilltinyFF;
 //int fforwardSize;
 
 float xRForward, yRForward, RForwardWidth, RForwardHeight;
-color buttonfillRForward;
+color buttonfillRForward, buttonfilltinyRF;
 //int rforwardSize;
 
 float xMuteUnmute, yMuteUnmute, MuteUnmuteWidth, MuteUnmuteHeight;
@@ -270,7 +271,7 @@ int loopSize;
 String loopText = "Loop";
 
 float xStop, yStop, StopWidth, StopHeight;
-color buttonfillStop, buttonfilltinyStop ;
+color buttonfillStop, buttonfilltinyStop;
 //int stopSize;
 //String stopText = "Stop"; //n ot need, will use square pic
 

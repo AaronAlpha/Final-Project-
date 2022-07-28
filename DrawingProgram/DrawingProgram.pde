@@ -993,6 +993,14 @@ void mousePressed() {
   }
   //end play button
 
+  if (mouseX >= xPlayPause&& mouseX <= xPlayPause + PlayPauseWidth&& mouseY >= yPlayPause && mouseY <= yPlayPause + PlayPauseHeight) {
+    if (Play_Pause == false) {
+      Play_Pause = true;
+    } else {
+     Play_Pause  = false;   
+  }
+ }
+
 
   //fast forward button
   if (mouseX >= xRForward && mouseX <= xRForward + RForwardWidth && mouseY >= yRForward && mouseY <= yRForward + RForwardHeight) Waterfallsong.skip(5000);

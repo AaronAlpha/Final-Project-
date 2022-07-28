@@ -11,15 +11,30 @@ void musiceTab() {
   //HoverOver for play button
   if (mouseX >= xPlayPause&& mouseX <= xPlayPause + PlayPauseWidth&& mouseY >= yPlayPause && mouseY <= yPlayPause + PlayPauseHeight) {
     buttonfillPlay = black;
+    buttonfilltinyPlay = resetWhite;
+    buttonfilltinyPause = resetWhite;
   } else {
     buttonfillPlay = resetWhite;
+    buttonfilltinyPlay = black;
+    buttonfilltinyPause = black;
   }
   //end
   fill(buttonfillPlay);
   rect(xPlayPause, yPlayPause, PlayPauseWidth, PlayPauseHeight);
   fill(resetWhite);
-  triangle(); //make play button triangle and pasue(2 rounded lines close together) button shapes
-
+  
+  if (Play_Pause == true) {
+     strokeWeight(6);
+    strokeCap(ROUND);
+    line(xPlayPause + xPlayPause*1/98, yPlayPause + yPlayPause/100,  xPlayPause + xPlayPause*1/98, yPlayPause + PlayPauseHeight*8/10);
+    line(xPlayPause + xPlayPause*1/40, yPlayPause + yPlayPause/100,  xPlayPause + xPlayPause*1/40, yPlayPause + PlayPauseHeight*8/10);
+    strokeWeight(1);
+    fill(resetWhite);
+  } else{
+  fill(buttonfilltinyPause);
+  triangle(xPlayPause + xPlayPause*1/200, yPlayPause + yPlayPause/180,  xPlayPause + xPlayPause*1/180 , yPlayPause + PlayPauseHeight*9/10, xPlayPause + PlayPauseWidth*9/10, yPlayPause + PlayPauseHeight/2); //make play button triangle and pasue(2 rounded lines close together) button shapes
+  fill(resetWhite);
+  }
 
   //end play
 
