@@ -808,37 +808,37 @@ void populationOfVariables() {
   
   
   //Population of Template Tool Box
-  //minim = new Minim(this);
-  //flowerSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
-  //carSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
-  //sightSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
+  minim = new Minim(this);
+  flowerSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
+  carSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
+  sightSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
   
-  //templateboxX = xCenter - xCenter*1/2;
-  //templateboxY = height*6.5/10;
-  //templateboxWidth = xCenter - xCenter*2/10;
-  //templateboxHeight = (height*7/10)/2; 
+  templateboxX = xCenter - xCenter*1/2;
+  templateboxY = height*6.5/10;
+  templateboxWidth = xCenter - xCenter*2/10;
+  templateboxHeight = (height*7/10)/2; 
   
-  //xtemplateTitle = xCenter - xCenter*1/2;
-  //ytemplateTitle = height*6.5/10;
-  //templateTitleWidth = (xCenter - xCenter*2/10);
-  //templateTitleHeight = ((height*7/10)/2)*1/5;
-  //templateFont = createFont("Arial Narrow", 45); 
+  xtemplateTitle = xCenter - xCenter*1/2;
+  ytemplateTitle = height*6.5/10;
+  templateTitleWidth = (xCenter - xCenter*2/10);
+  templateTitleHeight = ((height*7/10)/2)*1/5;
+  templateFont = createFont("Arial Narrow", 45); 
   
   
-  //xFlower = xCenter - xCenter*1/2;
-  //yFlower = height*6.5/10 + ((height*7/10)/2)*1/5;
-  //FlowerWidth = (xCenter - xCenter*2/10)*1/3;
-  //FlowerHeight = (height*7/10)/2 - ((height*7/10)/2)*1/5;
+  xFlower = xCenter - xCenter*1/2;
+  yFlower = height*6.5/10 + ((height*7/10)/2)*1/5;
+  FlowerWidth = (xCenter - xCenter*2/10)*1/3;
+  FlowerHeight = (height*7/10)/2 - ((height*7/10)/2)*1/5;
   
-  //xCar = xCenter - xCenter*1/2 + (xCenter - xCenter*2/10)*1/3;
-  //yCar = height*6.5/10 + ((height*7/10)/2)*1/5;
-  //CarWidth = (xCenter - xCenter*2/10)*1/3;
-  //CarHeight = (height*7/10)/2 - ((height*7/10)/2)*1/5; 
+  xCar = xCenter - xCenter*1/2 + (xCenter - xCenter*2/10)*1/3;
+  yCar = height*6.5/10 + ((height*7/10)/2)*1/5;
+  CarWidth = (xCenter - xCenter*2/10)*1/3;
+  CarHeight = (height*7/10)/2 - ((height*7/10)/2)*1/5; 
   
-  //xLovelySight = xCenter - xCenter*1/2 + (xCenter - xCenter*2/10)*1/3 + (xCenter - xCenter*2/10)*1/3;
-  //yLovelySight = height*6.5/10 + ((height*7/10)/2)*1/5;
-  //LovelySightWidth = (xCenter - xCenter*2/10)*1/3;
-  //LovelySightHeight = (height*7/10)/2 - ((height*7/10)/2)*1/5; 
+  xLovelySight = xCenter - xCenter*1/2 + (xCenter - xCenter*2/10)*1/3 + (xCenter - xCenter*2/10)*1/3;
+  yLovelySight = height*6.5/10 + ((height*7/10)/2)*1/5;
+  LovelySightWidth = (xCenter - xCenter*2/10)*1/3;
+  LovelySightHeight = (height*7/10)/2 - ((height*7/10)/2)*1/5; 
   
   
   
