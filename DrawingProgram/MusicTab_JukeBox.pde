@@ -45,8 +45,10 @@ void musiceTab() {
   //HoverOver for fast forward button
   if (mouseX >= xFForward && mouseX <= xFForward + FForwardWidth && mouseY >= yFForward && mouseY <= yFForward + FForwardHeight) {
     buttonfillFForward = black;
+    buttonfilltinyFF = resetWhite;
   } else {
     buttonfillFForward = resetWhite;
+    buttonfilltinyFF = black;
   }
   //end
 
@@ -54,7 +56,13 @@ void musiceTab() {
   rect(xFForward, yFForward, FForwardWidth, FForwardHeight);
   fill(resetWhite);
   
-  triangle(xFForward + xFForward*1/200, yFForward + yFForward/180,  xFForward + xFForward*1/180 , yFForward + yFForward*9/10, xFForward + FForwardWidth*9/10, yFForward + FForwardHeight/2);
+  fill(buttonfilltinyFF);
+  triangle(xFForward + xFForward*1/160, yFForward + yFForward/180,  xFForward + xFForward*1/160 , yFForward + yFForward*0.55/10, xFForward + FForwardWidth*9/10, yFForward + FForwardHeight/2);
+  stroke(buttonfilltinyFF);
+  line(xFForward, yFForward + FForwardHeight/2, xFForward + FForwardWidth*1/2, yFForward + FForwardHeight/2);
+  stroke(black);
+  fill(resetWhite);
+  
   //end fast forward
 
 
@@ -63,13 +71,23 @@ void musiceTab() {
   //HoverOver for reverse forward button
   if (mouseX >= xRForward && mouseX <= xRForward + RForwardWidth && mouseY >= yRForward && mouseY <= yRForward + RForwardHeight) {
     buttonfillRForward = black;
+    buttonfilltinyRF = resetWhite;
   } else {
     buttonfillRForward =resetWhite;
+    buttonfilltinyRF = black;
   }
   //end 
   fill(buttonfillRForward);
   rect(xRForward, yRForward, RForwardWidth, RForwardHeight);
   fill(resetWhite);
+  
+  fill(buttonfilltinyRF);
+  triangle(xRForward + xRForward*1/160, yRForward + yRForward/180,  xRForward + xRForward*1/160 , yRForward + yRForward*0.55/10, xRForward + RForwardWidth*9/10, yRForward + RForwardHeight/2);
+  stroke(buttonfilltinyRF);
+  line(xRForward + RForwardWidth, yRForward + RForwardHeight/2, xRForward + RForwardWidth*1/2, yRForward + RForwardHeight/2);
+  stroke(black);
+  fill(resetWhite);
+  
   //end reverse forward
 
 
