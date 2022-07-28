@@ -3,7 +3,7 @@ void template() {
   introSize = 50;
   textAlign(CENTER, CENTER);
   textFont(startFont, introSize);
-  fill(black);
+  fill(orange);
   text(introText, xStart, yStart, StartWidth, StartHeigt);
   fill(resetWhite);
 
