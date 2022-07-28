@@ -37,10 +37,11 @@ void setup() {
   println(xCar, yCar, adjustedCarWidth, adjustedCarHeight);
   println(largerDimensionlovelySight, smallerDimensionlovelySight, lovelySightWidthlarger, lovelySightHeightlarger);
   println(xLovelySight, yLovelySight, adjustedLovelySightWidth, adjustedLovelySightHeight);
+  
+  println(ImmortalsongMetaData.title());
 }
 
-
-
+  
 
 
 
@@ -62,46 +63,46 @@ void draw() {
   backgroundColorFill();
   backgroundPallete();
   musiceTab();
+  
+
+  ////images
+  //if (mouseX >= xFlower && mouseX <= xFlower + FlowerWidth && mouseY >= yFlower && mouseY <= yFlower + FlowerHeight) {
+  //  buttonfillflower = black;
+  //} else {
+  //  buttonfillflower = resetWhite;
+  //}
+
+  //fill(buttonfillflower);
+  //rect(xFlower, yFlower, FlowerWidth, FlowerHeight);
+  //fill(resetWhite);
+  //image(flowerPic, xFlower, yFlower, adjustedFlowerWidth, adjustedFlowerHeight);
 
 
-  //images
-  if (mouseX >= xFlower && mouseX <= xFlower + FlowerWidth && mouseY >= yFlower && mouseY <= yFlower + FlowerHeight) {
-    buttonfillflower = black;
-  } else {
-    buttonfillflower = resetWhite;
-  }
+  //if (mouseX >= xCar && mouseX <= xCar + CarWidth && mouseY >= yCar && mouseY <= yCar + CarHeight) {
+  //  buttonfillcar = black;
+  //} else {
+  //  buttonfillcar = resetWhite;
+  //}
 
-  fill(buttonfillflower);
-  rect(xFlower, yFlower, FlowerWidth, FlowerHeight);
-  fill(resetWhite);
-  image(flowerPic, xFlower, yFlower, adjustedFlowerWidth, adjustedFlowerHeight);
-
-
-  if (mouseX >= xCar && mouseX <= xCar + CarWidth && mouseY >= yCar && mouseY <= yCar + CarHeight) {
-    buttonfillcar = black;
-  } else {
-    buttonfillcar = resetWhite;
-  }
-
-  fill(buttonfillcar);
-  rect(xCar, yCar, CarWidth, CarHeight);
-  fill(resetWhite);
-  image(carPic, xCar, yCar, adjustedCarWidth, adjustedCarHeight);
-
-
-
-  if (mouseX >= xLovelySight && mouseX <= xLovelySight + LovelySightWidth && mouseY >= yLovelySight && mouseY <= yLovelySight + LovelySightHeight) {
-    buttonfillsight = black;
-  } else {
-    buttonfillsight = resetWhite;
-  }
+  //fill(buttonfillcar);
+  //rect(xCar, yCar, CarWidth, CarHeight);
+  //fill(resetWhite);
+  //image(carPic, xCar, yCar, adjustedCarWidth, adjustedCarHeight);
 
 
 
-  fill(buttonfillsight);
-  rect(xLovelySight, yLovelySight, LovelySightWidth, LovelySightHeight);
-  fill(resetWhite);  
-  image(lovelySightPic, xLovelySight, yLovelySight, adjustedLovelySightWidth, adjustedLovelySightHeight);
+  //if (mouseX >= xLovelySight && mouseX <= xLovelySight + LovelySightWidth && mouseY >= yLovelySight && mouseY <= yLovelySight + LovelySightHeight) {
+  //  buttonfillsight = black;
+  //} else {
+  //  buttonfillsight = resetWhite;
+  //}
+
+
+
+  //fill(buttonfillsight);
+  //rect(xLovelySight, yLovelySight, LovelySightWidth, LovelySightHeight);
+  //fill(resetWhite);  
+  //image(lovelySightPic, xLovelySight, yLovelySight, adjustedLovelySightWidth, adjustedLovelySightHeight);
 
 
 
@@ -1027,13 +1028,13 @@ void mousePressed() {
 
   //play button
   if (mouseX >= xPlayPause&& mouseX <= xPlayPause + PlayPauseWidth&& mouseY >= yPlayPause && mouseY <= yPlayPause + PlayPauseHeight) {
-    if (Waterfallsong.isPlaying()) {
-      Waterfallsong.pause();
-    } else if (Waterfallsong.position() >= Waterfallsong.length() - Waterfallsong.length()*1/5) {//ask sir about .position()/.lenght() ratio
-      Waterfallsong.rewind();
-      Waterfallsong.play();
+    if (Immortalsong.isPlaying()) {
+      Immortalsong.pause();
+    } else if (Immortalsong.position() >= Immortalsong.length() - Immortalsong.length()*1/5) {//ask sir about .position()/.lenght() ratio
+      Immortalsong.rewind();
+      Immortalsong.play();
     } else {
-      Waterfallsong.play();
+      Immortalsong.play();
     }
   }
   //end play button
@@ -1048,22 +1049,22 @@ void mousePressed() {
 
 
   //fast forward button
-  if (mouseX >= xFForward && mouseX <= xFForward + FForwardWidth && mouseY >= yFForward && mouseY <= yFForward + FForwardHeight) Waterfallsong.skip(5000);
+  if (mouseX >= xFForward && mouseX <= xFForward + FForwardWidth && mouseY >= yFForward && mouseY <= yFForward + FForwardHeight) Immortalsong.skip(5000);
   //end fast forward
 
 
   //reverse forward button
-  if (mouseX >= xRForward && mouseX <= xRForward + RForwardWidth && mouseY >= yRForward && mouseY <= yRForward + RForwardHeight) Waterfallsong.skip(-5000);
+  if (mouseX >= xRForward && mouseX <= xRForward + RForwardWidth && mouseY >= yRForward && mouseY <= yRForward + RForwardHeight) Immortalsong.skip(-5000);
   //end reverse button
 
 
   //mute button
   if (mouseX >= xMuteUnmute && mouseX <= xMuteUnmute + MuteUnmuteWidth && mouseY >= yMuteUnmute && mouseY <= yMuteUnmute + MuteUnmuteHeight) {
-    if (Waterfallsong.isPlaying()) {
-      if (Waterfallsong.isMuted()) {
-        Waterfallsong.unmute();
+    if (Immortalsong.isPlaying()) {
+      if (Immortalsong.isMuted()) {
+        Immortalsong.unmute();
       } else {
-        Waterfallsong.mute();
+        Immortalsong.mute();
       }
     }
   }
@@ -1079,17 +1080,17 @@ void mousePressed() {
 
 
   //loop button
-  if (mouseX >= xLoop && mouseX <= xLoop + LoopWidth&& mouseY >= yLoop && mouseY <= yLoop + LoopHeight) Waterfallsong.loop();
+  if (mouseX >= xLoop && mouseX <= xLoop + LoopWidth&& mouseY >= yLoop && mouseY <= yLoop + LoopHeight) Immortalsong.loop();
   //end loop
 
 
   //stop button
   if (mouseX >= xStop && mouseX <= xStop + StopWidth && mouseY >= yStop && mouseY <= yStop + StopHeight) {
-    if (Waterfallsong.isPlaying()) {
-      Waterfallsong.rewind();
-      Waterfallsong.play();
+    if (Immortalsong.isPlaying()) {
+      Immortalsong.rewind();
+      Immortalsong.play();
     } else {
-      Waterfallsong.rewind();
+      Immortalsong.rewind();
     }
   }
   //end stop

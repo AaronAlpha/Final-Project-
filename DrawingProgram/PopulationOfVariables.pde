@@ -231,8 +231,8 @@ float adjustedFlowerWidth, adjustedFlowerHeight, adjustedCarWidth, adjustedCarHe
 
 
 
-AudioPlayer Waterfallsong;
-AudioMetaData WaterfallsongMetaData;
+AudioPlayer Immortalsong;
+AudioMetaData ImmortalsongMetaData;
 float musicboxX, musicboxY, musicboxWidth, musicboxHeight;
 float xMusicTitle, yMusicTitle, MusicTitleWidth, MusicTitleHeight;
 int mtitleSize;
@@ -311,7 +311,7 @@ int appHeight = height;
 float xStartBox, yStartBox, StartBoxWidth, StartBoxHeight;
 boolean starterBox = true;
 float IntroX, IntroY, IntroWidth, IntroHeight;
-String introText = "Welcome to the Drawing Program";
+String introText = "Welcome to the Drawing Program! :)";
 int introSize;
 color buttonfillIntro = resetWhite, buttonfilltextintro = orange;
 float xStart, yStart, StartWidth, StartHeigt;
@@ -374,10 +374,10 @@ void populationOfVariables() {
   
   
   //Population Start
-  xStart = xCenter - xCenter*1.25/5;
-  yStart = yCenter + yCenter*2/5;
-  StartWidth = IntroWidth*3/4 - IntroWidth*1/4;
-  StartHeigt = IntroHeight/2;
+  xStart = xCenter - xCenter*1/2;
+  yStart = height*6.5/10;
+  StartWidth = xCenter - xCenter*2/10;
+  StartHeigt = (height*7/10)/2;
   //Text
   startFont = createFont("Arial Narrow", 45);
   //End Text  
@@ -486,22 +486,22 @@ void populationOfVariables() {
   
   //Population of paint brush
   xPaintBrush = ((xCenter - xCenter*1/2)/2)/2 + ((xCenter - xCenter*1/2)/2)/2;
-  yPaintBrush = ((height*6.5/10)/4)/2; 
+  yPaintBrush = height*0;//((height*6.5/10)/4)/2; 
   PaintBrushWidth = ((xCenter - xCenter*1/2)/2)/2; 
-  PaintBrushHeight = ((height*6.5/10)/4)/2;
+  PaintBrushHeight = (height*6.5/10)/4;
   paintFont = createFont("Arial Narrow", 45);
   //end
     
   
-  //Population of dotted line
-  xDottedLine = ((xCenter - xCenter*1/2)/2)/2 + ((xCenter - xCenter*1/2)/2)/2; 
-  yDottedLine = height*0;
-  DottedLineWidth = ((xCenter - xCenter*1/2)/2)/2;
-  DottedLineHeight = ((height*6.5/10)/4)/2;
-  //Text
-  DottedLineFont = createFont("Arial Narrow", 45);
-  //End Text
-  //End Population of dotted line
+  ////Population of dotted line
+  //xDottedLine = ((xCenter - xCenter*1/2)/2)/2 + ((xCenter - xCenter*1/2)/2)/2; 
+  //yDottedLine = height*0;
+  //DottedLineWidth = ((xCenter - xCenter*1/2)/2)/2;
+  //DottedLineHeight = ((height*6.5/10)/4)/2;
+  ////Text
+  //DottedLineFont = createFont("Arial Narrow", 45);
+  ////End Text
+  ////End Population of dotted line
   
 
   //Population of eraser tool switch
@@ -808,37 +808,37 @@ void populationOfVariables() {
   
   
   //Population of Template Tool Box
-  minim = new Minim(this);
-  flowerSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
-  carSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
-  sightSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
+  //minim = new Minim(this);
+  //flowerSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
+  //carSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
+  //sightSE = minim.loadFile("MostMinimalCode_OneSongPlay_groove.mp3");
   
-  templateboxX = xCenter - xCenter*1/2;
-  templateboxY = height*6.5/10;
-  templateboxWidth = xCenter - xCenter*2/10;
-  templateboxHeight = (height*7/10)/2; 
+  //templateboxX = xCenter - xCenter*1/2;
+  //templateboxY = height*6.5/10;
+  //templateboxWidth = xCenter - xCenter*2/10;
+  //templateboxHeight = (height*7/10)/2; 
   
-  xtemplateTitle = xCenter - xCenter*1/2;
-  ytemplateTitle = height*6.5/10;
-  templateTitleWidth = (xCenter - xCenter*2/10);
-  templateTitleHeight = ((height*7/10)/2)*1/5;
-  templateFont = createFont("Arial Narrow", 45); 
+  //xtemplateTitle = xCenter - xCenter*1/2;
+  //ytemplateTitle = height*6.5/10;
+  //templateTitleWidth = (xCenter - xCenter*2/10);
+  //templateTitleHeight = ((height*7/10)/2)*1/5;
+  //templateFont = createFont("Arial Narrow", 45); 
   
   
-  xFlower = xCenter - xCenter*1/2;
-  yFlower = height*6.5/10 + ((height*7/10)/2)*1/5;
-  FlowerWidth = (xCenter - xCenter*2/10)*1/3;
-  FlowerHeight = (height*7/10)/2 - ((height*7/10)/2)*1/5;
+  //xFlower = xCenter - xCenter*1/2;
+  //yFlower = height*6.5/10 + ((height*7/10)/2)*1/5;
+  //FlowerWidth = (xCenter - xCenter*2/10)*1/3;
+  //FlowerHeight = (height*7/10)/2 - ((height*7/10)/2)*1/5;
   
-  xCar = xCenter - xCenter*1/2 + (xCenter - xCenter*2/10)*1/3;
-  yCar = height*6.5/10 + ((height*7/10)/2)*1/5;
-  CarWidth = (xCenter - xCenter*2/10)*1/3;
-  CarHeight = (height*7/10)/2 - ((height*7/10)/2)*1/5; 
+  //xCar = xCenter - xCenter*1/2 + (xCenter - xCenter*2/10)*1/3;
+  //yCar = height*6.5/10 + ((height*7/10)/2)*1/5;
+  //CarWidth = (xCenter - xCenter*2/10)*1/3;
+  //CarHeight = (height*7/10)/2 - ((height*7/10)/2)*1/5; 
   
-  xLovelySight = xCenter - xCenter*1/2 + (xCenter - xCenter*2/10)*1/3 + (xCenter - xCenter*2/10)*1/3;
-  yLovelySight = height*6.5/10 + ((height*7/10)/2)*1/5;
-  LovelySightWidth = (xCenter - xCenter*2/10)*1/3;
-  LovelySightHeight = (height*7/10)/2 - ((height*7/10)/2)*1/5; 
+  //xLovelySight = xCenter - xCenter*1/2 + (xCenter - xCenter*2/10)*1/3 + (xCenter - xCenter*2/10)*1/3;
+  //yLovelySight = height*6.5/10 + ((height*7/10)/2)*1/5;
+  //LovelySightWidth = (xCenter - xCenter*2/10)*1/3;
+  //LovelySightHeight = (height*7/10)/2 - ((height*7/10)/2)*1/5; 
   
   
   
@@ -861,8 +861,8 @@ void populationOfVariables() {
   mtitleFont = createFont("Arial Narrow", 45);
   
   minim = new Minim(this);
-  Waterfallsong = minim.loadFile("../Waterfall.mp3");
-  WaterfallsongMetaData = Waterfallsong.getMetaData();
+  Immortalsong = minim.loadFile("Immortal - NEFFEX.mp3");
+  ImmortalsongMetaData = Immortalsong.getMetaData();
   
   xPlayPause = xCenter + xCenter*3/10 + (xCenter*3/10)*1/3 + (xCenter*3/10)*1/4;
   yPlayPause = height*6.5/10 + ((height*7/10)/2)*4/10 ;

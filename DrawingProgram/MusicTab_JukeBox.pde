@@ -202,12 +202,12 @@ void musiceTab() {
   //Song title
   rect(xSongTitle, ySongTitle, SongTitleWidth, SongTitleHeight);
   textAlign(CENTER, CENTER);
-  songtitleSize = 10;
+  songtitleSize = 20;
   textFont(SongNameFont, songtitleSize);
 
-  songTitle = WaterfallsongMetaData.title();
-  fill(resetWhite);
-  text(songTitle, xSongTitle, ySongTitle, SongTitleWidth, SongTitleHeight);
+  //songTitle = ImmortalsongMetaData.title();
+  fill(black);
+  text(ImmortalsongMetaData.title(), xSongTitle, ySongTitle, SongTitleWidth, SongTitleHeight);
   fill(resetWhite);
   //
 }

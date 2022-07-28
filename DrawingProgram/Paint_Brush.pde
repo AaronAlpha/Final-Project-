@@ -14,7 +14,7 @@ void paintBrush() {
   fill(buttonfillpaint);
   rect(xPaintBrush, yPaintBrush, PaintBrushWidth, PaintBrushHeight); //is the closing button //needs hover over(color and text)
   textAlign(CENTER, CENTER);
-  paintSize = 26; //Changing number until it exists
+  paintSize = 40; //Changing number until it exists
   textFont(paintFont, paintSize); //used to affext the text
   fill(buttontextfillpaint);
   text(paintText, xPaintBrush, yPaintBrush, PaintBrushWidth, PaintBrushHeight); //'text()' function 'draws' the text 
