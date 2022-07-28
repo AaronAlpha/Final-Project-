@@ -153,6 +153,7 @@ void draw() {
 
   //Shapes Tab
   if (circle == true) {
+    CircleSE.play();
     triangle = false;
     square = false;
     rectangle = false;
@@ -160,7 +161,7 @@ void draw() {
     ellipse( xCenter + xCenter*1/4, (height*6.5/10)/2, drawingSurfaceHeight, drawingSurfaceHeight);
     fill(resetWhite);
   } else if (triangle == true) {
-
+    TriangleSE.play();
     circle = false;
     square = false;
     rectangle = false;
@@ -168,6 +169,7 @@ void draw() {
     triangle(xCenter + xCenter*1/4, height*0, (xCenter + xCenter*1/4) - (xCenter + xCenter*1/4)*1/2.3, drawingSurfaceHeight, (xCenter + xCenter*1/4) + (xCenter + xCenter*1/4)*1/2.3, drawingSurfaceHeight);
     fill(resetWhite);
   } else if (square == true) {
+    SquareSE.play();
     circle = false;
     triangle = false;
     rectangle = false;
@@ -175,6 +177,7 @@ void draw() {
     square(((xCenter + xCenter*1/4) + (xCenter + xCenter*1/4)*1/2.3)*1/1.959, height*0, drawingSurfaceHeight);
     fill(resetWhite);
   } else if (rectangle == true) {
+    RectangleSE.play();
     circle = false;
     triangle = false;
     square = false;
@@ -195,6 +198,8 @@ void draw() {
 
   //Color pallete changer
   if (redBool == true) {
+    redSE.play();
+    
     blueBool = false;
     greenBool = false;
     orangeBool =false;
@@ -213,6 +218,8 @@ void draw() {
 
 
   if (blueBool == true) {
+    blueSE.play();
+    
     redBool = false;
     greenBool = false;
     orangeBool =false;
@@ -228,7 +235,11 @@ void draw() {
     blueBool = false;
   }
 
+
+
   if (greenBool == true) {
+    greenSE.play();
+    
     redBool = false;
     blueBool = false;
     orangeBool =false;
@@ -246,6 +257,8 @@ void draw() {
 
 
   if (orangeBool == true) {
+    orangeSE.play();
+    
     blueBool = false;
     greenBool = false;
     redBool =false;
@@ -261,6 +274,8 @@ void draw() {
   }
 
   if (yellowBool == true) {
+    yellowSE.play();
+    
     blueBool = false;
     greenBool = false;
     orangeBool =false;
@@ -277,6 +292,7 @@ void draw() {
 
 
   if (indigoBool == true) {
+    indigoSE.play();
     blueBool = false;
     greenBool = false;
     orangeBool =false;
@@ -292,6 +308,8 @@ void draw() {
   }
 
   if (pinkBool == true) {
+    pinkSE.play();
+    
     blueBool = false;
     greenBool = false;
     orangeBool =false;
@@ -307,6 +325,8 @@ void draw() {
   }
 
   if (blackBool == true) {
+    blackSE.play();
+    
     blueBool = false;
     greenBool = false;
     orangeBool =false;
@@ -322,6 +342,8 @@ void draw() {
   }
 
   if (whiteBool == true) {
+    whiteSE.play();
+    
     blueBool = false;
     greenBool = false;
     orangeBool =false;

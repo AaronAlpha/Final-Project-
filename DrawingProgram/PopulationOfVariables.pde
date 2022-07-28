@@ -77,6 +77,7 @@ int shapesSize;
 boolean shapesOn;
 float xShapeOptions, yShapeOptions, ShapeWidth, ShapeHeight;
 PShape circleShape, triangleShape, squareShape, rectangleShape;
+AudioPlayer CircleSE, TriangleSE, SquareSE, RectangleSE;
 
 float xCircle, yCircle, CircleWidth, CircleHeight;
 int circleSize;
@@ -566,8 +567,9 @@ void populationOfVariables() {
   //Text
   circleFont = createFont("Arial Narrow", 45);
   //End Text 
-  //shape
-  circleShape = createShape(ELLIPSE, drawingSurfaceX+drawingSurfaceX*1/4, drawingSurfaceY - drawingSurfaceY*1/2, xCenter, yCenter); //error
+  //sound effect
+  minim = new Minim(this);
+  CircleSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Car_Door_Closing.mp3"); 
   //
   //end 
   
@@ -579,6 +581,10 @@ void populationOfVariables() {
   //Text
   triangleFont = createFont("Arial Narrow", 45);
   //End Text 
+  //sound effect
+  minim = new Minim(this);
+  TriangleSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Car_Door_Closing.mp3");
+  //
   //end
   
   //square box
@@ -589,6 +595,10 @@ void populationOfVariables() {
   //Text
   squareFont = createFont("Arial Narrow", 45);
   //End Text   
+  //sound effect
+  minim = new Minim(this);
+  SquareSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Car_Door_Closing.mp3");
+  //
   //end
   
   //rectangle box
@@ -600,6 +610,10 @@ void populationOfVariables() {
   rectangleFont = createFont("Arial Narrow", 45);
   //End Text 
   //end
+  //sound effect
+  minim = new Minim(this);
+  RectangleSE = minim.loadFile("Music Program_FreeWare Music_SoundEffect_Car_Door_Closing.mp3");
+  //
   //End Population of Shapes Tool Box
   
   
