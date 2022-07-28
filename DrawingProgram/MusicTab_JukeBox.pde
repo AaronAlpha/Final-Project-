@@ -205,9 +205,9 @@ void musiceTab() {
   songtitleSize = 20;
   textFont(SongNameFont, songtitleSize);
 
-  //songTitle = ImmortalsongMetaData.title();
+  songTitle = ImmortalsongMetaData.fileName();
   fill(black);
-  text(ImmortalsongMetaData.title(), xSongTitle, ySongTitle, SongTitleWidth, SongTitleHeight);
+  text(songTitle  , xSongTitle, ySongTitle, SongTitleWidth, SongTitleHeight);
   fill(resetWhite);
   //
 }
