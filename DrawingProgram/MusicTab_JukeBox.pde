@@ -82,7 +82,7 @@ void musiceTab() {
   fill(resetWhite);
   
   fill(buttonfilltinyRF);
-  triangle(xRForward + xRForward*1/160, yRForward + yRForward/180,  xRForward + xRForward*1/160 , yRForward + yRForward*0.55/10, xRForward + RForwardWidth*9/10, yRForward + RForwardHeight/2);
+  triangle(xRForward , yRForward + RForwardHeight*1/2,  xRForward + xRForward*1/35 , yRForward + yRForward*0.55/10, xRForward + RForwardWidth*8/10, yRForward + yRForward*1/150);
   stroke(buttonfilltinyRF);
   line(xRForward + RForwardWidth, yRForward + RForwardHeight/2, xRForward + RForwardWidth*1/2, yRForward + RForwardHeight/2);
   stroke(black);
