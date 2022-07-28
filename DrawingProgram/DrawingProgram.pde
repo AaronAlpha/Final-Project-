@@ -1009,13 +1009,15 @@ void mousePressed() {
     if (Waterfallsong.isPlaying()) {
       if (Waterfallsong.isMuted()) {
         Waterfallsong.unmute();
+        Mute_Unmute = false;
       } else {
         Waterfallsong.mute();
+        Mute_Unmute = true;
     }
-     
-    }  
+  }  
 }
-  
+
+  if (Mute_Unmute == 
   //end mute
 
 

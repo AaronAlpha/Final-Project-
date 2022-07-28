@@ -71,7 +71,11 @@ void musiceTab() {
   muteunmuteSize = 20;
   textFont(muteFont, muteunmuteSize);
   fill(buttontextfillMuteUnmute);
-  text(muteText, xMuteUnmute, yMuteUnmute, MuteUnmuteWidth, MuteUnmuteHeight);
+  if (Mute_Unmute == true) {
+    text(unmuteText, xMuteUnmute, yMuteUnmute, MuteUnmuteWidth, MuteUnmuteHeight);
+  } else if(Mute_Unmute == false) {
+    text(muteText, xMuteUnmute, yMuteUnmute, MuteUnmuteWidth, MuteUnmuteHeight);
+  }
   fill(resetWhite);
   //end mute
 

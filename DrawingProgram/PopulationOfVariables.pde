@@ -248,6 +248,7 @@ float xMuteUnmute, yMuteUnmute, MuteUnmuteWidth, MuteUnmuteHeight;
 color buttonfillMuteUnmute, buttontextfillMuteUnmute;
 int muteunmuteSize;
 String muteText = "Mute", unmuteText = "Unmute";
+boolean Mute_Unmute = false;
 
 float xPSong, yPSong, PSongWidth, PSongHeight;
 color buttonfillPSong, buttontextfillPSong;
