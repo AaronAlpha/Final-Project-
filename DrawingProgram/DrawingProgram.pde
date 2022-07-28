@@ -155,7 +155,7 @@ void draw() {
     triangle = false;
     square = false;
     rectangle = false;
-    fill(red);
+    fill(drawingColor);
     ellipse( xCenter + xCenter*1/4, (height*6.5/10)/2, drawingSurfaceHeight, drawingSurfaceHeight);
     fill(resetWhite);
   } else if (triangle == true) {
@@ -163,21 +163,21 @@ void draw() {
     circle = false;
     square = false;
     rectangle = false;
-    fill(red);
+    fill(drawingColor);
     triangle(xCenter + xCenter*1/4, height*0, (xCenter + xCenter*1/4) - (xCenter + xCenter*1/4)*1/2.3, drawingSurfaceHeight, (xCenter + xCenter*1/4) + (xCenter + xCenter*1/4)*1/2.3, drawingSurfaceHeight);
     fill(resetWhite);
   } else if (square == true) {
     circle = false;
     triangle = false;
     rectangle = false;
-    fill(red);
+    fill(drawingColor);
     square(((xCenter + xCenter*1/4) + (xCenter + xCenter*1/4)*1/2.3)*1/1.959, height*0, drawingSurfaceHeight);
     fill(resetWhite);
   } else if (rectangle == true) {
     circle = false;
     triangle = false;
     square = false;
-    fill(red);
+    fill(drawingColor);
     rect((xCenter + xCenter*1/4) - (xCenter + xCenter*1/4)*1/2.3, height*0, drawingSurfaceWidth*3/4, drawingSurfaceHeight);
     fill(resetWhite);
     //rect();
@@ -535,7 +535,11 @@ void draw() {
     blackBackground = false;
     whiteBackground = false;
     
-
+    circle = false;
+    triangle = false;
+    square = false;
+    rectangle = false;
+      
     if (mousePressed == true) {
       draw = true;
     } else {
@@ -619,7 +623,11 @@ void draw() {
     whiteBackground = false;
 
 
-
+    circle = false;
+    triangle = false;
+    square = false;
+    rectangle = false;
+    
 
     if (mousePressed == true) {
       draw = true;
@@ -1118,6 +1126,10 @@ void mouseClicked() {
       paintDraw = false;
       eraser = false;
       
+      circle = false;
+      triangle = false;
+      square = false;
+      rectangle = false;
       //flower = false;
       //car = false;
       //sight = false;
@@ -1136,6 +1148,11 @@ void mouseClicked() {
       eraser = false;
       paintDraw = false;
       
+      
+      circle = false;
+      triangle = false;
+      square = false;
+      rectangle = false;
       //flower = false;
       //car = false;
       //sight = false;
@@ -1154,6 +1171,10 @@ void mouseClicked() {
       stampDraw = false;
       eraser = false;
       
+      circle = false;
+      triangle = false;
+      square = false;
+      rectangle = false;
       //flower = false;
       //car = false;
       //sight = false;
@@ -1172,6 +1193,7 @@ void mouseClicked() {
       eraser = false;
       paintDraw = false;
       
+      
       //flower = false;
       //car = false;
       //sight = false;
@@ -1189,6 +1211,11 @@ void mouseClicked() {
       lineDraw = false;
       DottedLineDraw = false;
       paintDraw = false;
+      
+      circle = false;
+      triangle = false;
+      square = false;
+      rectangle = false;
       
       //flower = false;
       //car = false;
