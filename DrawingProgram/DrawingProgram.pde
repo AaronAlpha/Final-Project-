@@ -704,12 +704,10 @@ void draw() {
     blackBackground = false;
     whiteBackground = false;
 
-  
-    flower = false;
-    car = false;
-    sight = false;
-
-
+    circle = false;
+    triangle = false;
+    square = false;
+    rectangle = false;
   
     if (mousePressed == true) {
       draw = true;
@@ -789,9 +787,10 @@ void draw() {
       //whiteBackground = false;
 
       
-      //flower = false;
-      //car = false;
-      //sight = false;
+      circle = false;
+      triangle = false;
+      square = false;
+      rectangle = false;
         
       
   //  if (mousePressed == true) {
@@ -843,7 +842,10 @@ void draw() {
     lineDraw = false;
     paintDraw = false;
 
-
+    circle = false;
+    triangle = false;
+    square = false;
+    rectangle = false;
     if (mousePressed == true) {
       draw = true;
     } else {
