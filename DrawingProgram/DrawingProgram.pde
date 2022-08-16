@@ -106,47 +106,47 @@ void draw() {
 
 
 
-  //if (flower == true) {
-  //  flowerSE.play();
-  //  car = false;
-  //  sight = false;
-  //  image(flowerPic, drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
-  //} else {
-  //  //lineDraw = true;
-  //  //stampDraw = true;
-  //  //paintDraw = true;
-  //  //eraser = true;
-  //  flower = false;
-  //  fill(backgroundColor);
-  //  rect(drawingSurfaceX, drawingSurfaceY, adjustedFlowerWidth, adjustedFlowerHeight);
-  //  fill(resetWhite);
-  //}
+  if (flower == true) {
+    flowerSE.play();
+    car = false;
+    sight = false;
+    image(flowerPic, drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
+  } else {
+    //lineDraw = true;
+    //stampDraw = true;
+    //paintDraw = true;
+    //eraser = true;
+    flower = false;
+    fill(backgroundColor);
+    rect(drawingSurfaceX, drawingSurfaceY, adjustedFlowerWidth, adjustedFlowerHeight);
+    fill(resetWhite);
+  }
 
-  //if (car == true) {
-  //  carSE.play();
-  //  flower = false;
-  //  sight = false;
+  if (car == true) {
+    carSE.play();
+    flower = false;
+    sight = false;
 
-  //  image(carPic, drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
-  //} else {
-  //  car = false;
-  //  fill(backgroundColor);
-  //  rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
-  //  fill(resetWhite);
-  //  }
+    image(carPic, drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
+  } else {
+    car = false;
+    fill(backgroundColor);
+    rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
+    fill(resetWhite);
+    }
 
 
-  //  if (sight == true) {
-  //  sightSE.play();
-  //  flower = false;
-  //  car = false;
-  //  image(lovelySightPic, drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
-  //} else {    
-  //  sight = false;
-  //  fill(backgroundColor);
-  //  rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
-  //  fill(resetWhite);
-  //}
+    if (sight == true) {
+    sightSE.play();
+    flower = false;
+    car = false;
+    image(lovelySightPic, drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
+  } else {    
+    sight = false;
+    fill(backgroundColor);
+    rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
+    fill(resetWhite);
+  }
 
   //end images
 
